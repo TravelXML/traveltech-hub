@@ -48,7 +48,7 @@ export default function Hero() {
           Find your next travel technology partner
         </h1>
         <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-600">
-          The directory of PMS, CRS, aggregators, channel managers, wholesalers, OTAs and more —
+          The directory of PMS, CRS, aggregators, channel managers, wholesalers, OTAs and more -
           all in one place.
         </p>
 
@@ -59,7 +59,7 @@ export default function Hero() {
               setQuery(v)
               setOpen(true)
             }}
-            placeholder="Search all categories — company, product, feature..."
+            placeholder="Search all categories - company, product, feature..."
           />
           {open && query.trim() && (
             <div className="absolute z-30 mt-2 w-full overflow-hidden rounded-xl border border-slate-200 bg-white text-left shadow-xl">

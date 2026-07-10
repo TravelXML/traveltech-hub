@@ -40,7 +40,7 @@ export default function Footer() {
           ))}
         </div>
         <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-slate-800 pt-6 text-sm text-slate-500 sm:flex-row">
-          <p>&copy; {new Date().getFullYear()} TravelTech Hub. Demo project — all data for illustration.</p>
+          <p>&copy; {new Date().getFullYear()} TravelTech Hub. Demo project - all data for illustration.</p>
           <Link to="/add-business" className="font-medium text-brand-400 hover:text-brand-300">
             List Your Business &rarr;
           </Link>

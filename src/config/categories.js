@@ -12,7 +12,7 @@ export const CATEGORIES = [
     color: 'indigo',
     icon: 'Building2',
     description:
-      'Software that runs the day-to-day operations of hotels and properties — reservations, housekeeping, billing and front-desk operations.',
+      'Software that runs the day-to-day operations of hotels and properties - reservations, housekeeping, billing and front-desk operations.',
   },
   {
     id: 'crs',

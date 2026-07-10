@@ -117,7 +117,7 @@ export default function AddBusinessForm() {
   if (submitted) {
     return (
       <div className="mx-auto max-w-lg rounded-2xl border border-emerald-200 bg-emerald-50 p-8 text-center">
-        <h2 className="font-display text-2xl font-bold text-emerald-800">Thanks — you're on the list!</h2>
+        <h2 className="font-display text-2xl font-bold text-emerald-800">Thanks - you're on the list!</h2>
         <p className="mt-2 text-emerald-700">
           Your submission for <strong>{form.name}</strong> has been received. Our team will review it
           shortly (check your console for the payload that would be sent to the API).

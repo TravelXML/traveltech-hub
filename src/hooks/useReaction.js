@@ -14,7 +14,7 @@ function writeStore(store) {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(store))
   } catch {
-    // localStorage unavailable (e.g. private browsing) — reactions just won't persist.
+    // localStorage unavailable (e.g. private browsing) - reactions just won't persist.
   }
 }
 

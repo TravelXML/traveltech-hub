@@ -2,7 +2,7 @@
 //
 // Today this reads from static JSON bundled at build time. When a real
 // backend exists, only the bodies of these functions need to change to
-// `fetch('/api/...')` calls — every component in the app goes through this
+// `fetch('/api/...')` calls - every component in the app goes through this
 // module, so no component code should need to change.
 
 import { CATEGORIES, getCategoryById } from '../config/categories.js'
