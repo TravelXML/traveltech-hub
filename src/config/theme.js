@@ -1,0 +1,118 @@
+// Maps a category's theme color name to the concrete Tailwind classes used
+// across cards, headers and tags. Centralising this means every usage site
+// stays a lookup rather than a hand-built template string, and only this
+// file (plus tailwind.config.js's safelist) needs updating to add a color.
+const THEMES = {
+  indigo: {
+    bg50: 'bg-indigo-50',
+    solid: 'bg-indigo-600',
+    solidHover: 'hover:bg-indigo-700',
+    gradient: 'from-indigo-500 to-indigo-700',
+    text: 'text-indigo-700',
+    border: 'border-indigo-200',
+    ring: 'ring-indigo-500',
+  },
+  teal: {
+    bg50: 'bg-teal-50',
+    solid: 'bg-teal-600',
+    solidHover: 'hover:bg-teal-700',
+    gradient: 'from-teal-500 to-teal-700',
+    text: 'text-teal-700',
+    border: 'border-teal-200',
+    ring: 'ring-teal-500',
+  },
+  sky: {
+    bg50: 'bg-sky-50',
+    solid: 'bg-sky-600',
+    solidHover: 'hover:bg-sky-700',
+    gradient: 'from-sky-500 to-sky-700',
+    text: 'text-sky-700',
+    border: 'border-sky-200',
+    ring: 'ring-sky-500',
+  },
+  amber: {
+    bg50: 'bg-amber-50',
+    solid: 'bg-amber-600',
+    solidHover: 'hover:bg-amber-700',
+    gradient: 'from-amber-500 to-amber-700',
+    text: 'text-amber-700',
+    border: 'border-amber-200',
+    ring: 'ring-amber-500',
+  },
+  emerald: {
+    bg50: 'bg-emerald-50',
+    solid: 'bg-emerald-600',
+    solidHover: 'hover:bg-emerald-700',
+    gradient: 'from-emerald-500 to-emerald-700',
+    text: 'text-emerald-700',
+    border: 'border-emerald-200',
+    ring: 'ring-emerald-500',
+  },
+  cyan: {
+    bg50: 'bg-cyan-50',
+    solid: 'bg-cyan-600',
+    solidHover: 'hover:bg-cyan-700',
+    gradient: 'from-cyan-500 to-cyan-700',
+    text: 'text-cyan-700',
+    border: 'border-cyan-200',
+    ring: 'ring-cyan-500',
+  },
+  violet: {
+    bg50: 'bg-violet-50',
+    solid: 'bg-violet-600',
+    solidHover: 'hover:bg-violet-700',
+    gradient: 'from-violet-500 to-violet-700',
+    text: 'text-violet-700',
+    border: 'border-violet-200',
+    ring: 'ring-violet-500',
+  },
+  orange: {
+    bg50: 'bg-orange-50',
+    solid: 'bg-orange-600',
+    solidHover: 'hover:bg-orange-700',
+    gradient: 'from-orange-500 to-orange-700',
+    text: 'text-orange-700',
+    border: 'border-orange-200',
+    ring: 'ring-orange-500',
+  },
+  rose: {
+    bg50: 'bg-rose-50',
+    solid: 'bg-rose-600',
+    solidHover: 'hover:bg-rose-700',
+    gradient: 'from-rose-500 to-rose-700',
+    text: 'text-rose-700',
+    border: 'border-rose-200',
+    ring: 'ring-rose-500',
+  },
+  blue: {
+    bg50: 'bg-blue-50',
+    solid: 'bg-blue-600',
+    solidHover: 'hover:bg-blue-700',
+    gradient: 'from-blue-500 to-blue-700',
+    text: 'text-blue-700',
+    border: 'border-blue-200',
+    ring: 'ring-blue-500',
+  },
+  lime: {
+    bg50: 'bg-lime-50',
+    solid: 'bg-lime-600',
+    solidHover: 'hover:bg-lime-700',
+    gradient: 'from-lime-500 to-lime-700',
+    text: 'text-lime-800',
+    border: 'border-lime-200',
+    ring: 'ring-lime-500',
+  },
+  fuchsia: {
+    bg50: 'bg-fuchsia-50',
+    solid: 'bg-fuchsia-600',
+    solidHover: 'hover:bg-fuchsia-700',
+    gradient: 'from-fuchsia-500 to-fuchsia-700',
+    text: 'text-fuchsia-700',
+    border: 'border-fuchsia-200',
+    ring: 'ring-fuchsia-500',
+  },
+}
+
+export function getTheme(color) {
+  return THEMES[color] ?? THEMES.indigo
+}

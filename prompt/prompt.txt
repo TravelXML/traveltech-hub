@@ -1,0 +1,162 @@
+Build a JustDial-style listing directory portal for the travel technology 
+domain called "TravelTech Hub". This is a React demo that will later be 
+made database-driven, so architect it with that migration in mind. It 
+must be deployable to GitHub Pages.
+
+## Tech Stack
+- React 18 + Vite
+- Tailwind CSS for styling
+- React Router (use HashRouter so routing works on GitHub Pages)
+- All listing data in structured JSON files (one per category) under 
+  src/data/ — shaped like API responses so swapping to a real backend 
+  later is trivial
+- No backend needed for now
+
+## Categories (12 sections, each with its own route + distinct color theme)
+1. Property Management Systems (PMS) — route: /pms
+2. Central Reservation Systems (CRS) — route: /crs
+3. Airline Aggregators — route: /airline-aggregators
+4. Hotel Aggregators — route: /hotel-aggregators
+5. Rail Aggregators — route: /rail-aggregators
+6. Liveaboard & Cruise Aggregators — route: /cruise-aggregators
+7. Channel Managers — route: /channel-managers
+8. B2B Wholesalers — route: /b2b-wholesalers
+9. Booking & Distribution Platforms — route: /booking-distribution
+10. OTA & Travel Aggregators — route: /ota
+11. Tour Operators with Own API Distribution — route: /tour-operators
+12. Rail Meta Booking Engines — route: /rail-meta
+
+## Data Model (per listing — keep this exact shape)
+{
+  "id": "string",
+  "name": "string",
+  "logoInitials": "string (2 chars)",
+  "description": "2-3 sentence business description",
+  "features": ["array of key features"],
+  "usps": ["array of unique selling points"],
+  "products": ["array of product names, shown as tags"],
+  "targetMarkets": ["geographical presence, e.g. Global, Europe, APAC, 
+    India, North America, Middle East, LATAM, Africa"],
+  "pricingModel": "one of: Subscription | Per Booking | Commission | 
+    Freemium | Enterprise/Custom",
+  "priceRange": "one of: $ | $$ | $$$",
+  "email": "string",
+  "phone": "string",
+  "website": "string",
+  "headquarters": "City, Country",
+  "founded": number
+}
+
+Populate each category with 15-20 REAL, well-known companies in that 
+space. Examples to guide you:
+- PMS: Oracle Opera Cloud, Cloudbeds, Mews, eZee Absolute, Hotelogix, 
+  Protel, RMS Cloud, Little Hotelier, StayFlexi
+- CRS: Sabre SynXis, Amadeus, TravelClick iHotelier, Pegasus, 
+  Windsurfer, RezGain
+- Airline Aggregators: Amadeus, Sabre, Travelport, Duffel, Kiwi.com 
+  Tequila, Mystifly, TravelFusion, AirGateway
+- Hotel Aggregators: Hotelbeds, Expedia TAAP, Agoda API, RateHawk, 
+  TBO Holidays, WebBeds, Travco, GRNconnect
+- Channel Managers: SiteMinder, RateGain, STAAH, Cloudbeds, D-EDGE, 
+  eZee Centrix, AxisRooms
+- B2B Wholesalers: Hotelbeds, WebBeds, TBO, Travco, GRN, Restel, DOTW
+- OTA: Booking.com, Expedia, MakeMyTrip, Agoda, Trip.com, Cleartrip, 
+  Traveloka, Despegar
+- Rail: Trainline Partner Solutions, Rail Europe, SilverRail, 
+  Distribusion, Omio B2B, RailClick, 12Go
+- Cruise/Liveaboard: Liveaboard.com, CruiseDirect, Widgety, Traveltek, 
+  Odysseus, Revelex
+Use real company names, real websites, real HQ locations, and accurate 
+descriptions. For email/phone use plausible placeholder-format contacts 
+(e.g. sales@company.com, +1-XXX-XXX-XXXX) and add a comment at the top 
+of each data file noting contacts are placeholders to be verified.
+
+## Pages & Components
+
+### 1. Home Page (/)
+- Sticky header: logo "TravelTech Hub", category dropdown nav, and a 
+  prominent "List Your Business" button
+- Hero section: bold headline, subtitle, global search bar that 
+  searches across ALL categories (by name, description, products)
+- Grid of 12 category cards, each in its category color, showing icon, 
+  name, short description, and listing count — clicking navigates to 
+  that category page
+- A second "Add Your Travel Business" CTA banner mid-page
+- Footer with category links
+
+### 2. Category Pages
+- Colored header band in the category theme color with category name, 
+  description, and listing count
+- Filter sidebar (desktop) / collapsible filter drawer (mobile):
+  * Target Market / Geography (multi-select checkboxes)
+  * Pricing Model (multi-select)
+  * Price Range (multi-select)
+  * Products (multi-select, built dynamically from the data)
+- All filters combinable, results update instantly, active filter 
+  chips shown above results with clear-all option
+- Search-within-category box
+- Sort by: name (A-Z), founded year
+- Result count display
+
+### 3. Listing Card Component
+- Company initials avatar in category color, name, HQ + founded year
+- Description, top 3 features, USP badges
+- Product tags, geography tags, pricing model + price range tags 
+  (each tag type visually distinct)
+- Contact row: email, phone, website link with icons
+- "View Details" expands the card (or opens a modal) with full 
+  features, all USPs, all products
+
+### 4. Add Your Business Page (/add-business)
+- Form: business name, category select, description, features 
+  (tag input), products (tag input), target markets (multi-select), 
+  pricing model, price range, email, phone, website, HQ, founded year
+- Client-side validation with helpful error messages
+- On submit: show a success state and console.log the payload with a 
+  code comment marking where the future API POST will go
+
+## Design Requirements
+- Each category has a DISTINCT color identity used on its category 
+  card, page header band, card accents, and tags. Theme map:
+  PMS=indigo, CRS=teal, Airlines=sky, Hotels=amber, Rail=emerald, 
+  Cruise=cyan, Channel Managers=violet, Wholesalers=orange, 
+  Booking=rose, OTA=blue, Tour Operators=lime, Rail Meta=fuchsia
+- Typography: import from Google Fonts — a distinctive display font 
+  for headings (e.g. "Sora" or "Space Grotesk") paired with a clean 
+  body font (e.g. "Inter"). Do not use default system fonts.
+- Fully responsive (mobile-first), polished hover states, smooth 
+  transitions, subtle card shadows, rounded corners
+- Consistent spacing scale and accessible color contrast
+
+## Architecture (for future DB migration)
+- src/services/listingService.js — single data-access layer; all 
+  components fetch through it (currently imports JSON, later swaps 
+  to fetch/API calls). Expose: getCategories(), getListings(category), 
+  searchAll(query)
+- src/hooks/useListingFilters.js — reusable filter/search/sort logic
+- src/config/categories.js — central category registry (id, name, 
+  route, color theme, icon, description)
+- Components organized under src/components/ (Header, Hero, 
+  CategoryCard, ListingCard, FilterSidebar, TagBadge, SearchBar, 
+  AddBusinessForm, Footer)
+
+## GitHub Pages Deployment
+- Set base: '/traveltech-hub/' in vite.config.js
+- Use HashRouter
+- Install gh-pages as a dev dependency and add scripts:
+  "predeploy": "npm run build", "deploy": "gh-pages -d dist"
+- Also add a GitHub Actions workflow (.github/workflows/deploy.yml) 
+  that builds and deploys to GitHub Pages on every push to main, as 
+  an alternative to the gh-pages script
+- README.md must document: project overview, data structure, how to 
+  run locally, both deployment methods step-by-step (including 
+  enabling Pages in repo settings), and how to swap in a real 
+  backend later
+
+## Final Steps
+1. Initialize git and create a sensible .gitignore
+2. Run npm run dev, open the app, and verify: home page renders, 
+   every category page loads with data, filters work, search works, 
+   the add-business form validates and submits
+3. Run npm run build and confirm it builds without errors
+4. Fix any errors before finishing
