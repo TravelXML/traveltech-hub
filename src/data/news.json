@@ -1,0 +1,245 @@
+{
+  "_comment": "Curated from real published sources at the time of writing. Verify dates/links before relying on this for production use.",
+  "items": [
+    {
+      "id": "booking-holdings-q1-2026-earnings",
+      "title": "Booking Holdings Reports First Quarter 2026 Financial Results",
+      "summary": "Booking Holdings reported Q1 2026 revenue growth of 16% year over year (about 10% on a constant-currency basis) and gross bookings growth of 15%, with room nights up 6%. The company said the Middle East conflict weighed on room-night growth by roughly 2 percentage points, while adjusted EBITDA grew 19%.",
+      "source": "Yahoo Finance",
+      "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/booking-holdings-q1-earnings-revenues-153000815.html",
+      "category": "Earnings",
+      "publishedDate": "2026-04-28",
+      "tags": ["Booking Holdings", "Earnings", "OTA"]
+    },
+    {
+      "id": "mews-series-d-300-million-2026",
+      "title": "Mews Raises $300 Million Series D Led by EQT Ventures",
+      "summary": "Hospitality operating system Mews closed a $300 million Series D at a $2.5 billion valuation, led by EQT Ventures with new backers Atomico and HarbourVest Partners, alongside existing investors Kinnevik, Battery Ventures and Tiger Global. The company said the capital will deepen its AI-native PMS, RMS and payments stack.",
+      "source": "Hotel Dive",
+      "sourceUrl": "https://www.hoteldive.com/news/mews-series-d-300-million-funding/810338/",
+      "category": "Funding",
+      "publishedDate": "2026-01-22",
+      "tags": ["Mews", "PMS", "EQT Ventures", "Funding"]
+    },
+    {
+      "id": "canary-technologies-acquires-openkey-2026",
+      "title": "Canary Technologies Acquires Mobile Key Pioneer OpenKey",
+      "summary": "Canary Technologies acquired the assets of OpenKey, one of the earliest mobile-key providers for hotels, resorts and casinos, in a deal finalized in January with undisclosed terms. The acquisition expands Canary's Mobile Key coverage across more door-lock models as it builds out its AI-powered guest management platform.",
+      "source": "PhocusWire",
+      "sourceUrl": "https://www.phocuswire.com/canary-technologies-acquires-openkey",
+      "category": "M&A",
+      "publishedDate": "2026-02-03",
+      "tags": ["Canary Technologies", "OpenKey", "Mobile Key", "Hotel Tech"]
+    },
+    {
+      "id": "hilton-navan-direct-connect-2026",
+      "title": "Hilton and Navan to Co-Create Hotel-TMC Direct Connect",
+      "summary": "Hilton and corporate travel platform Navan announced a direct booking connection that bypasses traditional distribution intermediaries, giving Hilton more control over how its rates are retailed to corporate travelers. The tie-up is an early step in a broader push to modernize business-travel hotel booking.",
+      "source": "Skift",
+      "sourceUrl": "https://skift.com/2026/07/07/hilton-opens-direct-line-to-navan-cutting-out-corporate-travel-middlemen/",
+      "category": "Partnership",
+      "publishedDate": "2026-07-07",
+      "tags": ["Hilton", "Navan", "Corporate Travel", "Distribution"]
+    },
+    {
+      "id": "tripadvisor-sells-thefork-amex-2026",
+      "title": "Tripadvisor to Sell TheFork to American Express for $700 Million",
+      "summary": "Tripadvisor agreed to sell TheFork, its European restaurant reservation and management platform used by more than 50,000 restaurants across 11 countries, to American Express in an all-cash $700 million deal. The move follows a February 2026 strategic review and lets Tripadvisor focus on its Viator and Experiences business; closing is expected before year-end 2026.",
+      "source": "Skift",
+      "sourceUrl": "https://skift.com/2026/06/15/tripadvisor-sell-thefork-american-express/",
+      "category": "M&A",
+      "publishedDate": "2026-06-15",
+      "tags": ["Tripadvisor", "TheFork", "American Express", "Restaurant Tech"]
+    },
+    {
+      "id": "stay22-122-million-summit-partners-2026",
+      "title": "Stay22 Lands $122 Million Growth Investment From Summit Partners",
+      "summary": "Montreal-based Stay22, which routes booking intent from travel creators, media publishers and event organizers to OTAs including Booking.com, Expedia Group and Tripadvisor, raised a $122 million minority growth investment from Summit Partners. The all-equity deal lets founders retain control as the company expands beyond travel into broader creator-monetization infrastructure.",
+      "source": "PhocusWire",
+      "sourceUrl": "https://www.phocuswire.com/news/online/stay22-lands-122-million-dollar-investment",
+      "category": "Funding",
+      "publishedDate": "2026-02-25",
+      "tags": ["Stay22", "Affiliate Marketing", "OTA", "Funding"]
+    },
+    {
+      "id": "expedia-b2b-ai-toolkit-explore-2026",
+      "title": "Expedia Group B2B Introduces AI Toolkit and Intelligent Experience Platform",
+      "summary": "At its Explore 26 partner conference, Expedia Group B2B previewed a new AI toolkit and Intelligent Experience Platform that lets partners embed Expedia inventory into branded, agentic and conversational travel experiences. The company is also preparing a B2B Model Context Protocol server to let partner AI agents connect directly to its travel inventory.",
+      "source": "Skift",
+      "sourceUrl": "https://skift.com/2026/05/21/expedia-to-launch-agentic-ai-tools-for-b2b-partners/",
+      "category": "Product Launch",
+      "publishedDate": "2026-05-19",
+      "tags": ["Expedia Group", "AI", "MCP", "B2B"]
+    },
+    {
+      "id": "lufthansa-gds-surcharge-hike-ndc-2026",
+      "title": "Lufthansa Group to Raise GDS Surcharge Again as ITA Airways Joins NDC Fold",
+      "summary": "Lufthansa, Austrian Airlines, SWISS, Brussels Airlines and Air Dolomiti raised their Distribution Cost Charge to $22 per ticket on Amadeus effective May 5, 2026, while integrating ITA Airways into the group's NDC ecosystem. Executives framed the higher surcharge as an incentive to push travel advisors toward Lufthansa's NDC Partner Program, targeting 75% of bookings through NDC or direct channels.",
+      "source": "Travel Market Report",
+      "sourceUrl": "https://www.travelmarketreport.com/air/articles/lufthansa-group-to-raise-gds-surcharge-again-in-may-as-ita-joins-ndc-fold",
+      "category": "Industry Trend",
+      "publishedDate": "2026-04-06",
+      "tags": ["Lufthansa Group", "NDC", "GDS", "Distribution"]
+    },
+    {
+      "id": "air-europa-gds-fee-ndc-shift-2026",
+      "title": "Air Europa Adds GDS Booking Fee as It Shifts to NDC Distribution",
+      "summary": "Air Europa will charge a Distribution Channel Fee of about €12-€14.50 per one-way ticket on bookings made through Global Distribution Systems starting July 1, 2026, while its own NDC channel remains unaffected. The airline also confirmed its content will no longer be available through Sabre after talks with the GDS did not lead to an agreement.",
+      "source": "Business Travel News Europe",
+      "sourceUrl": "https://www.businesstravelnewseurope.com/TMC-Distribution/Air-Europa-to-add-GDS-fee-and-plans-Sabre-exit",
+      "category": "Industry Trend",
+      "publishedDate": "2026-04-24",
+      "tags": ["Air Europa", "NDC", "GDS", "Sabre"]
+    },
+    {
+      "id": "etias-q4-2026-launch-reminder",
+      "title": "ETIAS Travel Authorization Still on Track for Q4 2026 Launch",
+      "summary": "The EU's European Travel Information and Authorisation System, which will require visa-exempt visitors to the Schengen Area to obtain a low-cost pre-travel authorization, remains scheduled to enter into force in the fourth quarter of 2026 following years of delay. The European Commission has committed to announcing the exact start date at least six months in advance.",
+      "source": "Family Travel Association",
+      "sourceUrl": "https://www.familytravel.org/2026/06/15/dont-forget-etias-scheduled-to-go-into-effect-q4-of-2026/",
+      "category": "Regulation",
+      "publishedDate": "2026-06-15",
+      "tags": ["ETIAS", "EU", "Border Tech", "Regulation"]
+    },
+    {
+      "id": "airbnb-earnings-protection-insurance-2026",
+      "title": "Airbnb Launches Earnings Protection Insurance for US Hosts",
+      "summary": "Airbnb introduced an optional Earnings Protection plan, developed with insurer MIC Global, that combines parametric payouts for hurricanes, earthquakes and wildfires with a traditional claims process for other interruptions. The plan launched in 45 US states for hosts with five or fewer listings and at least a year of hosting history, with nationwide availability planned for early 2027.",
+      "source": "Investing.com",
+      "sourceUrl": "https://www.investing.com/news/stock-market-news/airbnb-launches-earnings-protection-insurance-for-us-hosts-93CH-4724740",
+      "category": "Product Launch",
+      "publishedDate": "2026-06-03",
+      "tags": ["Airbnb", "Insurance", "Hosts", "Short-Term Rental"]
+    },
+    {
+      "id": "air-india-booking-com-partnership-2026",
+      "title": "Air India Partners With Booking.com, Joining Airlines Selling Hotels",
+      "summary": "Air India and Booking.com launched a co-branded accommodation platform giving Air India customers access to Booking.com's global listings alongside flight bookings. Maharaja Club loyalty members earn points on hotel stays booked through the platform, with launch discounts of up to 15% running June 22 to July 21, 2026.",
+      "source": "Skift",
+      "sourceUrl": "https://skift.com/2026/06/23/air-india-partners-with-booking-com-joining-airlines-selling-hotels-not-just-seats/",
+      "category": "Partnership",
+      "publishedDate": "2026-06-23",
+      "tags": ["Air India", "Booking.com", "Airline", "Loyalty"]
+    },
+    {
+      "id": "amadeus-sabre-competition-sabremosaic-2026",
+      "title": "Amadeus Widens Its Travel Tech Domain as Sabre Fight Escalates",
+      "summary": "Following its Q1 2026 earnings, Amadeus argued its competitive position extends well beyond airline distribution into retailing, biometric identity, AI, hospitality and payments, a day after Sabre's CEO accused it of holding a 'dominant monopoly position.' Sabre has countered with SabreMosaic Travel Marketplace, an AI-agentic platform supporting automated rebooking during disruptions.",
+      "source": "Skift",
+      "sourceUrl": "https://skift.com/2026/05/11/amadeus-q1-2026-earnings-sabre-ai/",
+      "category": "Industry Trend",
+      "publishedDate": "2026-05-11",
+      "tags": ["Amadeus", "Sabre", "GDS", "AI"]
+    },
+    {
+      "id": "weroad-58-million-series-c-airbnb-2026",
+      "title": "Airbnb Leads $58 Million WeRoad Funding for US Expansion",
+      "summary": "Italian group-adventure travel company WeRoad closed a €49 million ($58 million) Series C round led by Airbnb, which takes roughly a 10% stake and a board seat. The funding, which brings WeRoad's total raised to €85 million, backs its first expansion outside Europe after generating €130 million in 2025 revenue, up 30% year over year.",
+      "source": "Skift",
+      "sourceUrl": "https://skift.com/2026/05/27/airbnb-leads-58-million-weroad-funding-for-u-s-expansion/",
+      "category": "Funding",
+      "publishedDate": "2026-05-27",
+      "tags": ["WeRoad", "Airbnb", "Group Travel", "Funding"]
+    },
+    {
+      "id": "kindred-125-million-funding-2026",
+      "title": "Home-Swap Startup Kindred Raises $125 Million",
+      "summary": "Kindred, a non-commercial home-swapping platform, raised $125 million combining a $40 million Series B co-led by NEA and Figma CEO Dylan Field with an $85 million Series C led by Index Ventures. Unlike short-term rental marketplaces, over 90% of homes on Kindred are members' primary residences and nights cannot be bought or sold.",
+      "source": "Forbes",
+      "sourceUrl": "https://www.forbes.com/sites/francescawalton/2026/02/03/home-swap-startup-kindred-raises-125-million-in-fresh-funding-as-travelers-seek-creative-ways-to-save-money/",
+      "category": "Funding",
+      "publishedDate": "2026-02-03",
+      "tags": ["Kindred", "Home Swapping", "Alternative Accommodation", "Funding"]
+    },
+    {
+      "id": "heymax-11-million-series-a-2026",
+      "title": "HeyMax Secures $11 Million Series A to Expand Travel Loyalty Platform Across APAC",
+      "summary": "Singapore-based loyalty platform HeyMax raised an $11 million Series A led by Peak XV Partners, with participation from Agoda co-founder Rob Rosenstein. The funding will build AI-empowered rewards tools as HeyMax expands its Max Miles loyalty currency from Singapore and Hong Kong into Japan, Taiwan and Australia by the end of 2026.",
+      "source": "PhocusWire",
+      "sourceUrl": "https://www.phocuswire.com/heymax-loyalty-rewards-funding-series-a",
+      "category": "Funding",
+      "publishedDate": "2026-01-28",
+      "tags": ["HeyMax", "Loyalty", "APAC", "Funding"]
+    },
+    {
+      "id": "mews-siteminder-channel-manager-partnership-2026",
+      "title": "Mews and SiteMinder Build Native Channel Manager Partnership",
+      "summary": "Mews launched an embedded Mews Channel Manager built through a native, API-level technical partnership with SiteMinder, consolidating more than 400 OTA connections into a single contract and billing line for hoteliers. The companies say the move eliminates the 'Frankenstack' of disconnected point solutions common in hotel distribution.",
+      "source": "Hospitality Technology",
+      "sourceUrl": "https://hospitalitytech.com/news-briefs/2026-05-27?article=mews-and-siteminder-build-native-api-level-partnership-eliminate-channel-management-silos",
+      "category": "Partnership",
+      "publishedDate": "2026-05-27",
+      "tags": ["Mews", "SiteMinder", "Channel Manager", "PMS"]
+    },
+    {
+      "id": "tsa-touchless-id-expansion-2026",
+      "title": "TSA to Expand Touchless Facial Recognition ID to 65 Airports",
+      "summary": "The TSA announced it will expand its opt-in PreCheck Touchless ID biometric facial-matching program from 15 airports to as many as 65 US airports by spring 2026. Eligible PreCheck members can clear identity checks using facial matching instead of a physical ID, though manual checks remain available for travelers who decline to participate.",
+      "source": "The Washington Post",
+      "sourceUrl": "https://www.washingtonpost.com/travel/2026/01/26/tsa-precheck-facial-scanning-airports/",
+      "category": "Regulation",
+      "publishedDate": "2026-01-26",
+      "tags": ["TSA", "Facial Recognition", "Airport Security", "Biometrics"]
+    },
+    {
+      "id": "amadeus-idemia-acquisition-2026",
+      "title": "Amadeus to Acquire Biometrics Firm IDEMIA Public Security for €1.2 Billion",
+      "summary": "Amadeus agreed to acquire IDEMIA Public Security, a French biometrics and identity-services provider, for up to €1.35 billion including a performance-based earnout, following a competitive bid process. The deal, expected to close in mid-2027, follows Amadeus's February 2026 acquisition of AI corporate-travel startup SkyLink and builds on its 2024 purchase of Vision-Box.",
+      "source": "PhocusWire",
+      "sourceUrl": "https://www.phocuswire.com/news/technology/amadeus-acquires-idemia-biometrics-identity-technology",
+      "category": "M&A",
+      "publishedDate": "2026-04-29",
+      "tags": ["Amadeus", "IDEMIA", "Biometrics", "Identity"]
+    },
+    {
+      "id": "marriott-ask-bonvoy-ai-search-2026",
+      "title": "Marriott Begins Beta Rollout of AI-Powered 'Ask Bonvoy' Search",
+      "summary": "Marriott International started beta testing Ask Bonvoy, a natural-language search tool that lets travelers query its hotel portfolio by trip intent, amenities and destination before handing off to the company's existing booking flow. The feature launched to a subset of US Bonvoy members and new users, with global expansion planned later in 2026.",
+      "source": "PhocusWire",
+      "sourceUrl": "https://www.phocuswire.com/travel-tech-news-briefs/2026/june-26",
+      "category": "Product Launch",
+      "publishedDate": "2026-06-26",
+      "tags": ["Marriott", "AI Search", "Bonvoy", "Hotel Tech"]
+    },
+    {
+      "id": "rategain-duetto-partnership-2026",
+      "title": "RateGain and Duetto Partner to Power Autonomous, Real-Time Revenue Optimization",
+      "summary": "RateGain Travel Technologies and Duetto announced a partnership combining RateGain's AI-powered channel manager with Duetto's Revenue & Profit Operating System to enable automated, real-time rate updates across distribution channels. RateGain was named a Preferred Partner of Duetto, and shares of RateGain rose following the announcement.",
+      "source": "TradingView (Reuters)",
+      "sourceUrl": "https://www.tradingview.com/news/reuters.com,2026:newsml_FWN42N0TX:0-rategain-travel-technologies-partners-with-duetto-for-autonomous-real-time-revenue-optimization/",
+      "category": "Partnership",
+      "publishedDate": "2026-06-16",
+      "tags": ["RateGain", "Duetto", "Revenue Management", "AI"]
+    },
+    {
+      "id": "turkey-travel-tech-hub-2026",
+      "title": "Turkey Quietly Built One of the World's Most Complete Travel Tech Stacks",
+      "summary": "Skift reporting finds Turkey has become a significant, under-the-radar travel-tech hub, drawing more than 60 million visitors annually post-pandemic and generating roughly $60 billion in yearly tourism revenue. The country has built a broad domestic technology stack spanning booking, payments and hospitality software that the global industry largely overlooks.",
+      "source": "Skift",
+      "sourceUrl": "https://skift.com/2026/07/03/turkey-quietly-built-one-of-the-worlds-most-complete-travel-tech-stacks/",
+      "category": "Industry Trend",
+      "publishedDate": "2026-07-03",
+      "tags": ["Turkey", "Travel Tech", "Tourism"]
+    },
+    {
+      "id": "amadeus-acquires-skylink-2026",
+      "title": "Amadeus Acquires SkyLink to Accelerate the Deployment of AI in Travel",
+      "summary": "Amadeus acquired SkyLink, a New York-based AI corporate-travel startup specializing in conversational orchestration and automation, for an undisclosed sum. SkyLink's technology lets travelers book and service flights and hotels conversationally through chat platforms, and the deal expands Amadeus's corporate-travel footprint in North America.",
+      "source": "Skift",
+      "sourceUrl": "https://skift.com/2026/02/25/amadeus-acquired-skylink-to-infuse-its-products-with-conversational-ai/",
+      "category": "M&A",
+      "publishedDate": "2026-02-25",
+      "tags": ["Amadeus", "SkyLink", "AI", "Corporate Travel"]
+    },
+    {
+      "id": "marriott-q1-2026-earnings",
+      "title": "Marriott Tops Q1 2026 Guidance, Lifts Full-Year RevPAR Outlook",
+      "summary": "Marriott International reported worldwide Q1 2026 RevPAR growth of 4.2%, beating the high end of its own guidance, driven by both US & Canada and international demand. The company raised its full-year 2026 global RevPAR guidance to 2%-3% growth and increased its adjusted EPS outlook to $11.38-$11.63.",
+      "source": "Hotel Dive",
+      "sourceUrl": "https://www.hoteldive.com/news/marriott-q1-2026-earnings/819442/",
+      "category": "Earnings",
+      "publishedDate": "2026-05-06",
+      "tags": ["Marriott", "Earnings", "RevPAR"]
+    }
+  ]
+}

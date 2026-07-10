@@ -21,6 +21,14 @@ export default function Footer() {
               The directory for discovering travel technology providers across every corner of
               the industry.
             </p>
+            <div className="mt-4 flex gap-4">
+              <Link to="/news" className="text-sm font-medium text-slate-400 hover:text-white">
+                News
+              </Link>
+              <Link to="/events" className="text-sm font-medium text-slate-400 hover:text-white">
+                Events
+              </Link>
+            </div>
           </div>
           {columns.map((col, i) => (
             <div key={i}>

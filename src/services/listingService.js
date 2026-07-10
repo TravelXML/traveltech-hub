@@ -18,6 +18,11 @@ function loadCategoryData(dataFile) {
   return match ? match[1].default ?? match[1] : { listings: [] }
 }
 
+function loadDataFile(name) {
+  const match = Object.entries(dataModules).find(([path]) => path.endsWith(`/${name}.json`))
+  return match ? match[1].default ?? match[1] : null
+}
+
 /**
  * Returns the full category registry, each enriched with its live listing count.
  * Future API shape: GET /api/categories
@@ -66,6 +71,55 @@ export async function searchAll(query) {
     }
   }
   return results
+}
+
+/**
+ * Returns all travel news items, most recent first.
+ * Future API shape: GET /api/news
+ */
+export async function getNews() {
+  const data = loadDataFile('news')
+  const items = data?.items ?? []
+  return [...items].sort((a, b) => b.publishedDate.localeCompare(a.publishedDate))
+}
+
+/**
+ * Searches news items by title, summary and tags.
+ * Future API shape: GET /api/news?q=...
+ */
+export async function searchNews(query) {
+  const q = query.trim().toLowerCase()
+  const items = await getNews()
+  if (!q) return items
+  return items.filter((item) =>
+    [item.title, item.summary, ...(item.tags ?? [])].join(' ').toLowerCase().includes(q)
+  )
+}
+
+/**
+ * Returns all travel industry events, soonest first.
+ * Future API shape: GET /api/events
+ */
+export async function getEvents() {
+  const data = loadDataFile('events')
+  const items = data?.items ?? []
+  return [...items].sort((a, b) => a.startDate.localeCompare(b.startDate))
+}
+
+/**
+ * Searches events by name, host, description and location.
+ * Future API shape: GET /api/events?q=...
+ */
+export async function searchEvents(query) {
+  const q = query.trim().toLowerCase()
+  const items = await getEvents()
+  if (!q) return items
+  return items.filter((item) =>
+    [item.name, item.host, item.description, item.city, item.country]
+      .join(' ')
+      .toLowerCase()
+      .includes(q)
+  )
 }
 
 /**

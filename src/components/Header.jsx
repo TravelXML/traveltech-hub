@@ -46,6 +46,12 @@ export default function Header() {
               </div>
             )}
           </div>
+          <Link to="/news" className="text-sm font-medium text-slate-700 hover:text-brand-600">
+            News
+          </Link>
+          <Link to="/events" className="text-sm font-medium text-slate-700 hover:text-brand-600">
+            Events
+          </Link>
         </nav>
 
         <div className="flex items-center gap-3">
@@ -81,6 +87,22 @@ export default function Header() {
                 {cat.name}
               </Link>
             ))}
+          </div>
+          <div className="mt-3 grid grid-cols-2 gap-1 border-t border-slate-100 pt-3">
+            <Link
+              to="/news"
+              className="rounded-lg px-3 py-2 text-center text-sm font-medium text-slate-700 hover:bg-slate-50"
+              onClick={() => setMobileOpen(false)}
+            >
+              News
+            </Link>
+            <Link
+              to="/events"
+              className="rounded-lg px-3 py-2 text-center text-sm font-medium text-slate-700 hover:bg-slate-50"
+              onClick={() => setMobileOpen(false)}
+            >
+              Events
+            </Link>
           </div>
           <Link
             to="/add-business"
