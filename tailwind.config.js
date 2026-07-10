@@ -45,6 +45,7 @@ export default {
         `hover:bg-${color}-600`,
         `hover:bg-${color}-700`,
         `hover:text-${color}-700`,
+        `hover:border-${color}-300`,
         `group-hover:text-${color}-700`,
       ]
     ),
