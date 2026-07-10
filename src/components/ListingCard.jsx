@@ -17,14 +17,19 @@ export default function ListingCard({ listing, color }) {
       <div className={`h-1.5 w-full bg-gradient-to-r ${theme.gradient}`} />
 
       <div className="flex flex-1 flex-col p-6">
-        <div className={`-m-6 mb-4 flex items-start gap-4 border-b border-slate-100 p-6 pb-4 ${theme.bg50}`}>
+        <div className={`relative -m-6 mb-4 flex items-start gap-4 border-b border-slate-100 p-6 pb-4 ${theme.bg50}`}>
           <span
             className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${theme.solid} font-display text-base font-bold text-white shadow-sm`}
           >
             {listing.logoInitials}
           </span>
-          <div className="min-w-0 flex-1">
-            <h3 className="font-display text-lg font-semibold text-slate-900">{listing.name}</h3>
+          <div className="min-w-0 flex-1 pr-16">
+            <h3
+              title={listing.name}
+              className="line-clamp-2 break-words font-display text-lg font-semibold leading-tight text-slate-900"
+            >
+              {listing.name}
+            </h3>
             <div className="mt-0.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-slate-600">
               <span className="flex items-center gap-1">
                 <MapPin size={13} className={theme.text} /> {listing.headquarters}
@@ -35,7 +40,7 @@ export default function ListingCard({ listing, color }) {
             </div>
           </div>
 
-          <div className="flex shrink-0 items-center gap-1">
+          <div className="absolute right-3 top-3 flex items-center gap-0.5">
             <button
               type="button"
               onClick={toggleLike}

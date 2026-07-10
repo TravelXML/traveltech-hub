@@ -16,7 +16,7 @@ export default function App() {
           <Route path="/add-business" element={<AddBusiness />} />
           {/* Every category route is a single path segment matching its
               config id (e.g. /pms, /hotel-aggregators), so one dynamic
-              route handles all 12 categories. */}
+              route handles every category in src/config/categories.js. */}
           <Route path="/:categoryId" element={<CategoryPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

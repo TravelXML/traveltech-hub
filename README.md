@@ -2,7 +2,7 @@
 
 A JustDial-style listing directory for the travel technology industry. Browse Property
 Management Systems, Central Reservation Systems, aggregators, channel managers, wholesalers,
-OTAs and more - search, filter and discover providers across 12 categories.
+OTAs and more - search, filter and discover providers across 20 categories.
 
 This is a **frontend demo with static data**, deliberately architected so it can be swapped to a
 real backend later with minimal changes (see [Swapping in a real backend](#swapping-in-a-real-backend)).
@@ -19,7 +19,7 @@ real backend later with minimal changes (see [Swapping in a real backend](#swapp
 ```
 src/
   config/
-    categories.js      # Central registry of the 12 categories (id, route, color theme, icon)
+    categories.js      # Central registry of all categories (id, route, color theme, icon)
     theme.js            # Maps a category's color name to Tailwind classes
   data/
     pms.json, crs.json, ...   # One JSON file per category, shaped like an API response

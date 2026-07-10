@@ -18,7 +18,9 @@ export default function Home() {
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="mb-10 text-center">
           <h2 className="font-display text-3xl font-bold text-slate-900">Browse by category</h2>
-          <p className="mt-2 text-slate-600">12 sections covering the full travel technology stack.</p>
+          <p className="mt-2 text-slate-600">
+            {categories.length} sections covering the full travel technology stack.
+          </p>
         </div>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {categories.map((category) => (

@@ -23,6 +23,9 @@ export default function CategoryCard({ category }) {
           {category.name}
         </h3>
       </div>
+      <div
+        className={`mt-4 h-px w-10 bg-gradient-to-r ${theme.gradient} transition-all duration-300 ease-out group-hover:w-full`}
+      />
       <p className="mt-3 flex-1 text-sm text-slate-600 line-clamp-3">{category.description}</p>
       <div className="mt-4 flex items-center justify-between">
         <span
