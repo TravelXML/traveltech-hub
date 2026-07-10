@@ -1,0 +1,613 @@
+{
+  "_comment": "Contact details (email, phone) are plausible placeholder-format examples for demo purposes only and must be verified before real-world use.",
+  "category": "hotel-guest-apps",
+  "listings": [
+    {
+      "id": "alice-guest-app",
+      "name": "ALICE",
+      "logoInitials": "AL",
+      "description": "ALICE, now part of Actabl, offers a guest-facing mobile app that lets hotel guests request services, chat with staff, and browse hotel amenities directly from their phone. It is tightly integrated with ALICE's staff operations platform so requests route instantly to the right department.",
+      "features": [
+        "Guest-facing mobile app",
+        "In-app service requests",
+        "Two-way guest chat",
+        "Amenity & upsell browsing",
+        "Staff operations integration",
+        "Multi-property support"
+      ],
+      "usps": [
+        "Deep operations-plus-app integration",
+        "Strong luxury & full-service hotel adoption",
+        "Now part of Actabl's platform"
+      ],
+      "products": [
+        "ALICE Guest App",
+        "ALICE Staff Operations"
+      ],
+      "targetMarkets": [
+        "North America",
+        "Global"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "sales@aliceplatform.com",
+      "phone": "+1-212-555-0138",
+      "website": "https://www.aliceplatform.com",
+      "headquarters": "New York, United States",
+      "founded": 2013
+    },
+    {
+      "id": "duve-guest-app",
+      "name": "Duve",
+      "logoInitials": "DV",
+      "description": "Duve provides a guest-facing web app that hotels and short-term rental operators share with guests for digital check-in, upsells, and browsing local recommendations. The app requires no download, opening directly from a link sent before arrival.",
+      "features": [
+        "No-download web app",
+        "Digital check-in flow",
+        "Upsell & upgrade browsing",
+        "Local recommendations",
+        "PMS integrations",
+        "Guest journey automation"
+      ],
+      "usps": [
+        "No-app-download guest experience",
+        "Combines app content with upsell revenue tools",
+        "Fast-growing Israeli/European client base"
+      ],
+      "products": [
+        "Duve Guest App",
+        "Duve Upsell"
+      ],
+      "targetMarkets": [
+        "Europe",
+        "Global"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "hello@duve.com",
+      "phone": "+972-3-555-0129",
+      "website": "https://www.duve.com",
+      "headquarters": "Tel Aviv, Israel",
+      "founded": 2016
+    },
+    {
+      "id": "canary-technologies-guest-app",
+      "name": "Canary Technologies",
+      "logoInitials": "CT",
+      "description": "Canary Technologies offers a guest-facing digital journey that includes contactless check-in, digital forms, and upsell offers accessible from a mobile browser without an app download. It is used by independent hotels and major hotel brands to modernize the guest arrival experience.",
+      "features": [
+        "Mobile guest journey (web-based)",
+        "Contactless check-in",
+        "Digital authorization forms",
+        "Upsell offer browsing",
+        "PMS integrations",
+        "Fraud prevention tools"
+      ],
+      "usps": [
+        "Strong enterprise hotel brand adoption",
+        "No-download web-based guest journey",
+        "Rapid North American growth"
+      ],
+      "products": [
+        "Canary Guest Journey",
+        "Canary Digital Authorization",
+        "Canary Upsell"
+      ],
+      "targetMarkets": [
+        "North America",
+        "Global"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "sales@canarytechnologies.com",
+      "phone": "+1-415-555-0173",
+      "website": "https://www.canarytechnologies.com",
+      "headquarters": "San Francisco, United States",
+      "founded": 2018
+    },
+    {
+      "id": "ivy-gomoment-app",
+      "name": "Ivy (GoMoment)",
+      "logoInitials": "IV",
+      "description": "Ivy, by GoMoment, provides both a chat-based concierge and companion guest app that lets hotel guests browse property information, request services, and get AI-assisted answers to common questions from their phone. It reduces front-desk workload while improving guest self-service.",
+      "features": [
+        "Guest concierge app",
+        "AI-assisted FAQ answers",
+        "In-app service requests",
+        "Property information browsing",
+        "PMS integrations",
+        "Multi-language support"
+      ],
+      "usps": [
+        "Strong AI/NLP-driven automation",
+        "Reduces front-desk workload measurably",
+        "Established Silicon Valley hospitality tech"
+      ],
+      "products": [
+        "Ivy Guest App",
+        "GoMoment Messaging"
+      ],
+      "targetMarkets": [
+        "North America"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "info@gomoment.com",
+      "phone": "+1-650-555-0163",
+      "website": "https://www.gomoment.com",
+      "headquarters": "Palo Alto, United States",
+      "founded": 2013
+    },
+    {
+      "id": "intelity",
+      "name": "Intelity",
+      "logoInitials": "IN",
+      "description": "Intelity provides a hotel guest engagement platform combining a branded mobile app, in-room tablets, and digital signage for full-service hotels and resorts. Guests use the app to check in, request services, order room service, and control in-room devices.",
+      "features": [
+        "Branded guest mobile app",
+        "In-room tablet integration",
+        "Mobile check-in/checkout",
+        "Room service & service requests",
+        "PMS integrations",
+        "Digital signage"
+      ],
+      "usps": [
+        "Deep in-room hardware integration",
+        "Strong luxury resort & casino adoption",
+        "Long track record since mid-2000s"
+      ],
+      "products": [
+        "Intelity ICE Guest App",
+        "Intelity In-Room Tablet"
+      ],
+      "targetMarkets": [
+        "North America",
+        "Global"
+      ],
+      "pricingModel": "Enterprise/Custom",
+      "priceRange": "$$$",
+      "email": "sales@intelity.com",
+      "phone": "+1-323-555-0147",
+      "website": "https://www.intelity.com",
+      "headquarters": "Los Angeles, United States",
+      "founded": 2004
+    },
+    {
+      "id": "nuvola-guest-app",
+      "name": "Nuvola",
+      "logoInitials": "NV",
+      "description": "Nuvola's guest-facing app lets hotel guests submit service and maintenance requests directly from their phone, which are then routed through Nuvola's staff operations platform to the right department. It is used alongside the company's broader housekeeping and maintenance tools.",
+      "features": [
+        "Guest request mobile app",
+        "Staff task routing",
+        "Housekeeping & maintenance integration",
+        "Preventive maintenance tracking",
+        "PMS integrations",
+        "Performance analytics"
+      ],
+      "usps": [
+        "Operations-plus-app combined platform",
+        "Strong Latin American & US hotel adoption",
+        "Detailed maintenance/housekeeping workflows"
+      ],
+      "products": [
+        "Nuvola Guest App",
+        "Nuvola Operations"
+      ],
+      "targetMarkets": [
+        "North America",
+        "LATAM"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "sales@hotelnuvola.com",
+      "phone": "+1-305-555-0146",
+      "website": "https://www.hotelnuvola.com",
+      "headquarters": "Miami, United States",
+      "founded": 2015
+    },
+    {
+      "id": "runtriz",
+      "name": "Runtriz",
+      "logoInitials": "RZ",
+      "description": "Runtriz provides a white-label mobile guest app platform for hotels, offering mobile check-in, keyless entry integration, and service requests branded to each property. It targets luxury and boutique hotels wanting a fully customized guest app experience.",
+      "features": [
+        "White-label branded guest app",
+        "Mobile check-in/checkout",
+        "Keyless entry integration",
+        "In-app service requests",
+        "Push notification marketing",
+        "PMS integrations"
+      ],
+      "usps": [
+        "Fully white-labeled, brand-customizable app",
+        "Strong luxury/boutique hotel positioning",
+        "Deep keyless entry partner integrations"
+      ],
+      "products": [
+        "Runtriz Guest App",
+        "Runtriz Mobile Key"
+      ],
+      "targetMarkets": [
+        "North America"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "sales@runtriz.com",
+      "phone": "+1-310-555-0159",
+      "website": "https://www.runtriz.com",
+      "headquarters": "Marina del Rey, United States",
+      "founded": 2011
+    },
+    {
+      "id": "zaplox-guest-app",
+      "name": "Zaplox",
+      "logoInitials": "ZP",
+      "description": "Zaplox provides a mobile guest app used by hotel chains for check-in, checkout, and keyless room entry, letting guests bypass the front desk entirely. Its app integrates with a hotel's PMS and door lock systems to deliver an end-to-end contactless arrival experience.",
+      "features": [
+        "Mobile check-in/checkout app",
+        "Digital key/keyless entry",
+        "In-app guest messaging",
+        "PMS integrations",
+        "Multi-language support",
+        "Contactless service requests"
+      ],
+      "usps": [
+        "End-to-end contactless guest journey",
+        "Strong European hotel group adoption",
+        "Deep lock system integrations"
+      ],
+      "products": [
+        "Zaplox Mobile App",
+        "Zaplox Mobile Key"
+      ],
+      "targetMarkets": [
+        "Europe",
+        "Global"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "info@zaplox.com",
+      "phone": "+46-46-555-0128",
+      "website": "https://www.zaplox.com",
+      "headquarters": "Lund, Sweden",
+      "founded": 2013
+    },
+    {
+      "id": "suitepad",
+      "name": "SuitePad",
+      "logoInitials": "SP",
+      "description": "SuitePad is a German company providing in-room tablets and a companion guest app used by hotels for room service ordering, service requests, and digital compendium information. Its tablets are widely installed in mid-market and upscale European hotels.",
+      "features": [
+        "In-room tablet devices",
+        "Digital hotel compendium",
+        "Room service ordering",
+        "Service request app",
+        "Advertising & upsell placements",
+        "Multi-language support"
+      ],
+      "usps": [
+        "Strong European in-room hardware footprint",
+        "Combines physical tablets with app content",
+        "Advertising-supported revenue model available"
+      ],
+      "products": [
+        "SuitePad Tablet",
+        "SuitePad Guest App"
+      ],
+      "targetMarkets": [
+        "Europe"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "info@suitepad.de",
+      "phone": "+49-30-555-0141",
+      "website": "https://www.suitepad.de",
+      "headquarters": "Berlin, Germany",
+      "founded": 2014
+    },
+    {
+      "id": "quore",
+      "name": "Quore",
+      "logoInitials": "QR",
+      "description": "Quore is a US-based hotel operations platform with guest-facing app components that let guests submit requests which are then tracked and assigned to staff through Quore's operations dashboard. It is widely used by franchised hotels across major US brands.",
+      "features": [
+        "Guest request submission",
+        "Staff task assignment & tracking",
+        "Preventive maintenance module",
+        "Inspection checklists",
+        "PMS integrations",
+        "Multi-property reporting"
+      ],
+      "usps": [
+        "Very wide franchise hotel adoption in the US",
+        "Combines guest requests with deep operations tools",
+        "Long-standing operations platform since 2004"
+      ],
+      "products": [
+        "Quore Guest Requests",
+        "Quore Operations"
+      ],
+      "targetMarkets": [
+        "North America"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "sales@quore.com",
+      "phone": "+1-615-555-0136",
+      "website": "https://www.quore.com",
+      "headquarters": "Franklin, United States",
+      "founded": 2004
+    },
+    {
+      "id": "touch-stay-guest-app",
+      "name": "Touch Stay",
+      "logoInitials": "TS",
+      "description": "Touch Stay provides digital guidebooks accessible as a web app that hotels and vacation rental operators share with guests for arrival instructions, house rules, and local recommendations. It requires no app store download, opening instantly from a shared link or QR code.",
+      "features": [
+        "Digital guidebook web app",
+        "QR code / link access",
+        "Multi-language content",
+        "PMS/booking integration",
+        "Offline access",
+        "Analytics on guide engagement"
+      ],
+      "usps": [
+        "Focused on self-service guest information",
+        "Strong vacation rental and B&B adoption",
+        "Simple, no-app-download guest experience"
+      ],
+      "products": [
+        "Touch Stay Digital Guidebook",
+        "Touch Stay App"
+      ],
+      "targetMarkets": [
+        "Europe",
+        "Global"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$",
+      "email": "hello@touchstay.com",
+      "phone": "+44-1225-555-0169",
+      "website": "https://www.touchstay.com",
+      "headquarters": "Bath, United Kingdom",
+      "founded": 2015
+    },
+    {
+      "id": "guestjoy-app",
+      "name": "GuestJoy",
+      "logoInitials": "GJ",
+      "description": "GuestJoy's guest-facing digital directory and app lets hotel guests browse hotel services, order upgrades, and access property information from their phone before and during their stay. It ties into GuestJoy's broader CRM and upsell messaging platform.",
+      "features": [
+        "Digital guest directory",
+        "In-app upsell browsing",
+        "Pre-arrival check-in prompts",
+        "Multi-language content",
+        "PMS integrations",
+        "CRM integration"
+      ],
+      "usps": [
+        "Strong upsell-driven app content",
+        "Simple PMS-triggered automation",
+        "Popular with independent European hotels"
+      ],
+      "products": [
+        "GuestJoy App",
+        "GuestJoy CRM"
+      ],
+      "targetMarkets": [
+        "Europe"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$",
+      "email": "hello@guestjoy.com",
+      "phone": "+372-555-0119",
+      "website": "https://www.guestjoy.com",
+      "headquarters": "Tallinn, Estonia",
+      "founded": 2013
+    },
+    {
+      "id": "akia-guest-app",
+      "name": "Akia",
+      "logoInitials": "AK",
+      "description": "Akia offers a guest-facing digital journey accessible via SMS link or web app, letting hotel guests complete check-in, browse upsell offers, and request services from their phone. Hotels use Akia's dashboard to manage all guest app interactions in one inbox.",
+      "features": [
+        "Web-based guest journey app",
+        "Digital check-in flow",
+        "Upsell offer browsing",
+        "AI-assisted auto-responses",
+        "PMS integrations",
+        "Staff inbox dashboard"
+      ],
+      "usps": [
+        "Multi-channel access beyond native app",
+        "AI-assisted automation",
+        "Growing North American hotel client base"
+      ],
+      "products": [
+        "Akia Guest App",
+        "Akia Upsell"
+      ],
+      "targetMarkets": [
+        "North America"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "sales@akia.com",
+      "phone": "+1-650-555-0146",
+      "website": "https://www.akia.com",
+      "headquarters": "Santa Clara, United States",
+      "founded": 2016
+    },
+    {
+      "id": "whistle-guest-app",
+      "name": "Whistle",
+      "logoInitials": "WM",
+      "description": "Whistle, now part of Actabl, offers a guest-facing digital experience reachable via text link that lets guests check in, request services, and browse property information without downloading a dedicated app. It integrates with the hotel's PMS to personalize content per guest.",
+      "features": [
+        "Web-based guest experience",
+        "Contactless check-in prompts",
+        "Service request submission",
+        "Upsell offer browsing",
+        "PMS integrations",
+        "Staff task routing"
+      ],
+      "usps": [
+        "Wide PMS integration coverage",
+        "Now part of Actabl's operations suite",
+        "Strong North American hotel adoption"
+      ],
+      "products": [
+        "Whistle Guest Experience",
+        "Whistle Contactless"
+      ],
+      "targetMarkets": [
+        "North America",
+        "Global"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "sales@whistle.actabl.com",
+      "phone": "+1-305-555-0117",
+      "website": "https://www.actabl.com",
+      "headquarters": "Miami, United States",
+      "founded": 2014
+    },
+    {
+      "id": "volara-guest-app",
+      "name": "Volara",
+      "logoInitials": "VL",
+      "description": "Volara extends hotel guest engagement beyond voice assistants into companion app and messaging channels, letting guests make requests that are automatically routed to hotel staff and systems. It connects smart speakers, chat, and app-based touchpoints into one guest service layer.",
+      "features": [
+        "Voice + app guest engagement",
+        "Automated request routing",
+        "PMS/service system integration",
+        "Analytics on guest requests",
+        "Multi-language support",
+        "Multi-property deployment"
+      ],
+      "usps": [
+        "Pioneer of voice-based hotel guest service",
+        "Combines voice, app, and text channels",
+        "Enterprise hotel brand adoption"
+      ],
+      "products": [
+        "Volara Voice",
+        "Volara App Integration"
+      ],
+      "targetMarkets": [
+        "North America",
+        "Global"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "sales@volara.io",
+      "phone": "+1-713-555-0122",
+      "website": "https://www.volara.io",
+      "headquarters": "Houston, United States",
+      "founded": 2016
+    },
+    {
+      "id": "criton",
+      "name": "Criton",
+      "logoInitials": "CR",
+      "description": "Criton is a UK-based white-label hotel app platform that lets hotels and hospitality groups launch a branded guest app for service requests, upsells, and digital information without building custom software in-house. It targets independent hotels and small-to-mid groups.",
+      "features": [
+        "White-label branded guest app",
+        "In-app service requests",
+        "Digital compendium & upsells",
+        "Push notification marketing",
+        "PMS integrations",
+        "Multi-property management"
+      ],
+      "usps": [
+        "Affordable white-label app for independents",
+        "No in-house development required",
+        "Growing UK/European hotel client base"
+      ],
+      "products": [
+        "Criton Guest App",
+        "Criton CMS"
+      ],
+      "targetMarkets": [
+        "Europe"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "hello@criton.com",
+      "phone": "+44-1273-555-0152",
+      "website": "https://www.criton.com",
+      "headquarters": "Brighton, United Kingdom",
+      "founded": 2015
+    },
+    {
+      "id": "nonius",
+      "name": "Nonius",
+      "logoInitials": "NO",
+      "description": "Nonius is a Portuguese hospitality technology company providing in-room entertainment, guest Wi-Fi, and a guest app used by hotels for content casting, service requests, and information access. Its solutions are widely deployed across European and international hotel groups.",
+      "features": [
+        "Guest mobile app",
+        "In-room casting & entertainment",
+        "Guest Wi-Fi (HSIA)",
+        "Service request submission",
+        "PMS integrations",
+        "Digital signage"
+      ],
+      "usps": [
+        "Broad in-room technology portfolio",
+        "Long-established European hospitality tech vendor",
+        "Strong international hotel group adoption"
+      ],
+      "products": [
+        "Nonius Guest App",
+        "Nonius Cast",
+        "Nonius HSIA"
+      ],
+      "targetMarkets": [
+        "Europe",
+        "Global"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "info@nonius.com",
+      "phone": "+351-22-555-0164",
+      "website": "https://www.nonius.com",
+      "headquarters": "Porto, Portugal",
+      "founded": 1996
+    },
+    {
+      "id": "vamoos",
+      "name": "Vamoos",
+      "logoInitials": "VM",
+      "description": "Vamoos is a UK-based digital travel app used by hotels, tour operators, and travel agents to deliver itineraries, documents, and destination information to guests on their phone. It replaces printed itineraries with an offline-accessible app experience.",
+      "features": [
+        "Digital itinerary delivery",
+        "Offline document access",
+        "Push notifications",
+        "Destination guides & maps",
+        "White-label branding",
+        "Travel agent/operator dashboard"
+      ],
+      "usps": [
+        "Strong travel agency & tour operator adoption",
+        "Offline-first app design",
+        "Established UK travel-tech provider"
+      ],
+      "products": [
+        "Vamoos App",
+        "Vamoos Itinerary Platform"
+      ],
+      "targetMarkets": [
+        "Europe",
+        "Global"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$",
+      "email": "info@vamoos.com",
+      "phone": "+44-1483-555-0173",
+      "website": "https://www.vamoos.com",
+      "headquarters": "Guildford, United Kingdom",
+      "founded": 2013
+    }
+  ]
+}

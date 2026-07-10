@@ -1,0 +1,631 @@
+{
+  "_comment": "Contact details (email, phone) are plausible placeholder-format examples for demo purposes only and must be verified before real-world use.",
+  "category": "revenue-management",
+  "listings": [
+    {
+      "id": "ideas-revenue-solutions",
+      "name": "IDeaS Revenue Solutions",
+      "logoInitials": "ID",
+      "description": "IDeaS, a SAS company, provides revenue management software used by hotels, casinos, and resorts worldwide to forecast demand and optimize room pricing. Its systems combine machine learning-driven forecasting with configurable business rules for both independents and large chains.",
+      "features": [
+        "Demand forecasting",
+        "Automated rate optimization",
+        "Group pricing evaluation",
+        "Business intelligence dashboards",
+        "Multi-property revenue control",
+        "Rate parity monitoring"
+      ],
+      "usps": [
+        "Deep machine-learning forecasting pedigree",
+        "Trusted by major global hotel brands",
+        "Backed by SAS analytics infrastructure"
+      ],
+      "products": [
+        "IDeaS G3 RMS",
+        "IDeaS SAS Revenue Management",
+        "IDeaS Advantage"
+      ],
+      "targetMarkets": [
+        "Global",
+        "North America",
+        "Europe",
+        "APAC"
+      ],
+      "pricingModel": "Enterprise/Custom",
+      "priceRange": "$$$",
+      "email": "sales@ideas.com",
+      "phone": "+1-952-555-0144",
+      "website": "https://www.ideas.com",
+      "headquarters": "Bloomington, United States",
+      "founded": 1989
+    },
+    {
+      "id": "duetto",
+      "name": "Duetto",
+      "logoInitials": "DT",
+      "description": "Duetto is a cloud revenue management platform used by hotels and casino resorts to set pricing across rooms, group business, and function space. Its GameChanger product applies open-pricing analytics that update rates continuously based on demand signals.",
+      "features": [
+        "Open pricing engine",
+        "Demand forecasting",
+        "Group & catering pricing (BlockBuster)",
+        "Business intelligence dashboards",
+        "Rate distribution automation",
+        "Cloud-based analytics"
+      ],
+      "usps": [
+        "Open-pricing model beyond fixed rate tiers",
+        "Strong casino resort adoption",
+        "Modern cloud-native architecture"
+      ],
+      "products": [
+        "Duetto GameChanger",
+        "Duetto BlockBuster",
+        "Duetto ScoreBoard"
+      ],
+      "targetMarkets": [
+        "Global",
+        "North America",
+        "Europe",
+        "APAC"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$$",
+      "email": "sales@duettocloud.com",
+      "phone": "+1-415-555-0133",
+      "website": "https://www.duettocloud.com",
+      "headquarters": "San Francisco, United States",
+      "founded": 2012
+    },
+    {
+      "id": "atomize",
+      "name": "Atomize",
+      "logoInitials": "AT",
+      "description": "Atomize is a Swedish revenue management system that automates hotel room pricing using real-time market and booking data. It targets independent and mid-sized hotel groups that want dynamic pricing without a dedicated in-house revenue team.",
+      "features": [
+        "Automated dynamic pricing",
+        "Real-time rate updates",
+        "Competitor rate tracking",
+        "PMS & channel manager integrations",
+        "Forecasting dashboard",
+        "Rate strategy alerts"
+      ],
+      "usps": [
+        "Highly automated, low-touch pricing",
+        "Fast implementation for independents",
+        "Strong Nordic/European base"
+      ],
+      "products": [
+        "Atomize RMS",
+        "Atomize Group Pricing"
+      ],
+      "targetMarkets": [
+        "Europe",
+        "Global"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "hello@atomize.com",
+      "phone": "+46-31-555-0119",
+      "website": "https://www.atomize.com",
+      "headquarters": "Gothenburg, Sweden",
+      "founded": 2016
+    },
+    {
+      "id": "pricelabs",
+      "name": "PriceLabs",
+      "logoInitials": "PL",
+      "description": "PriceLabs is a dynamic pricing and revenue management tool used by vacation rental managers and independent hotels to automatically adjust nightly rates based on demand, seasonality, and market comps. It integrates with major property management and channel management systems.",
+      "features": [
+        "Dynamic pricing algorithms",
+        "Market comp & demand data",
+        "Customizable pricing rules",
+        "Minimum stay optimization",
+        "PMS integrations",
+        "Portfolio analytics dashboard"
+      ],
+      "usps": [
+        "Deep vacation rental market focus",
+        "Wide PMS/channel integration coverage",
+        "Granular customization of pricing rules"
+      ],
+      "products": [
+        "PriceLabs Dynamic Pricing",
+        "PriceLabs Revenue Analytics"
+      ],
+      "targetMarkets": [
+        "Global",
+        "North America",
+        "Europe"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "support@pricelabs.co",
+      "phone": "+1-773-555-0128",
+      "website": "https://www.pricelabs.co",
+      "headquarters": "Chicago, United States",
+      "founded": 2014
+    },
+    {
+      "id": "beonx-beonprice",
+      "name": "BEONx (Beonprice)",
+      "logoInitials": "BX",
+      "description": "BEONx, formerly Beonprice, is a Spanish revenue management platform that combines pricing automation with competitive intelligence for independent hotels and small chains. It emphasizes explainable pricing recommendations backed by market segmentation data.",
+      "features": [
+        "Automated rate recommendations",
+        "Competitive rate intelligence",
+        "Demand segmentation",
+        "Forecasting dashboard",
+        "Channel & PMS integrations",
+        "Business intelligence reporting"
+      ],
+      "usps": [
+        "Strong Spanish/LATAM hotel base",
+        "Explainable AI pricing model",
+        "Combines BI with revenue automation"
+      ],
+      "products": [
+        "BEONx RMS",
+        "BEONx Business Intelligence"
+      ],
+      "targetMarkets": [
+        "Europe",
+        "LATAM"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "info@beonx.com",
+      "phone": "+34-923-555-0146",
+      "website": "https://www.beonx.com",
+      "headquarters": "Salamanca, Spain",
+      "founded": 2014
+    },
+    {
+      "id": "roompricegenie",
+      "name": "RoomPriceGenie",
+      "logoInitials": "RG",
+      "description": "RoomPriceGenie is a Liechtenstein-based revenue management tool aimed at small and mid-sized independent hotels that lack a dedicated revenue manager. It automates day-to-day pricing decisions with simple override controls for hoteliers who want light-touch involvement.",
+      "features": [
+        "Automated daily pricing",
+        "Simple manual override controls",
+        "Competitor rate monitoring",
+        "PMS integrations",
+        "Performance dashboard",
+        "Seasonal strategy templates"
+      ],
+      "usps": [
+        "Designed for hoteliers without RM expertise",
+        "Fast onboarding and simple UI",
+        "Growing European independent base"
+      ],
+      "products": [
+        "RoomPriceGenie RMS",
+        "RoomPriceGenie Dashboard"
+      ],
+      "targetMarkets": [
+        "Europe",
+        "Global"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$",
+      "email": "hello@roompricegenie.com",
+      "phone": "+423-555-0117",
+      "website": "https://www.roompricegenie.com",
+      "headquarters": "Triesen, Liechtenstein",
+      "founded": 2017
+    },
+    {
+      "id": "infor-ezrms",
+      "name": "Infor EzRMS",
+      "logoInitials": "EZ",
+      "description": "Infor EzRMS is a revenue management system used by hotel groups to forecast demand and optimize pricing across room types and distribution channels. Originally developed as EasyRMS before being acquired by Infor, it integrates with Infor's broader hospitality software suite.",
+      "features": [
+        "Demand forecasting",
+        "Automated rate recommendations",
+        "Group displacement analysis",
+        "Integration with Infor HMS",
+        "Multi-property reporting",
+        "Channel rate distribution"
+      ],
+      "usps": [
+        "Deep integration with Infor's hospitality suite",
+        "Suited to multi-property groups",
+        "Long forecasting engine track record"
+      ],
+      "products": [
+        "Infor EzRMS",
+        "Infor HMS"
+      ],
+      "targetMarkets": [
+        "Global",
+        "North America",
+        "APAC"
+      ],
+      "pricingModel": "Enterprise/Custom",
+      "priceRange": "$$$",
+      "email": "hospitality@infor.com",
+      "phone": "+1-646-555-0155",
+      "website": "https://www.infor.com/industries/hospitality",
+      "headquarters": "New York, United States",
+      "founded": 1996
+    },
+    {
+      "id": "pace-revenue",
+      "name": "Pace Revenue",
+      "logoInitials": "PC",
+      "description": "Pace Revenue is an Australian revenue management platform that gives independent hotels and small groups automated pricing recommendations alongside forecasting and reporting tools. It is designed to be more accessible than legacy enterprise RMS products.",
+      "features": [
+        "Automated pricing recommendations",
+        "Demand forecasting",
+        "Performance benchmarking",
+        "PMS integrations",
+        "Alerts & rate strategy tools",
+        "Reporting dashboard"
+      ],
+      "usps": [
+        "Approachable UI for non-specialists",
+        "Strong APAC independent hotel base",
+        "Competitive subscription pricing"
+      ],
+      "products": [
+        "Pace RMS",
+        "Pace Revenue Analytics"
+      ],
+      "targetMarkets": [
+        "APAC",
+        "Global"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "hello@pacerevenue.com",
+      "phone": "+61-3-555-0162",
+      "website": "https://www.pacerevenue.com",
+      "headquarters": "Melbourne, Australia",
+      "founded": 2018
+    },
+    {
+      "id": "optii-solutions",
+      "name": "Optii Solutions",
+      "logoInitials": "OP",
+      "description": "Optii Solutions provides operations and labor optimization software that helps hotels align housekeeping and staffing resources with forecasted occupancy and revenue targets. It bridges revenue forecasts with real-time operational execution to reduce labor cost per occupied room.",
+      "features": [
+        "Housekeeping & labor optimization",
+        "Occupancy-based staff scheduling",
+        "Real-time task management",
+        "Forecast-linked planning",
+        "Mobile staff app",
+        "Performance analytics"
+      ],
+      "usps": [
+        "Links revenue forecasts to labor execution",
+        "Reduces cost per occupied room",
+        "Used by major global hotel brands"
+      ],
+      "products": [
+        "Optii Resolve",
+        "Optii Insights"
+      ],
+      "targetMarkets": [
+        "Global",
+        "North America",
+        "APAC"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "info@optiisolutions.com",
+      "phone": "+1-512-555-0139",
+      "website": "https://www.optiisolutions.com",
+      "headquarters": "Austin, United States",
+      "founded": 2004
+    },
+    {
+      "id": "wheelhouse",
+      "name": "Wheelhouse",
+      "logoInitials": "WH",
+      "description": "Wheelhouse is a dynamic pricing tool for short-term rental and small hotel operators that automatically adjusts nightly rates based on local demand, events, and market comps. It is widely used by vacation rental property managers integrated with platforms like Airbnb and Vrbo.",
+      "features": [
+        "Dynamic pricing algorithms",
+        "Local event & demand signals",
+        "Custom pricing rules",
+        "Channel/PMS integrations",
+        "Portfolio performance dashboard",
+        "Base price recommendations"
+      ],
+      "usps": [
+        "Strong short-term rental market focus",
+        "Simple, approachable pricing UI",
+        "Wide integration with STR platforms"
+      ],
+      "products": [
+        "Wheelhouse Dynamic Pricing",
+        "Wheelhouse Portfolio Analytics"
+      ],
+      "targetMarkets": [
+        "North America",
+        "Global"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "support@usewheelhouse.com",
+      "phone": "+1-415-555-0184",
+      "website": "https://www.usewheelhouse.com",
+      "headquarters": "San Francisco, United States",
+      "founded": 2014
+    },
+    {
+      "id": "nor1",
+      "name": "Nor1",
+      "logoInitials": "NR",
+      "description": "Nor1, now part of Oracle Hospitality, provides attribute-based selling and upgrade technology that lets hotels merchandise room upgrades and amenities at the point of booking and check-in. Its upsell engine is designed to increase incremental revenue per guest stay.",
+      "features": [
+        "Attribute-based upselling",
+        "Personalized upgrade offers",
+        "Pre-arrival & check-in merchandising",
+        "PMS integration",
+        "Revenue analytics",
+        "Dynamic offer pricing"
+      ],
+      "usps": [
+        "Pioneer of attribute-based hotel selling",
+        "Deep integration with Oracle OPERA",
+        "Proven incremental revenue lift"
+      ],
+      "products": [
+        "Nor1 eStandby Upgrade",
+        "Nor1 PRIME"
+      ],
+      "targetMarkets": [
+        "Global",
+        "North America"
+      ],
+      "pricingModel": "Enterprise/Custom",
+      "priceRange": "$$",
+      "email": "sales@nor1.com",
+      "phone": "+1-408-555-0146",
+      "website": "https://www.oracle.com/hospitality/",
+      "headquarters": "Santa Clara, United States",
+      "founded": 2004
+    },
+    {
+      "id": "revenue-analytics",
+      "name": "Revenue Analytics",
+      "logoInitials": "RA",
+      "description": "Revenue Analytics is a US-based consultancy and software provider delivering pricing and revenue management technology and advisory services to hotels and other travel businesses. It combines proprietary forecasting tools with hands-on revenue management consulting engagements.",
+      "features": [
+        "Custom forecasting models",
+        "Pricing strategy consulting",
+        "Revenue management training",
+        "Analytics dashboards",
+        "Market segmentation analysis",
+        "Ongoing advisory support"
+      ],
+      "usps": [
+        "Blends software with consulting expertise",
+        "Deep hospitality analytics pedigree",
+        "Tailored engagements for complex portfolios"
+      ],
+      "products": [
+        "Revenue Analytics RMS",
+        "Revenue Analytics Advisory"
+      ],
+      "targetMarkets": [
+        "North America"
+      ],
+      "pricingModel": "Enterprise/Custom",
+      "priceRange": "$$$",
+      "email": "info@revenueanalytics.com",
+      "phone": "+1-404-555-0157",
+      "website": "https://www.revenueanalytics.com",
+      "headquarters": "Atlanta, United States",
+      "founded": 2004
+    },
+    {
+      "id": "demand-calendar",
+      "name": "Demand Calendar",
+      "logoInitials": "DC",
+      "description": "Demand Calendar is a cloud revenue management and planning tool that gives hotel revenue managers a visual calendar for tracking demand drivers, events, and pacing against forecasts. It is designed to complement, rather than replace, human-led revenue strategy.",
+      "features": [
+        "Visual demand calendar",
+        "Pacing & pickup tracking",
+        "Event & group impact tagging",
+        "Forecast vs. actual reporting",
+        "Collaboration tools for RM teams",
+        "PMS data integration"
+      ],
+      "usps": [
+        "Visual, planning-first approach to RM",
+        "Complements human revenue managers",
+        "Flexible for independents and groups"
+      ],
+      "products": [
+        "Demand Calendar RMS",
+        "Demand Calendar Planning Board"
+      ],
+      "targetMarkets": [
+        "Global",
+        "North America",
+        "Europe"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "info@demandcalendar.com",
+      "phone": "+1-949-555-0122",
+      "website": "https://www.demandcalendar.com",
+      "headquarters": "Newport Beach, United States",
+      "founded": 2013
+    },
+    {
+      "id": "rategain-revenue-management",
+      "name": "RateGain (Revenue Management)",
+      "logoInitials": "RT",
+      "description": "RateGain is an Indian travel technology company whose revenue management module gives hotels rate intelligence, demand forecasting, and pricing optimization alongside its broader distribution and channel management products. It serves hotel chains and OTAs across multiple regions.",
+      "features": [
+        "Rate shopping & market intelligence",
+        "Demand forecasting",
+        "Automated rate optimization",
+        "Channel distribution integration",
+        "Competitor benchmarking",
+        "BI dashboards"
+      ],
+      "usps": [
+        "Combines RM with market intelligence data",
+        "Large global hotel client base",
+        "Publicly listed travel-tech scale"
+      ],
+      "products": [
+        "RateGain OptiMize",
+        "RateGain Rate Intelligence",
+        "RateGain DHISCO"
+      ],
+      "targetMarkets": [
+        "Global",
+        "India",
+        "APAC",
+        "North America"
+      ],
+      "pricingModel": "Enterprise/Custom",
+      "priceRange": "$$",
+      "email": "sales@rategain.com",
+      "phone": "+91-120-555-0114",
+      "website": "https://www.rategain.com",
+      "headquarters": "Noida, India",
+      "founded": 2004
+    },
+    {
+      "id": "cendyn-revintel",
+      "name": "Cendyn Revintel",
+      "logoInitials": "CV",
+      "description": "Revintel, part of the Cendyn hospitality software group, is a business intelligence and revenue analytics platform that helps hotels analyze booking pace, segmentation, and forecast accuracy. It is often deployed alongside Cendyn's CRM and central reservation products.",
+      "features": [
+        "Booking pace & pickup analysis",
+        "Segment-level BI dashboards",
+        "Forecast accuracy tracking",
+        "Integration with Cendyn CRS/CRM",
+        "Custom reporting",
+        "Multi-property benchmarking"
+      ],
+      "usps": [
+        "Deep integration with Cendyn's CRM suite",
+        "Strong BI/reporting focus",
+        "Backed by Cendyn's hospitality client base"
+      ],
+      "products": [
+        "Cendyn Revintel",
+        "Cendyn eInsight CRM"
+      ],
+      "targetMarkets": [
+        "North America",
+        "Global"
+      ],
+      "pricingModel": "Enterprise/Custom",
+      "priceRange": "$$",
+      "email": "sales@cendyn.com",
+      "phone": "+1-561-555-0177",
+      "website": "https://www.cendyn.com",
+      "headquarters": "Boca Raton, United States",
+      "founded": 1996
+    },
+    {
+      "id": "siteminder-insights-ota-insight",
+      "name": "SiteMinder Insights (OTA Insight)",
+      "logoInitials": "OT",
+      "description": "OTA Insight, rebranded SiteMinder Insights after SiteMinder's 2023 acquisition, provides rate intelligence, market benchmarking, and revenue management dashboards for hotels. Its tools aggregate competitor and market rate data to support pricing decisions.",
+      "features": [
+        "Rate shopping & benchmarking",
+        "Market demand intelligence",
+        "Parity monitoring",
+        "Revenue management dashboards",
+        "Booking pace analytics",
+        "Channel performance reporting"
+      ],
+      "usps": [
+        "Wide market/competitor rate data coverage",
+        "Now integrated with SiteMinder's distribution suite",
+        "Strong European independent hotel adoption"
+      ],
+      "products": [
+        "Rate Insight",
+        "Demand Insight",
+        "Parity Insight"
+      ],
+      "targetMarkets": [
+        "Europe",
+        "Global"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "sales@siteminder.com",
+      "phone": "+32-16-555-0132",
+      "website": "https://www.siteminder.com",
+      "headquarters": "Leuven, Belgium",
+      "founded": 2012
+    },
+    {
+      "id": "fornova",
+      "name": "Fornova",
+      "logoInitials": "FR",
+      "description": "Fornova is an Israeli travel technology company providing rate intelligence, distribution analytics, and revenue management data for hotels and online travel agencies. Its platform tracks pricing across thousands of channels to detect parity issues and market shifts.",
+      "features": [
+        "Rate & parity intelligence",
+        "Distribution analytics",
+        "Market share benchmarking",
+        "Channel performance monitoring",
+        "API data feeds",
+        "Custom BI dashboards"
+      ],
+      "usps": [
+        "Large-scale market rate data coverage",
+        "Serves both hotels and OTAs",
+        "Deep parity/leakage detection tools"
+      ],
+      "products": [
+        "Fornova Rate Intelligence",
+        "Fornova Market Insight"
+      ],
+      "targetMarkets": [
+        "Global",
+        "Europe",
+        "Middle East"
+      ],
+      "pricingModel": "Enterprise/Custom",
+      "priceRange": "$$",
+      "email": "info@fornova.com",
+      "phone": "+972-3-555-0148",
+      "website": "https://www.fornova.com",
+      "headquarters": "Tel Aviv, Israel",
+      "founded": 2012
+    },
+    {
+      "id": "blastness",
+      "name": "Blastness",
+      "logoInitials": "BL",
+      "description": "Blastness is an Italian digital marketing and revenue management company that helps independent hotels drive direct bookings through pricing strategy, website optimization, and online marketing. It combines RMS-style consulting with performance marketing services.",
+      "features": [
+        "Revenue management consulting",
+        "Digital marketing campaigns",
+        "Website conversion optimization",
+        "Booking engine integration",
+        "Market analytics",
+        "Direct booking strategy"
+      ],
+      "usps": [
+        "Combines RM strategy with performance marketing",
+        "Strong Italian/Southern European base",
+        "Full-service agency plus software model"
+      ],
+      "products": [
+        "Blastness Revenue Management",
+        "Blastness Digital Marketing"
+      ],
+      "targetMarkets": [
+        "Europe"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "info@blastness.com",
+      "phone": "+39-081-555-0126",
+      "website": "https://www.blastness.com",
+      "headquarters": "Naples, Italy",
+      "founded": 2011
+    }
+  ]
+}

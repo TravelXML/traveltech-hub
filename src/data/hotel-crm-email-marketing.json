@@ -1,0 +1,618 @@
+{
+  "_comment": "Contact details (email, phone) are plausible placeholder-format examples for demo purposes only and must be verified before real-world use.",
+  "category": "hotel-crm-email-marketing",
+  "listings": [
+    {
+      "id": "revinate",
+      "name": "Revinate",
+      "logoInitials": "RV",
+      "description": "Revinate is a San Francisco-based guest data platform providing CRM and email marketing tools that help hotels unify guest profiles from PMS, reservation, and survey systems. Its marketing product automates segmented email campaigns to drive repeat direct bookings.",
+      "features": [
+        "Unified guest data platform",
+        "Segmented email campaigns",
+        "Guest survey & reputation tools",
+        "Automated pre/post-stay emails",
+        "PMS data integration",
+        "Marketing performance analytics"
+      ],
+      "usps": [
+        "Widely adopted guest data hub",
+        "Deep PMS integration ecosystem",
+        "Strong reputation management pedigree"
+      ],
+      "products": [
+        "Revinate Marketing",
+        "Revinate Guest Data Platform",
+        "Revinate Surveys"
+      ],
+      "targetMarkets": [
+        "Global",
+        "North America",
+        "Europe"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "sales@revinate.com",
+      "phone": "+1-415-555-0128",
+      "website": "https://www.revinate.com",
+      "headquarters": "San Francisco, United States",
+      "founded": 2009
+    },
+    {
+      "id": "cendyn",
+      "name": "Cendyn",
+      "logoInitials": "CD",
+      "description": "Cendyn provides CRM, central reservations, and digital marketing software for hotel groups worldwide, built around its eInsight CRM platform. Its tools let hotel marketing teams manage guest segmentation, email campaigns, and personalized offers across a portfolio of properties.",
+      "features": [
+        "Guest CRM (eInsight)",
+        "Segmented email campaigns",
+        "Central reservation integration",
+        "Personalized offer management",
+        "Loyalty & guest journey tools",
+        "Multi-property marketing dashboard"
+      ],
+      "usps": [
+        "Broad hospitality software portfolio",
+        "Deep enterprise hotel group adoption",
+        "Combines CRM with CRS and revenue tools"
+      ],
+      "products": [
+        "Cendyn eInsight CRM",
+        "Cendyn CRS",
+        "Cendyn Guest Experience"
+      ],
+      "targetMarkets": [
+        "Global",
+        "North America",
+        "Europe"
+      ],
+      "pricingModel": "Enterprise/Custom",
+      "priceRange": "$$$",
+      "email": "sales@cendyn.com",
+      "phone": "+1-561-555-0177",
+      "website": "https://www.cendyn.com",
+      "headquarters": "Boca Raton, United States",
+      "founded": 1996
+    },
+    {
+      "id": "bookboost",
+      "name": "Bookboost",
+      "logoInitials": "BB",
+      "description": "Bookboost is a Swedish CRM and guest messaging platform that consolidates guest data and communication channels for independent hotels and hotel groups. It combines segmentation and email marketing automation with unified inbox messaging for guest service teams.",
+      "features": [
+        "Unified guest CRM",
+        "Segmented email marketing",
+        "Multi-channel guest messaging",
+        "Automated campaign triggers",
+        "PMS data sync",
+        "Marketing performance reporting"
+      ],
+      "usps": [
+        "Combines CRM with messaging in one tool",
+        "Strong Nordic/European base",
+        "Modern, lightweight platform for independents"
+      ],
+      "products": [
+        "Bookboost CRM",
+        "Bookboost Messaging"
+      ],
+      "targetMarkets": [
+        "Europe"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "hello@bookboost.io",
+      "phone": "+46-40-555-0138",
+      "website": "https://www.bookboost.io",
+      "headquarters": "Malmö, Sweden",
+      "founded": 2016
+    },
+    {
+      "id": "customer-alliance",
+      "name": "Customer Alliance",
+      "logoInitials": "CA",
+      "description": "Customer Alliance is a Berlin-based guest feedback and reputation management platform that also provides CRM-style guest data tools for hotels. It aggregates reviews across booking sites alongside post-stay surveys to help hotels manage online reputation and repeat engagement.",
+      "features": [
+        "Guest feedback surveys",
+        "Review aggregation & reputation management",
+        "Guest data CRM",
+        "Automated review request emails",
+        "Multi-language surveys",
+        "Benchmarking analytics"
+      ],
+      "usps": [
+        "Strong reputation management focus",
+        "Wide review platform coverage",
+        "Established European hotel client base"
+      ],
+      "products": [
+        "Customer Alliance Feedback",
+        "Customer Alliance CRM"
+      ],
+      "targetMarkets": [
+        "Europe"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "info@customer-alliance.com",
+      "phone": "+49-30-555-0162",
+      "website": "https://www.customer-alliance.com",
+      "headquarters": "Berlin, Germany",
+      "founded": 2010
+    },
+    {
+      "id": "guestjoy-crm",
+      "name": "GuestJoy",
+      "logoInitials": "GJ",
+      "description": "GuestJoy is an Estonian guest engagement platform offering CRM and automated email/SMS marketing tools that help hotels sell upgrades, packages, and services before and during a guest's stay. It integrates with PMS systems to trigger personalized pre-arrival campaigns.",
+      "features": [
+        "Pre-arrival upsell campaigns",
+        "Guest CRM & segmentation",
+        "Automated email/SMS marketing",
+        "Digital guest directory",
+        "PMS integrations",
+        "Revenue reporting"
+      ],
+      "usps": [
+        "Strong upsell-driven marketing focus",
+        "Simple PMS-triggered automation",
+        "Popular with independent European hotels"
+      ],
+      "products": [
+        "GuestJoy CRM",
+        "GuestJoy Upsell Marketing"
+      ],
+      "targetMarkets": [
+        "Europe"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$",
+      "email": "hello@guestjoy.com",
+      "phone": "+372-555-0119",
+      "website": "https://www.guestjoy.com",
+      "headquarters": "Tallinn, Estonia",
+      "founded": 2013
+    },
+    {
+      "id": "hotelchamp",
+      "name": "Hotelchamp",
+      "logoInitials": "HC",
+      "description": "Hotelchamp is an Amsterdam-based hotel marketing platform providing website personalization, CRM segmentation, and conversion tools that help hotels convert website visitors into direct bookings. Its data hub feeds automated, targeted marketing messages based on guest behavior.",
+      "features": [
+        "Website personalization",
+        "Guest data CRM",
+        "Behavioral email triggers",
+        "Conversion rate tools",
+        "Booking engine integration",
+        "Marketing analytics dashboard"
+      ],
+      "usps": [
+        "Strong website conversion focus",
+        "Behavior-based personalization engine",
+        "Established European independent hotel base"
+      ],
+      "products": [
+        "Hotelchamp Convert",
+        "Hotelchamp CRM"
+      ],
+      "targetMarkets": [
+        "Europe"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "hello@hotelchamp.com",
+      "phone": "+31-20-555-0147",
+      "website": "https://www.hotelchamp.com",
+      "headquarters": "Amsterdam, Netherlands",
+      "founded": 2014
+    },
+    {
+      "id": "dailypoint",
+      "name": "dailypoint",
+      "logoInitials": "DP",
+      "description": "dailypoint is a German guest data platform and CRM used by hotel groups to unify guest profiles across multiple properties and systems into a single customer data hub. It powers targeted email marketing campaigns and personalized guest experiences at scale.",
+      "features": [
+        "Unified guest data hub",
+        "Multi-property CRM",
+        "Segmented email marketing",
+        "Personalization rules engine",
+        "PMS/CRS data integration",
+        "GDPR-focused data governance"
+      ],
+      "usps": [
+        "Deep multi-property data unification",
+        "Strong DACH region enterprise adoption",
+        "Robust data governance/compliance focus"
+      ],
+      "products": [
+        "dailypoint CDP",
+        "dailypoint CRM"
+      ],
+      "targetMarkets": [
+        "Europe"
+      ],
+      "pricingModel": "Enterprise/Custom",
+      "priceRange": "$$$",
+      "email": "info@dailypoint.net",
+      "phone": "+49-89-555-0173",
+      "website": "https://www.dailypoint.net",
+      "headquarters": "Munich, Germany",
+      "founded": 2005
+    },
+    {
+      "id": "nextguest-cendyn",
+      "name": "NextGuest (Cendyn)",
+      "logoInitials": "NG",
+      "description": "NextGuest is a digital marketing and CRM agency for hotels that became part of Cendyn in 2021, offering website design, email marketing, and paid media services layered on top of Cendyn's guest data platform. It targets independent hotels and boutique groups in North America.",
+      "features": [
+        "Email marketing campaigns",
+        "Website design & SEO",
+        "Paid media management",
+        "Guest CRM integration (Cendyn)",
+        "Conversion rate optimization",
+        "Reporting dashboards"
+      ],
+      "usps": [
+        "Full-service marketing agency model",
+        "Backed by Cendyn's CRM platform",
+        "Strong North American boutique hotel base"
+      ],
+      "products": [
+        "NextGuest Marketing",
+        "NextGuest Websites",
+        "Cendyn eInsight CRM"
+      ],
+      "targetMarkets": [
+        "North America"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "info@nextguest.com",
+      "phone": "+1-212-555-0136",
+      "website": "https://www.nextguest.com",
+      "headquarters": "New York, United States",
+      "founded": 2001
+    },
+    {
+      "id": "screen-pilot-cendyn",
+      "name": "Screen Pilot (Cendyn)",
+      "logoInitials": "SP",
+      "description": "Screen Pilot is a hospitality digital marketing agency, now part of Cendyn, providing SEO, paid media, and email marketing services for independent hotels and small groups. It focuses on driving direct booking revenue growth for boutique and lifestyle properties.",
+      "features": [
+        "SEO & paid media management",
+        "Email marketing campaigns",
+        "Website design & optimization",
+        "Direct booking revenue strategy",
+        "Analytics & reporting",
+        "CRM integration via Cendyn"
+      ],
+      "usps": [
+        "Boutique/lifestyle hotel marketing focus",
+        "Backed by Cendyn's platform scale",
+        "Long-standing North American agency"
+      ],
+      "products": [
+        "Screen Pilot Marketing",
+        "Screen Pilot SEO",
+        "Cendyn eInsight CRM"
+      ],
+      "targetMarkets": [
+        "North America"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "info@screenpilot.com",
+      "phone": "+1-303-555-0129",
+      "website": "https://www.screenpilot.com",
+      "headquarters": "Denver, United States",
+      "founded": 2000
+    },
+    {
+      "id": "profitroom-crm",
+      "name": "Profitroom CRM",
+      "logoInitials": "PT",
+      "description": "Profitroom's marketing suite gives independent hotels and resorts across Europe CRM and email marketing tools alongside its booking engine, helping properties re-market to past guests and nurture leads into direct reservations. It is often deployed together with Profitroom's website and booking products.",
+      "features": [
+        "Guest CRM & segmentation",
+        "Automated email campaigns",
+        "Lead nurturing workflows",
+        "Booking engine integration",
+        "Website personalization",
+        "Campaign performance analytics"
+      ],
+      "usps": [
+        "Bundled with booking engine & website",
+        "Strong Central/Eastern European base",
+        "Resort & spa client specialization"
+      ],
+      "products": [
+        "Profitroom CRM",
+        "Profitroom Marketing",
+        "Profitroom Booking Engine"
+      ],
+      "targetMarkets": [
+        "Europe"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "hello@profitroom.com",
+      "phone": "+48-61-555-0158",
+      "website": "https://www.profitroom.com",
+      "headquarters": "Poznan, Poland",
+      "founded": 2008
+    },
+    {
+      "id": "trustyou",
+      "name": "TrustYou",
+      "logoInitials": "TY",
+      "description": "TrustYou is a Munich-based guest experience platform that aggregates online reviews and guest survey data into a unified feedback hub, which hotels use to inform CRM segmentation and service recovery. Its data feeds also support targeted post-stay marketing and reputation management.",
+      "features": [
+        "Review aggregation",
+        "Guest survey platform",
+        "Guest experience data hub",
+        "Reputation management",
+        "Sentiment analytics",
+        "Case management/service recovery"
+      ],
+      "usps": [
+        "Broad OTA/review source coverage",
+        "Deep sentiment analytics engine",
+        "Widely adopted by major hotel brands"
+      ],
+      "products": [
+        "TrustYou Reputation",
+        "TrustYou Surveys",
+        "TrustYou Guest Experience Platform"
+      ],
+      "targetMarkets": [
+        "Global",
+        "Europe",
+        "North America"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "info@trustyou.com",
+      "phone": "+49-89-555-0184",
+      "website": "https://www.trustyou.com",
+      "headquarters": "Munich, Germany",
+      "founded": 2008
+    },
+    {
+      "id": "fuel-cendyn",
+      "name": "Fuel (a Cendyn brand)",
+      "logoInitials": "FL",
+      "description": "Fuel is a hospitality digital marketing agency, acquired by Cendyn in 2018, that provides website design, SEO, and email marketing services for hotels and resorts. It operates within Cendyn's broader marketing and CRM portfolio to help properties grow direct revenue.",
+      "features": [
+        "Website design",
+        "SEO & content strategy",
+        "Email marketing campaigns",
+        "Paid media management",
+        "Conversion optimization",
+        "CRM integration via Cendyn"
+      ],
+      "usps": [
+        "Full-service digital marketing agency",
+        "Backed by Cendyn's platform ecosystem",
+        "Established North American hospitality client base"
+      ],
+      "products": [
+        "Fuel Websites",
+        "Fuel Marketing",
+        "Cendyn eInsight CRM"
+      ],
+      "targetMarkets": [
+        "North America"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "info@fuelmarketing.com",
+      "phone": "+1-561-555-0192",
+      "website": "https://www.cendyn.com",
+      "headquarters": "Delray Beach, United States",
+      "founded": 1998
+    },
+    {
+      "id": "milestone-internet",
+      "name": "Milestone Inc.",
+      "logoInitials": "MS",
+      "description": "Milestone Inc. is a US-based hospitality digital marketing and technology company offering CRM, email marketing, and website services to independent hotels and small chains. Its platform combines guest data management with SEO and paid campaign execution.",
+      "features": [
+        "Guest CRM & segmentation",
+        "Email marketing automation",
+        "SEO & paid media",
+        "Website design",
+        "Local search optimization",
+        "Reporting dashboards"
+      ],
+      "usps": [
+        "Long-standing North American agency",
+        "Combines CRM with full-service marketing",
+        "Strong independent hotel client base"
+      ],
+      "products": [
+        "Milestone CRM",
+        "Milestone Marketing",
+        "Milestone Websites"
+      ],
+      "targetMarkets": [
+        "North America"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "info@milestoneinternet.com",
+      "phone": "+1-408-555-0171",
+      "website": "https://www.milestoneinternet.com",
+      "headquarters": "San Jose, United States",
+      "founded": 1999
+    },
+    {
+      "id": "avantio-crm",
+      "name": "Avantio",
+      "logoInitials": "AV",
+      "description": "Avantio is a Spanish vacation rental management software company whose platform includes CRM and email marketing tools that help property managers nurture leads and re-market to past guests. It serves vacation rental agencies primarily across Europe.",
+      "features": [
+        "Guest/owner CRM",
+        "Automated email campaigns",
+        "Lead management",
+        "Channel manager integration",
+        "Owner portal",
+        "Marketing performance reporting"
+      ],
+      "usps": [
+        "Strong Southern European vacation rental base",
+        "Combines CRM with full PMS suite",
+        "Established since early 2000s"
+      ],
+      "products": [
+        "Avantio CRM",
+        "Avantio PMS",
+        "Avantio Channel Manager"
+      ],
+      "targetMarkets": [
+        "Europe"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "info@avantio.com",
+      "phone": "+34-96-555-0157",
+      "website": "https://www.avantio.com",
+      "headquarters": "Valencia, Spain",
+      "founded": 2001
+    },
+    {
+      "id": "guestfolio",
+      "name": "Guestfolio",
+      "logoInitials": "GF",
+      "description": "Guestfolio is a Canadian guest engagement and CRM platform, acquired by TrustYou in 2018, that helped hotels manage guest profiles and automate pre- and post-stay email marketing. Its tools focused on turning guest data into personalized upsell and loyalty campaigns.",
+      "features": [
+        "Guest CRM & profiles",
+        "Automated pre/post-stay emails",
+        "Upsell campaign tools",
+        "Loyalty program support",
+        "PMS integration",
+        "Marketing analytics"
+      ],
+      "usps": [
+        "Guest data specialization",
+        "Now integrated into TrustYou's platform",
+        "Strong North American independent hotel base"
+      ],
+      "products": [
+        "Guestfolio CRM",
+        "Guestfolio Marketing"
+      ],
+      "targetMarkets": [
+        "North America"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "info@guestfolio.com",
+      "phone": "+1-403-555-0148",
+      "website": "https://www.guestfolio.com",
+      "headquarters": "Calgary, Canada",
+      "founded": 2012
+    },
+    {
+      "id": "vizergy",
+      "name": "Vizergy",
+      "logoInitials": "VZ",
+      "description": "Vizergy is a US-based hospitality digital marketing and CRM company providing website design, email marketing, and guest data tools for independent hotels and resorts. It bundles CRM segmentation with full-service digital marketing campaign execution.",
+      "features": [
+        "Guest CRM & segmentation",
+        "Email marketing campaigns",
+        "Website design",
+        "SEO & paid media",
+        "Booking engine integration",
+        "Marketing performance reporting"
+      ],
+      "usps": [
+        "Long-standing North American agency",
+        "Bundled CRM and marketing services",
+        "Focus on independent and resort hotels"
+      ],
+      "products": [
+        "Vizergy CRM",
+        "Vizergy Marketing",
+        "Vizergy Websites"
+      ],
+      "targetMarkets": [
+        "North America"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "info@vizergy.com",
+      "phone": "+1-386-555-0163",
+      "website": "https://www.vizergy.com",
+      "headquarters": "Ormond Beach, United States",
+      "founded": 1999
+    },
+    {
+      "id": "bookassist-crm",
+      "name": "Bookassist (Digital Marketing & CRM)",
+      "logoInitials": "BA",
+      "description": "Bookassist's digital marketing division provides independent hotels with email marketing and guest CRM services layered on top of its direct booking engine. It helps European hoteliers re-market to past guests and convert website traffic into repeat direct bookings.",
+      "features": [
+        "Guest CRM & segmentation",
+        "Email marketing campaigns",
+        "Booking engine integration",
+        "Conversion rate optimization",
+        "Website design",
+        "Reporting dashboards"
+      ],
+      "usps": [
+        "Combines booking tech with marketing services",
+        "Strong presence in Ireland & Europe",
+        "Long track record with independents"
+      ],
+      "products": [
+        "Bookassist CRM",
+        "Bookassist Digital Marketing",
+        "Bookassist Booking Engine"
+      ],
+      "targetMarkets": [
+        "Europe"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "info@bookassist.com",
+      "phone": "+353-1-555-0124",
+      "website": "https://www.bookassist.com",
+      "headquarters": "Dublin, Ireland",
+      "founded": 2000
+    },
+    {
+      "id": "above-property-cendyn",
+      "name": "Above Property (Cendyn)",
+      "logoInitials": "AP",
+      "description": "Above Property Services was a CRM and marketing technology provider for hotel groups, acquired by Cendyn in 2018 and folded into its guest data and marketing platform. Its legacy tools continue to power segmented email campaigns and guest data management for enterprise hotel clients.",
+      "features": [
+        "Guest CRM & segmentation",
+        "Email marketing automation",
+        "Enterprise multi-property data management",
+        "Loyalty program integration",
+        "Personalized offer campaigns",
+        "Reporting dashboards"
+      ],
+      "usps": [
+        "Enterprise multi-brand hotel group focus",
+        "Now integrated into Cendyn's platform",
+        "Deep segmentation capabilities"
+      ],
+      "products": [
+        "Above Property CRM",
+        "Cendyn eInsight CRM"
+      ],
+      "targetMarkets": [
+        "North America",
+        "Global"
+      ],
+      "pricingModel": "Enterprise/Custom",
+      "priceRange": "$$$",
+      "email": "sales@cendyn.com",
+      "phone": "+1-561-555-0177",
+      "website": "https://www.cendyn.com",
+      "headquarters": "Boca Raton, United States",
+      "founded": 2000
+    }
+  ]
+}

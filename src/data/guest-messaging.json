@@ -1,0 +1,615 @@
+{
+  "_comment": "Contact details (email, phone) are plausible placeholder-format examples for demo purposes only and must be verified before real-world use.",
+  "category": "guest-messaging",
+  "listings": [
+    {
+      "id": "whistle-messaging",
+      "name": "Whistle Messaging",
+      "logoInitials": "WM",
+      "description": "Whistle Messaging, now part of Actabl, is a guest messaging and contactless service platform used by hotels to text guests before, during, and after their stay. It automates check-in instructions, upsell offers, and service requests through a two-way SMS and chat interface.",
+      "features": [
+        "Two-way SMS/chat messaging",
+        "Automated pre-arrival texts",
+        "Contactless check-in prompts",
+        "Upsell offer automation",
+        "Staff task routing",
+        "PMS integrations"
+      ],
+      "usps": [
+        "Wide PMS integration coverage",
+        "Now part of Actabl's operations suite",
+        "Strong North American hotel adoption"
+      ],
+      "products": [
+        "Whistle Messaging",
+        "Whistle Contactless",
+        "Whistle Upsell"
+      ],
+      "targetMarkets": [
+        "North America",
+        "Global"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "sales@whistle.actabl.com",
+      "phone": "+1-305-555-0117",
+      "website": "https://www.actabl.com",
+      "headquarters": "Miami, United States",
+      "founded": 2014
+    },
+    {
+      "id": "alice-messaging",
+      "name": "ALICE",
+      "logoInitials": "AL",
+      "description": "ALICE, now part of Actabl, is a hotel operations and guest messaging platform that lets front desk, housekeeping, and concierge staff manage guest requests received via text message or app from a single dashboard. It is used by hotel groups to coordinate service delivery in real time.",
+      "features": [
+        "Two-way guest messaging",
+        "Staff task & request routing",
+        "Concierge request management",
+        "Housekeeping coordination",
+        "PMS integrations",
+        "Multi-property dashboard"
+      ],
+      "usps": [
+        "Deep operations-plus-messaging integration",
+        "Strong luxury & full-service hotel adoption",
+        "Now part of Actabl's platform"
+      ],
+      "products": [
+        "ALICE Guest Messaging",
+        "ALICE Staff Operations"
+      ],
+      "targetMarkets": [
+        "North America",
+        "Global"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "sales@aliceplatform.com",
+      "phone": "+1-212-555-0138",
+      "website": "https://www.aliceplatform.com",
+      "headquarters": "New York, United States",
+      "founded": 2013
+    },
+    {
+      "id": "akia",
+      "name": "Akia",
+      "logoInitials": "AK",
+      "description": "Akia is a US-based guest messaging and automation platform that lets hotels communicate with guests over SMS, WhatsApp, and web chat for check-in, upsells, and service requests. It uses templated and AI-assisted automation to reduce manual front-desk messaging workload.",
+      "features": [
+        "Multi-channel messaging (SMS/WhatsApp/web)",
+        "Automated check-in workflows",
+        "Upsell messaging campaigns",
+        "AI-assisted auto-responses",
+        "PMS integrations",
+        "Staff inbox dashboard"
+      ],
+      "usps": [
+        "Multi-channel messaging beyond SMS",
+        "AI-assisted automation",
+        "Growing North American hotel client base"
+      ],
+      "products": [
+        "Akia Messaging",
+        "Akia Upsell",
+        "Akia Contactless Check-in"
+      ],
+      "targetMarkets": [
+        "North America"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "sales@akia.com",
+      "phone": "+1-650-555-0146",
+      "website": "https://www.akia.com",
+      "headquarters": "Santa Clara, United States",
+      "founded": 2016
+    },
+    {
+      "id": "duve",
+      "name": "Duve",
+      "logoInitials": "DV",
+      "description": "Duve is an Israeli guest experience and messaging platform used by hotels and short-term rental operators to automate pre-arrival communication, upsells, and digital check-in. It centralizes guest conversations from multiple channels into a single team inbox.",
+      "features": [
+        "Automated guest messaging",
+        "Digital check-in flow",
+        "Upsell & upgrade offers",
+        "Unified team inbox",
+        "PMS integrations",
+        "Guest journey automation"
+      ],
+      "usps": [
+        "Strong short-term rental & boutique hotel fit",
+        "Combines messaging with upsell revenue tools",
+        "Fast-growing Israeli/European client base"
+      ],
+      "products": [
+        "Duve Guest Experience",
+        "Duve Messaging",
+        "Duve Upsell"
+      ],
+      "targetMarkets": [
+        "Europe",
+        "Global"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "hello@duve.com",
+      "phone": "+972-3-555-0129",
+      "website": "https://www.duve.com",
+      "headquarters": "Tel Aviv, Israel",
+      "founded": 2016
+    },
+    {
+      "id": "guestjoy-messaging",
+      "name": "GuestJoy",
+      "logoInitials": "GJ",
+      "description": "GuestJoy provides automated guest messaging alongside its CRM and upsell tools, letting hotels send pre-arrival, in-stay, and post-stay messages triggered by PMS events. It is popular with independent European hotels looking to automate guest communication and upselling together.",
+      "features": [
+        "Automated messaging triggers",
+        "Pre-arrival & in-stay campaigns",
+        "Digital guest directory",
+        "Upsell messaging",
+        "PMS integrations",
+        "Multi-language templates"
+      ],
+      "usps": [
+        "Strong upsell-driven messaging focus",
+        "Simple PMS-triggered automation",
+        "Popular with independent European hotels"
+      ],
+      "products": [
+        "GuestJoy Messaging",
+        "GuestJoy CRM"
+      ],
+      "targetMarkets": [
+        "Europe"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$",
+      "email": "hello@guestjoy.com",
+      "phone": "+372-555-0119",
+      "website": "https://www.guestjoy.com",
+      "headquarters": "Tallinn, Estonia",
+      "founded": 2013
+    },
+    {
+      "id": "bookboost-messaging",
+      "name": "Bookboost",
+      "logoInitials": "BB",
+      "description": "Bookboost's messaging product gives hotels a unified inbox for guest communication across SMS, WhatsApp, Facebook Messenger, and email, tied to the property's CRM data. It is used by independent hotels and small groups to centralize guest service conversations.",
+      "features": [
+        "Unified multi-channel inbox",
+        "Automated message triggers",
+        "CRM data integration",
+        "Team collaboration tools",
+        "Chatbot automation",
+        "PMS data sync"
+      ],
+      "usps": [
+        "Combines messaging with CRM in one tool",
+        "Strong Nordic/European base",
+        "Modern, lightweight platform for independents"
+      ],
+      "products": [
+        "Bookboost Messaging",
+        "Bookboost CRM"
+      ],
+      "targetMarkets": [
+        "Europe"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "hello@bookboost.io",
+      "phone": "+46-40-555-0138",
+      "website": "https://www.bookboost.io",
+      "headquarters": "Malmö, Sweden",
+      "founded": 2016
+    },
+    {
+      "id": "helloshift",
+      "name": "HelloShift",
+      "logoInitials": "HS",
+      "description": "HelloShift is a San Francisco-based guest messaging and staff collaboration platform for hotels, combining a unified guest inbox with internal team communication tools. It helps front desk, housekeeping, and management coordinate around guest requests in real time.",
+      "features": [
+        "Unified guest messaging inbox",
+        "Internal staff collaboration",
+        "Automated message templates",
+        "Housekeeping task coordination",
+        "PMS integrations",
+        "Multi-property dashboard"
+      ],
+      "usps": [
+        "Combines guest and staff messaging in one app",
+        "Strong hotel group adoption in North America",
+        "Simple, mobile-first interface"
+      ],
+      "products": [
+        "HelloShift Guest Messaging",
+        "HelloShift Staff Collaboration"
+      ],
+      "targetMarkets": [
+        "North America"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "sales@helloshift.com",
+      "phone": "+1-415-555-0159",
+      "website": "https://www.helloshift.com",
+      "headquarters": "San Francisco, United States",
+      "founded": 2014
+    },
+    {
+      "id": "kipsu",
+      "name": "Kipsu",
+      "logoInitials": "KP",
+      "description": "Kipsu is a Minneapolis-based real-time guest messaging platform used by hotels to handle service requests and guest communication over SMS and web chat. It emphasizes fast, personal response times for service recovery and concierge-style guest interactions.",
+      "features": [
+        "Real-time SMS/web chat messaging",
+        "Service recovery workflows",
+        "Concierge request handling",
+        "Team performance analytics",
+        "PMS integrations",
+        "Multi-property dashboard"
+      ],
+      "usps": [
+        "Emphasis on fast, human-style responses",
+        "Long track record since 2010",
+        "Strong North American hotel group adoption"
+      ],
+      "products": [
+        "Kipsu Guest Messaging",
+        "Kipsu Service Recovery"
+      ],
+      "targetMarkets": [
+        "North America"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "sales@kipsu.com",
+      "phone": "+1-612-555-0137",
+      "website": "https://www.kipsu.com",
+      "headquarters": "Minneapolis, United States",
+      "founded": 2010
+    },
+    {
+      "id": "volara",
+      "name": "Volara",
+      "logoInitials": "VL",
+      "description": "Volara is a Houston-based voice and messaging platform that connects hotels' smart speakers and chat channels to their PMS and service systems. Guests can make requests by voice or text, which Volara routes to the right hotel department automatically.",
+      "features": [
+        "Voice assistant integration (Alexa for Hospitality)",
+        "SMS/chat messaging",
+        "Automated request routing",
+        "PMS/service system integration",
+        "Analytics on guest requests",
+        "Multi-language support"
+      ],
+      "usps": [
+        "Pioneer of voice-based hotel guest service",
+        "Combines voice and text messaging channels",
+        "Enterprise hotel brand adoption"
+      ],
+      "products": [
+        "Volara Voice",
+        "Volara Messaging"
+      ],
+      "targetMarkets": [
+        "North America",
+        "Global"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "sales@volara.io",
+      "phone": "+1-713-555-0122",
+      "website": "https://www.volara.io",
+      "headquarters": "Houston, United States",
+      "founded": 2016
+    },
+    {
+      "id": "zingle-medallia-concierge",
+      "name": "Zingle (Medallia Concierge)",
+      "logoInitials": "ZG",
+      "description": "Zingle was a guest messaging platform acquired by Medallia in 2019 and rebranded as Medallia Concierge, giving hotels a two-way texting and chat channel tied to Medallia's broader guest experience analytics. It automates routine messaging while surfacing guest sentiment data.",
+      "features": [
+        "Two-way SMS/chat messaging",
+        "Automated workflows & triggers",
+        "Integration with Medallia experience analytics",
+        "Staff task routing",
+        "PMS integrations",
+        "Sentiment & feedback signals"
+      ],
+      "usps": [
+        "Backed by Medallia's enterprise CX platform",
+        "Deep sentiment/experience analytics tie-in",
+        "Established hotel brand client base"
+      ],
+      "products": [
+        "Medallia Concierge",
+        "Medallia Experience Cloud"
+      ],
+      "targetMarkets": [
+        "Global",
+        "North America"
+      ],
+      "pricingModel": "Enterprise/Custom",
+      "priceRange": "$$$",
+      "email": "info@medallia.com",
+      "phone": "+1-650-555-0184",
+      "website": "https://www.medallia.com",
+      "headquarters": "San Diego, United States",
+      "founded": 2009
+    },
+    {
+      "id": "ivy-gomoment",
+      "name": "Ivy (GoMoment)",
+      "logoInitials": "IV",
+      "description": "Ivy, by GoMoment, is an AI-powered guest messaging concierge used by hotels to answer common guest questions and route service requests automatically via SMS and chat. It reduces front-desk call volume by handling routine inquiries with conversational AI.",
+      "features": [
+        "AI chatbot messaging",
+        "Automated FAQ handling",
+        "Service request routing",
+        "PMS integrations",
+        "Multi-language support",
+        "Analytics on guest inquiries"
+      ],
+      "usps": [
+        "Strong AI/NLP-driven automation",
+        "Reduces front-desk workload measurably",
+        "Established Silicon Valley hospitality tech"
+      ],
+      "products": [
+        "Ivy AI Concierge",
+        "GoMoment Messaging"
+      ],
+      "targetMarkets": [
+        "North America"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "info@gomoment.com",
+      "phone": "+1-650-555-0163",
+      "website": "https://www.gomoment.com",
+      "headquarters": "Palo Alto, United States",
+      "founded": 2013
+    },
+    {
+      "id": "quicktext",
+      "name": "Quicktext",
+      "logoInitials": "QT",
+      "description": "Quicktext is a Paris-based AI chatbot and messaging platform that helps hotels convert website visitors into direct bookings and manage guest communication over WhatsApp, SMS, and web chat. Its assistant, Marina, automates responses to common reservation questions.",
+      "features": [
+        "AI booking chatbot",
+        "Multi-channel messaging (WhatsApp/SMS/web)",
+        "Automated reservation assistance",
+        "Upsell messaging",
+        "PMS/booking engine integration",
+        "Multi-language support"
+      ],
+      "usps": [
+        "AI chatbot focused on direct booking conversion",
+        "Strong French/European hotel base",
+        "Multi-channel messaging beyond SMS"
+      ],
+      "products": [
+        "Quicktext Marina Chatbot",
+        "Quicktext Messaging"
+      ],
+      "targetMarkets": [
+        "Europe"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "hello@quicktext.im",
+      "phone": "+33-1-5555-0148",
+      "website": "https://www.quicktext.im",
+      "headquarters": "Paris, France",
+      "founded": 2016
+    },
+    {
+      "id": "asksuite",
+      "name": "Asksuite",
+      "logoInitials": "AS",
+      "description": "Asksuite is a Brazilian hotel chatbot and omnichannel messaging platform that automates reservation inquiries and guest communication across a hotel's website, WhatsApp, Facebook, and Instagram. It is widely used across Latin America and expanding into other regions.",
+      "features": [
+        "Reservation chatbot",
+        "Omnichannel messaging (WhatsApp/social/web)",
+        "Automated FAQ handling",
+        "Booking engine integration",
+        "Multi-language support",
+        "Sales conversion analytics"
+      ],
+      "usps": [
+        "Strong Latin American hotel adoption",
+        "Omnichannel coverage including social apps",
+        "Chatbot tuned for reservation conversion"
+      ],
+      "products": [
+        "Asksuite Chatbot",
+        "Asksuite Messaging"
+      ],
+      "targetMarkets": [
+        "LATAM",
+        "Global"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "hello@asksuite.com",
+      "phone": "+55-48-555-0117",
+      "website": "https://www.asksuite.com",
+      "headquarters": "Florianópolis, Brazil",
+      "founded": 2015
+    },
+    {
+      "id": "canary-technologies-messaging",
+      "name": "Canary Technologies",
+      "logoInitials": "CT",
+      "description": "Canary Technologies provides a hotel guest management platform including two-way guest messaging, digital authorization, and upsell tools, replacing manual front-desk paperwork with automated digital workflows. It is used by independent hotels and major chains alike.",
+      "features": [
+        "Two-way guest messaging",
+        "Digital authorization forms",
+        "Upsell offer automation",
+        "Contactless check-in",
+        "PMS integrations",
+        "Fraud prevention tools"
+      ],
+      "usps": [
+        "Strong enterprise hotel brand adoption",
+        "Combines messaging with digital authorization",
+        "Rapid North American growth"
+      ],
+      "products": [
+        "Canary Guest Messaging",
+        "Canary Digital Authorization",
+        "Canary Upsell"
+      ],
+      "targetMarkets": [
+        "North America",
+        "Global"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "sales@canarytechnologies.com",
+      "phone": "+1-415-555-0173",
+      "website": "https://www.canarytechnologies.com",
+      "headquarters": "San Francisco, United States",
+      "founded": 2018
+    },
+    {
+      "id": "zaplox-messaging",
+      "name": "Zaplox",
+      "logoInitials": "ZP",
+      "description": "Zaplox is a Swedish mobile guest journey platform offering messaging alongside mobile check-in and keyless entry for hotels. Guests receive automated texts guiding them through arrival, in-stay requests, and departure without visiting the front desk.",
+      "features": [
+        "Automated guest messaging",
+        "Mobile check-in/checkout flow",
+        "Digital key integration",
+        "PMS integrations",
+        "Multi-language support",
+        "Contactless service requests"
+      ],
+      "usps": [
+        "Combines messaging with mobile key journey",
+        "Strong European hotel group adoption",
+        "End-to-end contactless guest flow"
+      ],
+      "products": [
+        "Zaplox Messaging",
+        "Zaplox Mobile Key",
+        "Zaplox Mobile Check-in"
+      ],
+      "targetMarkets": [
+        "Europe",
+        "Global"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "info@zaplox.com",
+      "phone": "+46-46-555-0128",
+      "website": "https://www.zaplox.com",
+      "headquarters": "Lund, Sweden",
+      "founded": 2013
+    },
+    {
+      "id": "nuvola",
+      "name": "Nuvola",
+      "logoInitials": "NV",
+      "description": "Nuvola is a Miami-based hotel operations platform that includes guest messaging as part of a broader suite for managing housekeeping, maintenance, and guest requests. It routes guest text messages directly to the responsible staff member or department for faster resolution.",
+      "features": [
+        "Guest messaging integration",
+        "Staff task & request routing",
+        "Housekeeping & maintenance workflows",
+        "Preventive maintenance tracking",
+        "PMS integrations",
+        "Performance analytics"
+      ],
+      "usps": [
+        "Operations-plus-messaging combined platform",
+        "Strong Latin American & US hotel adoption",
+        "Detailed maintenance/housekeeping workflows"
+      ],
+      "products": [
+        "Nuvola Guest Messaging",
+        "Nuvola Operations"
+      ],
+      "targetMarkets": [
+        "North America",
+        "LATAM"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "sales@hotelnuvola.com",
+      "phone": "+1-305-555-0146",
+      "website": "https://www.hotelnuvola.com",
+      "headquarters": "Miami, United States",
+      "founded": 2015
+    },
+    {
+      "id": "touch-stay",
+      "name": "Touch Stay",
+      "logoInitials": "TS",
+      "description": "Touch Stay is a UK-based digital guidebook platform used by hotels and vacation rental operators to share arrival instructions, local recommendations, and house rules with guests via a shareable link. It complements messaging tools by giving guests self-service access to property information.",
+      "features": [
+        "Digital guest guidebooks",
+        "Shareable web-based directions",
+        "Multi-language content",
+        "PMS/booking integration",
+        "Offline access",
+        "Analytics on guide engagement"
+      ],
+      "usps": [
+        "Focused on self-service guest information",
+        "Strong vacation rental and B&B adoption",
+        "Simple, no-app-download guest experience"
+      ],
+      "products": [
+        "Touch Stay Digital Guidebook",
+        "Touch Stay App"
+      ],
+      "targetMarkets": [
+        "Europe",
+        "Global"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$",
+      "email": "hello@touchstay.com",
+      "phone": "+44-1225-555-0169",
+      "website": "https://www.touchstay.com",
+      "headquarters": "Bath, United Kingdom",
+      "founded": 2015
+    },
+    {
+      "id": "monscierge",
+      "name": "Monscierge",
+      "logoInitials": "MG",
+      "description": "Monscierge is a US-based guest engagement platform offering messaging, digital directories, and concierge tools for hotels. Its messaging product lets guests text the front desk for requests and recommendations, which staff manage through a shared dashboard.",
+      "features": [
+        "Guest text messaging",
+        "Digital concierge directory",
+        "Staff request dashboard",
+        "Multi-property support",
+        "PMS integrations",
+        "Analytics on guest engagement"
+      ],
+      "usps": [
+        "Long-standing North American guest engagement vendor",
+        "Combines messaging with digital concierge tools",
+        "Simple staff-facing dashboard"
+      ],
+      "products": [
+        "Monscierge Messaging",
+        "Monscierge Directory"
+      ],
+      "targetMarkets": [
+        "North America"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "info@monscierge.com",
+      "phone": "+1-503-555-0138",
+      "website": "https://www.monscierge.com",
+      "headquarters": "Portland, United States",
+      "founded": 2010
+    }
+  ]
+}

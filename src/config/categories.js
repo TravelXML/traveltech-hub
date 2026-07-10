@@ -135,6 +135,94 @@ export const CATEGORIES = [
     description:
       'Metasearch and booking engines comparing rail fares across multiple operators and countries in one interface.',
   },
+  {
+    id: 'hotel-reservations',
+    name: 'Hotel Reservations Software',
+    shortName: 'Reservations',
+    route: '/hotel-reservations',
+    dataFile: 'hotel-reservations',
+    color: 'red',
+    icon: 'CalendarCheck',
+    description:
+      'Reservation platforms that let independent hotels and small chains manage bookings, rates and availability directly.',
+  },
+  {
+    id: 'hotel-management-software',
+    name: 'Hotel Management Software',
+    shortName: 'Hotel Mgmt',
+    route: '/hotel-management-software',
+    dataFile: 'hotel-management-software',
+    color: 'yellow',
+    icon: 'LayoutDashboard',
+    description:
+      'All-in-one operational software covering front desk, housekeeping, POS and back-office management for properties.',
+  },
+  {
+    id: 'revenue-management',
+    name: 'Revenue Management Systems',
+    shortName: 'Revenue Mgmt',
+    route: '/revenue-management',
+    dataFile: 'revenue-management',
+    color: 'green',
+    icon: 'LineChart',
+    description:
+      'Dynamic pricing and forecasting engines that optimise hotel room rates against demand, competitors and market data.',
+  },
+  {
+    id: 'booking-engine',
+    name: 'Booking Engine',
+    shortName: 'Booking Engine',
+    route: '/booking-engine',
+    dataFile: 'booking-engine',
+    color: 'purple',
+    icon: 'MousePointerClick',
+    description:
+      'Direct booking widgets and engines hotels embed on their own websites to convert visitors without OTA commission.',
+  },
+  {
+    id: 'hotel-crm-email-marketing',
+    name: 'Hotel CRM & Email Marketing',
+    shortName: 'CRM & Email',
+    route: '/hotel-crm-email-marketing',
+    dataFile: 'hotel-crm-email-marketing',
+    color: 'pink',
+    icon: 'Mail',
+    description:
+      'Guest data platforms and email/CRM tools that help hotels build guest profiles and drive repeat direct bookings.',
+  },
+  {
+    id: 'guest-messaging',
+    name: 'Guest Messaging Software',
+    shortName: 'Messaging',
+    route: '/guest-messaging',
+    dataFile: 'guest-messaging',
+    color: 'stone',
+    icon: 'MessageCircle',
+    description:
+      'Two-way SMS, WhatsApp and chat platforms that let hotel staff communicate with guests before, during and after their stay.',
+  },
+  {
+    id: 'hotel-guest-apps',
+    name: 'Hotel Guest Apps',
+    shortName: 'Guest Apps',
+    route: '/hotel-guest-apps',
+    dataFile: 'hotel-guest-apps',
+    color: 'gray',
+    icon: 'Smartphone',
+    description:
+      'Mobile and web apps offering guests digital check-in, room service, concierge requests and in-stay information.',
+  },
+  {
+    id: 'keyless-entry',
+    name: 'Hotel Keyless Entry Systems',
+    shortName: 'Keyless Entry',
+    route: '/keyless-entry',
+    dataFile: 'keyless-entry',
+    color: 'slate',
+    icon: 'KeyRound',
+    description:
+      'Mobile and RFID access control systems letting guests unlock hotel rooms without a physical key card.',
+  },
 ]
 
 export const getCategoryById = (id) => CATEGORIES.find((c) => c.id === id)

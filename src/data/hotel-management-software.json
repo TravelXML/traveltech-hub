@@ -1,0 +1,709 @@
+{
+  "_comment": "Contact details (email, phone) are plausible placeholder-format examples for demo purposes only and must be verified before real-world use.",
+  "category": "hotel-management-software",
+  "listings": [
+    {
+      "id": "hotelogix-management",
+      "name": "Hotelogix",
+      "logoInitials": "HG",
+      "description": "Hotelogix is a cloud hotel management system covering front desk, housekeeping, and back-office operations for independent hotels and small chains. It is widely deployed across India, Southeast Asia, and the Middle East for day-to-day property operations.",
+      "features": [
+        "Front desk & night audit",
+        "Housekeeping management",
+        "Multi-property dashboard",
+        "Travel agent module",
+        "Reporting & analytics",
+        "Mobile management app"
+      ],
+      "usps": [
+        "Budget-friendly pricing",
+        "Fast setup for small hotels",
+        "Strong regional support in Asia"
+      ],
+      "products": [
+        "Hotelogix PMS",
+        "Hotelogix Channel Manager",
+        "Hotelogix Booking Engine"
+      ],
+      "targetMarkets": [
+        "India",
+        "APAC",
+        "Middle East"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$",
+      "email": "sales@hotelogix.com",
+      "phone": "+91-124-455-0133",
+      "website": "https://www.hotelogix.com",
+      "headquarters": "Gurugram, India",
+      "founded": 2009
+    },
+    {
+      "id": "roomkey-pms-cendyn",
+      "name": "RoomKeyPMS (Cendyn)",
+      "logoInitials": "RK",
+      "description": "RoomKeyPMS is a cloud property management system for independent hotels and small groups in North America, now operated as part of Cendyn following its 2018 acquisition. It manages reservations, housekeeping, and billing with tight integration into Cendyn's CRM and revenue tools.",
+      "features": [
+        "Cloud front desk operations",
+        "Housekeeping management",
+        "Guest folio & billing",
+        "Integration with Cendyn CRM",
+        "Channel management",
+        "Multi-property support"
+      ],
+      "usps": [
+        "Backed by Cendyn's marketing ecosystem",
+        "Strong Canadian/US independent base",
+        "Simple, guided implementation"
+      ],
+      "products": [
+        "RoomKeyPMS",
+        "Cendyn eInsight CRM",
+        "Cendyn Guest Experience"
+      ],
+      "targetMarkets": [
+        "North America"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "sales@cendyn.com",
+      "phone": "+1-561-555-0177",
+      "website": "https://www.cendyn.com",
+      "headquarters": "Boca Raton, United States",
+      "founded": 1996
+    },
+    {
+      "id": "agilysys-management",
+      "name": "Agilysys",
+      "logoInitials": "AG",
+      "description": "Agilysys provides enterprise property management, point-of-sale, and inventory software for full-service hotels, resorts, and casinos. Its management suite coordinates front office, F&B, spa, and procurement operations across large, complex properties.",
+      "features": [
+        "Enterprise front office management",
+        "Integrated POS",
+        "Inventory & procurement",
+        "Spa & activities management",
+        "Mobile staff tools",
+        "Payment processing"
+      ],
+      "usps": [
+        "Deep resort & casino vertical expertise",
+        "End-to-end hospitality software stack",
+        "Long-standing enterprise client base"
+      ],
+      "products": [
+        "Agilysys PMS (Stay)",
+        "Agilysys POS (InfoGenesis)",
+        "Agilysys Pay"
+      ],
+      "targetMarkets": [
+        "North America",
+        "APAC",
+        "Middle East"
+      ],
+      "pricingModel": "Enterprise/Custom",
+      "priceRange": "$$$",
+      "email": "sales@agilysys.com",
+      "phone": "+1-770-555-0154",
+      "website": "https://www.agilysys.com",
+      "headquarters": "Alpharetta, United States",
+      "founded": 1963
+    },
+    {
+      "id": "maestro-management",
+      "name": "Maestro PMS",
+      "logoInitials": "MP",
+      "description": "Maestro PMS by NORTHWIND is a fully integrated hotel management platform for independent hotels, resorts, and multi-property groups, deployed in both cloud and on-premise form. It covers front desk, spa, activities, and accounting operations within a single suite.",
+      "features": [
+        "Multi-property front desk",
+        "Spa & activities management",
+        "Integrated accounting",
+        "Housekeeping & maintenance",
+        "Loyalty module",
+        "Group & catering management"
+      ],
+      "usps": [
+        "Deep vertical modules for resorts",
+        "Deployment flexibility (cloud/on-prem)",
+        "Long-term North American resort focus"
+      ],
+      "products": [
+        "Maestro PMS",
+        "Maestro Web Booking",
+        "Maestro Spa & Activities"
+      ],
+      "targetMarkets": [
+        "North America"
+      ],
+      "pricingModel": "Enterprise/Custom",
+      "priceRange": "$$",
+      "email": "sales@maestropms.com",
+      "phone": "+1-905-555-0176",
+      "website": "https://www.maestropms.com",
+      "headquarters": "Markham, Canada",
+      "founded": 1978
+    },
+    {
+      "id": "innquest-roommaster",
+      "name": "innQuest roomMaster",
+      "logoInitials": "IQ",
+      "description": "roomMaster by innQuest Software is a property management platform serving independent hotels, motels, and small groups, offered in cloud and on-premise editions. It bundles front desk, housekeeping, and reservation management with configurable reporting for owner-operators.",
+      "features": [
+        "Front desk & housekeeping",
+        "Configurable reporting",
+        "Multi-property management",
+        "Group booking tools",
+        "POS integration",
+        "Channel management"
+      ],
+      "usps": [
+        "Flexible cloud or on-premise deployment",
+        "Long-established North American vendor",
+        "Configurable for independents and groups"
+      ],
+      "products": [
+        "roomMaster PMS",
+        "roomMaster Anywhere",
+        "roomMaster Channel Manager"
+      ],
+      "targetMarkets": [
+        "North America",
+        "Global"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "sales@innquest.com",
+      "phone": "+1-813-555-0161",
+      "website": "https://www.innquest.com",
+      "headquarters": "Tampa, United States",
+      "founded": 1990
+    },
+    {
+      "id": "skyware-management",
+      "name": "Skyware Hotel Systems",
+      "logoInitials": "SK",
+      "description": "Skyware Hotel Systems provides a cloud hotel management platform designed for independent hotels and small groups, with modules covering front office, group blocks, and rate management. It is used by mid-sized properties across Europe, Africa, and the Middle East.",
+      "features": [
+        "Front office management",
+        "Group booking management",
+        "Rate & inventory control",
+        "Interface hub for third parties",
+        "Reporting suite",
+        "Multi-language support"
+      ],
+      "usps": [
+        "Flexible group booking tools",
+        "Strong African & Middle East presence",
+        "Configurable rate management"
+      ],
+      "products": [
+        "Skyware PMS",
+        "Skyware Central Reservations"
+      ],
+      "targetMarkets": [
+        "Europe",
+        "Africa",
+        "Middle East"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "info@skyware-systems.com",
+      "phone": "+357-25-555-0128",
+      "website": "https://www.skyware-systems.com",
+      "headquarters": "Limassol, Cyprus",
+      "founded": 1999
+    },
+    {
+      "id": "frontdesk-anywhere-management",
+      "name": "Frontdesk Anywhere",
+      "logoInitials": "FA",
+      "description": "Frontdesk Anywhere is a cloud-based hotel management system providing front desk, housekeeping, and channel management tools for independent hotels and small groups, primarily in North America. It focuses on straightforward usability and quick deployment for boutique operators.",
+      "features": [
+        "Cloud front desk",
+        "Housekeeping tools",
+        "Channel management",
+        "Group reservations",
+        "Reporting",
+        "Credit card processing"
+      ],
+      "usps": [
+        "Simple, quick implementation",
+        "Reliable for boutique properties",
+        "Established North American user base"
+      ],
+      "products": [
+        "Frontdesk Anywhere PMS",
+        "Frontdesk Anywhere Booking Engine"
+      ],
+      "targetMarkets": [
+        "North America"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "sales@frontdeskanywhere.com",
+      "phone": "+1-800-555-0129",
+      "website": "https://www.frontdeskanywhere.com",
+      "headquarters": "Santa Monica, United States",
+      "founded": 2005
+    },
+    {
+      "id": "hotelkey",
+      "name": "HotelKey",
+      "logoInitials": "HK",
+      "description": "HotelKey is a cloud hotel management platform combining PMS, point-of-sale, and central reservation functionality on a single mobile-first system. It targets branded hotel groups and management companies looking to replace legacy on-premise systems with one modern stack.",
+      "features": [
+        "Mobile-first PMS",
+        "Integrated POS",
+        "Central reservation system",
+        "Multi-property dashboard",
+        "Contactless check-in/out",
+        "Open API"
+      ],
+      "usps": [
+        "Single unified stack (PMS+POS+CRS)",
+        "Mobile-native staff workflows",
+        "Backed by hospitality industry veterans"
+      ],
+      "products": [
+        "HotelKey PMS",
+        "HotelKey POS",
+        "HotelKey CRS"
+      ],
+      "targetMarkets": [
+        "North America",
+        "APAC"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "sales@hotelkey.com",
+      "phone": "+1-415-555-0166",
+      "website": "https://www.hotelkey.com",
+      "headquarters": "San Francisco, United States",
+      "founded": 2018
+    },
+    {
+      "id": "stayntouch",
+      "name": "StayNTouch",
+      "logoInitials": "SN",
+      "description": "StayNTouch provides a cloud, mobile-first property management system used by branded and independent hotels for contactless check-in, mobile staff operations, and guest self-service kiosks. It is designed to replace legacy terminal-based PMS with a tablet-driven experience.",
+      "features": [
+        "Mobile-first PMS",
+        "Contactless check-in/checkout",
+        "Self-service kiosk",
+        "Guest messaging integration",
+        "Open API platform",
+        "Multi-property management"
+      ],
+      "usps": [
+        "Mobile & kiosk-first design",
+        "Strong branded hotel group adoption",
+        "Fast implementation timelines"
+      ],
+      "products": [
+        "StayNTouch PMS",
+        "StayNTouch Kiosk",
+        "StayNTouch Mobile"
+      ],
+      "targetMarkets": [
+        "North America",
+        "Europe"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "sales@stayntouch.com",
+      "phone": "+1-301-555-0172",
+      "website": "https://www.stayntouch.com",
+      "headquarters": "Bethesda, United States",
+      "founded": 2012
+    },
+    {
+      "id": "guestline-management",
+      "name": "Guestline",
+      "logoInitials": "GL",
+      "description": "Guestline is a UK-based hospitality technology provider offering cloud hotel management, EPoS, and revenue management tools for hotel groups, pubs, and serviced apartments. Its Rezlynx platform integrates front office operations with distribution and payments for mid-market operators.",
+      "features": [
+        "Cloud front office management",
+        "EPoS integration",
+        "Revenue management",
+        "Channel management",
+        "Payment processing",
+        "Guest engagement tools"
+      ],
+      "usps": [
+        "Strong UK hospitality footprint",
+        "Integrated EPoS for F&B-heavy properties",
+        "Rezlynx PMS widely adopted"
+      ],
+      "products": [
+        "Rezlynx PMS",
+        "Guestline GDS",
+        "Guestline Payments"
+      ],
+      "targetMarkets": [
+        "Europe"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "info@guestline.com",
+      "phone": "+44-1743-555-0161",
+      "website": "https://www.guestline.com",
+      "headquarters": "Shrewsbury, United Kingdom",
+      "founded": 1985
+    },
+    {
+      "id": "clock-software-management",
+      "name": "Clock Software",
+      "logoInitials": "CP",
+      "description": "Clock PMS+ from Clock Software is a cloud hotel management platform for hotels and hotel groups in Europe and beyond, offering guest-facing self-service tools alongside traditional front office functions. It supports multi-property and franchise operations from a single account.",
+      "features": [
+        "Cloud front office management",
+        "Guest self-service portal",
+        "Multi-property management",
+        "Point of sale",
+        "Central reservations",
+        "Housekeeping tools"
+      ],
+      "usps": [
+        "Strong guest self-service focus",
+        "Franchise/multi-property capability",
+        "Flexible open API"
+      ],
+      "products": [
+        "Clock PMS+",
+        "Clock Central Reservations",
+        "Clock Kiosk"
+      ],
+      "targetMarkets": [
+        "Europe",
+        "Middle East",
+        "Global"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "info@clock-software.com",
+      "phone": "+359-2-555-0143",
+      "website": "https://www.clock-software.com",
+      "headquarters": "Sofia, Bulgaria",
+      "founded": 2011
+    },
+    {
+      "id": "protel-planet-management",
+      "name": "protel (Planet)",
+      "logoInitials": "PR",
+      "description": "protel is a hotel management system, now part of Planet, offering on-premise and cloud PMS deployments popular across Europe. It provides front office, back office, housekeeping, and integrated payment processing tailored for hotel groups and independents.",
+      "features": [
+        "Cloud & on-premise front office",
+        "Integrated payments",
+        "Central reservation module",
+        "Interface hub for third parties",
+        "Housekeeping management",
+        "Guest data management"
+      ],
+      "usps": [
+        "Strong DACH region presence",
+        "Payments-integrated PMS",
+        "Backed by Planet's global payments network"
+      ],
+      "products": [
+        "protel Air",
+        "protel I/O",
+        "protel Payment"
+      ],
+      "targetMarkets": [
+        "Europe",
+        "Global"
+      ],
+      "pricingModel": "Enterprise/Custom",
+      "priceRange": "$$",
+      "email": "info@protel.net",
+      "phone": "+49-231-555-0147",
+      "website": "https://www.protel.net",
+      "headquarters": "Dortmund, Germany",
+      "founded": 1994
+    },
+    {
+      "id": "asi-frontdesk",
+      "name": "ASI FrontDesk",
+      "logoInitials": "AS",
+      "description": "ASI FrontDesk, from Advanced Systems Inc., is a hotel management system built for small and mid-sized independent hotels and motels in North America. It covers reservations, housekeeping, and guest accounting with an emphasis on straightforward, low-maintenance deployment.",
+      "features": [
+        "Front desk & night audit",
+        "Housekeeping management",
+        "Guest accounting",
+        "Group reservations",
+        "Reporting",
+        "Channel interface options"
+      ],
+      "usps": [
+        "Long-standing independent hotel vendor",
+        "Low-maintenance on-premise or hosted options",
+        "Straightforward pricing for small properties"
+      ],
+      "products": [
+        "ASI FrontDesk PMS",
+        "ASI FrontDesk Interface"
+      ],
+      "targetMarkets": [
+        "North America"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$",
+      "email": "sales@asifrontdesk.com",
+      "phone": "+1-817-555-0138",
+      "website": "https://www.asifrontdesk.com",
+      "headquarters": "Fort Worth, United States",
+      "founded": 1988
+    },
+    {
+      "id": "oracle-opera-management",
+      "name": "Oracle OPERA Cloud",
+      "logoInitials": "OC",
+      "description": "Oracle OPERA Cloud is a cloud-native hotel management system used by hotel chains and independent properties worldwide to manage front desk, housekeeping, and back-office operations. It integrates with a large ecosystem of sales, catering, distribution, and payment applications through Oracle's OHIP APIs.",
+      "features": [
+        "Cloud-based front office",
+        "Mobile check-in/checkout",
+        "Multi-property management",
+        "Open API platform (OHIP)",
+        "Integrated POS",
+        "Housekeeping & maintenance"
+      ],
+      "usps": [
+        "Deep enterprise-grade scalability",
+        "Extensive global partner ecosystem",
+        "Trusted by major hotel chains"
+      ],
+      "products": [
+        "OPERA Cloud PMS",
+        "OPERA Reservation System",
+        "Hospitality Integration Platform"
+      ],
+      "targetMarkets": [
+        "Global",
+        "North America",
+        "Europe",
+        "APAC"
+      ],
+      "pricingModel": "Enterprise/Custom",
+      "priceRange": "$$$",
+      "email": "sales@oracle.com",
+      "phone": "+1-650-555-0198",
+      "website": "https://www.oracle.com/hospitality/",
+      "headquarters": "Austin, United States",
+      "founded": 1977
+    },
+    {
+      "id": "cloudbeds-management",
+      "name": "Cloudbeds",
+      "logoInitials": "CB",
+      "description": "Cloudbeds provides a unified hospitality management platform combining front desk operations, housekeeping, channel management, and revenue management for independent hotels, hostels, and vacation rentals. Its cloud architecture is designed for ease of use by small and mid-sized property operators.",
+      "features": [
+        "All-in-one management suite",
+        "Housekeeping & maintenance",
+        "Built-in channel manager",
+        "Revenue management",
+        "Mobile app",
+        "Open API marketplace"
+      ],
+      "usps": [
+        "Award-winning ease of use",
+        "Fast onboarding for independents",
+        "Strong marketplace of integrations"
+      ],
+      "products": [
+        "Cloudbeds PMS",
+        "Cloudbeds Booking Engine",
+        "Cloudbeds Channel Manager"
+      ],
+      "targetMarkets": [
+        "Global",
+        "North America",
+        "Europe",
+        "APAC",
+        "LATAM"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "sales@cloudbeds.com",
+      "phone": "+1-415-555-0112",
+      "website": "https://www.cloudbeds.com",
+      "headquarters": "San Diego, United States",
+      "founded": 2012
+    },
+    {
+      "id": "webrezpro-management",
+      "name": "WebRezPro",
+      "logoInitials": "WR",
+      "description": "WebRezPro is a cloud-based hotel management system from World Web Technologies, serving hotels, hostels, vacation rentals, and campgrounds. It provides an all-in-one suite covering front desk operations, housekeeping, distribution, and guest communication.",
+      "features": [
+        "Cloud front office management",
+        "Housekeeping module",
+        "Channel manager",
+        "Online booking engine",
+        "Guest communication tools",
+        "Multi-property reporting"
+      ],
+      "usps": [
+        "Serves diverse lodging types (campgrounds, hostels)",
+        "All-in-one bundled pricing",
+        "Established Canadian provider"
+      ],
+      "products": [
+        "WebRezPro PMS",
+        "WebRezPro Booking Engine",
+        "WebRezPro Channel Manager"
+      ],
+      "targetMarkets": [
+        "North America",
+        "Global"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "sales@webrezpro.com",
+      "phone": "+1-250-555-0182",
+      "website": "https://www.webrezpro.com",
+      "headquarters": "Victoria, Canada",
+      "founded": 2003
+    },
+    {
+      "id": "springer-miller",
+      "name": "Springer-Miller Systems",
+      "logoInitials": "SM",
+      "description": "Springer-Miller Systems provides the SMS Host property management platform for luxury resorts, hotels, and spas across North America. Its management suite integrates lodging, spa, activities, and food & beverage operations for full-service resort properties.",
+      "features": [
+        "Full-service resort PMS",
+        "Spa & activities management",
+        "F&B and POS integration",
+        "Guest profile management",
+        "Multi-property support",
+        "Reporting & analytics"
+      ],
+      "usps": [
+        "Deep luxury resort & spa specialization",
+        "Long operating history since the 1980s",
+        "Integrated F&B and activities modules"
+      ],
+      "products": [
+        "SMS Host PMS",
+        "SMS Spa & Activities",
+        "SMS Sales & Catering"
+      ],
+      "targetMarkets": [
+        "North America"
+      ],
+      "pricingModel": "Enterprise/Custom",
+      "priceRange": "$$$",
+      "email": "sales@springermiller.com",
+      "phone": "+1-802-555-0121",
+      "website": "https://www.springermiller.com",
+      "headquarters": "Stowe, United States",
+      "founded": 1983
+    },
+    {
+      "id": "infor-hms",
+      "name": "Infor HMS",
+      "logoInitials": "IF",
+      "description": "Infor Hospitality Management Solution (HMS) is an enterprise property management platform aimed at hotel chains and resort groups needing deep integration with Infor's broader ERP, finance, and workforce management products. It supports multi-property, multi-brand operations at scale.",
+      "features": [
+        "Enterprise PMS",
+        "Multi-brand/multi-property support",
+        "ERP & finance integration",
+        "Workforce management integration",
+        "Reporting & BI",
+        "Cloud deployment"
+      ],
+      "usps": [
+        "Deep ERP ecosystem integration",
+        "Suited to large multi-brand groups",
+        "Backed by Infor's enterprise software scale"
+      ],
+      "products": [
+        "Infor HMS",
+        "Infor EzRMS",
+        "Infor CRM"
+      ],
+      "targetMarkets": [
+        "Global",
+        "North America",
+        "Europe"
+      ],
+      "pricingModel": "Enterprise/Custom",
+      "priceRange": "$$$",
+      "email": "hospitality@infor.com",
+      "phone": "+1-646-555-0155",
+      "website": "https://www.infor.com/industries/hospitality",
+      "headquarters": "New York, United States",
+      "founded": 2002
+    },
+    {
+      "id": "yanolja-cloud-solution-ezee",
+      "name": "Yanolja Cloud Solution (eZee)",
+      "logoInitials": "YC",
+      "description": "Yanolja Cloud Solution, formerly eZee Technosys, provides cloud and on-premise hotel management software for independent hotels across Asia, the Middle East, and Africa. Following its 2022 acquisition by Yanolja, it continues its eZee Absolute PMS line under the Yanolja Cloud Solution brand.",
+      "features": [
+        "Cloud & on-premise PMS",
+        "Front office automation",
+        "Housekeeping management",
+        "POS integration",
+        "Multi-language support",
+        "Reporting dashboard"
+      ],
+      "usps": [
+        "Affordable for independents",
+        "Strong presence in emerging markets",
+        "Backed by Yanolja's global travel platform"
+      ],
+      "products": [
+        "eZee Absolute PMS",
+        "eZee Centrix",
+        "eZee Optimus"
+      ],
+      "targetMarkets": [
+        "APAC",
+        "India",
+        "Middle East"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$",
+      "email": "sales@ezeetechnosys.com",
+      "phone": "+91-79-5550-1122",
+      "website": "https://www.ezeeabsolute.com",
+      "headquarters": "Ahmedabad, India",
+      "founded": 2005
+    },
+    {
+      "id": "mews-management",
+      "name": "Mews",
+      "logoInitials": "MW",
+      "description": "Mews is a cloud-native hotel management platform that serves hotels, hostels, and apartment operators with automation-first tools for check-in, billing, housekeeping, and guest engagement. It offers an open API and app marketplace that lets properties assemble a customized tech stack.",
+      "features": [
+        "Cloud front office management",
+        "Automated check-in kiosk",
+        "Housekeeping & task management",
+        "Open API marketplace",
+        "Integrated payments",
+        "Guest self-service tools"
+      ],
+      "usps": [
+        "Modern UX built for automation",
+        "Large app marketplace ecosystem",
+        "Strong European independent hotel base"
+      ],
+      "products": [
+        "Mews Operations",
+        "Mews Payments",
+        "Mews Distributor"
+      ],
+      "targetMarkets": [
+        "Europe",
+        "North America",
+        "Global"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "hello@mews.com",
+      "phone": "+44-20-7555-0176",
+      "website": "https://www.mews.com",
+      "headquarters": "Prague, Czech Republic",
+      "founded": 2012
+    }
+  ]
+}

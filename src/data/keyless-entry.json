@@ -1,0 +1,626 @@
+{
+  "_comment": "Contact details (email, phone) are plausible placeholder-format examples for demo purposes only and must be verified before real-world use.",
+  "category": "keyless-entry",
+  "listings": [
+    {
+      "id": "salto-systems",
+      "name": "Salto Systems",
+      "logoInitials": "SL",
+      "description": "Salto Systems is a Spanish manufacturer of wireless electronic access control and keyless locking hardware used extensively in hotels, offices, and residential buildings. Its hotel locks integrate with PMS systems to issue mobile and RFID keys without wiring every door to a central controller.",
+      "features": [
+        "Wireless electronic locks",
+        "Mobile key (SALTO KS)",
+        "RFID card credentials",
+        "PMS integrations",
+        "Real-time access management",
+        "Battery-powered retrofit hardware"
+      ],
+      "usps": [
+        "Wire-free electronic lock architecture",
+        "Very wide global hotel installation base",
+        "Broad PMS integration ecosystem"
+      ],
+      "products": [
+        "SALTO XS4",
+        "SALTO KS",
+        "SALTO Space"
+      ],
+      "targetMarkets": [
+        "Global",
+        "Europe",
+        "North America",
+        "APAC"
+      ],
+      "pricingModel": "Enterprise/Custom",
+      "priceRange": "$$$",
+      "email": "info@saltosystems.com",
+      "phone": "+34-943-555-0128",
+      "website": "https://www.saltosystems.com",
+      "headquarters": "Oiartzun, Spain",
+      "founded": 2001
+    },
+    {
+      "id": "assa-abloy-vingcard",
+      "name": "ASSA ABLOY (VingCard)",
+      "logoInitials": "AA",
+      "description": "VingCard, part of ASSA ABLOY Global Solutions, is one of the world's largest suppliers of electronic hotel door locks, used by major hotel chains and independents alike. Its locks support RFID cards and mobile keys, backed by ASSA ABLOY's global manufacturing and support network.",
+      "features": [
+        "Electronic RFID door locks",
+        "Mobile key support",
+        "In-room safes (Elsafe)",
+        "PMS integrations",
+        "Centralized access management software",
+        "Global service network"
+      ],
+      "usps": [
+        "Largest installed base of hotel electronic locks globally",
+        "Backed by ASSA ABLOY's manufacturing scale",
+        "Trusted by major global hotel brands"
+      ],
+      "products": [
+        "VingCard Essence",
+        "VingCard Signature",
+        "ASSA ABLOY Visionline"
+      ],
+      "targetMarkets": [
+        "Global",
+        "North America",
+        "Europe",
+        "APAC"
+      ],
+      "pricingModel": "Enterprise/Custom",
+      "priceRange": "$$$",
+      "email": "info@vingcard.com",
+      "phone": "+47-22-555-0139",
+      "website": "https://www.assaabloyglobalsolutions.com",
+      "headquarters": "Stockholm, Sweden",
+      "founded": 1976
+    },
+    {
+      "id": "dormakaba",
+      "name": "dormakaba",
+      "logoInitials": "DK",
+      "description": "dormakaba is a Swiss access control and security company, formed in 2015 through the merger of Dorma and Kaba, that supplies electronic hotel door locks under its Saflok brand alongside broader access control systems. It serves hotel chains and independents worldwide with keyless entry hardware and management software.",
+      "features": [
+        "Electronic RFID/mobile locks (Saflok)",
+        "Access management software",
+        "Mobile key integration",
+        "PMS integrations",
+        "In-room safes",
+        "Global service & installation network"
+      ],
+      "usps": [
+        "Global manufacturing and service scale",
+        "Long heritage from Dorma and Kaba brands",
+        "Saflok widely adopted by major hotel chains"
+      ],
+      "products": [
+        "Saflok Quantum",
+        "Saflok Messenger",
+        "dormakaba Community"
+      ],
+      "targetMarkets": [
+        "Global",
+        "Europe",
+        "North America",
+        "APAC"
+      ],
+      "pricingModel": "Enterprise/Custom",
+      "priceRange": "$$$",
+      "email": "info@dormakaba.com",
+      "phone": "+41-44-555-0147",
+      "website": "https://www.dormakaba.com",
+      "headquarters": "Rümlang, Switzerland",
+      "founded": 2015
+    },
+    {
+      "id": "openkey",
+      "name": "OpenKey",
+      "logoInitials": "OK",
+      "description": "OpenKey is a US-based mobile key platform that works across multiple hardware lock brands, letting hotels deploy contactless mobile check-in and room entry without replacing existing door locks. It is aimed at hotel groups seeking a brand-agnostic mobile key layer.",
+      "features": [
+        "Mobile key app",
+        "Multi-brand lock compatibility",
+        "Contactless check-in integration",
+        "PMS integrations",
+        "Bluetooth & NFC unlocking",
+        "Multi-property management"
+      ],
+      "usps": [
+        "Works across multiple existing lock brands",
+        "No full lock hardware replacement required",
+        "Strong North American franchise hotel adoption"
+      ],
+      "products": [
+        "OpenKey Mobile Key",
+        "OpenKey Contactless Check-in"
+      ],
+      "targetMarkets": [
+        "North America"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "sales@openkey.co",
+      "phone": "+1-479-555-0158",
+      "website": "https://www.openkey.co",
+      "headquarters": "Fayetteville, United States",
+      "founded": 2014
+    },
+    {
+      "id": "remotelock",
+      "name": "RemoteLock",
+      "logoInitials": "RL",
+      "description": "RemoteLock is a Colorado-based cloud access control company providing smart lock management software compatible with a range of lock hardware, used by short-term rental operators, small hotels, and multifamily properties. Its cloud platform lets managers issue and revoke access codes remotely.",
+      "features": [
+        "Cloud-managed smart locks",
+        "Remote access code issuance",
+        "Multi-brand lock compatibility",
+        "PMS/channel manager integrations",
+        "Access scheduling",
+        "Multi-property dashboard"
+      ],
+      "usps": [
+        "Strong vacation rental & multifamily fit",
+        "Works across many third-party lock brands",
+        "Cloud-based remote management"
+      ],
+      "products": [
+        "RemoteLock Access Control",
+        "RemoteLock Smart Locks"
+      ],
+      "targetMarkets": [
+        "North America"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "sales@remotelock.com",
+      "phone": "+1-303-555-0146",
+      "website": "https://www.remotelock.com",
+      "headquarters": "Denver, United States",
+      "founded": 2007
+    },
+    {
+      "id": "latch",
+      "name": "Latch",
+      "logoInitials": "LT",
+      "description": "Latch is a New York-based smart access company primarily focused on multifamily residential buildings, with its LatchOS platform also used by some short-term rental and boutique hospitality operators for keyless entry. Its hardware combines smart locks with an integrated access management app.",
+      "features": [
+        "Smart lock hardware",
+        "LatchOS access management platform",
+        "Mobile & keypad entry",
+        "Video intercom integration",
+        "Delivery access management",
+        "Property management system integrations"
+      ],
+      "usps": [
+        "Modern hardware-plus-software design",
+        "Strong multifamily residential brand recognition",
+        "Growing boutique hospitality use cases"
+      ],
+      "products": [
+        "Latch Smart Lock",
+        "LatchOS"
+      ],
+      "targetMarkets": [
+        "North America"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "sales@latch.com",
+      "phone": "+1-646-555-0173",
+      "website": "https://www.latch.com",
+      "headquarters": "New York, United States",
+      "founded": 2014
+    },
+    {
+      "id": "onity",
+      "name": "Onity",
+      "logoInitials": "ON",
+      "description": "Onity is a long-established manufacturer of electronic hotel door locks and security systems, with hardware installed across hundreds of thousands of hotel rooms worldwide. Its locks support RFID and mobile credentials, integrating with major PMS platforms for automated key issuance.",
+      "features": [
+        "Electronic RFID door locks",
+        "Mobile key support",
+        "In-room safes",
+        "PMS integrations",
+        "Access management software",
+        "Global service network"
+      ],
+      "usps": [
+        "Very large existing installed base",
+        "Long operating history in hotel security",
+        "Global distribution and service network"
+      ],
+      "products": [
+        "Onity HT Series",
+        "Onity Mobile Key",
+        "Onity Advance"
+      ],
+      "targetMarkets": [
+        "Global",
+        "North America",
+        "Europe",
+        "APAC"
+      ],
+      "pricingModel": "Enterprise/Custom",
+      "priceRange": "$$$",
+      "email": "info@onity.com",
+      "phone": "+1-770-555-0164",
+      "website": "https://www.onity.com",
+      "headquarters": "Atlanta, United States",
+      "founded": 1988
+    },
+    {
+      "id": "nuki",
+      "name": "Nuki",
+      "logoInitials": "NK",
+      "description": "Nuki is an Austrian smart lock manufacturer whose retrofit devices attach to existing door cylinders, enabling app-based and keypad entry without replacing the lock itself. It is popular with short-term rental hosts and small guesthouses seeking an affordable keyless upgrade.",
+      "features": [
+        "Retrofit smart lock hardware",
+        "App-based unlocking",
+        "Keypad & keycard accessories",
+        "Short-term rental access codes",
+        "Third-party integrations (Airbnb, PMS)",
+        "Bluetooth & Wi-Fi connectivity"
+      ],
+      "usps": [
+        "Retrofits onto existing door cylinders",
+        "Affordable for small/independent operators",
+        "Strong European short-term rental adoption"
+      ],
+      "products": [
+        "Nuki Smart Lock",
+        "Nuki Keypad",
+        "Nuki Web API"
+      ],
+      "targetMarkets": [
+        "Europe"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$",
+      "email": "support@nuki.io",
+      "phone": "+43-662-555-0117",
+      "website": "https://www.nuki.io",
+      "headquarters": "Salzburg, Austria",
+      "founded": 2014
+    },
+    {
+      "id": "hafele-dialock",
+      "name": "Häfele Dialock",
+      "logoInitials": "HD",
+      "description": "Häfele Dialock is an electronic locking system from the German furniture and hardware group Häfele, used in hotels for room doors, lockers, and furniture-integrated locks. It offers RFID and mobile credential options managed through Häfele's access management software.",
+      "features": [
+        "Electronic RFID door locks",
+        "Furniture & locker locking systems",
+        "Mobile key support",
+        "Access management software",
+        "PMS integrations",
+        "Battery-powered hardware"
+      ],
+      "usps": [
+        "Combines door and furniture/locker locking",
+        "Backed by Häfele's global hardware distribution",
+        "Long manufacturing heritage since 1923"
+      ],
+      "products": [
+        "Dialock DT 100",
+        "Dialock Access Management Software"
+      ],
+      "targetMarkets": [
+        "Europe",
+        "Global"
+      ],
+      "pricingModel": "Enterprise/Custom",
+      "priceRange": "$$",
+      "email": "info@hafele.com",
+      "phone": "+49-7452-555-0138",
+      "website": "https://www.hafele.com",
+      "headquarters": "Nagold, Germany",
+      "founded": 1923
+    },
+    {
+      "id": "assa-abloy-visionline",
+      "name": "ASSA ABLOY Visionline",
+      "logoInitials": "VS",
+      "description": "Visionline is ASSA ABLOY Global Solutions' online access management software platform that powers VingCard hotel locks with real-time credential updates and reporting. It lets hotels manage keys, audit trails, and mobile key issuance from a centralized system.",
+      "features": [
+        "Online lock management software",
+        "Real-time credential updates",
+        "Audit trail reporting",
+        "Mobile key issuance",
+        "PMS integrations",
+        "Multi-property management"
+      ],
+      "usps": [
+        "Real-time online lock management",
+        "Deep integration with VingCard hardware",
+        "Trusted by major global hotel brands"
+      ],
+      "products": [
+        "Visionline Software",
+        "VingCard Essence",
+        "VingCard Signature"
+      ],
+      "targetMarkets": [
+        "Global",
+        "North America",
+        "Europe",
+        "APAC"
+      ],
+      "pricingModel": "Enterprise/Custom",
+      "priceRange": "$$$",
+      "email": "info@vingcard.com",
+      "phone": "+47-22-555-0139",
+      "website": "https://www.assaabloyglobalsolutions.com",
+      "headquarters": "Stockholm, Sweden",
+      "founded": 1976
+    },
+    {
+      "id": "miwa-lock",
+      "name": "Miwa Lock",
+      "logoInitials": "MW",
+      "description": "Miwa Lock is a Japanese lock manufacturer with a long history in mechanical and electronic locking hardware, including electronic door locks used by hotels across Japan and the broader Asia-Pacific region. Its hotel lock lines support RFID card credentials integrated with PMS systems.",
+      "features": [
+        "Electronic RFID door locks",
+        "Mechanical lock manufacturing heritage",
+        "PMS integrations",
+        "Access management software",
+        "Multi-property support",
+        "Regional service network"
+      ],
+      "usps": [
+        "Strong Japan/APAC market presence",
+        "Long manufacturing heritage since 1945",
+        "Broad mechanical and electronic lock portfolio"
+      ],
+      "products": [
+        "Miwa Electronic Lock",
+        "Miwa PMS Interface"
+      ],
+      "targetMarkets": [
+        "APAC"
+      ],
+      "pricingModel": "Enterprise/Custom",
+      "priceRange": "$$",
+      "email": "info@miwa-lock.co.jp",
+      "phone": "+81-3-555-0126",
+      "website": "https://www.miwa-lock.com",
+      "headquarters": "Tokyo, Japan",
+      "founded": 1945
+    },
+    {
+      "id": "idesco",
+      "name": "Idesco",
+      "logoInitials": "ID",
+      "description": "Idesco is a Finnish RFID access control manufacturer whose readers and credentials are used in hospitality, offices, and industrial access control settings across Northern Europe. Its hotel-focused solutions integrate RFID door readers with PMS-driven key issuance.",
+      "features": [
+        "RFID access control readers",
+        "Electronic credential issuance",
+        "PMS integrations",
+        "Access management software",
+        "Multi-site deployment",
+        "Industrial-grade hardware"
+      ],
+      "usps": [
+        "Strong Nordic/Northern European base",
+        "Long-established RFID hardware manufacturer",
+        "Flexible for hospitality and other verticals"
+      ],
+      "products": [
+        "Idesco RFID Reader",
+        "Idesco Access Management"
+      ],
+      "targetMarkets": [
+        "Europe"
+      ],
+      "pricingModel": "Enterprise/Custom",
+      "priceRange": "$$",
+      "email": "info@idesco.fi",
+      "phone": "+358-9-555-0114",
+      "website": "https://www.idesco.fi",
+      "headquarters": "Vantaa, Finland",
+      "founded": 1979
+    },
+    {
+      "id": "allegion-schlage",
+      "name": "Allegion (Schlage)",
+      "logoInitials": "AG",
+      "description": "Allegion, the security hardware company behind the Schlage brand, offers electronic locking solutions for hospitality alongside its broader commercial and residential access control portfolio. Its hotel-grade electronic locks support RFID and mobile credentials integrated with major PMS platforms.",
+      "features": [
+        "Electronic RFID door locks",
+        "Mobile credential support",
+        "PMS integrations",
+        "Access management software",
+        "Global manufacturing scale",
+        "Broad hardware accessory ecosystem"
+      ],
+      "usps": [
+        "Backed by Allegion's global security hardware scale",
+        "Well-known Schlage brand trust",
+        "Broad commercial and hospitality lock portfolio"
+      ],
+      "products": [
+        "Schlage Hospitality Locks",
+        "Allegion Access Management"
+      ],
+      "targetMarkets": [
+        "Global",
+        "North America"
+      ],
+      "pricingModel": "Enterprise/Custom",
+      "priceRange": "$$$",
+      "email": "info@allegion.com",
+      "phone": "+1-317-555-0163",
+      "website": "https://www.allegion.com",
+      "headquarters": "Indianapolis, United States",
+      "founded": 2013
+    },
+    {
+      "id": "iloq",
+      "name": "iLOQ",
+      "logoInitials": "IQ",
+      "description": "iLOQ is a Finnish manufacturer of electromechanical and digital locking systems that require no batteries in the lock cylinder itself, drawing power from the key instead. Its systems are used in some hospitality and multi-site access control deployments across Europe.",
+      "features": [
+        "Electromechanical keyless locks",
+        "Battery-free lock cylinders",
+        "Digital key management software",
+        "Multi-site access control",
+        "Audit trail reporting",
+        "Retrofit-friendly hardware"
+      ],
+      "usps": [
+        "Battery-free lock cylinder technology",
+        "Strong Nordic/European industrial and hospitality base",
+        "Long-life, low-maintenance hardware design"
+      ],
+      "products": [
+        "iLOQ S50",
+        "iLOQ Manager Software"
+      ],
+      "targetMarkets": [
+        "Europe"
+      ],
+      "pricingModel": "Enterprise/Custom",
+      "priceRange": "$$",
+      "email": "info@iloq.com",
+      "phone": "+358-8-555-0132",
+      "website": "https://www.iloq.com",
+      "headquarters": "Oulu, Finland",
+      "founded": 2005
+    },
+    {
+      "id": "akiles-systems",
+      "name": "Akiles Systems",
+      "logoInitials": "AK",
+      "description": "Akiles Systems is a Spanish access control company providing electronic locking hardware and management software used by small hotels and short-term rental operators across Southern Europe. Its systems focus on straightforward keyless entry for independent properties.",
+      "features": [
+        "Electronic access control hardware",
+        "Access management software",
+        "Short-term rental key issuance",
+        "PMS/channel manager integrations",
+        "Mobile & card credentials",
+        "Multi-property support"
+      ],
+      "usps": [
+        "Focus on small independent hospitality operators",
+        "Straightforward setup for short-term rentals",
+        "Regional Southern European support"
+      ],
+      "products": [
+        "Akiles Access Control",
+        "Akiles Management Software"
+      ],
+      "targetMarkets": [
+        "Europe"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "info@akiles.es",
+      "phone": "+34-93-555-0148",
+      "website": "https://www.akiles.es",
+      "headquarters": "Barcelona, Spain",
+      "founded": 2012
+    },
+    {
+      "id": "ttlock",
+      "name": "TTLock",
+      "logoInitials": "TT",
+      "description": "TTLock is a Chinese smart lock technology company whose app-based platform and OEM hardware are used by short-term rental hosts and small hospitality operators worldwide for remote, keyless room access. Its cloud platform lets managers issue time-limited digital keys to guests.",
+      "features": [
+        "App-based smart lock control",
+        "Time-limited digital keys",
+        "Remote access management",
+        "OEM hardware partnerships",
+        "Multi-language app",
+        "Short-term rental integrations"
+      ],
+      "usps": [
+        "Very large OEM hardware partner network",
+        "Popular with short-term rental hosts globally",
+        "Affordable app-based access management"
+      ],
+      "products": [
+        "TTLock App",
+        "TTLock Cloud Platform"
+      ],
+      "targetMarkets": [
+        "Global",
+        "APAC"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$",
+      "email": "support@ttlock.com",
+      "phone": "+86-591-555-0119",
+      "website": "https://www.ttlock.com",
+      "headquarters": "Fuzhou, China",
+      "founded": 2013
+    },
+    {
+      "id": "kisi",
+      "name": "Kisi",
+      "logoInitials": "KS",
+      "description": "Kisi is a New York-based cloud access control company primarily serving offices and commercial buildings, with some boutique hotel and coworking-hospitality adoption for keyless door entry. Its system pairs cloud-managed hardware readers with a mobile app for unlocking doors.",
+      "features": [
+        "Cloud-managed access control",
+        "Mobile app unlocking",
+        "Real-time access logs",
+        "Visitor & guest access management",
+        "Third-party software integrations",
+        "Multi-site management dashboard"
+      ],
+      "usps": [
+        "Modern cloud-native access control design",
+        "Strong commercial/office market credibility",
+        "Flexible API for custom integrations"
+      ],
+      "products": [
+        "Kisi Reader Pro",
+        "Kisi Mobile App"
+      ],
+      "targetMarkets": [
+        "North America",
+        "Europe"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "sales@getkisi.com",
+      "phone": "+1-646-555-0184",
+      "website": "https://www.getkisi.com",
+      "headquarters": "New York, United States",
+      "founded": 2012
+    },
+    {
+      "id": "zaplox-keyless-entry",
+      "name": "Zaplox",
+      "logoInitials": "ZP",
+      "description": "Zaplox provides mobile key technology that integrates with existing hotel door lock hardware, letting guests unlock their room directly from the Zaplox mobile app as part of a broader contactless check-in journey. It partners with major lock manufacturers to support a wide range of hardware.",
+      "features": [
+        "Mobile key app",
+        "Integration with multiple lock hardware brands",
+        "Mobile check-in/checkout",
+        "PMS integrations",
+        "Multi-language support",
+        "Contactless guest journey"
+      ],
+      "usps": [
+        "Broad third-party lock hardware compatibility",
+        "Strong European hotel group adoption",
+        "Bundled with full contactless guest journey"
+      ],
+      "products": [
+        "Zaplox Mobile Key",
+        "Zaplox Mobile Check-in"
+      ],
+      "targetMarkets": [
+        "Europe",
+        "Global"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "info@zaplox.com",
+      "phone": "+46-46-555-0128",
+      "website": "https://www.zaplox.com",
+      "headquarters": "Lund, Sweden",
+      "founded": 2013
+    }
+  ]
+}

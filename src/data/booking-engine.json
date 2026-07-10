@@ -1,0 +1,689 @@
+{
+  "_comment": "Contact details (email, phone) are plausible placeholder-format examples for demo purposes only and must be verified before real-world use.",
+  "category": "booking-engine",
+  "listings": [
+    {
+      "id": "siteminder-booking-button",
+      "name": "SiteMinder Booking Engine",
+      "logoInitials": "SM",
+      "description": "SiteMinder's Booking Engine (formerly Booking Button) lets hotels embed a direct booking widget on their own website, synchronized in real time with SiteMinder's channel manager. It is one of the most widely deployed direct booking widgets among independent hotels globally.",
+      "features": [
+        "Direct booking widget",
+        "Real-time channel sync",
+        "Upsell add-ons",
+        "Mobile-optimized checkout",
+        "Multi-language & multi-currency",
+        "Payment gateway integration"
+      ],
+      "usps": [
+        "Extremely wide global adoption",
+        "Deep integration with SiteMinder's channel manager",
+        "Strong brand trust among independents"
+      ],
+      "products": [
+        "SiteMinder Booking Engine",
+        "SiteMinder Channel Manager",
+        "SiteMinder Payments"
+      ],
+      "targetMarkets": [
+        "Global",
+        "APAC",
+        "Europe",
+        "North America"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "sales@siteminder.com",
+      "phone": "+61-2-5555-0111",
+      "website": "https://www.siteminder.com",
+      "headquarters": "Sydney, Australia",
+      "founded": 2006
+    },
+    {
+      "id": "little-hotelier-booking-engine",
+      "name": "Little Hotelier Booking Engine",
+      "logoInitials": "LH",
+      "description": "Little Hotelier's booking engine, part of the SiteMinder family, lets small properties such as B&Bs and guesthouses accept commission-free direct bookings from their own website. It syncs automatically with the property's channel manager to prevent overbooking.",
+      "features": [
+        "Direct booking widget",
+        "Mobile-responsive checkout",
+        "Real-time availability sync",
+        "Upsell packages",
+        "Payment processing",
+        "Multi-language support"
+      ],
+      "usps": [
+        "Purpose-built for small properties",
+        "Backed by SiteMinder's distribution network",
+        "Easy self-service setup"
+      ],
+      "products": [
+        "Little Hotelier Booking Engine",
+        "Little Hotelier PMS"
+      ],
+      "targetMarkets": [
+        "APAC",
+        "Europe",
+        "Global"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$",
+      "email": "support@littlehotelier.com",
+      "phone": "+61-2-5550-1199",
+      "website": "https://www.littlehotelier.com",
+      "headquarters": "Sydney, Australia",
+      "founded": 2011
+    },
+    {
+      "id": "cloudbeds-booking-engine",
+      "name": "Cloudbeds Booking Engine",
+      "logoInitials": "CB",
+      "description": "Cloudbeds' booking engine allows independent hotels and hostels to accept commission-free reservations directly through their website, synced live with the property's PMS and channel manager. It supports upsells, packages, and multi-property booking flows.",
+      "features": [
+        "Direct booking widget",
+        "Real-time PMS sync",
+        "Upsell & package merchandising",
+        "Mobile-optimized checkout",
+        "Multi-currency support",
+        "Abandoned cart recovery"
+      ],
+      "usps": [
+        "Deep native PMS integration",
+        "Award-winning ease of use",
+        "Strong marketplace of add-ons"
+      ],
+      "products": [
+        "Cloudbeds Booking Engine",
+        "Cloudbeds PMS",
+        "Cloudbeds Channel Manager"
+      ],
+      "targetMarkets": [
+        "Global",
+        "North America",
+        "Europe",
+        "APAC",
+        "LATAM"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "sales@cloudbeds.com",
+      "phone": "+1-415-555-0112",
+      "website": "https://www.cloudbeds.com",
+      "headquarters": "San Diego, United States",
+      "founded": 2012
+    },
+    {
+      "id": "webrezpro-booking-engine",
+      "name": "WebRezPro Booking Engine",
+      "logoInitials": "WR",
+      "description": "WebRezPro's booking engine gives hotels, hostels, and campgrounds a direct reservation widget for their website that stays synchronized with inventory managed in the WebRezPro PMS. It supports group bookings and multi-unit availability for varied lodging types.",
+      "features": [
+        "Direct booking widget",
+        "Real-time inventory sync",
+        "Group & multi-unit bookings",
+        "Deposit & cancellation rules",
+        "Multi-currency support",
+        "Guest communication triggers"
+      ],
+      "usps": [
+        "Serves diverse lodging types",
+        "Deep native PMS integration",
+        "Established Canadian provider"
+      ],
+      "products": [
+        "WebRezPro Booking Engine",
+        "WebRezPro PMS"
+      ],
+      "targetMarkets": [
+        "North America",
+        "Global"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "sales@webrezpro.com",
+      "phone": "+1-250-555-0182",
+      "website": "https://www.webrezpro.com",
+      "headquarters": "Victoria, Canada",
+      "founded": 2003
+    },
+    {
+      "id": "synxis-booking-engine-sabre",
+      "name": "Synxis Booking Engine (Sabre)",
+      "logoInitials": "SX",
+      "description": "The Synxis Booking Engine, part of Sabre Hospitality Solutions, is a central reservation and direct booking platform used by hotel chains and large independents worldwide. It connects a hotel's website booking flow to Sabre's global distribution and GDS network.",
+      "features": [
+        "Direct booking engine",
+        "Central reservation system integration",
+        "GDS/OTA distribution",
+        "Rate & inventory management",
+        "Multi-property support",
+        "Merchandising & upsells"
+      ],
+      "usps": [
+        "Deep GDS distribution integration",
+        "Trusted by major global hotel brands",
+        "Scales to large multi-property portfolios"
+      ],
+      "products": [
+        "Synxis Booking Engine",
+        "Synxis CRS",
+        "Synxis GDS Connect"
+      ],
+      "targetMarkets": [
+        "Global",
+        "North America",
+        "Europe",
+        "APAC"
+      ],
+      "pricingModel": "Enterprise/Custom",
+      "priceRange": "$$$",
+      "email": "hospitality@sabre.com",
+      "phone": "+1-682-555-0113",
+      "website": "https://www.sabrehospitality.com",
+      "headquarters": "Southlake, United States",
+      "founded": 1996
+    },
+    {
+      "id": "verticalbooking",
+      "name": "Verticalbooking",
+      "logoInitials": "VB",
+      "description": "Verticalbooking is an Italian direct booking engine provider serving independent hotels and small chains, particularly across Southern Europe. It merged with the French provider Availpro to expand its footprint, and integrates with a wide range of channel managers and PMS platforms.",
+      "features": [
+        "Direct booking widget",
+        "Rate parity tools",
+        "Upsell merchandising",
+        "Multi-language checkout",
+        "PMS/channel manager integrations",
+        "Group booking support"
+      ],
+      "usps": [
+        "Strong Italian & Southern European base",
+        "Expanded reach via Availpro merger",
+        "Wide third-party integration network"
+      ],
+      "products": [
+        "Verticalbooking Engine",
+        "Verticalbooking Channel Manager"
+      ],
+      "targetMarkets": [
+        "Europe"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "info@verticalbooking.com",
+      "phone": "+39-06-555-0139",
+      "website": "https://www.verticalbooking.com",
+      "headquarters": "Rome, Italy",
+      "founded": 2003
+    },
+    {
+      "id": "bookassist",
+      "name": "Bookassist",
+      "logoInitials": "BA",
+      "description": "Bookassist is an Irish direct booking technology and digital marketing company serving independent hotels across Europe. Its booking engine is bundled with website design, SEO, and paid media services aimed at maximizing direct, commission-free reservations.",
+      "features": [
+        "Direct booking engine",
+        "Website design & SEO",
+        "Digital marketing campaigns",
+        "Rate parity monitoring",
+        "Multi-language checkout",
+        "Conversion optimization"
+      ],
+      "usps": [
+        "Combines booking tech with marketing services",
+        "Strong presence in Ireland & Europe",
+        "Long track record with independents"
+      ],
+      "products": [
+        "Bookassist Booking Engine",
+        "Bookassist Digital Marketing"
+      ],
+      "targetMarkets": [
+        "Europe"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "info@bookassist.com",
+      "phone": "+353-1-555-0124",
+      "website": "https://www.bookassist.com",
+      "headquarters": "Dublin, Ireland",
+      "founded": 2000
+    },
+    {
+      "id": "net-affinity",
+      "name": "Net Affinity",
+      "logoInitials": "NA",
+      "description": "Net Affinity is an Irish provider of hotel booking engine and digital marketing technology, helping independent hotels increase direct bookings through their own websites. It combines a conversion-focused booking flow with performance marketing and website services.",
+      "features": [
+        "Direct booking engine",
+        "Conversion rate optimization",
+        "Digital marketing services",
+        "Website design",
+        "Upsell & package tools",
+        "Multi-property dashboard"
+      ],
+      "usps": [
+        "Strong Irish/UK independent hotel base",
+        "Marketing-and-technology bundled model",
+        "Focus on conversion rate performance"
+      ],
+      "products": [
+        "Net Affinity Booking Engine",
+        "Net Affinity Digital Marketing"
+      ],
+      "targetMarkets": [
+        "Europe"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "info@netaffinity.com",
+      "phone": "+353-1-555-0187",
+      "website": "https://www.netaffinity.com",
+      "headquarters": "Dublin, Ireland",
+      "founded": 2003
+    },
+    {
+      "id": "djubo",
+      "name": "DJUBO",
+      "logoInitials": "DJ",
+      "description": "DJUBO is an Indian hotel commerce platform whose booking engine gives independent hotels a direct reservation channel alongside its channel management and CRM tools. It targets small and mid-sized hotels across India and Southeast Asia looking to grow direct revenue.",
+      "features": [
+        "Direct booking engine",
+        "Channel manager integration",
+        "Guest CRM",
+        "Dynamic pricing tools",
+        "Mobile booking flow",
+        "Multi-property dashboard"
+      ],
+      "usps": [
+        "Strong India/Southeast Asia footprint",
+        "Bundled commerce platform approach",
+        "Affordable for independents"
+      ],
+      "products": [
+        "DJUBO Booking Engine",
+        "DJUBO Channel Manager",
+        "DJUBO CRM"
+      ],
+      "targetMarkets": [
+        "India",
+        "APAC"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$",
+      "email": "sales@djubo.com",
+      "phone": "+91-22-555-0163",
+      "website": "https://www.djubo.com",
+      "headquarters": "Mumbai, India",
+      "founded": 2015
+    },
+    {
+      "id": "base7booking",
+      "name": "Base7booking",
+      "logoInitials": "BS",
+      "description": "Base7booking is a cloud booking engine and channel management platform serving independent hotels across Asia. It provides a direct reservation widget synced with OTA distribution to help small hotel operators reduce dependency on third-party commissions.",
+      "features": [
+        "Direct booking widget",
+        "Channel manager sync",
+        "Multi-language checkout",
+        "Group booking support",
+        "Rate & inventory management",
+        "Reporting dashboard"
+      ],
+      "usps": [
+        "Strong Asian independent hotel base",
+        "Bundled channel management",
+        "Competitive pricing for small hotels"
+      ],
+      "products": [
+        "Base7booking Engine",
+        "Base7booking Channel Manager"
+      ],
+      "targetMarkets": [
+        "APAC"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$",
+      "email": "info@base7booking.com",
+      "phone": "+852-5555-0177",
+      "website": "https://www.base7booking.com",
+      "headquarters": "Hong Kong",
+      "founded": 2005
+    },
+    {
+      "id": "profitroom",
+      "name": "Profitroom",
+      "logoInitials": "PT",
+      "description": "Profitroom is a Polish direct booking and marketing platform used by independent hotels and resorts across Europe to drive commission-free reservations. Its booking engine is bundled with website, email marketing, and rate parity tools.",
+      "features": [
+        "Direct booking engine",
+        "Website builder",
+        "Email marketing automation",
+        "Rate parity monitoring",
+        "Upsell packages",
+        "Conversion analytics"
+      ],
+      "usps": [
+        "Strong Central/Eastern European base",
+        "Marketing-and-booking bundled platform",
+        "Fast-growing resort & spa client base"
+      ],
+      "products": [
+        "Profitroom Booking Engine",
+        "Profitroom Marketing"
+      ],
+      "targetMarkets": [
+        "Europe"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "hello@profitroom.com",
+      "phone": "+48-61-555-0158",
+      "website": "https://www.profitroom.com",
+      "headquarters": "Poznan, Poland",
+      "founded": 2008
+    },
+    {
+      "id": "hotelrunner-booking-engine",
+      "name": "HotelRunner Booking Engine",
+      "logoInitials": "HR",
+      "description": "HotelRunner's booking engine gives independent hotels and travel agencies a direct reservation widget synchronized with its central reservation and channel distribution platform. It is widely used across Turkey, Europe, and the Middle East.",
+      "features": [
+        "Direct booking widget",
+        "Channel & GDS sync",
+        "Travel agency booking portal",
+        "Dynamic pricing tools",
+        "Multi-property management",
+        "Mobile-optimized checkout"
+      ],
+      "usps": [
+        "Strong Turkey/Middle East footprint",
+        "Combined B2B agency & OTA distribution",
+        "Flexible for chains and independents"
+      ],
+      "products": [
+        "HotelRunner Booking Engine",
+        "HotelRunner CRS"
+      ],
+      "targetMarkets": [
+        "Europe",
+        "Middle East",
+        "APAC"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "sales@hotelrunner.com",
+      "phone": "+90-212-555-0176",
+      "website": "https://www.hotelrunner.com",
+      "headquarters": "Istanbul, Turkey",
+      "founded": 2012
+    },
+    {
+      "id": "simplebooking",
+      "name": "SimpleBooking",
+      "logoInitials": "SB",
+      "description": "SimpleBooking is an Italian direct booking engine, now part of the Bookassist group, serving independent hotels across Europe. It focuses on conversion-optimized checkout flows and integrates with a broad range of PMS and channel manager systems.",
+      "features": [
+        "Direct booking widget",
+        "Conversion-optimized checkout",
+        "Upsell merchandising",
+        "Multi-language & multi-currency",
+        "PMS/channel manager integrations",
+        "Rate parity tools"
+      ],
+      "usps": [
+        "Strong Italian independent hotel base",
+        "Now backed by Bookassist group scale",
+        "Conversion-focused UX design"
+      ],
+      "products": [
+        "SimpleBooking Engine",
+        "SimpleBooking Channel Manager"
+      ],
+      "targetMarkets": [
+        "Europe"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "info@simplebooking.it",
+      "phone": "+39-051-555-0142",
+      "website": "https://www.simplebooking.it",
+      "headquarters": "Bologna, Italy",
+      "founded": 2007
+    },
+    {
+      "id": "juniper-booking-engine",
+      "name": "Juniper Booking Engine",
+      "logoInitials": "JN",
+      "description": "Juniper is a Spanish travel technology company whose booking engine serves hotels, tour operators, and travel agencies with both B2C direct booking and B2B distribution capability. It is used across Europe and Latin America for multi-product travel commerce.",
+      "features": [
+        "Direct booking engine",
+        "B2B agency distribution",
+        "Dynamic packaging",
+        "Multi-currency & multi-language",
+        "Channel connectivity",
+        "API-based integrations"
+      ],
+      "usps": [
+        "Combines hotel and tour/package booking",
+        "Strong Spanish/LATAM footprint",
+        "Flexible B2B and B2C distribution"
+      ],
+      "products": [
+        "Juniper Booking Engine",
+        "Juniper B2B Platform"
+      ],
+      "targetMarkets": [
+        "Europe",
+        "LATAM"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "info@junipertravel.com",
+      "phone": "+34-93-555-0177",
+      "website": "https://www.juniper.es",
+      "headquarters": "Barcelona, Spain",
+      "founded": 2000
+    },
+    {
+      "id": "trust-international",
+      "name": "Trust International",
+      "logoInitials": "TI",
+      "description": "Trust International is a Dutch provider of hotel booking engines and website technology, helping independent hotels and small chains across Europe drive direct reservations. It combines a customizable booking flow with website design services.",
+      "features": [
+        "Direct booking engine",
+        "Website design",
+        "Upsell & package tools",
+        "Multi-language checkout",
+        "Channel manager integration",
+        "Rate parity monitoring"
+      ],
+      "usps": [
+        "Long-established European provider",
+        "Website-and-booking bundled offering",
+        "Strong Benelux hotel client base"
+      ],
+      "products": [
+        "Trust Booking Engine",
+        "Trust Website Platform"
+      ],
+      "targetMarkets": [
+        "Europe"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "info@trust.nl",
+      "phone": "+31-10-555-0135",
+      "website": "https://www.trust.nl",
+      "headquarters": "Rotterdam, Netherlands",
+      "founded": 1996
+    },
+    {
+      "id": "avvio",
+      "name": "Avvio",
+      "logoInitials": "AV",
+      "description": "Avvio is an Irish direct booking technology company whose AI-driven booking engine, Allora, helps independent hotels and small groups increase direct reservation conversion. It focuses heavily on personalization and conversion rate optimization for hotel websites.",
+      "features": [
+        "AI-personalized booking flow",
+        "Conversion rate optimization",
+        "Upsell & package merchandising",
+        "Multi-language & multi-currency",
+        "Rate parity monitoring",
+        "Website integration tools"
+      ],
+      "usps": [
+        "AI-driven personalization engine",
+        "Strong European independent hotel base",
+        "Focus on measurable conversion lift"
+      ],
+      "products": [
+        "Avvio Allora Booking Engine",
+        "Avvio Personalization"
+      ],
+      "targetMarkets": [
+        "Europe"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "info@avvio.com",
+      "phone": "+353-91-555-0146",
+      "website": "https://www.avvio.com",
+      "headquarters": "Galway, Ireland",
+      "founded": 2004
+    },
+    {
+      "id": "hotel-link-solutions",
+      "name": "Hotel Link Solutions",
+      "logoInitials": "HK",
+      "description": "Hotel Link Solutions provides a booking engine, channel manager, and PMS suite for independent hotels across Asia-Pacific, with particular strength in Indonesia and Southeast Asia. Its direct booking widget is designed for hotels with limited in-house IT resources.",
+      "features": [
+        "Direct booking widget",
+        "Channel manager",
+        "PMS integration",
+        "Multi-language checkout",
+        "Mobile-friendly booking flow",
+        "Reporting dashboard"
+      ],
+      "usps": [
+        "Strong Southeast Asian/Indonesian base",
+        "Bundled suite for small operators",
+        "Localized support in emerging markets"
+      ],
+      "products": [
+        "Hotel Link Booking Engine",
+        "Hotel Link Channel Manager",
+        "Hotel Link PMS"
+      ],
+      "targetMarkets": [
+        "APAC"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$",
+      "email": "info@hotellinksolutions.com",
+      "phone": "+61-7-5555-0119",
+      "website": "https://www.hotellinksolutions.com",
+      "headquarters": "Sydney, Australia",
+      "founded": 2012
+    },
+    {
+      "id": "yieldplanet-booking-engine",
+      "name": "YieldPlanet Booking Engine",
+      "logoInitials": "YP",
+      "description": "YieldPlanet is a Polish channel manager and booking engine provider serving independent hotels across Europe. Its direct booking widget syncs live with the same platform's channel distribution to keep rates and availability consistent across all sales channels.",
+      "features": [
+        "Direct booking widget",
+        "Real-time channel sync",
+        "Multi-language & multi-currency",
+        "Rate parity tools",
+        "Upsell add-ons",
+        "Reporting dashboard"
+      ],
+      "usps": [
+        "Deep channel manager integration",
+        "Strong Central European hotel base",
+        "Competitive pricing for independents"
+      ],
+      "products": [
+        "YieldPlanet Booking Engine",
+        "YieldPlanet Channel Manager"
+      ],
+      "targetMarkets": [
+        "Europe"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "info@yieldplanet.com",
+      "phone": "+48-22-555-0164",
+      "website": "https://www.yieldplanet.com",
+      "headquarters": "Warsaw, Poland",
+      "founded": 2011
+    },
+    {
+      "id": "amenitiz-booking-engine",
+      "name": "Amenitiz Booking Engine",
+      "logoInitials": "AM",
+      "description": "Amenitiz's booking engine gives independent hotels, campsites, and vacation rentals across southern Europe a direct, commission-free reservation widget for their own website. It is bundled with the company's broader PMS, payments, and marketing platform.",
+      "features": [
+        "Direct booking widget",
+        "Real-time PMS sync",
+        "Payment processing",
+        "Website builder integration",
+        "Multi-language checkout",
+        "Upsell tools"
+      ],
+      "usps": [
+        "Strong Southern European footprint",
+        "All-in-one bundled pricing",
+        "Fast-growing independent focus"
+      ],
+      "products": [
+        "Amenitiz Booking Engine",
+        "Amenitiz PMS",
+        "Amenitiz Payments"
+      ],
+      "targetMarkets": [
+        "Europe"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "hello@amenitiz.io",
+      "phone": "+33-1-5555-0171",
+      "website": "https://www.amenitiz.io",
+      "headquarters": "Paris, France",
+      "founded": 2018
+    },
+    {
+      "id": "bookline",
+      "name": "Bookline",
+      "logoInitials": "BO",
+      "description": "Bookline is a Hungarian online booking engine originally built for restaurants that has expanded into hotel and hospitality reservations across Central and Eastern Europe. It provides a direct booking widget with integrated payments for small hospitality businesses.",
+      "features": [
+        "Direct booking widget",
+        "Integrated payments",
+        "Multi-language checkout",
+        "Deposit & cancellation rules",
+        "Table/room availability management",
+        "Reporting dashboard"
+      ],
+      "usps": [
+        "Strong Central/Eastern European base",
+        "Origins in restaurant bookings now extended to hotels",
+        "Affordable for small operators"
+      ],
+      "products": [
+        "Bookline Booking Engine",
+        "Bookline Payments"
+      ],
+      "targetMarkets": [
+        "Europe"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$",
+      "email": "info@bookline.net",
+      "phone": "+36-1-555-0149",
+      "website": "https://www.bookline.net",
+      "headquarters": "Budapest, Hungary",
+      "founded": 2013
+    }
+  ]
+}

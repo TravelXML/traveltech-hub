@@ -1,0 +1,702 @@
+{
+  "_comment": "Contact details (email, phone) are plausible placeholder-format examples for demo purposes only and must be verified before real-world use.",
+  "category": "hotel-reservations",
+  "listings": [
+    {
+      "id": "cloudbeds-reservations",
+      "name": "Cloudbeds Reservation System",
+      "logoInitials": "CB",
+      "description": "Cloudbeds' reservation system gives independent hotels and hostels a unified way to manage bookings arriving from OTAs, the direct booking engine, and walk-ins in one calendar. It automates rate and inventory updates across channels in real time to prevent overbookings.",
+      "features": [
+        "Unified reservation calendar",
+        "Real-time channel sync",
+        "Direct booking engine",
+        "Automated rate updates",
+        "Guest profile management",
+        "Mobile app access"
+      ],
+      "usps": [
+        "Award-winning ease of use",
+        "Fast onboarding for independents",
+        "Large integration marketplace"
+      ],
+      "products": [
+        "Cloudbeds PMS",
+        "Cloudbeds Booking Engine",
+        "Cloudbeds Channel Manager"
+      ],
+      "targetMarkets": [
+        "Global",
+        "North America",
+        "Europe",
+        "APAC",
+        "LATAM"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "sales@cloudbeds.com",
+      "phone": "+1-415-555-0112",
+      "website": "https://www.cloudbeds.com",
+      "headquarters": "San Diego, United States",
+      "founded": 2012
+    },
+    {
+      "id": "resnexus",
+      "name": "ResNexus",
+      "logoInitials": "RN",
+      "description": "ResNexus is a US-based reservation and property management platform serving hotels, bed & breakfasts, campgrounds, and vacation rentals. It combines an online booking engine with channel distribution, payment processing, and marketing tools tailored to small lodging operators.",
+      "features": [
+        "Online reservation engine",
+        "Channel manager",
+        "Automated email marketing",
+        "Payment processing",
+        "Damage waiver & insurance add-ons",
+        "Guest review tools"
+      ],
+      "usps": [
+        "Strong niche fit for campgrounds & B&Bs",
+        "Bundled marketing add-ons",
+        "US-focused support team"
+      ],
+      "products": [
+        "ResNexus Reservations",
+        "ResNexus Channel Manager",
+        "ResNexus Marketing"
+      ],
+      "targetMarkets": [
+        "North America"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$",
+      "email": "support@resnexus.com",
+      "phone": "+1-801-555-0144",
+      "website": "https://www.resnexus.com",
+      "headquarters": "Logan, United States",
+      "founded": 2003
+    },
+    {
+      "id": "webrezpro-reservations",
+      "name": "WebRezPro",
+      "logoInitials": "WR",
+      "description": "WebRezPro's reservation module lets hotels, hostels, and campgrounds take direct bookings online while synchronizing availability with OTAs through its built-in channel manager. It is delivered as a cloud service by World Web Technologies to a broad range of lodging types.",
+      "features": [
+        "Online booking engine",
+        "Real-time availability sync",
+        "Group & block reservations",
+        "Deposit & cancellation rules",
+        "Multi-currency support",
+        "Guest communication tools"
+      ],
+      "usps": [
+        "Serves diverse lodging types",
+        "All-in-one bundled pricing",
+        "Established Canadian provider"
+      ],
+      "products": [
+        "WebRezPro PMS",
+        "WebRezPro Booking Engine",
+        "WebRezPro Channel Manager"
+      ],
+      "targetMarkets": [
+        "North America",
+        "Global"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "sales@webrezpro.com",
+      "phone": "+1-250-555-0182",
+      "website": "https://www.webrezpro.com",
+      "headquarters": "Victoria, Canada",
+      "founded": 2003
+    },
+    {
+      "id": "innroad-reservations",
+      "name": "innRoad",
+      "logoInitials": "IR",
+      "description": "innRoad provides a commission-free reservation system for independent North American hotels, combining a direct booking engine with channel distribution and payment processing. Its reservation dashboard is designed to reduce reliance on third-party OTA commissions.",
+      "features": [
+        "Commission-free booking engine",
+        "Central reservation dashboard",
+        "Channel distribution",
+        "Automated confirmations",
+        "Integrated payments",
+        "Reporting & analytics"
+      ],
+      "usps": [
+        "No booking commission model",
+        "Strong independent-hotel focus",
+        "Bundled all-in-one pricing"
+      ],
+      "products": [
+        "innRoad PMS",
+        "innRoad Booking Engine",
+        "innRoad Channel Manager"
+      ],
+      "targetMarkets": [
+        "North America"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "sales@innroad.com",
+      "phone": "+1-877-555-0165",
+      "website": "https://www.innroad.com",
+      "headquarters": "New York, United States",
+      "founded": 2003
+    },
+    {
+      "id": "sirvoy",
+      "name": "Sirvoy",
+      "logoInitials": "SV",
+      "description": "Sirvoy is a Swedish-built reservation and booking system aimed at small hotels, guesthouses, and hostels that need an affordable way to manage online reservations. It combines a booking engine, channel manager, and front desk tools in a single lightweight package.",
+      "features": [
+        "Online booking engine",
+        "Channel manager",
+        "Point of sale",
+        "Automated guest emails",
+        "Multi-language booking widget",
+        "Payment gateway integration"
+      ],
+      "usps": [
+        "Very low-cost entry point",
+        "Simple setup for micro-properties",
+        "Popular with hostels & guesthouses"
+      ],
+      "products": [
+        "Sirvoy Booking System",
+        "Sirvoy Channel Manager",
+        "Sirvoy POS"
+      ],
+      "targetMarkets": [
+        "Europe",
+        "Global"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$",
+      "email": "support@sirvoy.com",
+      "phone": "+46-8-555-0119",
+      "website": "https://www.sirvoy.com",
+      "headquarters": "Stockholm, Sweden",
+      "founded": 2010
+    },
+    {
+      "id": "hotelrunner-reservations",
+      "name": "HotelRunner",
+      "logoInitials": "HR",
+      "description": "HotelRunner is a cloud reservation and distribution platform used by independent hotels and travel agencies, particularly across Turkey, Europe, and the Middle East. It centralizes reservations from OTAs, GDS, and direct channels into a single dashboard.",
+      "features": [
+        "Central reservation dashboard",
+        "Channel & GDS distribution",
+        "Direct booking engine",
+        "Travel agency portal",
+        "Dynamic pricing tools",
+        "Multi-property management"
+      ],
+      "usps": [
+        "Strong Turkey/Middle East footprint",
+        "Combined B2B agency & OTA distribution",
+        "Flexible for chains and independents"
+      ],
+      "products": [
+        "HotelRunner CRS",
+        "HotelRunner Booking Engine",
+        "HotelRunner Channel Manager"
+      ],
+      "targetMarkets": [
+        "Europe",
+        "Middle East",
+        "APAC"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "sales@hotelrunner.com",
+      "phone": "+90-212-555-0176",
+      "website": "https://www.hotelrunner.com",
+      "headquarters": "Istanbul, Turkey",
+      "founded": 2012
+    },
+    {
+      "id": "beds24",
+      "name": "Beds24",
+      "logoInitials": "BD",
+      "description": "Beds24 is a long-standing online reservation and channel management system used by hostels, guesthouses, and vacation rental operators worldwide. It offers deep customization of booking rules and connects to a wide range of OTAs and payment gateways.",
+      "features": [
+        "Highly configurable booking engine",
+        "Multi-channel distribution",
+        "Automated rate rules",
+        "Payment gateway integrations",
+        "API access",
+        "Guest messaging automation"
+      ],
+      "usps": [
+        "Deep configurability for power users",
+        "Very competitive pricing",
+        "Long track record since early 2000s"
+      ],
+      "products": [
+        "Beds24 Booking System",
+        "Beds24 Channel Manager",
+        "Beds24 API"
+      ],
+      "targetMarkets": [
+        "Global",
+        "Europe",
+        "APAC"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$",
+      "email": "support@beds24.com",
+      "phone": "+852-5555-0198",
+      "website": "https://www.beds24.com",
+      "headquarters": "Hong Kong",
+      "founded": 2006
+    },
+    {
+      "id": "ezee-reservation",
+      "name": "eZee Reservation",
+      "logoInitials": "EZ",
+      "description": "eZee Reservation is the central reservation and booking engine product from eZee Technosys, giving independent hotels across Asia, the Middle East, and Africa a way to accept direct bookings and manage inventory alongside its companion PMS. It emphasizes affordability for budget and mid-market properties.",
+      "features": [
+        "Direct booking engine",
+        "Central reservation system",
+        "Real-time inventory sync",
+        "Multi-language & multi-currency",
+        "Upsell add-ons",
+        "Mobile-friendly widget"
+      ],
+      "usps": [
+        "Affordable for independents",
+        "Strong presence in emerging markets",
+        "Bundled with eZee's PMS suite"
+      ],
+      "products": [
+        "eZee Reservation",
+        "eZee Absolute PMS",
+        "eZee Centrix"
+      ],
+      "targetMarkets": [
+        "APAC",
+        "India",
+        "Middle East",
+        "Africa"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$",
+      "email": "sales@ezeetechnosys.com",
+      "phone": "+91-79-5550-1122",
+      "website": "https://www.ezeeabsolute.com",
+      "headquarters": "Ahmedabad, India",
+      "founded": 2005
+    },
+    {
+      "id": "thinkreservations",
+      "name": "ThinkReservations",
+      "logoInitials": "TR",
+      "description": "ThinkReservations provides reservation and property management software built specifically for small hotels, bed & breakfasts, and vacation rental operators in North America. Its booking engine emphasizes upselling add-ons and packages alongside standard room reservations.",
+      "features": [
+        "Direct booking engine",
+        "Package & add-on upsells",
+        "Channel management",
+        "Guest CRM",
+        "Integrated payments",
+        "Reporting dashboard"
+      ],
+      "usps": [
+        "Purpose-built for B&Bs and inns",
+        "Strong upsell/packaging tools",
+        "Responsive US-based support"
+      ],
+      "products": [
+        "ThinkReservations PMS",
+        "ThinkReservations Booking Engine"
+      ],
+      "targetMarkets": [
+        "North America"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "hello@thinkreservations.com",
+      "phone": "+1-877-555-0113",
+      "website": "https://www.thinkreservations.com",
+      "headquarters": "Kirkland, United States",
+      "founded": 2012
+    },
+    {
+      "id": "little-hotelier-reservations",
+      "name": "Little Hotelier",
+      "logoInitials": "LH",
+      "description": "Little Hotelier, a SiteMinder product, gives small properties such as B&Bs and guesthouses a simplified way to take direct reservations online while syncing availability with OTAs. Its reservation dashboard is designed for owner-operators without dedicated IT staff.",
+      "features": [
+        "Simple reservation dashboard",
+        "Direct booking website engine",
+        "Channel manager sync",
+        "Mobile management app",
+        "Payment processing",
+        "Guest reporting"
+      ],
+      "usps": [
+        "Purpose-built for small properties",
+        "Backed by SiteMinder's distribution network",
+        "Easy self-service onboarding"
+      ],
+      "products": [
+        "Little Hotelier PMS",
+        "Little Hotelier Booking Engine",
+        "Little Hotelier Channel Manager"
+      ],
+      "targetMarkets": [
+        "APAC",
+        "Europe",
+        "Global"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$",
+      "email": "support@littlehotelier.com",
+      "phone": "+61-2-5550-1199",
+      "website": "https://www.littlehotelier.com",
+      "headquarters": "Sydney, Australia",
+      "founded": 2011
+    },
+    {
+      "id": "preno",
+      "name": "Preno",
+      "logoInitials": "PN",
+      "description": "Preno is a cloud reservation and hotel management platform from New Zealand aimed at small independent hotels, motels, and B&Bs. It automates bookings from OTAs and direct channels into a single calendar with straightforward invoicing.",
+      "features": [
+        "Unified booking calendar",
+        "Channel manager integration",
+        "Automated invoicing",
+        "Guest communication templates",
+        "Housekeeping checklist",
+        "Reporting"
+      ],
+      "usps": [
+        "Simple, intuitive interface",
+        "Fast setup for small operators",
+        "Strong APAC independent focus"
+      ],
+      "products": [
+        "Preno PMS",
+        "Preno Booking Engine"
+      ],
+      "targetMarkets": [
+        "APAC"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$",
+      "email": "hello@preno.co",
+      "phone": "+64-9-555-0127",
+      "website": "https://www.preno.co",
+      "headquarters": "Auckland, New Zealand",
+      "founded": 2016
+    },
+    {
+      "id": "roomraccoon",
+      "name": "RoomRaccoon",
+      "logoInitials": "RR",
+      "description": "RoomRaccoon is an all-in-one reservation and hotel management system for independent hotels and B&Bs, popular across Europe. It automates reservations, invoicing, and upselling through a single cloud dashboard connected to major OTAs.",
+      "features": [
+        "Automated reservation engine",
+        "Dynamic upselling",
+        "Channel manager",
+        "Automated invoicing",
+        "Payment processing",
+        "Revenue management add-on"
+      ],
+      "usps": [
+        "Strong automation for small teams",
+        "Built-in upsell revenue tools",
+        "Rapid growth across Europe"
+      ],
+      "products": [
+        "RoomRaccoon PMS",
+        "RoomRaccoon Booking Engine",
+        "RoomRaccoon Payments"
+      ],
+      "targetMarkets": [
+        "Europe",
+        "Africa"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "hello@roomraccoon.com",
+      "phone": "+31-73-555-0155",
+      "website": "https://www.roomraccoon.com",
+      "headquarters": "'s-Hertogenbosch, Netherlands",
+      "founded": 2017
+    },
+    {
+      "id": "amenitiz",
+      "name": "Amenitiz",
+      "logoInitials": "AM",
+      "description": "Amenitiz is an all-in-one reservation, booking engine, and property management platform for independent hotels, campsites, and vacation rentals across southern Europe. It targets owner-operators who need a single tool for bookings, payments, and marketing.",
+      "features": [
+        "Direct booking engine",
+        "Channel manager",
+        "Automated reservation calendar",
+        "Integrated payments",
+        "Website builder",
+        "Guest marketing tools"
+      ],
+      "usps": [
+        "Strong Southern European footprint",
+        "All-in-one bundled pricing",
+        "Fast-growing independent focus"
+      ],
+      "products": [
+        "Amenitiz PMS",
+        "Amenitiz Booking Engine",
+        "Amenitiz Payments"
+      ],
+      "targetMarkets": [
+        "Europe"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "hello@amenitiz.io",
+      "phone": "+33-1-5555-0171",
+      "website": "https://www.amenitiz.io",
+      "headquarters": "Paris, France",
+      "founded": 2018
+    },
+    {
+      "id": "hotelogix-reservations",
+      "name": "Hotelogix",
+      "logoInitials": "HG",
+      "description": "Hotelogix offers a cloud reservation system bundled with its PMS for independent hotels and small chains across India, Southeast Asia, and the Middle East. The reservation module centralizes bookings from OTAs, travel agents, and the hotel's own website.",
+      "features": [
+        "Central reservation system",
+        "Direct booking engine",
+        "Travel agent booking module",
+        "Channel manager",
+        "Mobile reservations app",
+        "Multi-property view"
+      ],
+      "usps": [
+        "Budget-friendly pricing",
+        "Fast setup for small hotels",
+        "Strong regional support in Asia"
+      ],
+      "products": [
+        "Hotelogix PMS",
+        "Hotelogix Booking Engine",
+        "Hotelogix Channel Manager"
+      ],
+      "targetMarkets": [
+        "India",
+        "APAC",
+        "Middle East"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$",
+      "email": "sales@hotelogix.com",
+      "phone": "+91-124-455-0133",
+      "website": "https://www.hotelogix.com",
+      "headquarters": "Gurugram, India",
+      "founded": 2009
+    },
+    {
+      "id": "frontdesk-anywhere-reservations",
+      "name": "Frontdesk Anywhere",
+      "logoInitials": "FA",
+      "description": "Frontdesk Anywhere provides a cloud reservation system for independent hotels and small groups in North America, syncing direct bookings with OTA channels in real time. It is positioned as a straightforward, quick-to-deploy alternative to legacy reservation systems.",
+      "features": [
+        "Cloud reservation system",
+        "Channel management",
+        "Direct booking engine",
+        "Group block reservations",
+        "Credit card processing",
+        "Reporting"
+      ],
+      "usps": [
+        "Simple, quick implementation",
+        "Reliable for boutique properties",
+        "Established North American user base"
+      ],
+      "products": [
+        "Frontdesk Anywhere PMS",
+        "Frontdesk Anywhere Booking Engine"
+      ],
+      "targetMarkets": [
+        "North America"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "sales@frontdeskanywhere.com",
+      "phone": "+1-800-555-0129",
+      "website": "https://www.frontdeskanywhere.com",
+      "headquarters": "Santa Monica, United States",
+      "founded": 2005
+    },
+    {
+      "id": "bookalet",
+      "name": "Bookalet",
+      "logoInitials": "BK",
+      "description": "Bookalet is a UK-based online booking and reservation system built for holiday cottage and self-catering property owners and small agencies. It handles availability calendars, deposits, and guest correspondence for owners managing a handful of units.",
+      "features": [
+        "Online availability calendar",
+        "Deposit & balance payments",
+        "Owner/agency multi-property view",
+        "Guest correspondence templates",
+        "iCal channel sync",
+        "Booking widget for owner websites"
+      ],
+      "usps": [
+        "Purpose-built for holiday cottages",
+        "Affordable for small owners",
+        "Simple iCal-based channel sync"
+      ],
+      "products": [
+        "Bookalet Booking System",
+        "Bookalet Payments"
+      ],
+      "targetMarkets": [
+        "Europe"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$",
+      "email": "support@bookalet.co.uk",
+      "phone": "+44-1225-555-0138",
+      "website": "https://www.bookalet.co.uk",
+      "headquarters": "Bath, United Kingdom",
+      "founded": 2008
+    },
+    {
+      "id": "lodgify",
+      "name": "Lodgify",
+      "logoInitials": "LG",
+      "description": "Lodgify provides reservation and website software for vacation rental owners and property managers, letting them take direct bookings through their own branded site while syncing with Airbnb, Vrbo, and Booking.com. It targets hosts scaling beyond a handful of listings.",
+      "features": [
+        "Direct booking website builder",
+        "Reservation & payment engine",
+        "Channel manager sync",
+        "Automated guest messaging",
+        "Multi-calendar dashboard",
+        "API integrations"
+      ],
+      "usps": [
+        "Strong direct-booking website focus",
+        "Popular with vacation rental hosts",
+        "Fast-growing European provider"
+      ],
+      "products": [
+        "Lodgify Website Builder",
+        "Lodgify Booking Engine",
+        "Lodgify Channel Manager"
+      ],
+      "targetMarkets": [
+        "Europe",
+        "North America",
+        "Global"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "support@lodgify.com",
+      "phone": "+34-93-555-0164",
+      "website": "https://www.lodgify.com",
+      "headquarters": "Barcelona, Spain",
+      "founded": 2014
+    },
+    {
+      "id": "skytouch",
+      "name": "SkyTouch Technology",
+      "logoInitials": "ST",
+      "description": "SkyTouch Technology provides a cloud reservation and property management system originally spun out of Choice Hotels, now serving independent and franchised hotels across North America. Its reservation system integrates with major franchise central reservation systems.",
+      "features": [
+        "Cloud reservation system",
+        "Franchise CRS integration",
+        "Channel management",
+        "Mobile-friendly dashboard",
+        "Group reservation tools",
+        "Reporting suite"
+      ],
+      "usps": [
+        "Deep franchise hotel expertise",
+        "Proven at scale from Choice Hotels lineage",
+        "Strong North American support"
+      ],
+      "products": [
+        "SkyTouch Hotel OS",
+        "SkyTouch Reservations"
+      ],
+      "targetMarkets": [
+        "North America"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "sales@skytouchtechnology.com",
+      "phone": "+1-602-555-0159",
+      "website": "https://www.skytouchtechnology.com",
+      "headquarters": "Phoenix, United States",
+      "founded": 2011
+    },
+    {
+      "id": "newbook",
+      "name": "NewBook",
+      "logoInitials": "NB",
+      "description": "NewBook is a reservation and management platform built for holiday parks, hostels, hotels, and campgrounds primarily across Australia, New Zealand, and North America. It combines a direct booking engine with trust accounting and channel distribution suited to multi-site operators.",
+      "features": [
+        "Reservation & availability engine",
+        "Channel manager",
+        "Trust accounting",
+        "Point of sale",
+        "Guest communication automation",
+        "Multi-site reporting"
+      ],
+      "usps": [
+        "Strong holiday park/campground niche",
+        "Trust accounting built in",
+        "Deep APAC operator base"
+      ],
+      "products": [
+        "NewBook PMS",
+        "NewBook Booking Engine",
+        "NewBook Channel Manager"
+      ],
+      "targetMarkets": [
+        "APAC",
+        "North America"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "sales@newbook.cloud",
+      "phone": "+61-7-5555-0187",
+      "website": "https://www.newbook.cloud",
+      "headquarters": "Gold Coast, Australia",
+      "founded": 2005
+    },
+    {
+      "id": "zeevou",
+      "name": "Zeevou",
+      "logoInitials": "ZV",
+      "description": "Zeevou is a UK-based reservation, channel management, and guest experience platform built for serviced accommodation and short-term rental operators. It automates multi-unit bookings across OTAs and direct channels with dynamic pricing and guest communication tools.",
+      "features": [
+        "Multi-unit reservation engine",
+        "Channel manager",
+        "Dynamic pricing",
+        "Automated guest messaging",
+        "Direct booking website",
+        "Owner/investor reporting"
+      ],
+      "usps": [
+        "Purpose-built for serviced accommodation",
+        "Strong automation for multi-unit operators",
+        "Growing UK/Europe presence"
+      ],
+      "products": [
+        "Zeevou Reservation System",
+        "Zeevou Channel Manager",
+        "Zeevou Booking Engine"
+      ],
+      "targetMarkets": [
+        "Europe"
+      ],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "hello@zeevou.com",
+      "phone": "+44-20-5555-0143",
+      "website": "https://www.zeevou.com",
+      "headquarters": "London, United Kingdom",
+      "founded": 2017
+    }
+  ]
+}

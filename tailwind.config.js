@@ -21,7 +21,10 @@ export default {
   // Category theme colors are referenced dynamically via src/config/categories.js,
   // so their utility classes must be safelisted (Tailwind can't see them via static analysis).
   safelist: [
-    ...['indigo', 'teal', 'sky', 'amber', 'emerald', 'cyan', 'violet', 'orange', 'rose', 'blue', 'lime', 'fuchsia'].flatMap(
+    ...[
+      'indigo', 'teal', 'sky', 'amber', 'emerald', 'cyan', 'violet', 'orange', 'rose', 'blue', 'lime', 'fuchsia',
+      'red', 'yellow', 'green', 'purple', 'pink', 'stone', 'gray', 'slate',
+    ].flatMap(
       (color) => [
         `bg-${color}-50`,
         `bg-${color}-100`,
