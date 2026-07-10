@@ -1,12 +1,14 @@
 import { useState } from 'react'
-import { Mail, Phone, Globe, MapPin, Calendar, ChevronDown, ChevronUp } from 'lucide-react'
+import { Mail, Phone, Globe, MapPin, Calendar, ChevronDown, ChevronUp, Heart, ThumbsUp, ThumbsDown } from 'lucide-react'
 import TagBadge from './TagBadge.jsx'
 import { getTheme } from '../config/theme.js'
+import { useReaction } from '../hooks/useReaction.js'
 
 export default function ListingCard({ listing, color }) {
   const [expanded, setExpanded] = useState(false)
   const theme = getTheme(color)
   const accentBorder = theme.ring.replace('ring-', 'border-')
+  const { liked, vote, toggleLike, castVote } = useReaction(listing.id)
 
   const websiteHost = listing.website.replace(/^https?:\/\//, '').replace(/\/$/, '')
 
@@ -31,6 +33,36 @@ export default function ListingCard({ listing, color }) {
                 <Calendar size={13} className={theme.text} /> Founded {listing.founded}
               </span>
             </div>
+          </div>
+
+          <div className="flex shrink-0 items-center gap-1">
+            <button
+              type="button"
+              onClick={toggleLike}
+              title={liked ? 'Remove from favorites' : 'Add to favorites'}
+              aria-pressed={liked}
+              className={`rounded-full p-1.5 transition hover:bg-white/60 ${liked ? 'text-red-500' : 'text-slate-400'}`}
+            >
+              <Heart size={18} fill={liked ? 'currentColor' : 'none'} />
+            </button>
+            <button
+              type="button"
+              onClick={() => castVote('up')}
+              title="Helpful"
+              aria-pressed={vote === 'up'}
+              className={`rounded-full p-1.5 transition hover:bg-white/60 ${vote === 'up' ? 'text-emerald-600' : 'text-slate-400'}`}
+            >
+              <ThumbsUp size={17} fill={vote === 'up' ? 'currentColor' : 'none'} />
+            </button>
+            <button
+              type="button"
+              onClick={() => castVote('down')}
+              title="Not helpful"
+              aria-pressed={vote === 'down'}
+              className={`rounded-full p-1.5 transition hover:bg-white/60 ${vote === 'down' ? 'text-red-600' : 'text-slate-400'}`}
+            >
+              <ThumbsDown size={17} fill={vote === 'down' ? 'currentColor' : 'none'} />
+            </button>
           </div>
         </div>
 
