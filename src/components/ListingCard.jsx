@@ -89,10 +89,11 @@ export default function ListingCard({ listing, color }) {
             href={listing.website}
             target="_blank"
             rel="noreferrer"
-            className={`flex min-w-0 items-center gap-2 hover:${theme.text}`}
+            title={`Visit ${listing.name}'s website (${websiteHost})`}
+            className={`inline-flex w-fit items-center gap-2 rounded-lg ${theme.solid} px-3 py-1.5 text-sm font-medium text-white transition ${theme.solidHover}`}
           >
-            <Globe size={15} className={`shrink-0 ${theme.text}`} />
-            <span className="truncate">{websiteHost}</span>
+            <Globe size={15} className="shrink-0" />
+            Visit website
           </a>
         </div>
 
