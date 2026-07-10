@@ -113,7 +113,7 @@ export default function CategoryPage() {
               {loading ? 'Loading…' : `${filters.resultCount} result${filters.resultCount === 1 ? '' : 's'}`}
             </p>
 
-            <div className="mt-4 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+            <div className="mt-4 grid grid-cols-[repeat(auto-fit,minmax(320px,1fr))] gap-6">
               {filters.filteredListings.map((listing) => (
                 <ListingCard key={listing.id} listing={listing} color={category.color} />
               ))}
