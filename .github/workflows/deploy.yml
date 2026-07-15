@@ -1,3 +1,16 @@
+# Deploys to GitHub Pages, as a secondary deployment target alongside
+# Cloudflare Pages (see docs/cloudflare-pages.md - Cloudflare is set up
+# separately in the Cloudflare dashboard and isn't affected by this
+# workflow at all). Both can run at once without conflict: this workflow
+# builds with VITE_BASE_PATH=/traveltech-hub/ + BrowserRouter, matching the
+# GitHub Pages project subpath, while Cloudflare builds with no
+# VITE_BASE_PATH (defaults to '/') for its own custom domain/*.pages.dev.
+#
+# Requires two repo secrets (Settings -> Secrets and variables -> Actions):
+#   VITE_SUPABASE_URL
+#   VITE_SUPABASE_PUBLISHABLE_KEY
+# Never add SUPABASE_SERVICE_ROLE_KEY or similar here - this workflow only
+# ever builds public, browser-safe frontend code.
 name: Deploy to GitHub Pages
 
 on:
@@ -31,6 +44,10 @@ jobs:
         run: npm ci
 
       - name: Build
+        env:
+          VITE_BASE_PATH: /traveltech-hub/
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_PUBLISHABLE_KEY: ${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}
         run: npm run build
 
       - name: Upload build artifact

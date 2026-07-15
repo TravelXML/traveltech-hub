@@ -17,11 +17,14 @@ export default function Hero() {
       setResults([])
       return
     }
-    searchAll(query).then((res) => {
-      if (active) setResults(res.slice(0, 8))
-    })
+    const timer = setTimeout(() => {
+      searchAll(query).then((res) => {
+        if (active) setResults(res.slice(0, 8))
+      })
+    }, 300)
     return () => {
       active = false
+      clearTimeout(timer)
     }
   }, [query])
 

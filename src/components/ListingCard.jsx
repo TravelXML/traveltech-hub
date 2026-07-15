@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { Mail, Phone, Globe, MapPin, Calendar, ChevronDown, ChevronUp, Heart, ThumbsUp, ThumbsDown } from 'lucide-react'
 import TagBadge from './TagBadge.jsx'
 import { getTheme } from '../config/theme.js'
@@ -10,7 +11,7 @@ export default function ListingCard({ listing, color }) {
   const accentBorder = theme.ring.replace('ring-', 'border-')
   const { liked, vote, toggleLike, castVote } = useReaction(listing.id)
 
-  const websiteHost = listing.website.replace(/^https?:\/\//, '').replace(/\/$/, '')
+  const websiteHost = listing.website ? listing.website.replace(/^https?:\/\//, '').replace(/\/$/, '') : null
 
   return (
     <div className="flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg">
@@ -18,17 +19,24 @@ export default function ListingCard({ listing, color }) {
 
       <div className="flex flex-1 flex-col p-6">
         <div className={`relative -m-6 mb-4 flex items-start gap-4 border-b border-slate-100 p-6 pb-4 ${theme.bg50}`}>
-          <span
-            className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${theme.solid} font-display text-base font-bold text-white shadow-sm`}
-          >
-            {listing.logoInitials}
-          </span>
-          <div className="min-w-0 flex-1 pr-16">
-            <h3
-              title={listing.name}
-              className="line-clamp-2 break-words font-display text-lg font-semibold leading-tight text-slate-900"
+          {listing.logoUrl ? (
+            <img
+              src={listing.logoUrl}
+              alt=""
+              className="h-12 w-12 shrink-0 rounded-xl bg-white object-contain p-0.5 shadow-sm ring-1 ring-slate-200"
+            />
+          ) : (
+            <span
+              className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${theme.solid} font-display text-base font-bold text-white shadow-sm`}
             >
-              {listing.name}
+              {listing.logoInitials}
+            </span>
+          )}
+          <div className="min-w-0 flex-1 pr-16">
+            <h3 title={listing.name} className="line-clamp-2 break-words font-display text-lg font-semibold leading-tight">
+              <Link to={`/vendor/${listing.slug}`} className="text-slate-900 hover:text-brand-600">
+                {listing.name}
+              </Link>
             </h3>
             <div className="mt-0.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-slate-600">
               <span className="flex items-center gap-1">
@@ -111,27 +119,33 @@ export default function ListingCard({ listing, color }) {
         </div>
 
         <div className="mt-4 flex flex-col gap-2 border-t border-slate-100 pt-4 text-sm text-slate-600">
-          <a
-            href={`mailto:${listing.email}`}
-            className={`flex min-w-0 items-center gap-2 hover:${theme.text}`}
-          >
-            <Mail size={15} className={`shrink-0 ${theme.text}`} />
-            <span className="truncate">{listing.email}</span>
-          </a>
-          <a href={`tel:${listing.phone}`} className={`flex min-w-0 items-center gap-2 hover:${theme.text}`}>
-            <Phone size={15} className={`shrink-0 ${theme.text}`} />
-            <span className="truncate">{listing.phone}</span>
-          </a>
-          <a
-            href={listing.website}
-            target="_blank"
-            rel="noreferrer"
-            title={`Visit ${listing.name}'s website (${websiteHost})`}
-            className={`inline-flex w-fit items-center gap-2 rounded-lg ${theme.solid} px-3 py-1.5 text-sm font-medium text-white transition ${theme.solidHover}`}
-          >
-            <Globe size={15} className="shrink-0" />
-            Visit website
-          </a>
+          {listing.email && (
+            <a href={`mailto:${listing.email}`} className={`flex min-w-0 items-center gap-2 hover:${theme.text}`}>
+              <Mail size={15} className={`shrink-0 ${theme.text}`} />
+              <span className="truncate">{listing.email}</span>
+            </a>
+          )}
+          {listing.phone && (
+            <a href={`tel:${listing.phone}`} className={`flex min-w-0 items-center gap-2 hover:${theme.text}`}>
+              <Phone size={15} className={`shrink-0 ${theme.text}`} />
+              <span className="truncate">{listing.phone}</span>
+            </a>
+          )}
+          {!listing.email && !listing.phone && (
+            <p className="text-xs text-slate-400">Contact details not yet verified.</p>
+          )}
+          {listing.website && (
+            <a
+              href={listing.website}
+              target="_blank"
+              rel="noreferrer"
+              title={`Visit ${listing.name}'s website (${websiteHost})`}
+              className={`inline-flex w-fit items-center gap-2 rounded-lg ${theme.solid} px-3 py-1.5 text-sm font-medium text-white transition ${theme.solidHover}`}
+            >
+              <Globe size={15} className="shrink-0" />
+              Visit website
+            </a>
+          )}
         </div>
 
         <button

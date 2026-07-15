@@ -1,11 +1,24 @@
 import { Routes, Route } from 'react-router-dom'
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
+import ProtectedRoute from './components/ProtectedRoute.jsx'
+import AdminRoute from './components/AdminRoute.jsx'
 import Home from './pages/Home.jsx'
 import CategoryPage from './pages/CategoryPage.jsx'
 import AddBusiness from './pages/AddBusiness.jsx'
 import NewsPage from './pages/NewsPage.jsx'
 import EventsPage from './pages/EventsPage.jsx'
+import Login from './pages/Login.jsx'
+import Register from './pages/Register.jsx'
+import ForgotPassword from './pages/ForgotPassword.jsx'
+import ResetPassword from './pages/ResetPassword.jsx'
+import ListingDetail from './pages/ListingDetail.jsx'
+import Dashboard from './pages/Dashboard.jsx'
+import MyListings from './pages/MyListings.jsx'
+import EditListing from './pages/EditListing.jsx'
+import AdminDashboard from './pages/AdminDashboard.jsx'
+import AdminListings from './pages/AdminListings.jsx'
+import AdminListingDetail from './pages/AdminListingDetail.jsx'
 import NotFound from './pages/NotFound.jsx'
 
 export default function App() {
@@ -18,9 +31,69 @@ export default function App() {
           <Route path="/add-business" element={<AddBusiness />} />
           <Route path="/news" element={<NewsPage />} />
           <Route path="/events" element={<EventsPage />} />
+
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/reset-password" element={<ResetPassword />} />
+
+          <Route path="/vendor/:slug" element={<ListingDetail />} />
+
+          <Route
+            path="/dashboard"
+            element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/dashboard/listings"
+            element={
+              <ProtectedRoute>
+                <MyListings />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/dashboard/listings/:id/edit"
+            element={
+              <ProtectedRoute>
+                <EditListing />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
+            path="/admin"
+            element={
+              <AdminRoute>
+                <AdminDashboard />
+              </AdminRoute>
+            }
+          />
+          <Route
+            path="/admin/listings"
+            element={
+              <AdminRoute>
+                <AdminListings />
+              </AdminRoute>
+            }
+          />
+          <Route
+            path="/admin/listings/:id"
+            element={
+              <AdminRoute>
+                <AdminListingDetail />
+              </AdminRoute>
+            }
+          />
+
           {/* Every category route is a single path segment matching its
               config id (e.g. /pms, /hotel-aggregators), so one dynamic
-              route handles every category in src/config/categories.js. */}
+              route handles every category in src/config/categories.js.
+              It must stay after every other named route above so those
+              aren't swallowed by this catch-all. */}
           <Route path="/:categoryId" element={<CategoryPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

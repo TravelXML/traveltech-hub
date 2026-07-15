@@ -1,11 +1,20 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { ChevronDown, Menu, X, Compass } from 'lucide-react'
 import { CATEGORIES } from '../config/categories.js'
+import { useAuth } from '../context/AuthContext.jsx'
 
 export default function Header() {
   const [dropdownOpen, setDropdownOpen] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const { user, isAdmin, signOut } = useAuth()
+  const navigate = useNavigate()
+
+  async function handleLogout() {
+    setMobileOpen(false)
+    await signOut()
+    navigate('/')
+  }
 
   return (
     <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/90 backdrop-blur">
@@ -54,7 +63,33 @@ export default function Header() {
           </Link>
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-4">
+          <div className="hidden items-center gap-3 md:flex">
+            {user ? (
+              <>
+                <Link to="/dashboard" className="text-sm font-medium text-slate-700 hover:text-brand-600">
+                  Dashboard
+                </Link>
+                {isAdmin && (
+                  <Link to="/admin" className="text-sm font-medium text-slate-700 hover:text-brand-600">
+                    Admin
+                  </Link>
+                )}
+                <button onClick={handleLogout} className="text-sm font-medium text-slate-700 hover:text-brand-600">
+                  Log out
+                </button>
+              </>
+            ) : (
+              <>
+                <Link to="/login" className="text-sm font-medium text-slate-700 hover:text-brand-600">
+                  Log in
+                </Link>
+                <Link to="/register" className="text-sm font-medium text-slate-700 hover:text-brand-600">
+                  Register
+                </Link>
+              </>
+            )}
+          </div>
           <Link
             to="/add-business"
             className="hidden rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-700 sm:inline-block"
@@ -103,6 +138,51 @@ export default function Header() {
             >
               Events
             </Link>
+          </div>
+          <div className="mt-3 grid grid-cols-2 gap-1 border-t border-slate-100 pt-3">
+            {user ? (
+              <>
+                <Link
+                  to="/dashboard"
+                  className="rounded-lg px-3 py-2 text-center text-sm font-medium text-slate-700 hover:bg-slate-50"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  Dashboard
+                </Link>
+                {isAdmin && (
+                  <Link
+                    to="/admin"
+                    className="rounded-lg px-3 py-2 text-center text-sm font-medium text-slate-700 hover:bg-slate-50"
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    Admin
+                  </Link>
+                )}
+                <button
+                  onClick={handleLogout}
+                  className="rounded-lg px-3 py-2 text-center text-sm font-medium text-slate-700 hover:bg-slate-50"
+                >
+                  Log out
+                </button>
+              </>
+            ) : (
+              <>
+                <Link
+                  to="/login"
+                  className="rounded-lg px-3 py-2 text-center text-sm font-medium text-slate-700 hover:bg-slate-50"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  Log in
+                </Link>
+                <Link
+                  to="/register"
+                  className="rounded-lg px-3 py-2 text-center text-sm font-medium text-slate-700 hover:bg-slate-50"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  Register
+                </Link>
+              </>
+            )}
           </div>
           <Link
             to="/add-business"

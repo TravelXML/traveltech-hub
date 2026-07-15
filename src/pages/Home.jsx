@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, AlertCircle } from 'lucide-react'
 import Hero from '../components/Hero.jsx'
 import CategoryCard from '../components/CategoryCard.jsx'
 import NewsCard from '../components/NewsCard.jsx'
@@ -9,17 +9,30 @@ import { getCategories, getNews, getEvents } from '../services/listingService.js
 
 export default function Home() {
   const [categories, setCategories] = useState([])
+  const [categoriesLoading, setCategoriesLoading] = useState(true)
+  const [categoriesError, setCategoriesError] = useState('')
   const [news, setNews] = useState([])
   const [events, setEvents] = useState([])
+  const [retryKey, setRetryKey] = useState(0)
 
   useEffect(() => {
-    getCategories().then(setCategories)
-    getNews().then((items) => setNews(items.slice(0, 3)))
+    let active = true
+    setCategoriesLoading(true)
+    setCategoriesError('')
+    getCategories()
+      .then((data) => active && setCategories(data))
+      .catch((err) => active && setCategoriesError(err.message))
+      .finally(() => active && setCategoriesLoading(false))
+    getNews().then((items) => active && setNews(items.slice(0, 3)))
     getEvents().then((items) => {
+      if (!active) return
       const today = new Date().toISOString().slice(0, 10)
       setEvents(items.filter((e) => e.endDate >= today).slice(0, 3))
     })
-  }, [])
+    return () => {
+      active = false
+    }
+  }, [retryKey])
 
   return (
     <div>
@@ -29,14 +42,29 @@ export default function Home() {
         <div className="mb-10 text-center">
           <h2 className="font-display text-3xl font-bold text-slate-900">Browse by category</h2>
           <p className="mt-2 text-slate-600">
-            {categories.length} sections covering the full travel technology stack.
+            {categoriesLoading
+              ? 'Loading categories…'
+              : `${categories.length} sections covering the full travel technology stack.`}
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {categories.map((category) => (
-            <CategoryCard key={category.id} category={category} />
-          ))}
-        </div>
+        {categoriesError ? (
+          <div className="mx-auto max-w-md rounded-2xl border border-dashed border-red-300 bg-red-50 py-12 text-center">
+            <AlertCircle className="mx-auto text-red-500" size={28} />
+            <p className="mt-3 text-red-700">{categoriesError}</p>
+            <button
+              onClick={() => setRetryKey((k) => k + 1)}
+              className="mt-4 rounded-lg bg-red-600 px-4 py-2 text-sm font-semibold text-white hover:bg-red-700"
+            >
+              Retry
+            </button>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {categories.map((category) => (
+              <CategoryCard key={category.id} category={category} />
+            ))}
+          </div>
+        )}
       </section>
 
       {news.length > 0 && (

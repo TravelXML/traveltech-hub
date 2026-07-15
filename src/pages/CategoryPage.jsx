@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useParams, useSearchParams, Navigate } from 'react-router-dom'
-import { SlidersHorizontal, X } from 'lucide-react'
+import { SlidersHorizontal, X, AlertCircle } from 'lucide-react'
 import { getCategoryById } from '../config/categories.js'
 import { getTheme } from '../config/theme.js'
 import { getListings } from '../services/listingService.js'
@@ -16,15 +16,30 @@ export default function CategoryPage() {
   const category = getCategoryById(categoryId)
   const [listings, setListings] = useState([])
   const [loading, setLoading] = useState(true)
+  const [error, setError] = useState('')
   const [drawerOpen, setDrawerOpen] = useState(false)
+  const [retryKey, setRetryKey] = useState(0)
 
   useEffect(() => {
+    let active = true
     setLoading(true)
-    getListings(categoryId).then((data) => {
-      setListings(data)
-      setLoading(false)
-    })
-  }, [categoryId])
+    setError('')
+    // getListings returns { listings, total } - only listings is needed
+    // here since filtering/sorting stays client-side via useListingFilters.
+    getListings(categoryId)
+      .then(({ listings: data }) => {
+        if (active) setListings(data)
+      })
+      .catch((err) => {
+        if (active) setError(err.message)
+      })
+      .finally(() => {
+        if (active) setLoading(false)
+      })
+    return () => {
+      active = false
+    }
+  }, [categoryId, retryKey])
 
   const filters = useListingFilters(listings)
 
@@ -109,20 +124,39 @@ export default function CategoryPage() {
               </div>
             )}
 
-            <p className="mt-4 text-sm text-slate-500">
-              {loading ? 'Loading…' : `${filters.resultCount} result${filters.resultCount === 1 ? '' : 's'}`}
-            </p>
+            {!error && (
+              <p className="mt-4 text-sm text-slate-500">
+                {loading ? 'Loading…' : `${filters.resultCount} result${filters.resultCount === 1 ? '' : 's'}`}
+              </p>
+            )}
 
-            <div className="mt-4 grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-6">
-              {filters.filteredListings.map((listing) => (
-                <ListingCard key={listing.id} listing={listing} color={category.color} />
-              ))}
-            </div>
-
-            {!loading && filters.filteredListings.length === 0 && (
-              <div className="mt-12 rounded-2xl border border-dashed border-slate-300 py-16 text-center text-slate-500">
-                No listings match your filters. Try clearing some filters.
+            {error ? (
+              <div className="mt-12 rounded-2xl border border-dashed border-red-300 bg-red-50 py-16 text-center">
+                <AlertCircle className="mx-auto text-red-500" size={28} />
+                <p className="mt-3 text-red-700">{error}</p>
+                <button
+                  onClick={() => setRetryKey((k) => k + 1)}
+                  className="mt-4 rounded-lg bg-red-600 px-4 py-2 text-sm font-semibold text-white hover:bg-red-700"
+                >
+                  Retry
+                </button>
               </div>
+            ) : (
+              <>
+                <div className="mt-4 grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-6">
+                  {filters.filteredListings.map((listing) => (
+                    <ListingCard key={listing.id} listing={listing} color={category.color} />
+                  ))}
+                </div>
+
+                {!loading && filters.filteredListings.length === 0 && (
+                  <div className="mt-12 rounded-2xl border border-dashed border-slate-300 py-16 text-center text-slate-500">
+                    {listings.length === 0
+                      ? 'No providers listed in this category yet.'
+                      : 'No listings match your filters. Try clearing some filters.'}
+                  </div>
+                )}
+              </>
             )}
           </div>
         </div>

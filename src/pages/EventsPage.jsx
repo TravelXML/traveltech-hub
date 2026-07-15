@@ -46,7 +46,7 @@ export default function EventsPage() {
             <h1 className="font-display text-3xl font-bold sm:text-4xl">Travel Events</h1>
           </div>
           <p className="mt-3 max-w-2xl text-white/90">
-            Trade shows, conferences and summits across the travel industry - who's hosting,
+            Trade shows, conferences and summits across the travel industry - who&apos;s hosting,
             where, and when.
           </p>
           <p className="mt-4 text-sm font-medium text-white/80">

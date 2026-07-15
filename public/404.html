@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>TravelTech Hub</title>
+    <script type="text/javascript">
+      // Single Page Apps for GitHub Pages: https://github.com/rafgraph/spa-github-pages
+      //
+      // GitHub Pages has no server-side rewrite support, so any deep link
+      // (e.g. /traveltech-hub/pms) 404s on refresh. This page runs instead,
+      // encodes the intended path into a query string, and redirects to
+      // index.html - which decodes it back via the matching script in
+      // index.html before React Router ever sees the URL.
+      //
+      // pathSegmentsToKeep = 1 matches this site's GitHub Pages project
+      // path (/traveltech-hub/); it's the one segment that isn't part of
+      // the app's own routes. Cloudflare Pages never reaches this file
+      // (public/_redirects handles it there instead).
+      var pathSegmentsToKeep = 1
+
+      var l = window.location
+      l.replace(
+        l.protocol +
+          '//' +
+          l.hostname +
+          (l.port ? ':' + l.port : '') +
+          l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') +
+          '/?/' +
+          l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+          (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+          l.hash
+      )
+    </script>
+  </head>
+  <body></body>
+</html>
