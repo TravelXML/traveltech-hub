@@ -1,9 +1,11 @@
-# Cloudflare Pages deployment
+# Cloudflare Pages / Workers deployment
 
-## Project settings
+Cloudflare has been migrating Git-connected static sites from classic "Pages" projects into the
+unified "Workers" flow (Workers & Pages -> Create -> Connect to Git), which now defaults straight
+to a Workers/Wrangler-based setup rather than the old Framework-preset/build-output-directory UI.
+Both work fine for this app - use whichever your dashboard actually shows you.
 
-When connecting the GitHub repo in the Cloudflare dashboard (Workers & Pages -> Create -> Pages ->
-Connect to Git):
+## If you get the classic Pages UI
 
 | Setting | Value |
 |---|---|
@@ -14,8 +16,43 @@ Connect to Git):
 | Production branch | `main` |
 
 Do **not** set `VITE_BASE_PATH` here - leaving it unset means `vite.config.js` defaults `base` to
-`/`, which is what Cloudflare Pages (served from its own domain root) needs. `VITE_BASE_PATH` is
-only for the separate GitHub Pages build (see `.github/workflows/deploy.yml`).
+`/`, which is what Cloudflare (served from its own domain root) needs. `VITE_BASE_PATH` is only
+for the separate GitHub Pages build (see `.github/workflows/deploy.yml`).
+
+## If you get the newer Workers/Wrangler UI
+
+This is what most new projects see now. The repo already has what it needs - `wrangler.jsonc` at
+the root configures Wrangler to serve the Vite build as static assets, with SPA fallback so
+client-side routes work on a hard refresh:
+
+```jsonc
+{
+  "name": "traveltech-hub",
+  "compatibility_date": "2024-09-23",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "single-page-application"
+  }
+}
+```
+
+Fill in the project-creation form as:
+
+| Field | Value |
+|---|---|
+| Project name | `traveltech-hub` (or whatever you prefer) |
+| Build command | `npm run build` |
+| Deploy command | `npx wrangler deploy` (prefilled by default - leave it) |
+| Path | `/` |
+
+`npx wrangler deploy` reads `wrangler.jsonc` automatically and needs no separate Cloudflare API
+token when run from Cloudflare's own build environment - authentication is handled for you there.
+
+`wrangler` is pinned to major version 3 in `package.json` (not the latest v4, which requires
+Node.js >= 22) since the exact Node version Cloudflare's build image uses by default wasn't
+verified against v4's requirement - v3 was confirmed working via `npx wrangler deploy --dry-run`
+against a real build. If a build fails on an unrelated Node-version error, either set a
+`NODE_VERSION` build environment variable to `22` and upgrade to `wrangler@4`, or leave v3 as is.
 
 ## Environment variables
 
@@ -39,12 +76,12 @@ Level Security, so there's no privileged key for the frontend to hold.
 
 ## SPA routing
 
-`public/_redirects` (already in the repo, copied verbatim into `dist/` by Vite) handles deep-link
-refreshes:
+Two mechanisms exist depending on which UI you ended up with (both are already in the repo, so no
+extra setup either way):
 
-```
-/* /index.html 200
-```
+- **Classic Pages**: `public/_redirects` (copied verbatim into `dist/` by Vite) -
+  `/* /index.html 200`.
+- **Workers/Wrangler**: `wrangler.jsonc`'s `assets.not_found_handling: "single-page-application"`.
 
 Combined with `BrowserRouter` (see `src/main.jsx`), this means `/pms`, `/vendor/some-slug`,
 `/dashboard`, `/admin`, etc. all work on a hard refresh, not just via in-app navigation.

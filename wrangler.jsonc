@@ -1,0 +1,15 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  // Cloudflare's Git integration now creates "Workers" (via Wrangler) rather
+  // than classic "Pages" projects. This app has no server-side Worker code -
+  // it's a static Vite build - so this config just tells Wrangler to serve
+  // the dist/ output as static assets, with SPA fallback so client-side
+  // routes like /pms or /vendor/some-slug work on a hard refresh (the
+  // Workers-Assets equivalent of public/_redirects on classic Pages).
+  "name": "traveltech-hub",
+  "compatibility_date": "2024-09-23",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "single-page-application"
+  }
+}
