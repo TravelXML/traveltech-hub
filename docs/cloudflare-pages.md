@@ -76,12 +76,17 @@ Level Security, so there's no privileged key for the frontend to hold.
 
 ## SPA routing
 
-Two mechanisms exist depending on which UI you ended up with (both are already in the repo, so no
-extra setup either way):
+**Workers/Wrangler** (what this repo is actually deployed with): `wrangler.jsonc`'s
+`assets.not_found_handling: "single-page-application"` handles it natively - no `_redirects` file
+needed or wanted here.
 
-- **Classic Pages**: `public/_redirects` (copied verbatim into `dist/` by Vite) -
-  `/* /index.html 200`.
-- **Workers/Wrangler**: `wrangler.jsonc`'s `assets.not_found_handling: "single-page-application"`.
+There used to be a `public/_redirects` file (`/* /index.html 200`) for the classic-Pages path, but
+it was removed - under Workers Assets it actively breaks the deploy (`Invalid _redirects
+configuration: Infinite loop detected...`, error code 100324), since it conflicts with Workers
+Assets' own automatic HTML/index handling on top of `not_found_handling`. **If you ever deploy via
+classic Pages instead**, re-add `public/_redirects` with that one line yourself - the two
+mechanisms are mutually exclusive, not additive, so the repo only ships the one that matches how
+it's actually being deployed.
 
 Combined with `BrowserRouter` (see `src/main.jsx`), this means `/pms`, `/vendor/some-slug`,
 `/dashboard`, `/admin`, etc. all work on a hard refresh, not just via in-app navigation.

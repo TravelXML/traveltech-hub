@@ -122,10 +122,11 @@ npx vitest run     # unit tests
 
 ## Deployment
 
-This app deploys to **both** Cloudflare Pages and GitHub Pages from the same `main` branch - see
-[docs/cloudflare-pages.md](./docs/cloudflare-pages.md) for exactly how the two coexist (different
-`VITE_BASE_PATH` per target, `BrowserRouter` + `public/_redirects` for Cloudflare,
-`BrowserRouter` + the standard `public/404.html` redirect trick for GitHub Pages).
+This app deploys to **both** Cloudflare (via Workers/Wrangler - see `wrangler.jsonc`) and GitHub
+Pages from the same `main` branch - see [docs/cloudflare-pages.md](./docs/cloudflare-pages.md) for
+exactly how the two coexist (different `VITE_BASE_PATH` per target, `BrowserRouter` +
+`wrangler.jsonc`'s SPA asset handling for Cloudflare, `BrowserRouter` + the standard
+`public/404.html` redirect trick for GitHub Pages).
 
 ### Cloudflare Pages
 
