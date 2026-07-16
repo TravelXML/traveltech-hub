@@ -1,29 +1,29 @@
 import { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { Plane, Hotel, Ship, TrainFront, Building2, Globe2, Share2, Warehouse, CalendarCheck, Route, MapPin } from 'lucide-react'
 import SearchBar from './SearchBar.jsx'
 import { searchAll } from '../services/listingService.js'
 import { getTheme } from '../config/theme.js'
 
-// A loose network of connected nodes with a few map-pin markers - echoes the
-// dashed flight-path + pin motifs already in Logo.jsx, reused here as a
-// subtle "global, connected" backdrop behind the hero copy.
+// A network of connected nodes, each carrying the icon of an actual
+// category from config/categories.js - literally "every corner of travel
+// tech, connected in one directory." Two loose bands (top edge, bottom
+// edge) frame the headline/search instead of crossing through them.
 function NetworkMap() {
-  // Two loose bands - one hugging the top edge, one the bottom - so the
-  // network frames the headline/search instead of crossing through them.
   const topNodes = [
-    { x: 70, y: 55 },
-    { x: 290, y: 35 },
-    { x: 510, y: 68 },
-    { x: 730, y: 38 },
-    { x: 950, y: 62 },
-    { x: 1140, y: 42 },
+    { x: 70, y: 55, Icon: Plane },
+    { x: 290, y: 35, Icon: Hotel },
+    { x: 510, y: 68, Icon: Ship },
+    { x: 730, y: 38, Icon: TrainFront },
+    { x: 950, y: 62, Icon: Building2 },
+    { x: 1140, y: 42, Icon: Globe2 },
   ]
   const bottomNodes = [
-    { x: 140, y: 420 },
-    { x: 380, y: 400 },
-    { x: 630, y: 428 },
-    { x: 870, y: 402 },
-    { x: 1090, y: 418 },
+    { x: 140, y: 420, Icon: Share2 },
+    { x: 380, y: 400, Icon: Warehouse },
+    { x: 630, y: 428, Icon: CalendarCheck },
+    { x: 870, y: 402, Icon: Route },
+    { x: 1090, y: 418, Icon: MapPin },
   ]
   const topLinks = [
     [0, 1],
@@ -38,10 +38,8 @@ function NetworkMap() {
     [2, 3],
     [3, 4],
   ]
-  const topPinned = new Set([1, 4])
-  const bottomPinned = new Set([2])
 
-  function band(nodes, links, pinned, keyPrefix) {
+  function band(nodes, links, keyPrefix) {
     return (
       <g>
         {links.map(([a, b], i) => (
@@ -57,16 +55,12 @@ function NetworkMap() {
             strokeLinecap="round"
           />
         ))}
-        {nodes.map((n, i) =>
-          pinned.has(i) ? (
-            <g key={`${keyPrefix}-n${i}`} transform={`translate(${n.x - 8} ${n.y - 21})`}>
-              <path d="M8 0C3.6 0 0 3.6 0 8c0 6 8 15 8 15s8-9 8-15c0-4.4-3.6-8-8-8z" fill="#7c3aed" />
-              <circle cx="8" cy="8" r="3" fill="#fff" />
-            </g>
-          ) : (
-            <circle key={`${keyPrefix}-n${i}`} cx={n.x} cy={n.y} r="4.5" fill="#8b5cf6" />
-          )
-        )}
+        {nodes.map(({ x, y, Icon }, i) => (
+          <g key={`${keyPrefix}-n${i}`}>
+            <circle cx={x} cy={y} r="15" fill="#fff" stroke="#8b5cf6" strokeWidth="1.5" />
+            <Icon x={x - 9} y={y - 9} width={18} height={18} color="#7c3aed" strokeWidth={2.2} />
+          </g>
+        ))}
       </g>
     )
   }
@@ -75,15 +69,15 @@ function NetworkMap() {
     <svg
       viewBox="0 0 1200 470"
       preserveAspectRatio="xMidYMid slice"
-      className="pointer-events-none absolute inset-0 h-full w-full opacity-[0.22]"
+      className="pointer-events-none absolute inset-0 h-full w-full opacity-[0.3]"
       aria-hidden="true"
     >
       {/* Two short edge-only links tying the bands together, kept near the
           far left/right so they don't cross the centered text column. */}
       <line x1={70} y1={55} x2={140} y2={420} stroke="#8b5cf6" strokeWidth="2" strokeDasharray="1 8" strokeLinecap="round" />
       <line x1={1140} y1={42} x2={1090} y2={418} stroke="#8b5cf6" strokeWidth="2" strokeDasharray="1 8" strokeLinecap="round" />
-      {band(topNodes, topLinks, topPinned, 'top')}
-      {band(bottomNodes, bottomLinks, bottomPinned, 'bottom')}
+      {band(topNodes, topLinks, 'top')}
+      {band(bottomNodes, bottomLinks, 'bottom')}
     </svg>
   )
 }

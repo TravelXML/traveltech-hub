@@ -17,16 +17,21 @@ function Lighthouse({ x = 0, color = BLUE }) {
       <line x1="34" y1="2" x2="34" y2="14" stroke={color} strokeWidth="4" strokeLinecap="round" />
       <path d="M34 3 L49 8 L34 13 Z" fill={color} />
       {/* lantern room */}
-      <rect x="21" y="14" width="26" height="11" rx="2" fill={color} />
-      {/* tapered tower */}
-      <path d="M25 24 L16 90 L52 90 L43 24 Z" fill={color} />
+      <rect x="21" y="14" width="26" height="11" rx="4" fill={color} />
+      {/* tapered tower - curved shoulders and a gentle outward bow, not a
+          straight trapezoid, so the silhouette reads as a lighthouse rather
+          than a flat wedge */}
+      <path
+        d="M25 24C20.5 24 18.5 28 17.8 34C16.5 46 15 68 14 90L34 92L54 90C53 68 51.5 46 50.2 34C49.5 28 47.5 24 43 24Z"
+        fill={color}
+      />
       {/* gallery band */}
-      <rect x="13" y="50" width="42" height="7" rx="3.5" fill={color} />
+      <rect x="12" y="50" width="44" height="8" rx="4" fill={color} />
       {/* windows */}
-      <rect x="29" y="32" width="10" height="10" rx="2" fill="#fff" />
-      <rect x="27" y="68" width="14" height="10" rx="2" fill="#fff" />
-      {/* base platform */}
-      <rect x="9" y="88" width="50" height="6" rx="3" fill={color} />
+      <rect x="28" y="31" width="12" height="12" rx="3" fill="#fff" />
+      <rect x="26" y="68" width="16" height="12" rx="3" fill="#fff" />
+      {/* base platform - a slightly domed footing instead of a flat bar */}
+      <path d="M7 94C7 90 19 88 34 88C49 88 61 90 61 94C61 97 49 98 34 98C19 98 7 97 7 94Z" fill={color} />
     </g>
   )
 }
