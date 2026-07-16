@@ -23,7 +23,7 @@ export default {
   safelist: [
     ...[
       'indigo', 'teal', 'sky', 'amber', 'emerald', 'cyan', 'violet', 'orange', 'rose', 'blue', 'lime', 'fuchsia',
-      'red', 'yellow', 'green', 'purple', 'pink', 'stone', 'gray', 'slate',
+      'red', 'yellow', 'green', 'purple', 'pink', 'stone', 'gray', 'slate', 'zinc',
     ].flatMap(
       (color) => [
         `bg-${color}-50`,

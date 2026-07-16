@@ -183,6 +183,15 @@ const THEMES = {
     border: 'border-slate-200',
     ring: 'ring-slate-500',
   },
+  zinc: {
+    bg50: 'bg-zinc-50',
+    solid: 'bg-zinc-600',
+    solidHover: 'hover:bg-zinc-700',
+    gradient: 'from-zinc-500 to-zinc-700',
+    text: 'text-zinc-700',
+    border: 'border-zinc-200',
+    ring: 'ring-zinc-500',
+  },
 }
 
 export function getTheme(color) {

@@ -1,0 +1,553 @@
+{
+  "_comment": "Contact details (email, phone) are plausible placeholder-format examples for demo purposes only and must be verified before real-world use.",
+  "category": "travel-tech-marketing",
+  "listings": [
+    {
+      "id": "sojern",
+      "name": "Sojern",
+      "logoInitials": "SJ",
+      "description": "Sojern is a San Francisco-based travel marketing platform that uses traveler intent data to run programmatic advertising, email and metasearch campaigns for airlines, hotels, DMOs and attractions. Its Traveler Platform helps travel brands identify and retarget in-market travelers across channels.",
+      "features": [
+        "Traveler intent data platform",
+        "Programmatic display & video ads",
+        "Metasearch campaign management",
+        "Email marketing automation",
+        "Attribution & multi-touch reporting",
+        "DMO co-op marketing tools"
+      ],
+      "usps": [
+        "Large proprietary traveler intent dataset",
+        "Full-funnel campaign management",
+        "Deep airline & hospitality client base"
+      ],
+      "products": [
+        "Sojern Traveler Platform",
+        "Sojern Email Marketing",
+        "Sojern Metasearch"
+      ],
+      "targetMarkets": ["Global", "North America", "Europe", "Asia Pacific"],
+      "pricingModel": "Enterprise/Custom",
+      "priceRange": "$$",
+      "email": "hello@sojern.com",
+      "phone": "+1-415-555-0111",
+      "website": "https://www.sojern.com",
+      "headquarters": "San Francisco, United States",
+      "founded": 2012
+    },
+    {
+      "id": "adara",
+      "name": "Adara",
+      "logoInitials": "AD",
+      "description": "Adara is a travel data and marketing company that pools first-party data from airlines, hotels and travel intermediaries into a cooperative data platform, letting travel brands target and measure advertising against verified traveler audiences rather than modeled ones.",
+      "features": [
+        "Cooperative traveler data pool",
+        "Audience targeting & lookalikes",
+        "Cross-channel campaign measurement",
+        "Fraud-resistant identity resolution",
+        "Real-time bidding integrations"
+      ],
+      "usps": [
+        "First-party data cooperative model",
+        "Trusted by major global airlines",
+        "Privacy-conscious data partnerships"
+      ],
+      "products": ["Adara Impact", "Adara Audiences", "Adara Analytics"],
+      "targetMarkets": ["Global", "North America", "Europe"],
+      "pricingModel": "Enterprise/Custom",
+      "priceRange": "$$$",
+      "email": "sales@adara.com",
+      "phone": "+1-415-555-0122",
+      "website": "https://www.adara.com",
+      "headquarters": "San Francisco, United States",
+      "founded": 2009
+    },
+    {
+      "id": "mmgy-global",
+      "name": "MMGY Global",
+      "logoInitials": "MG",
+      "description": "MMGY Global is a full-service travel and tourism marketing agency offering strategy, creative, media buying and public relations for destinations, hotel brands and travel associations, backed by its own traveler research arm, MMGY Travel Intelligence.",
+      "features": [
+        "Integrated advertising campaigns",
+        "Destination brand strategy",
+        "Travel PR & public affairs",
+        "Traveler research & insights",
+        "Media planning & buying",
+        "Social & content marketing"
+      ],
+      "usps": [
+        "Decades of destination marketing pedigree",
+        "In-house traveler research division",
+        "Long-standing DMO relationships"
+      ],
+      "products": ["MMGY Brand Strategy", "MMGY Media", "MMGY Travel Intelligence"],
+      "targetMarkets": ["North America", "Global"],
+      "pricingModel": "Enterprise/Custom",
+      "priceRange": "$$$",
+      "email": "info@mmgyglobal.com",
+      "phone": "+1-816-555-0133",
+      "website": "https://www.mmgyglobal.com",
+      "headquarters": "Kansas City, United States",
+      "founded": 1975
+    },
+    {
+      "id": "miles-partnership",
+      "name": "Miles Partnership",
+      "logoInitials": "MP",
+      "description": "Miles Partnership is a destination marketing agency working with tourism boards, DMOs and hospitality brands on website design, digital advertising, content and industry partnership programs that drive visitation and direct bookings.",
+      "features": [
+        "Destination website design",
+        "Digital advertising campaigns",
+        "Content & storytelling programs",
+        "Partner co-op marketing platforms",
+        "Visitor guide publishing"
+      ],
+      "usps": [
+        "Deep destination marketing specialization",
+        "Long-running tourism board partnerships",
+        "Combines content, tech and media in-house"
+      ],
+      "products": ["Miles Digital", "Miles Content", "Miles Partner Marketing"],
+      "targetMarkets": ["North America"],
+      "pricingModel": "Enterprise/Custom",
+      "priceRange": "$$",
+      "email": "hello@milespartnership.com",
+      "phone": "+1-941-555-0144",
+      "website": "https://www.milespartnership.com",
+      "headquarters": "Sarasota, United States",
+      "founded": 1988
+    },
+    {
+      "id": "simpleview",
+      "name": "Simpleview",
+      "logoInitials": "SV",
+      "description": "Simpleview provides a CRM and digital marketing platform built specifically for destination marketing organizations, combining website CMS, partner/member management, email marketing and analytics in one system used by hundreds of DMOs worldwide.",
+      "features": [
+        "DMO-specific CMS & website platform",
+        "Partner & member CRM",
+        "Email marketing automation",
+        "Visitor analytics dashboards",
+        "Digital asset management",
+        "Group & meeting sales tools"
+      ],
+      "usps": [
+        "Purpose-built for DMOs, not generic marketing",
+        "Large installed base of tourism boards",
+        "All-in-one CRM plus CMS platform"
+      ],
+      "products": ["Simpleview CRM", "Simpleview CMS", "Simpleview Media"],
+      "targetMarkets": ["North America", "Global"],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "sales@simpleviewinc.com",
+      "phone": "+1-520-555-0155",
+      "website": "https://www.simpleviewinc.com",
+      "headquarters": "Tucson, United States",
+      "founded": 1991
+    },
+    {
+      "id": "tambourine",
+      "name": "Tambourine",
+      "logoInitials": "TB",
+      "description": "Tambourine is a hospitality digital marketing agency serving independent hotels and resorts with website design, SEO, paid media and direct-booking conversion strategy aimed at reducing OTA dependency.",
+      "features": [
+        "Hotel website design & CRO",
+        "SEO & paid search management",
+        "Direct booking strategy",
+        "Social media management",
+        "Email marketing campaigns"
+      ],
+      "usps": [
+        "Focused exclusively on independent hotels",
+        "Strong direct-booking conversion track record",
+        "Boutique, hands-on account teams"
+      ],
+      "products": ["Tambourine Websites", "Tambourine Media", "Tambourine SEO"],
+      "targetMarkets": ["North America", "Latin America"],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "info@tambourine.com",
+      "phone": "+1-954-555-0166",
+      "website": "https://www.tambourine.com",
+      "headquarters": "Fort Lauderdale, United States",
+      "founded": 1993
+    },
+    {
+      "id": "vizergy",
+      "name": "Vizergy",
+      "logoInitials": "VZ",
+      "description": "Vizergy delivers digital marketing and website services for hotels and resorts, including responsive website design, search marketing and a proprietary revenue-focused reporting suite that ties marketing spend to booking outcomes.",
+      "features": [
+        "Responsive hotel website design",
+        "Paid search & display advertising",
+        "Revenue-focused marketing reporting",
+        "Email & CRM marketing",
+        "Local SEO management"
+      ],
+      "usps": [
+        "Marketing tied directly to revenue reporting",
+        "Long track record with independent hotels",
+        "Combines design and media under one roof"
+      ],
+      "products": ["Vizergy Websites", "Vizergy Digital Marketing", "Vizergy Analytics"],
+      "targetMarkets": ["North America"],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "sales@vizergy.com",
+      "phone": "+1-904-555-0177",
+      "website": "https://www.vizergy.com",
+      "headquarters": "Jacksonville, United States",
+      "founded": 1995
+    },
+    {
+      "id": "blue-magnet-interactive",
+      "name": "Blue Magnet Interactive",
+      "logoInitials": "BM",
+      "description": "Blue Magnet Interactive is a hospitality-focused digital marketing agency offering website development, SEO, paid media and social advertising for independent hotels, resorts and hotel management groups.",
+      "features": [
+        "Hotel website development",
+        "SEO & content marketing",
+        "Paid social & display campaigns",
+        "Conversion rate optimization",
+        "Reputation management"
+      ],
+      "usps": [
+        "Boutique agency with senior-led accounts",
+        "Hospitality-only client focus",
+        "Transparent performance reporting"
+      ],
+      "products": ["Blue Magnet Websites", "Blue Magnet SEO", "Blue Magnet Paid Media"],
+      "targetMarkets": ["North America"],
+      "pricingModel": "Subscription",
+      "priceRange": "$",
+      "email": "hello@bluemagnetinteractive.com",
+      "phone": "+1-817-555-0188",
+      "website": "https://www.bluemagnetinteractive.com",
+      "headquarters": "Fort Worth, United States",
+      "founded": 1999
+    },
+    {
+      "id": "milestone-inc",
+      "name": "Milestone Inc",
+      "logoInitials": "MS",
+      "description": "Milestone is a hospitality digital marketing company providing website design, SEO, paid media and its proprietary MOJO marketing intelligence platform that gives hoteliers visibility into competitive digital marketing performance.",
+      "features": [
+        "Hotel website & CRO services",
+        "SEO & paid search",
+        "Competitive marketing intelligence (MOJO)",
+        "Social media marketing",
+        "Email marketing campaigns"
+      ],
+      "usps": [
+        "Proprietary competitive intelligence tool",
+        "Data-driven campaign optimization",
+        "Established hospitality agency network"
+      ],
+      "products": ["Milestone Websites", "MOJO Minder", "Milestone Digital Marketing"],
+      "targetMarkets": ["North America"],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "info@milestoneinternet.com",
+      "phone": "+1-541-555-0199",
+      "website": "https://www.milestoneinternet.com",
+      "headquarters": "Bend, United States",
+      "founded": 1992
+    },
+    {
+      "id": "nextguest",
+      "name": "NextGuest",
+      "logoInitials": "NG",
+      "description": "NextGuest is a full-service hotel digital marketing agency offering media buying, SEO, website design and creative services for independent hotels, resorts and hospitality management companies, with a focus on measurable direct-revenue impact.",
+      "features": [
+        "Full-funnel paid media management",
+        "Hotel website design",
+        "SEO & content strategy",
+        "Creative & brand campaigns",
+        "Performance & revenue reporting"
+      ],
+      "usps": [
+        "Media-buying scale across major hotel groups",
+        "In-house creative studio",
+        "Revenue-attributed campaign reporting"
+      ],
+      "products": ["NextGuest Media", "NextGuest Websites", "NextGuest Creative"],
+      "targetMarkets": ["North America", "Global"],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "hello@nextguest.com",
+      "phone": "+1-212-555-0210",
+      "website": "https://www.nextguest.com",
+      "headquarters": "New York, United States",
+      "founded": 2013
+    },
+    {
+      "id": "hebs-digital",
+      "name": "HeBS Digital",
+      "logoInitials": "HD",
+      "description": "HeBS Digital is a hospitality e-commerce and digital marketing agency offering website design, SEO, paid media and its Smart Data platform, focused on maximizing direct bookings for hotels and hotel groups.",
+      "features": [
+        "Hotel e-commerce website platform",
+        "SEO & paid media management",
+        "Smart Data guest intelligence",
+        "Conversion rate optimization",
+        "Email & remarketing campaigns"
+      ],
+      "usps": [
+        "Long-established direct-booking specialist",
+        "Proprietary guest intelligence data platform",
+        "Enterprise hotel group experience"
+      ],
+      "products": ["HeBS Digital Websites", "Smart Data Platform", "HeBS Digital Media"],
+      "targetMarkets": ["North America", "Global"],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "info@hebsdigital.com",
+      "phone": "+1-212-555-0221",
+      "website": "https://www.hebsdigital.com",
+      "headquarters": "New York, United States",
+      "founded": 2001
+    },
+    {
+      "id": "fuel-travel",
+      "name": "Fuel Travel",
+      "logoInitials": "FT",
+      "description": "Fuel Travel is a digital marketing agency serving independent hotels with mobile-first website design, paid search, SEO and social media management, aimed at boosting direct bookings for small and mid-size properties.",
+      "features": [
+        "Mobile-first website design",
+        "Paid search & social advertising",
+        "SEO management",
+        "Social media content management",
+        "Booking conversion optimization"
+      ],
+      "usps": [
+        "Affordable option for independent hotels",
+        "Mobile-first design philosophy",
+        "Hands-on account management"
+      ],
+      "products": ["Fuel Websites", "Fuel Paid Media", "Fuel Social"],
+      "targetMarkets": ["North America"],
+      "pricingModel": "Subscription",
+      "priceRange": "$",
+      "email": "info@fueltravel.com",
+      "phone": "+1-316-555-0232",
+      "website": "https://www.fueltravel.com",
+      "headquarters": "Wichita, United States",
+      "founded": 2010
+    },
+    {
+      "id": "screen-pilot",
+      "name": "Screen Pilot",
+      "logoInitials": "SP",
+      "description": "Screen Pilot is a hospitality digital marketing agency specializing in paid search, SEO and analytics for hotels and resorts, known for transparent, data-driven reporting tied directly to booking revenue.",
+      "features": [
+        "Paid search campaign management",
+        "SEO & organic visibility",
+        "Custom analytics dashboards",
+        "Website conversion audits",
+        "Metasearch bid management"
+      ],
+      "usps": [
+        "Analytics-first agency culture",
+        "Transparent revenue-tied reporting",
+        "Boutique, senior-staffed accounts"
+      ],
+      "products": ["Screen Pilot Paid Search", "Screen Pilot SEO", "Screen Pilot Analytics"],
+      "targetMarkets": ["North America"],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "hello@screenpilot.com",
+      "phone": "+1-303-555-0243",
+      "website": "https://www.screenpilot.com",
+      "headquarters": "Denver, United States",
+      "founded": 2005
+    },
+    {
+      "id": "the-hotels-network",
+      "name": "The Hotels Network",
+      "logoInitials": "THN",
+      "description": "The Hotels Network is a Barcelona-based conversion and personalization platform that helps hotels increase direct bookings through website personalization, price comparison widgets, retargeting and booking-abandonment recovery tools.",
+      "features": [
+        "Website personalization engine",
+        "Price comparison & parity widgets",
+        "Booking abandonment recovery",
+        "A/B testing tools",
+        "Direct-booking retargeting"
+      ],
+      "usps": [
+        "Personalization-first approach to conversion",
+        "Widely adopted price-comparison widget",
+        "Strong presence with European hotel groups"
+      ],
+      "products": ["Booster", "Metasearch Manager", "Smart Pixel"],
+      "targetMarkets": ["Europe", "Global", "Latin America"],
+      "pricingModel": "Commission",
+      "priceRange": "$$",
+      "email": "hello@thehotelsnetwork.com",
+      "phone": "+34-93-555-0254",
+      "website": "https://www.thehotelsnetwork.com",
+      "headquarters": "Barcelona, Spain",
+      "founded": 2015
+    },
+    {
+      "id": "digital-alchemy",
+      "name": "Digital Alchemy",
+      "logoInitials": "DA",
+      "description": "Digital Alchemy provides automated guest marketing and email campaign software for hotels, combining trigger-based messaging with creative services to help hotel marketing teams run always-on lifecycle campaigns.",
+      "features": [
+        "Automated lifecycle email campaigns",
+        "Trigger-based guest messaging",
+        "Campaign creative services",
+        "Segmentation & personalization",
+        "Performance reporting dashboards"
+      ],
+      "usps": [
+        "Always-on automated campaign library",
+        "Combines software with creative services",
+        "Deep hotel group implementation experience"
+      ],
+      "products": ["Digital Alchemy Email", "Digital Alchemy Creative Studio"],
+      "targetMarkets": ["North America", "Global"],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "info@digitalalchemy.io",
+      "phone": "+1-972-555-0265",
+      "website": "https://www.digitalalchemy.io",
+      "headquarters": "Dallas, United States",
+      "founded": 2013
+    },
+    {
+      "id": "expedia-group-media-solutions",
+      "name": "Expedia Group Media Solutions",
+      "logoInitials": "EGM",
+      "description": "Expedia Group Media Solutions is the advertising arm of Expedia Group, letting hotels, airlines, tourism boards and travel brands run sponsored placements and display campaigns across Expedia's network of travel booking sites to reach in-market travelers.",
+      "features": [
+        "Sponsored placement advertising",
+        "Cross-brand display campaigns",
+        "Audience targeting on booking intent",
+        "Co-op marketing programs",
+        "Campaign performance reporting"
+      ],
+      "usps": [
+        "Access to Expedia Group's traveler audience",
+        "Advertising placed at point of booking intent",
+        "Cross-brand reach across Expedia's travel sites"
+      ],
+      "products": ["Sponsored Listings", "Expedia Display Ads", "Destination Marketing Program"],
+      "targetMarkets": ["Global"],
+      "pricingModel": "Per Booking",
+      "priceRange": "$$$",
+      "email": "advertising@expediagroup.com",
+      "phone": "+1-206-555-0276",
+      "website": "https://advertising.expediagroup.com",
+      "headquarters": "Seattle, United States",
+      "founded": 1996
+    },
+    {
+      "id": "tripadvisor-business-advantage",
+      "name": "TripAdvisor Business Advantage",
+      "logoInitials": "TA",
+      "description": "TripAdvisor Business Advantage is TripAdvisor's advertising and profile-enhancement program for hotels and attractions, offering sponsored placements, business listing tools and analytics to help properties stand out to travelers researching on TripAdvisor.",
+      "features": [
+        "Sponsored placement advertising",
+        "Enhanced business listing tools",
+        "Competitor comparison removal",
+        "Review management dashboard",
+        "Traveler engagement analytics"
+      ],
+      "usps": [
+        "Direct access to TripAdvisor's review audience",
+        "Placement at the review-research moment",
+        "Widely recognized traveler-trust brand"
+      ],
+      "products": ["Business Advantage", "Sponsored Placements", "TripAdvisor Analytics"],
+      "targetMarkets": ["Global"],
+      "pricingModel": "Subscription",
+      "priceRange": "$$",
+      "email": "business@tripadvisor.com",
+      "phone": "+1-781-555-0287",
+      "website": "https://www.tripadvisor.com/Owners",
+      "headquarters": "Needham, United States",
+      "founded": 2000
+    },
+    {
+      "id": "amadeus-media-solutions",
+      "name": "Amadeus Media Solutions",
+      "logoInitials": "AMS",
+      "description": "Amadeus Media Solutions lets airlines and travel sellers monetize and target advertising within Amadeus's global distribution and shopping systems, connecting brands with travel agents and travelers during the booking search process.",
+      "features": [
+        "In-GDS advertising placements",
+        "Travel agent audience targeting",
+        "Airline ancillary media programs",
+        "Shopping-moment sponsored content",
+        "Campaign analytics & reporting"
+      ],
+      "usps": [
+        "Reaches travel agents at point of sale",
+        "Backed by Amadeus's global distribution scale",
+        "Deep integration with airline shopping systems"
+      ],
+      "products": ["Amadeus Media Exchange", "Amadeus Advertising", "Amadeus Sponsored Content"],
+      "targetMarkets": ["Global", "Europe", "Asia Pacific"],
+      "pricingModel": "Enterprise/Custom",
+      "priceRange": "$$$",
+      "email": "media.solutions@amadeus.com",
+      "phone": "+34-91-555-0298",
+      "website": "https://amadeus.com/en/industries/media-solutions",
+      "headquarters": "Madrid, Spain",
+      "founded": 1987
+    },
+    {
+      "id": "criteo-for-travel",
+      "name": "Criteo for Travel",
+      "logoInitials": "CR",
+      "description": "Criteo for Travel applies Criteo's commerce media and retargeting technology to the travel vertical, helping airlines, hotels and OTAs re-engage site visitors and drive incremental bookings through personalized dynamic ads.",
+      "features": [
+        "Dynamic retargeting ads",
+        "Cross-device audience matching",
+        "Commerce media marketplace",
+        "Lookalike audience targeting",
+        "Real-time bid optimization"
+      ],
+      "usps": [
+        "Large-scale commerce media network",
+        "Strong dynamic creative retargeting engine",
+        "Cross-device identity resolution at scale"
+      ],
+      "products": ["Criteo Retargeting", "Criteo Commerce Growth", "Criteo Audience Match"],
+      "targetMarkets": ["Global", "Europe", "North America"],
+      "pricingModel": "Per Booking",
+      "priceRange": "$$",
+      "email": "travel@criteo.com",
+      "phone": "+33-1-555-0309",
+      "website": "https://www.criteo.com",
+      "headquarters": "Paris, France",
+      "founded": 2005
+    },
+    {
+      "id": "trivago-business-studio",
+      "name": "Trivago Business Studio",
+      "logoInitials": "TBS",
+      "description": "Trivago Business Studio is trivago's marketing and analytics suite for hotel advertisers, giving hoteliers tools to manage their metasearch presence, bidding strategy and performance reporting directly on the trivago platform.",
+      "features": [
+        "Metasearch bid management",
+        "Hotel profile & content management",
+        "Performance analytics dashboard",
+        "Rate parity monitoring",
+        "Audience insights reporting"
+      ],
+      "usps": [
+        "Direct access to trivago's metasearch traffic",
+        "Native bidding tools built for the platform",
+        "Large European hotel advertiser base"
+      ],
+      "products": ["trivago Business Studio", "trivago Hotel Manager", "trivago Insights"],
+      "targetMarkets": ["Europe", "Global"],
+      "pricingModel": "Per Booking",
+      "priceRange": "$$",
+      "email": "business@trivago.com",
+      "phone": "+49-211-555-0310",
+      "website": "https://business.trivago.com",
+      "headquarters": "Düsseldorf, Germany",
+      "founded": 2005
+    }
+  ]
+}

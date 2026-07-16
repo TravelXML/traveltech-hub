@@ -223,6 +223,17 @@ export const CATEGORIES = [
     description:
       'Mobile and RFID access control systems letting guests unlock hotel rooms without a physical key card.',
   },
+  {
+    id: 'travel-tech-marketing',
+    name: 'Travel Tech Marketing',
+    shortName: 'Marketing',
+    route: '/travel-tech-marketing',
+    dataFile: 'travel-tech-marketing',
+    color: 'zinc',
+    icon: 'Megaphone',
+    description:
+      'Digital marketing agencies, ad-tech and media platforms specialised in reaching travelers on behalf of hotels, destinations and travel brands.',
+  },
 ]
 
 export const getCategoryById = (id) => CATEGORIES.find((c) => c.id === id)
