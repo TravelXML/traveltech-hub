@@ -6,6 +6,8 @@ import AdminRoute from './components/AdminRoute.jsx'
 import Home from './pages/Home.jsx'
 import CategoryPage from './pages/CategoryPage.jsx'
 import AddBusiness from './pages/AddBusiness.jsx'
+import AddNews from './pages/AddNews.jsx'
+import AddEvent from './pages/AddEvent.jsx'
 import NewsPage from './pages/NewsPage.jsx'
 import EventsPage from './pages/EventsPage.jsx'
 import Login from './pages/Login.jsx'
@@ -16,9 +18,17 @@ import ListingDetail from './pages/ListingDetail.jsx'
 import Dashboard from './pages/Dashboard.jsx'
 import MyListings from './pages/MyListings.jsx'
 import EditListing from './pages/EditListing.jsx'
+import MyNews from './pages/MyNews.jsx'
+import EditNews from './pages/EditNews.jsx'
+import MyEvents from './pages/MyEvents.jsx'
+import EditEvent from './pages/EditEvent.jsx'
 import AdminDashboard from './pages/AdminDashboard.jsx'
 import AdminListings from './pages/AdminListings.jsx'
 import AdminListingDetail from './pages/AdminListingDetail.jsx'
+import AdminNews from './pages/AdminNews.jsx'
+import AdminNewsDetail from './pages/AdminNewsDetail.jsx'
+import AdminEvents from './pages/AdminEvents.jsx'
+import AdminEventsDetail from './pages/AdminEventsDetail.jsx'
 import NotFound from './pages/NotFound.jsx'
 
 export default function App() {
@@ -29,6 +39,8 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/add-business" element={<AddBusiness />} />
+          <Route path="/add-news" element={<AddNews />} />
+          <Route path="/add-event" element={<AddEvent />} />
           <Route path="/news" element={<NewsPage />} />
           <Route path="/events" element={<EventsPage />} />
 
@@ -63,6 +75,38 @@ export default function App() {
               </ProtectedRoute>
             }
           />
+          <Route
+            path="/dashboard/news"
+            element={
+              <ProtectedRoute>
+                <MyNews />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/dashboard/news/:id/edit"
+            element={
+              <ProtectedRoute>
+                <EditNews />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/dashboard/events"
+            element={
+              <ProtectedRoute>
+                <MyEvents />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/dashboard/events/:id/edit"
+            element={
+              <ProtectedRoute>
+                <EditEvent />
+              </ProtectedRoute>
+            }
+          />
 
           <Route
             path="/admin"
@@ -85,6 +129,38 @@ export default function App() {
             element={
               <AdminRoute>
                 <AdminListingDetail />
+              </AdminRoute>
+            }
+          />
+          <Route
+            path="/admin/news"
+            element={
+              <AdminRoute>
+                <AdminNews />
+              </AdminRoute>
+            }
+          />
+          <Route
+            path="/admin/news/:id"
+            element={
+              <AdminRoute>
+                <AdminNewsDetail />
+              </AdminRoute>
+            }
+          />
+          <Route
+            path="/admin/events"
+            element={
+              <AdminRoute>
+                <AdminEvents />
+              </AdminRoute>
+            }
+          />
+          <Route
+            path="/admin/events/:id"
+            element={
+              <AdminRoute>
+                <AdminEventsDetail />
               </AdminRoute>
             }
           />

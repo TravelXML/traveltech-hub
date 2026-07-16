@@ -1,14 +1,22 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { getPendingListings } from '../services/adminService.js'
+import { getPendingListings, getPendingNews, getPendingEvents } from '../services/adminService.js'
 
 export default function AdminDashboard() {
   const [pendingCount, setPendingCount] = useState(null)
+  const [pendingNewsCount, setPendingNewsCount] = useState(null)
+  const [pendingEventsCount, setPendingEventsCount] = useState(null)
   const [error, setError] = useState('')
 
   useEffect(() => {
     getPendingListings()
       .then((rows) => setPendingCount(rows.length))
+      .catch((err) => setError(err.message))
+    getPendingNews()
+      .then((rows) => setPendingNewsCount(rows.length))
+      .catch((err) => setError(err.message))
+    getPendingEvents()
+      .then((rows) => setPendingEventsCount(rows.length))
       .catch((err) => setError(err.message))
   }, [])
 
@@ -34,6 +42,36 @@ export default function AdminDashboard() {
         >
           <h2 className="font-display text-lg font-semibold text-slate-900">All listings</h2>
           <p className="mt-2 text-sm text-slate-600">Browse, search and moderate every listing.</p>
+        </Link>
+        <Link
+          to="/admin/news?status=pending"
+          className="rounded-2xl border border-amber-200 bg-amber-50 p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg"
+        >
+          <p className="font-display text-3xl font-bold text-amber-800">{pendingNewsCount ?? '—'}</p>
+          <h2 className="mt-1 font-display text-lg font-semibold text-amber-900">Pending news</h2>
+          <p className="mt-1 text-sm text-amber-700">Awaiting review</p>
+        </Link>
+        <Link
+          to="/admin/news"
+          className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg"
+        >
+          <h2 className="font-display text-lg font-semibold text-slate-900">All news</h2>
+          <p className="mt-2 text-sm text-slate-600">Browse, search and moderate every news item.</p>
+        </Link>
+        <Link
+          to="/admin/events?status=pending"
+          className="rounded-2xl border border-amber-200 bg-amber-50 p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg"
+        >
+          <p className="font-display text-3xl font-bold text-amber-800">{pendingEventsCount ?? '—'}</p>
+          <h2 className="mt-1 font-display text-lg font-semibold text-amber-900">Pending events</h2>
+          <p className="mt-1 text-sm text-amber-700">Awaiting review</p>
+        </Link>
+        <Link
+          to="/admin/events"
+          className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg"
+        >
+          <h2 className="font-display text-lg font-semibold text-slate-900">All events</h2>
+          <p className="mt-2 text-sm text-slate-600">Browse, search and moderate every event.</p>
         </Link>
       </div>
     </div>

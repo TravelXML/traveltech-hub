@@ -26,6 +26,20 @@ export default function Dashboard() {
           <h2 className="font-display text-lg font-semibold text-slate-900">Add a business</h2>
           <p className="mt-2 text-sm text-slate-600">Submit a new listing for review.</p>
         </Link>
+        <Link
+          to="/dashboard/news"
+          className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg"
+        >
+          <h2 className="font-display text-lg font-semibold text-slate-900">My news</h2>
+          <p className="mt-2 text-sm text-slate-600">View, edit and resubmit your news submissions.</p>
+        </Link>
+        <Link
+          to="/dashboard/events"
+          className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg"
+        >
+          <h2 className="font-display text-lg font-semibold text-slate-900">My events</h2>
+          <p className="mt-2 text-sm text-slate-600">View, edit and resubmit your event submissions.</p>
+        </Link>
         {isAdmin && (
           <Link
             to="/admin"

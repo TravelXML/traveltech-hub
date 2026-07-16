@@ -6,8 +6,6 @@
 import { supabase } from '../lib/supabase.js'
 import { mapListingRow, mapCategoryRow, LISTING_SELECT } from './listingMapper.js'
 import { verifyCaptcha } from './captchaService.js'
-import newsData from '../data/news.json'
-import eventsData from '../data/events.json'
 
 const DEFAULT_PAGE_SIZE = 100
 const SEARCH_RESULT_LIMIT = 30
@@ -250,37 +248,5 @@ export async function setMyListingLogo(id, logoUrl) {
   if (error) throw toFriendlyError(error)
 }
 
-/**
- * Returns all travel news items, most recent first.
- * (Unchanged - out of scope for the Supabase migration; still static JSON.)
- */
-export async function getNews() {
-  const items = newsData?.items ?? []
-  return [...items].sort((a, b) => b.publishedDate.localeCompare(a.publishedDate))
-}
-
-/** Searches news items by title, summary and tags. */
-export async function searchNews(query) {
-  const q = query.trim().toLowerCase()
-  const items = await getNews()
-  if (!q) return items
-  return items.filter((item) =>
-    [item.title, item.summary, ...(item.tags ?? [])].join(' ').toLowerCase().includes(q)
-  )
-}
-
-/** Returns all travel industry events, soonest first. */
-export async function getEvents() {
-  const items = eventsData?.items ?? []
-  return [...items].sort((a, b) => a.startDate.localeCompare(b.startDate))
-}
-
-/** Searches events by name, host, description and location. */
-export async function searchEvents(query) {
-  const q = query.trim().toLowerCase()
-  const items = await getEvents()
-  if (!q) return items
-  return items.filter((item) =>
-    [item.name, item.host, item.description, item.city, item.country].join(' ').toLowerCase().includes(q)
-  )
-}
+// News and events moved to newsService.js / eventService.js - both are
+// database-backed now (submission + admin approval), not static JSON.

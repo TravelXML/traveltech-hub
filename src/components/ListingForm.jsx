@@ -1,54 +1,13 @@
 import { useState } from 'react'
-import { X } from 'lucide-react'
 import { validateLogoFile } from '../services/storageService.js'
 import Turnstile from './Turnstile.jsx'
+import FieldLabel from './FieldLabel.jsx'
+import TagInput from './TagInput.jsx'
 
 const PRICING_MODELS = ['Subscription', 'Per Booking', 'Commission', 'Freemium', 'Enterprise/Custom']
 const PRICE_RANGES = ['$', '$$', '$$$']
 const MARKETS = ['Global', 'Europe', 'APAC', 'India', 'North America', 'Middle East', 'LATAM', 'Africa']
 const CURRENT_YEAR = new Date().getFullYear()
-
-function TagInput({ values, onChange, placeholder }) {
-  const [draft, setDraft] = useState('')
-
-  function addTag() {
-    const v = draft.trim()
-    if (v && !values.includes(v)) onChange([...values, v])
-    setDraft('')
-  }
-
-  return (
-    <div className="rounded-lg border border-slate-300 p-2 focus-within:border-brand-500 focus-within:ring-2 focus-within:ring-brand-500/30">
-      <div className="mb-1.5 flex flex-wrap gap-1.5">
-        {values.map((tag) => (
-          <span
-            key={tag}
-            className="flex items-center gap-1 rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-700"
-          >
-            {tag}
-            <button type="button" onClick={() => onChange(values.filter((t) => t !== tag))}>
-              <X size={12} />
-            </button>
-          </span>
-        ))}
-      </div>
-      <input
-        type="text"
-        value={draft}
-        onChange={(e) => setDraft(e.target.value)}
-        onKeyDown={(e) => {
-          if (e.key === 'Enter' || e.key === ',') {
-            e.preventDefault()
-            addTag()
-          }
-        }}
-        onBlur={addTag}
-        placeholder={placeholder}
-        className="w-full border-none p-1 text-sm outline-none"
-      />
-    </div>
-  )
-}
 
 export const EMPTY_LISTING_FORM = {
   name: '',
@@ -183,7 +142,7 @@ export default function ListingForm({
       {serverError && <p className="rounded-lg bg-red-50 px-4 py-3 text-sm text-red-700">{serverError}</p>}
 
       <div>
-        <label className="mb-1 block text-sm font-medium text-slate-700">Business name</label>
+        <FieldLabel required>Business name</FieldLabel>
         <input
           type="text"
           maxLength={200}
@@ -195,7 +154,7 @@ export default function ListingForm({
       </div>
 
       <div>
-        <label className="mb-1 block text-sm font-medium text-slate-700">Category</label>
+        <FieldLabel required>Category</FieldLabel>
         <select
           value={form.categoryId}
           onChange={(e) => set('categoryId')(e.target.value)}
@@ -212,7 +171,7 @@ export default function ListingForm({
       </div>
 
       <div>
-        <label className="mb-1 block text-sm font-medium text-slate-700">Description</label>
+        <FieldLabel required>Description</FieldLabel>
         <textarea
           rows={4}
           maxLength={4000}
@@ -224,7 +183,7 @@ export default function ListingForm({
       </div>
 
       <div>
-        <label className="mb-1 block text-sm font-medium text-slate-700">Logo (optional)</label>
+        <FieldLabel>Logo (optional)</FieldLabel>
         <div className="flex items-center gap-4">
           {logoPreview ? (
             <img src={logoPreview} alt="Logo preview" className="h-14 w-14 rounded-xl border border-slate-200 object-contain p-1" />
@@ -245,24 +204,24 @@ export default function ListingForm({
       </div>
 
       <div>
-        <label className="mb-1 block text-sm font-medium text-slate-700">Key features</label>
+        <FieldLabel required>Key features</FieldLabel>
         <TagInput values={form.features} onChange={set('features')} placeholder="Type a feature, press Enter" />
         <FieldError field="features" />
       </div>
 
       <div>
-        <label className="mb-1 block text-sm font-medium text-slate-700">USPs (optional)</label>
+        <FieldLabel>USPs (optional)</FieldLabel>
         <TagInput values={form.usps} onChange={set('usps')} placeholder="What makes you stand out? Press Enter" />
       </div>
 
       <div>
-        <label className="mb-1 block text-sm font-medium text-slate-700">Products</label>
+        <FieldLabel required>Products</FieldLabel>
         <TagInput values={form.products} onChange={set('products')} placeholder="Type a product name, press Enter" />
         <FieldError field="products" />
       </div>
 
       <div>
-        <label className="mb-1 block text-sm font-medium text-slate-700">Target markets</label>
+        <FieldLabel required>Target markets</FieldLabel>
         <div className="flex flex-wrap gap-2">
           {MARKETS.map((market) => (
             <button
@@ -284,7 +243,7 @@ export default function ListingForm({
 
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
         <div>
-          <label className="mb-1 block text-sm font-medium text-slate-700">Pricing model</label>
+          <FieldLabel required>Pricing model</FieldLabel>
           <select
             value={form.pricingModel}
             onChange={(e) => set('pricingModel')(e.target.value)}
@@ -300,7 +259,7 @@ export default function ListingForm({
           <FieldError field="pricingModel" />
         </div>
         <div>
-          <label className="mb-1 block text-sm font-medium text-slate-700">Price range</label>
+          <FieldLabel required>Price range</FieldLabel>
           <select
             value={form.priceRange}
             onChange={(e) => set('priceRange')(e.target.value)}
@@ -319,20 +278,20 @@ export default function ListingForm({
 
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
         <div>
-          <label className="mb-1 block text-sm font-medium text-slate-700">Email (optional)</label>
+          <FieldLabel>Email (optional)</FieldLabel>
           <input type="email" value={form.email} onChange={(e) => set('email')(e.target.value)} className={inputClass('email')} />
           <p className="mt-1 text-xs text-slate-500">Hidden publicly until verified by an admin.</p>
           <FieldError field="email" />
         </div>
         <div>
-          <label className="mb-1 block text-sm font-medium text-slate-700">Phone (optional)</label>
+          <FieldLabel>Phone (optional)</FieldLabel>
           <input type="tel" value={form.phone} onChange={(e) => set('phone')(e.target.value)} className={inputClass('phone')} />
           <FieldError field="phone" />
         </div>
       </div>
 
       <div>
-        <label className="mb-1 block text-sm font-medium text-slate-700">Website</label>
+        <FieldLabel required>Website</FieldLabel>
         <input
           type="text"
           placeholder="https://"
@@ -345,7 +304,7 @@ export default function ListingForm({
 
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
         <div>
-          <label className="mb-1 block text-sm font-medium text-slate-700">Headquarters</label>
+          <FieldLabel required>Headquarters</FieldLabel>
           <input
             type="text"
             placeholder="City, Country"
@@ -357,7 +316,7 @@ export default function ListingForm({
           <FieldError field="headquarters" />
         </div>
         <div>
-          <label className="mb-1 block text-sm font-medium text-slate-700">Founded year</label>
+          <FieldLabel required>Founded year</FieldLabel>
           <input
             type="number"
             min={1800}

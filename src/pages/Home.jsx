@@ -6,7 +6,9 @@ import CategoryCard from '../components/CategoryCard.jsx'
 import NewsCard from '../components/NewsCard.jsx'
 import EventCard from '../components/EventCard.jsx'
 import SeoHead from '../components/SeoHead.jsx'
-import { getCategories, getNews, getEvents } from '../services/listingService.js'
+import { getCategories } from '../services/listingService.js'
+import { getNews } from '../services/newsService.js'
+import { getEvents } from '../services/eventService.js'
 
 export default function Home() {
   const [categories, setCategories] = useState([])

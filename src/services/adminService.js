@@ -4,6 +4,7 @@
 
 import { supabase } from '../lib/supabase.js'
 import { mapListingRow, mapCategoryRow, LISTING_SELECT } from './listingMapper.js'
+import { mapNewsRow, mapEventRow, NEWS_SELECT, EVENTS_SELECT } from './contentMapper.js'
 
 const CATEGORY_EMBED = 'categories(id, name, short_name, route, color, icon)'
 
@@ -87,5 +88,103 @@ export async function setListingFeatured(id, featured) {
 
 export async function setListingVerified(id, verified) {
   const { error } = await supabase.rpc('set_listing_verified', { p_id: id, p_verified: verified })
+  if (error) throw toFriendlyError(error)
+}
+
+// News moderation --------------------------------------------------------
+
+/** All pending news items, oldest submission first (the moderation queue). */
+export async function getPendingNews() {
+  const { data, error } = await supabase
+    .from('news')
+    .select(NEWS_SELECT)
+    .eq('status', 'pending')
+    .order('submitted_at', { ascending: true })
+  if (error) throw toFriendlyError(error)
+  return (data ?? []).map(mapNewsRow)
+}
+
+/** All news items, optionally filtered by status and/or a title/summary search term. */
+export async function getAllNews({ status, search } = {}) {
+  let query = supabase.from('news').select(NEWS_SELECT).order('created_at', { ascending: false })
+  if (status) query = query.eq('status', status)
+  const q = search?.trim()
+  if (q) {
+    const pattern = `%${q.replace(/[%_\\]/g, (m) => `\\${m}`)}%`
+    query = query.or(`title.ilike.${pattern},summary.ilike.${pattern}`)
+  }
+  const { data, error } = await query
+  if (error) throw toFriendlyError(error)
+  return (data ?? []).map(mapNewsRow)
+}
+
+/** One news item by id, any status (admin review view). */
+export async function getNewsByIdForAdmin(id) {
+  const { data, error } = await supabase.from('news').select(NEWS_SELECT).eq('id', id).maybeSingle()
+  if (error) throw toFriendlyError(error)
+  return data ? mapNewsRow(data) : null
+}
+
+export async function approveNews(id) {
+  const { error } = await supabase.rpc('approve_news', { p_id: id })
+  if (error) throw toFriendlyError(error)
+}
+
+export async function rejectNews(id, reason) {
+  const { error } = await supabase.rpc('reject_news', { p_id: id, p_reason: reason })
+  if (error) throw toFriendlyError(error)
+}
+
+export async function archiveNews(id) {
+  const { error } = await supabase.rpc('archive_news', { p_id: id })
+  if (error) throw toFriendlyError(error)
+}
+
+// Event moderation --------------------------------------------------------
+
+/** All pending events, oldest submission first (the moderation queue). */
+export async function getPendingEvents() {
+  const { data, error } = await supabase
+    .from('events')
+    .select(EVENTS_SELECT)
+    .eq('status', 'pending')
+    .order('submitted_at', { ascending: true })
+  if (error) throw toFriendlyError(error)
+  return (data ?? []).map(mapEventRow)
+}
+
+/** All events, optionally filtered by status and/or a name/description search term. */
+export async function getAllEvents({ status, search } = {}) {
+  let query = supabase.from('events').select(EVENTS_SELECT).order('created_at', { ascending: false })
+  if (status) query = query.eq('status', status)
+  const q = search?.trim()
+  if (q) {
+    const pattern = `%${q.replace(/[%_\\]/g, (m) => `\\${m}`)}%`
+    query = query.or(`name.ilike.${pattern},description.ilike.${pattern}`)
+  }
+  const { data, error } = await query
+  if (error) throw toFriendlyError(error)
+  return (data ?? []).map(mapEventRow)
+}
+
+/** One event by id, any status (admin review view). */
+export async function getEventByIdForAdmin(id) {
+  const { data, error } = await supabase.from('events').select(EVENTS_SELECT).eq('id', id).maybeSingle()
+  if (error) throw toFriendlyError(error)
+  return data ? mapEventRow(data) : null
+}
+
+export async function approveEvent(id) {
+  const { error } = await supabase.rpc('approve_event', { p_id: id })
+  if (error) throw toFriendlyError(error)
+}
+
+export async function rejectEvent(id, reason) {
+  const { error } = await supabase.rpc('reject_event', { p_id: id, p_reason: reason })
+  if (error) throw toFriendlyError(error)
+}
+
+export async function archiveEvent(id) {
+  const { error } = await supabase.rpc('archive_event', { p_id: id })
   if (error) throw toFriendlyError(error)
 }

@@ -23,7 +23,13 @@
 -- keep showing logoInitials in the UI until a real logo is uploaded via
 -- Supabase Storage.
 --
--- Categories: 20   Listings: 337
+-- News/events are seeded as pre-approved (status='approved', owner_id=null)
+-- rows, upserted on their unique legacy_id - the same "editorial content"
+-- treatment as seeded listings, distinct from user submissions which always
+-- start status='pending' with a real owner_id (see submit_news()/
+-- submit_event() in 002_news_events.sql).
+--
+-- Categories: 20   Listings: 337   News: 24   Events: 21
 
 begin;
 
@@ -20496,5 +20502,965 @@ begin
     (v_listing_id, 'Global');
 
 end $seed_listing$;
+
+
+insert into public.news (
+  legacy_id, owner_id, title, summary, source, source_url, category, tags, published_date,
+  status, submitted_at, approved_at
+) values (
+  'booking-holdings-q1-2026-earnings', null, 'Booking Holdings Reports First Quarter 2026 Financial Results', 'Booking Holdings reported Q1 2026 revenue growth of 16% year over year (about 10% on a constant-currency basis) and gross bookings growth of 15%, with room nights up 6%. The company said the Middle East conflict weighed on room-night growth by roughly 2 percentage points, while adjusted EBITDA grew 19%.',
+  'Yahoo Finance', 'https://finance.yahoo.com/markets/stocks/articles/booking-holdings-q1-earnings-revenues-153000815.html', 'Earnings',
+  array['Booking Holdings', 'Earnings', 'OTA']::text[], '2026-04-28'::date,
+  'approved', now(), now()
+)
+on conflict (legacy_id) do update set
+  title = excluded.title,
+  summary = excluded.summary,
+  source = excluded.source,
+  source_url = excluded.source_url,
+  category = excluded.category,
+  tags = excluded.tags,
+  published_date = excluded.published_date;
+
+
+insert into public.news (
+  legacy_id, owner_id, title, summary, source, source_url, category, tags, published_date,
+  status, submitted_at, approved_at
+) values (
+  'mews-series-d-300-million-2026', null, 'Mews Raises $300 Million Series D Led by EQT Ventures', 'Hospitality operating system Mews closed a $300 million Series D at a $2.5 billion valuation, led by EQT Ventures with new backers Atomico and HarbourVest Partners, alongside existing investors Kinnevik, Battery Ventures and Tiger Global. The company said the capital will deepen its AI-native PMS, RMS and payments stack.',
+  'Hotel Dive', 'https://www.hoteldive.com/news/mews-series-d-300-million-funding/810338/', 'Funding',
+  array['Mews', 'PMS', 'EQT Ventures', 'Funding']::text[], '2026-01-22'::date,
+  'approved', now(), now()
+)
+on conflict (legacy_id) do update set
+  title = excluded.title,
+  summary = excluded.summary,
+  source = excluded.source,
+  source_url = excluded.source_url,
+  category = excluded.category,
+  tags = excluded.tags,
+  published_date = excluded.published_date;
+
+
+insert into public.news (
+  legacy_id, owner_id, title, summary, source, source_url, category, tags, published_date,
+  status, submitted_at, approved_at
+) values (
+  'canary-technologies-acquires-openkey-2026', null, 'Canary Technologies Acquires Mobile Key Pioneer OpenKey', 'Canary Technologies acquired the assets of OpenKey, one of the earliest mobile-key providers for hotels, resorts and casinos, in a deal finalized in January with undisclosed terms. The acquisition expands Canary''s Mobile Key coverage across more door-lock models as it builds out its AI-powered guest management platform.',
+  'PhocusWire', 'https://www.phocuswire.com/canary-technologies-acquires-openkey', 'M&A',
+  array['Canary Technologies', 'OpenKey', 'Mobile Key', 'Hotel Tech']::text[], '2026-02-03'::date,
+  'approved', now(), now()
+)
+on conflict (legacy_id) do update set
+  title = excluded.title,
+  summary = excluded.summary,
+  source = excluded.source,
+  source_url = excluded.source_url,
+  category = excluded.category,
+  tags = excluded.tags,
+  published_date = excluded.published_date;
+
+
+insert into public.news (
+  legacy_id, owner_id, title, summary, source, source_url, category, tags, published_date,
+  status, submitted_at, approved_at
+) values (
+  'hilton-navan-direct-connect-2026', null, 'Hilton and Navan to Co-Create Hotel-TMC Direct Connect', 'Hilton and corporate travel platform Navan announced a direct booking connection that bypasses traditional distribution intermediaries, giving Hilton more control over how its rates are retailed to corporate travelers. The tie-up is an early step in a broader push to modernize business-travel hotel booking.',
+  'Skift', 'https://skift.com/2026/07/07/hilton-opens-direct-line-to-navan-cutting-out-corporate-travel-middlemen/', 'Partnership',
+  array['Hilton', 'Navan', 'Corporate Travel', 'Distribution']::text[], '2026-07-07'::date,
+  'approved', now(), now()
+)
+on conflict (legacy_id) do update set
+  title = excluded.title,
+  summary = excluded.summary,
+  source = excluded.source,
+  source_url = excluded.source_url,
+  category = excluded.category,
+  tags = excluded.tags,
+  published_date = excluded.published_date;
+
+
+insert into public.news (
+  legacy_id, owner_id, title, summary, source, source_url, category, tags, published_date,
+  status, submitted_at, approved_at
+) values (
+  'tripadvisor-sells-thefork-amex-2026', null, 'Tripadvisor to Sell TheFork to American Express for $700 Million', 'Tripadvisor agreed to sell TheFork, its European restaurant reservation and management platform used by more than 50,000 restaurants across 11 countries, to American Express in an all-cash $700 million deal. The move follows a February 2026 strategic review and lets Tripadvisor focus on its Viator and Experiences business; closing is expected before year-end 2026.',
+  'Skift', 'https://skift.com/2026/06/15/tripadvisor-sell-thefork-american-express/', 'M&A',
+  array['Tripadvisor', 'TheFork', 'American Express', 'Restaurant Tech']::text[], '2026-06-15'::date,
+  'approved', now(), now()
+)
+on conflict (legacy_id) do update set
+  title = excluded.title,
+  summary = excluded.summary,
+  source = excluded.source,
+  source_url = excluded.source_url,
+  category = excluded.category,
+  tags = excluded.tags,
+  published_date = excluded.published_date;
+
+
+insert into public.news (
+  legacy_id, owner_id, title, summary, source, source_url, category, tags, published_date,
+  status, submitted_at, approved_at
+) values (
+  'stay22-122-million-summit-partners-2026', null, 'Stay22 Lands $122 Million Growth Investment From Summit Partners', 'Montreal-based Stay22, which routes booking intent from travel creators, media publishers and event organizers to OTAs including Booking.com, Expedia Group and Tripadvisor, raised a $122 million minority growth investment from Summit Partners. The all-equity deal lets founders retain control as the company expands beyond travel into broader creator-monetization infrastructure.',
+  'PhocusWire', 'https://www.phocuswire.com/news/online/stay22-lands-122-million-dollar-investment', 'Funding',
+  array['Stay22', 'Affiliate Marketing', 'OTA', 'Funding']::text[], '2026-02-25'::date,
+  'approved', now(), now()
+)
+on conflict (legacy_id) do update set
+  title = excluded.title,
+  summary = excluded.summary,
+  source = excluded.source,
+  source_url = excluded.source_url,
+  category = excluded.category,
+  tags = excluded.tags,
+  published_date = excluded.published_date;
+
+
+insert into public.news (
+  legacy_id, owner_id, title, summary, source, source_url, category, tags, published_date,
+  status, submitted_at, approved_at
+) values (
+  'expedia-b2b-ai-toolkit-explore-2026', null, 'Expedia Group B2B Introduces AI Toolkit and Intelligent Experience Platform', 'At its Explore 26 partner conference, Expedia Group B2B previewed a new AI toolkit and Intelligent Experience Platform that lets partners embed Expedia inventory into branded, agentic and conversational travel experiences. The company is also preparing a B2B Model Context Protocol server to let partner AI agents connect directly to its travel inventory.',
+  'Skift', 'https://skift.com/2026/05/21/expedia-to-launch-agentic-ai-tools-for-b2b-partners/', 'Product Launch',
+  array['Expedia Group', 'AI', 'MCP', 'B2B']::text[], '2026-05-19'::date,
+  'approved', now(), now()
+)
+on conflict (legacy_id) do update set
+  title = excluded.title,
+  summary = excluded.summary,
+  source = excluded.source,
+  source_url = excluded.source_url,
+  category = excluded.category,
+  tags = excluded.tags,
+  published_date = excluded.published_date;
+
+
+insert into public.news (
+  legacy_id, owner_id, title, summary, source, source_url, category, tags, published_date,
+  status, submitted_at, approved_at
+) values (
+  'lufthansa-gds-surcharge-hike-ndc-2026', null, 'Lufthansa Group to Raise GDS Surcharge Again as ITA Airways Joins NDC Fold', 'Lufthansa, Austrian Airlines, SWISS, Brussels Airlines and Air Dolomiti raised their Distribution Cost Charge to $22 per ticket on Amadeus effective May 5, 2026, while integrating ITA Airways into the group''s NDC ecosystem. Executives framed the higher surcharge as an incentive to push travel advisors toward Lufthansa''s NDC Partner Program, targeting 75% of bookings through NDC or direct channels.',
+  'Travel Market Report', 'https://www.travelmarketreport.com/air/articles/lufthansa-group-to-raise-gds-surcharge-again-in-may-as-ita-joins-ndc-fold', 'Industry Trend',
+  array['Lufthansa Group', 'NDC', 'GDS', 'Distribution']::text[], '2026-04-06'::date,
+  'approved', now(), now()
+)
+on conflict (legacy_id) do update set
+  title = excluded.title,
+  summary = excluded.summary,
+  source = excluded.source,
+  source_url = excluded.source_url,
+  category = excluded.category,
+  tags = excluded.tags,
+  published_date = excluded.published_date;
+
+
+insert into public.news (
+  legacy_id, owner_id, title, summary, source, source_url, category, tags, published_date,
+  status, submitted_at, approved_at
+) values (
+  'air-europa-gds-fee-ndc-shift-2026', null, 'Air Europa Adds GDS Booking Fee as It Shifts to NDC Distribution', 'Air Europa will charge a Distribution Channel Fee of about €12-€14.50 per one-way ticket on bookings made through Global Distribution Systems starting July 1, 2026, while its own NDC channel remains unaffected. The airline also confirmed its content will no longer be available through Sabre after talks with the GDS did not lead to an agreement.',
+  'Business Travel News Europe', 'https://www.businesstravelnewseurope.com/TMC-Distribution/Air-Europa-to-add-GDS-fee-and-plans-Sabre-exit', 'Industry Trend',
+  array['Air Europa', 'NDC', 'GDS', 'Sabre']::text[], '2026-04-24'::date,
+  'approved', now(), now()
+)
+on conflict (legacy_id) do update set
+  title = excluded.title,
+  summary = excluded.summary,
+  source = excluded.source,
+  source_url = excluded.source_url,
+  category = excluded.category,
+  tags = excluded.tags,
+  published_date = excluded.published_date;
+
+
+insert into public.news (
+  legacy_id, owner_id, title, summary, source, source_url, category, tags, published_date,
+  status, submitted_at, approved_at
+) values (
+  'etias-q4-2026-launch-reminder', null, 'ETIAS Travel Authorization Still on Track for Q4 2026 Launch', 'The EU''s European Travel Information and Authorisation System, which will require visa-exempt visitors to the Schengen Area to obtain a low-cost pre-travel authorization, remains scheduled to enter into force in the fourth quarter of 2026 following years of delay. The European Commission has committed to announcing the exact start date at least six months in advance.',
+  'Family Travel Association', 'https://www.familytravel.org/2026/06/15/dont-forget-etias-scheduled-to-go-into-effect-q4-of-2026/', 'Regulation',
+  array['ETIAS', 'EU', 'Border Tech', 'Regulation']::text[], '2026-06-15'::date,
+  'approved', now(), now()
+)
+on conflict (legacy_id) do update set
+  title = excluded.title,
+  summary = excluded.summary,
+  source = excluded.source,
+  source_url = excluded.source_url,
+  category = excluded.category,
+  tags = excluded.tags,
+  published_date = excluded.published_date;
+
+
+insert into public.news (
+  legacy_id, owner_id, title, summary, source, source_url, category, tags, published_date,
+  status, submitted_at, approved_at
+) values (
+  'airbnb-earnings-protection-insurance-2026', null, 'Airbnb Launches Earnings Protection Insurance for US Hosts', 'Airbnb introduced an optional Earnings Protection plan, developed with insurer MIC Global, that combines parametric payouts for hurricanes, earthquakes and wildfires with a traditional claims process for other interruptions. The plan launched in 45 US states for hosts with five or fewer listings and at least a year of hosting history, with nationwide availability planned for early 2027.',
+  'Investing.com', 'https://www.investing.com/news/stock-market-news/airbnb-launches-earnings-protection-insurance-for-us-hosts-93CH-4724740', 'Product Launch',
+  array['Airbnb', 'Insurance', 'Hosts', 'Short-Term Rental']::text[], '2026-06-03'::date,
+  'approved', now(), now()
+)
+on conflict (legacy_id) do update set
+  title = excluded.title,
+  summary = excluded.summary,
+  source = excluded.source,
+  source_url = excluded.source_url,
+  category = excluded.category,
+  tags = excluded.tags,
+  published_date = excluded.published_date;
+
+
+insert into public.news (
+  legacy_id, owner_id, title, summary, source, source_url, category, tags, published_date,
+  status, submitted_at, approved_at
+) values (
+  'air-india-booking-com-partnership-2026', null, 'Air India Partners With Booking.com, Joining Airlines Selling Hotels', 'Air India and Booking.com launched a co-branded accommodation platform giving Air India customers access to Booking.com''s global listings alongside flight bookings. Maharaja Club loyalty members earn points on hotel stays booked through the platform, with launch discounts of up to 15% running June 22 to July 21, 2026.',
+  'Skift', 'https://skift.com/2026/06/23/air-india-partners-with-booking-com-joining-airlines-selling-hotels-not-just-seats/', 'Partnership',
+  array['Air India', 'Booking.com', 'Airline', 'Loyalty']::text[], '2026-06-23'::date,
+  'approved', now(), now()
+)
+on conflict (legacy_id) do update set
+  title = excluded.title,
+  summary = excluded.summary,
+  source = excluded.source,
+  source_url = excluded.source_url,
+  category = excluded.category,
+  tags = excluded.tags,
+  published_date = excluded.published_date;
+
+
+insert into public.news (
+  legacy_id, owner_id, title, summary, source, source_url, category, tags, published_date,
+  status, submitted_at, approved_at
+) values (
+  'amadeus-sabre-competition-sabremosaic-2026', null, 'Amadeus Widens Its Travel Tech Domain as Sabre Fight Escalates', 'Following its Q1 2026 earnings, Amadeus argued its competitive position extends well beyond airline distribution into retailing, biometric identity, AI, hospitality and payments, a day after Sabre''s CEO accused it of holding a ''dominant monopoly position.'' Sabre has countered with SabreMosaic Travel Marketplace, an AI-agentic platform supporting automated rebooking during disruptions.',
+  'Skift', 'https://skift.com/2026/05/11/amadeus-q1-2026-earnings-sabre-ai/', 'Industry Trend',
+  array['Amadeus', 'Sabre', 'GDS', 'AI']::text[], '2026-05-11'::date,
+  'approved', now(), now()
+)
+on conflict (legacy_id) do update set
+  title = excluded.title,
+  summary = excluded.summary,
+  source = excluded.source,
+  source_url = excluded.source_url,
+  category = excluded.category,
+  tags = excluded.tags,
+  published_date = excluded.published_date;
+
+
+insert into public.news (
+  legacy_id, owner_id, title, summary, source, source_url, category, tags, published_date,
+  status, submitted_at, approved_at
+) values (
+  'weroad-58-million-series-c-airbnb-2026', null, 'Airbnb Leads $58 Million WeRoad Funding for US Expansion', 'Italian group-adventure travel company WeRoad closed a €49 million ($58 million) Series C round led by Airbnb, which takes roughly a 10% stake and a board seat. The funding, which brings WeRoad''s total raised to €85 million, backs its first expansion outside Europe after generating €130 million in 2025 revenue, up 30% year over year.',
+  'Skift', 'https://skift.com/2026/05/27/airbnb-leads-58-million-weroad-funding-for-u-s-expansion/', 'Funding',
+  array['WeRoad', 'Airbnb', 'Group Travel', 'Funding']::text[], '2026-05-27'::date,
+  'approved', now(), now()
+)
+on conflict (legacy_id) do update set
+  title = excluded.title,
+  summary = excluded.summary,
+  source = excluded.source,
+  source_url = excluded.source_url,
+  category = excluded.category,
+  tags = excluded.tags,
+  published_date = excluded.published_date;
+
+
+insert into public.news (
+  legacy_id, owner_id, title, summary, source, source_url, category, tags, published_date,
+  status, submitted_at, approved_at
+) values (
+  'kindred-125-million-funding-2026', null, 'Home-Swap Startup Kindred Raises $125 Million', 'Kindred, a non-commercial home-swapping platform, raised $125 million combining a $40 million Series B co-led by NEA and Figma CEO Dylan Field with an $85 million Series C led by Index Ventures. Unlike short-term rental marketplaces, over 90% of homes on Kindred are members'' primary residences and nights cannot be bought or sold.',
+  'Forbes', 'https://www.forbes.com/sites/francescawalton/2026/02/03/home-swap-startup-kindred-raises-125-million-in-fresh-funding-as-travelers-seek-creative-ways-to-save-money/', 'Funding',
+  array['Kindred', 'Home Swapping', 'Alternative Accommodation', 'Funding']::text[], '2026-02-03'::date,
+  'approved', now(), now()
+)
+on conflict (legacy_id) do update set
+  title = excluded.title,
+  summary = excluded.summary,
+  source = excluded.source,
+  source_url = excluded.source_url,
+  category = excluded.category,
+  tags = excluded.tags,
+  published_date = excluded.published_date;
+
+
+insert into public.news (
+  legacy_id, owner_id, title, summary, source, source_url, category, tags, published_date,
+  status, submitted_at, approved_at
+) values (
+  'heymax-11-million-series-a-2026', null, 'HeyMax Secures $11 Million Series A to Expand Travel Loyalty Platform Across APAC', 'Singapore-based loyalty platform HeyMax raised an $11 million Series A led by Peak XV Partners, with participation from Agoda co-founder Rob Rosenstein. The funding will build AI-empowered rewards tools as HeyMax expands its Max Miles loyalty currency from Singapore and Hong Kong into Japan, Taiwan and Australia by the end of 2026.',
+  'PhocusWire', 'https://www.phocuswire.com/heymax-loyalty-rewards-funding-series-a', 'Funding',
+  array['HeyMax', 'Loyalty', 'APAC', 'Funding']::text[], '2026-01-28'::date,
+  'approved', now(), now()
+)
+on conflict (legacy_id) do update set
+  title = excluded.title,
+  summary = excluded.summary,
+  source = excluded.source,
+  source_url = excluded.source_url,
+  category = excluded.category,
+  tags = excluded.tags,
+  published_date = excluded.published_date;
+
+
+insert into public.news (
+  legacy_id, owner_id, title, summary, source, source_url, category, tags, published_date,
+  status, submitted_at, approved_at
+) values (
+  'mews-siteminder-channel-manager-partnership-2026', null, 'Mews and SiteMinder Build Native Channel Manager Partnership', 'Mews launched an embedded Mews Channel Manager built through a native, API-level technical partnership with SiteMinder, consolidating more than 400 OTA connections into a single contract and billing line for hoteliers. The companies say the move eliminates the ''Frankenstack'' of disconnected point solutions common in hotel distribution.',
+  'Hospitality Technology', 'https://hospitalitytech.com/news-briefs/2026-05-27?article=mews-and-siteminder-build-native-api-level-partnership-eliminate-channel-management-silos', 'Partnership',
+  array['Mews', 'SiteMinder', 'Channel Manager', 'PMS']::text[], '2026-05-27'::date,
+  'approved', now(), now()
+)
+on conflict (legacy_id) do update set
+  title = excluded.title,
+  summary = excluded.summary,
+  source = excluded.source,
+  source_url = excluded.source_url,
+  category = excluded.category,
+  tags = excluded.tags,
+  published_date = excluded.published_date;
+
+
+insert into public.news (
+  legacy_id, owner_id, title, summary, source, source_url, category, tags, published_date,
+  status, submitted_at, approved_at
+) values (
+  'tsa-touchless-id-expansion-2026', null, 'TSA to Expand Touchless Facial Recognition ID to 65 Airports', 'The TSA announced it will expand its opt-in PreCheck Touchless ID biometric facial-matching program from 15 airports to as many as 65 US airports by spring 2026. Eligible PreCheck members can clear identity checks using facial matching instead of a physical ID, though manual checks remain available for travelers who decline to participate.',
+  'The Washington Post', 'https://www.washingtonpost.com/travel/2026/01/26/tsa-precheck-facial-scanning-airports/', 'Regulation',
+  array['TSA', 'Facial Recognition', 'Airport Security', 'Biometrics']::text[], '2026-01-26'::date,
+  'approved', now(), now()
+)
+on conflict (legacy_id) do update set
+  title = excluded.title,
+  summary = excluded.summary,
+  source = excluded.source,
+  source_url = excluded.source_url,
+  category = excluded.category,
+  tags = excluded.tags,
+  published_date = excluded.published_date;
+
+
+insert into public.news (
+  legacy_id, owner_id, title, summary, source, source_url, category, tags, published_date,
+  status, submitted_at, approved_at
+) values (
+  'amadeus-idemia-acquisition-2026', null, 'Amadeus to Acquire Biometrics Firm IDEMIA Public Security for €1.2 Billion', 'Amadeus agreed to acquire IDEMIA Public Security, a French biometrics and identity-services provider, for up to €1.35 billion including a performance-based earnout, following a competitive bid process. The deal, expected to close in mid-2027, follows Amadeus''s February 2026 acquisition of AI corporate-travel startup SkyLink and builds on its 2024 purchase of Vision-Box.',
+  'PhocusWire', 'https://www.phocuswire.com/news/technology/amadeus-acquires-idemia-biometrics-identity-technology', 'M&A',
+  array['Amadeus', 'IDEMIA', 'Biometrics', 'Identity']::text[], '2026-04-29'::date,
+  'approved', now(), now()
+)
+on conflict (legacy_id) do update set
+  title = excluded.title,
+  summary = excluded.summary,
+  source = excluded.source,
+  source_url = excluded.source_url,
+  category = excluded.category,
+  tags = excluded.tags,
+  published_date = excluded.published_date;
+
+
+insert into public.news (
+  legacy_id, owner_id, title, summary, source, source_url, category, tags, published_date,
+  status, submitted_at, approved_at
+) values (
+  'marriott-ask-bonvoy-ai-search-2026', null, 'Marriott Begins Beta Rollout of AI-Powered ''Ask Bonvoy'' Search', 'Marriott International started beta testing Ask Bonvoy, a natural-language search tool that lets travelers query its hotel portfolio by trip intent, amenities and destination before handing off to the company''s existing booking flow. The feature launched to a subset of US Bonvoy members and new users, with global expansion planned later in 2026.',
+  'PhocusWire', 'https://www.phocuswire.com/travel-tech-news-briefs/2026/june-26', 'Product Launch',
+  array['Marriott', 'AI Search', 'Bonvoy', 'Hotel Tech']::text[], '2026-06-26'::date,
+  'approved', now(), now()
+)
+on conflict (legacy_id) do update set
+  title = excluded.title,
+  summary = excluded.summary,
+  source = excluded.source,
+  source_url = excluded.source_url,
+  category = excluded.category,
+  tags = excluded.tags,
+  published_date = excluded.published_date;
+
+
+insert into public.news (
+  legacy_id, owner_id, title, summary, source, source_url, category, tags, published_date,
+  status, submitted_at, approved_at
+) values (
+  'rategain-duetto-partnership-2026', null, 'RateGain and Duetto Partner to Power Autonomous, Real-Time Revenue Optimization', 'RateGain Travel Technologies and Duetto announced a partnership combining RateGain''s AI-powered channel manager with Duetto''s Revenue & Profit Operating System to enable automated, real-time rate updates across distribution channels. RateGain was named a Preferred Partner of Duetto, and shares of RateGain rose following the announcement.',
+  'TradingView (Reuters)', 'https://www.tradingview.com/news/reuters.com,2026:newsml_FWN42N0TX:0-rategain-travel-technologies-partners-with-duetto-for-autonomous-real-time-revenue-optimization/', 'Partnership',
+  array['RateGain', 'Duetto', 'Revenue Management', 'AI']::text[], '2026-06-16'::date,
+  'approved', now(), now()
+)
+on conflict (legacy_id) do update set
+  title = excluded.title,
+  summary = excluded.summary,
+  source = excluded.source,
+  source_url = excluded.source_url,
+  category = excluded.category,
+  tags = excluded.tags,
+  published_date = excluded.published_date;
+
+
+insert into public.news (
+  legacy_id, owner_id, title, summary, source, source_url, category, tags, published_date,
+  status, submitted_at, approved_at
+) values (
+  'turkey-travel-tech-hub-2026', null, 'Turkey Quietly Built One of the World''s Most Complete Travel Tech Stacks', 'Skift reporting finds Turkey has become a significant, under-the-radar travel-tech hub, drawing more than 60 million visitors annually post-pandemic and generating roughly $60 billion in yearly tourism revenue. The country has built a broad domestic technology stack spanning booking, payments and hospitality software that the global industry largely overlooks.',
+  'Skift', 'https://skift.com/2026/07/03/turkey-quietly-built-one-of-the-worlds-most-complete-travel-tech-stacks/', 'Industry Trend',
+  array['Turkey', 'Travel Tech', 'Tourism']::text[], '2026-07-03'::date,
+  'approved', now(), now()
+)
+on conflict (legacy_id) do update set
+  title = excluded.title,
+  summary = excluded.summary,
+  source = excluded.source,
+  source_url = excluded.source_url,
+  category = excluded.category,
+  tags = excluded.tags,
+  published_date = excluded.published_date;
+
+
+insert into public.news (
+  legacy_id, owner_id, title, summary, source, source_url, category, tags, published_date,
+  status, submitted_at, approved_at
+) values (
+  'amadeus-acquires-skylink-2026', null, 'Amadeus Acquires SkyLink to Accelerate the Deployment of AI in Travel', 'Amadeus acquired SkyLink, a New York-based AI corporate-travel startup specializing in conversational orchestration and automation, for an undisclosed sum. SkyLink''s technology lets travelers book and service flights and hotels conversationally through chat platforms, and the deal expands Amadeus''s corporate-travel footprint in North America.',
+  'Skift', 'https://skift.com/2026/02/25/amadeus-acquired-skylink-to-infuse-its-products-with-conversational-ai/', 'M&A',
+  array['Amadeus', 'SkyLink', 'AI', 'Corporate Travel']::text[], '2026-02-25'::date,
+  'approved', now(), now()
+)
+on conflict (legacy_id) do update set
+  title = excluded.title,
+  summary = excluded.summary,
+  source = excluded.source,
+  source_url = excluded.source_url,
+  category = excluded.category,
+  tags = excluded.tags,
+  published_date = excluded.published_date;
+
+
+insert into public.news (
+  legacy_id, owner_id, title, summary, source, source_url, category, tags, published_date,
+  status, submitted_at, approved_at
+) values (
+  'marriott-q1-2026-earnings', null, 'Marriott Tops Q1 2026 Guidance, Lifts Full-Year RevPAR Outlook', 'Marriott International reported worldwide Q1 2026 RevPAR growth of 4.2%, beating the high end of its own guidance, driven by both US & Canada and international demand. The company raised its full-year 2026 global RevPAR guidance to 2%-3% growth and increased its adjusted EPS outlook to $11.38-$11.63.',
+  'Hotel Dive', 'https://www.hoteldive.com/news/marriott-q1-2026-earnings/819442/', 'Earnings',
+  array['Marriott', 'Earnings', 'RevPAR']::text[], '2026-05-06'::date,
+  'approved', now(), now()
+)
+on conflict (legacy_id) do update set
+  title = excluded.title,
+  summary = excluded.summary,
+  source = excluded.source,
+  source_url = excluded.source_url,
+  category = excluded.category,
+  tags = excluded.tags,
+  published_date = excluded.published_date;
+
+
+insert into public.events (
+  legacy_id, owner_id, name, host, description, start_date, end_date, city, country, venue, format,
+  audience, website, status, submitted_at, approved_at
+) values (
+  'itb-berlin-2026', null, 'ITB Berlin 2026', 'Messe Berlin', 'ITB Berlin is the world''s leading travel trade show, bringing together tour operators, DMOs, airlines, hoteliers and travel technology providers from around the globe. The event includes the ITB Convention, a large B2B exhibition floor, and a dedicated digital/travel tech program.',
+  '2026-03-03'::date, '2026-03-05'::date,
+  'Berlin', 'Germany', 'Messe Berlin (Berlin ExpoCenter City)', 'In-person',
+  'Global travel & tourism trade', 'https://www.itb.com/en',
+  'approved', now(), now()
+)
+on conflict (legacy_id) do update set
+  name = excluded.name,
+  host = excluded.host,
+  description = excluded.description,
+  start_date = excluded.start_date,
+  end_date = excluded.end_date,
+  city = excluded.city,
+  country = excluded.country,
+  venue = excluded.venue,
+  format = excluded.format,
+  audience = excluded.audience,
+  website = excluded.website;
+
+
+insert into public.events (
+  legacy_id, owner_id, name, host, description, start_date, end_date, city, country, venue, format,
+  audience, website, status, submitted_at, approved_at
+) values (
+  'hitec-2026', null, 'HITEC 2026', 'Hospitality Financial and Technology Professionals (HFTP)', 'HITEC is billed as the world''s largest and longest-running hospitality technology event, bringing together hundreds of exhibitors covering PMS, revenue management, guest experience and hotel operations software. It runs alongside HSMAI''s Commercial Strategy Conference.',
+  '2026-06-15'::date, '2026-06-18'::date,
+  'San Antonio', 'United States', 'Henry B. Gonzalez Convention Center', 'In-person',
+  'Hoteliers & hospitality tech vendors', 'https://www.hitec.org',
+  'approved', now(), now()
+)
+on conflict (legacy_id) do update set
+  name = excluded.name,
+  host = excluded.host,
+  description = excluded.description,
+  start_date = excluded.start_date,
+  end_date = excluded.end_date,
+  city = excluded.city,
+  country = excluded.country,
+  venue = excluded.venue,
+  format = excluded.format,
+  audience = excluded.audience,
+  website = excluded.website;
+
+
+insert into public.events (
+  legacy_id, owner_id, name, host, description, start_date, end_date, city, country, venue, format,
+  audience, website, status, submitted_at, approved_at
+) values (
+  'phocuswright-conference-2026', null, 'The Phocuswright Conference 2026', 'Phocuswright', 'The Phocuswright Conference is a leading gathering for travel industry executives, investors and technology leaders to discuss trends in online travel, distribution and emerging technology. The 2026 edition takes place at the fully renovated Diplomat Beach Resort.',
+  '2026-11-17'::date, '2026-11-19'::date,
+  'Fort Lauderdale', 'United States', 'Diplomat Beach Resort', 'In-person',
+  'Travel technology executives & investors', 'https://www.phocuswrightconference.com/',
+  'approved', now(), now()
+)
+on conflict (legacy_id) do update set
+  name = excluded.name,
+  host = excluded.host,
+  description = excluded.description,
+  start_date = excluded.start_date,
+  end_date = excluded.end_date,
+  city = excluded.city,
+  country = excluded.country,
+  venue = excluded.venue,
+  format = excluded.format,
+  audience = excluded.audience,
+  website = excluded.website;
+
+
+insert into public.events (
+  legacy_id, owner_id, name, host, description, start_date, end_date, city, country, venue, format,
+  audience, website, status, submitted_at, approved_at
+) values (
+  'wtm-london-2026', null, 'World Travel Market (WTM) London 2026', 'RX Global (Reed Exhibitions)', 'World Travel Market London is a major global marketplace for travel professionals to source new products, meet buyers and discuss distribution and technology trends. The event draws tens of thousands of visitors and thousands of exhibitors from across the travel industry.',
+  '2026-11-03'::date, '2026-11-05'::date,
+  'London', 'United Kingdom', 'ExCeL London', 'In-person',
+  'OTAs, tour operators & travel agents', 'https://www.wtm.com/london/en-gb.html',
+  'approved', now(), now()
+)
+on conflict (legacy_id) do update set
+  name = excluded.name,
+  host = excluded.host,
+  description = excluded.description,
+  start_date = excluded.start_date,
+  end_date = excluded.end_date,
+  city = excluded.city,
+  country = excluded.country,
+  venue = excluded.venue,
+  format = excluded.format,
+  audience = excluded.audience,
+  website = excluded.website;
+
+
+insert into public.events (
+  legacy_id, owner_id, name, host, description, start_date, end_date, city, country, venue, format,
+  audience, website, status, submitted_at, approved_at
+) values (
+  'arabian-travel-market-2026', null, 'Arabian Travel Market (ATM) 2026', 'RX Global (Reed Exhibitions)', 'Arabian Travel Market is a leading global event for the travel and tourism industry in the Middle East, connecting buyers and sellers across hospitality, aviation and travel technology. The 2026 edition was rescheduled from its original spring dates to September.',
+  '2026-09-14'::date, '2026-09-17'::date,
+  'Dubai', 'United Arab Emirates', 'Dubai World Trade Centre', 'In-person',
+  'Middle East travel & tourism trade', 'https://www.wtm.com/atm/en-gb.html',
+  'approved', now(), now()
+)
+on conflict (legacy_id) do update set
+  name = excluded.name,
+  host = excluded.host,
+  description = excluded.description,
+  start_date = excluded.start_date,
+  end_date = excluded.end_date,
+  city = excluded.city,
+  country = excluded.country,
+  venue = excluded.venue,
+  format = excluded.format,
+  audience = excluded.audience,
+  website = excluded.website;
+
+
+insert into public.events (
+  legacy_id, owner_id, name, host, description, start_date, end_date, city, country, venue, format,
+  audience, website, status, submitted_at, approved_at
+) values (
+  'imex-america-2026', null, 'IMEX America 2026', 'IMEX Group', 'IMEX America is the largest trade show for the global meetings, events and incentive travel (MICE) industry, gathering thousands of suppliers and qualified buyers for education and networking.',
+  '2026-10-13'::date, '2026-10-15'::date,
+  'Las Vegas', 'United States', 'Mandalay Bay Convention Center', 'In-person',
+  'Meetings, events & incentive travel (MICE)', 'https://america.imexevents.com',
+  'approved', now(), now()
+)
+on conflict (legacy_id) do update set
+  name = excluded.name,
+  host = excluded.host,
+  description = excluded.description,
+  start_date = excluded.start_date,
+  end_date = excluded.end_date,
+  city = excluded.city,
+  country = excluded.country,
+  venue = excluded.venue,
+  format = excluded.format,
+  audience = excluded.audience,
+  website = excluded.website;
+
+
+insert into public.events (
+  legacy_id, owner_id, name, host, description, start_date, end_date, city, country, venue, format,
+  audience, website, status, submitted_at, approved_at
+) values (
+  'itb-asia-2026', null, 'ITB Asia 2026', 'Messe Berlin (Asia Pacific)', 'ITB Asia is Asia''s largest B2B travel trade show, connecting travel technology providers, tour operators, airlines and MICE professionals across the Asia-Pacific region.',
+  '2026-10-21'::date, '2026-10-23'::date,
+  'Singapore', 'Singapore', 'Sands Expo & Convention Centre', 'In-person',
+  'APAC travel trade & MICE', 'https://www.itb-asia.com/',
+  'approved', now(), now()
+)
+on conflict (legacy_id) do update set
+  name = excluded.name,
+  host = excluded.host,
+  description = excluded.description,
+  start_date = excluded.start_date,
+  end_date = excluded.end_date,
+  city = excluded.city,
+  country = excluded.country,
+  venue = excluded.venue,
+  format = excluded.format,
+  audience = excluded.audience,
+  website = excluded.website;
+
+
+insert into public.events (
+  legacy_id, owner_id, name, host, description, start_date, end_date, city, country, venue, format,
+  audience, website, status, submitted_at, approved_at
+) values (
+  'business-travel-show-europe-2026', null, 'Business Travel Show Europe 2026', 'CloserStill Media', 'Business Travel Show Europe is the continent''s leading annual event for corporate travel and meetings professionals, co-located with TravelTech Show and The Meetings Show at ExCeL London.',
+  '2026-06-24'::date, '2026-06-25'::date,
+  'London', 'United Kingdom', 'ExCeL London', 'In-person',
+  'Corporate travel & meetings buyers', 'https://www.businesstravelshoweurope.com/',
+  'approved', now(), now()
+)
+on conflict (legacy_id) do update set
+  name = excluded.name,
+  host = excluded.host,
+  description = excluded.description,
+  start_date = excluded.start_date,
+  end_date = excluded.end_date,
+  city = excluded.city,
+  country = excluded.country,
+  venue = excluded.venue,
+  format = excluded.format,
+  audience = excluded.audience,
+  website = excluded.website;
+
+
+insert into public.events (
+  legacy_id, owner_id, name, host, description, start_date, end_date, city, country, venue, format,
+  audience, website, status, submitted_at, approved_at
+) values (
+  'gbta-convention-2026', null, 'GBTA Convention 2026', 'Global Business Travel Association (GBTA)', 'The GBTA Convention is one of the largest annual gatherings for the global business travel industry, featuring expert-led sessions on corporate travel management, expense and travel technology.',
+  '2026-08-03'::date, '2026-08-05'::date,
+  'Chicago', 'United States', 'McCormick Place', 'In-person',
+  'Business travel & corporate travel managers', 'https://convention.gbta.org/',
+  'approved', now(), now()
+)
+on conflict (legacy_id) do update set
+  name = excluded.name,
+  host = excluded.host,
+  description = excluded.description,
+  start_date = excluded.start_date,
+  end_date = excluded.end_date,
+  city = excluded.city,
+  country = excluded.country,
+  venue = excluded.venue,
+  format = excluded.format,
+  audience = excluded.audience,
+  website = excluded.website;
+
+
+insert into public.events (
+  legacy_id, owner_id, name, host, description, start_date, end_date, city, country, venue, format,
+  audience, website, status, submitted_at, approved_at
+) values (
+  'routes-world-2026', null, 'Routes World 2026', 'Routes (Informa Markets)', 'Routes World is a leading route development forum uniting airlines, airports and destinations for bilateral meetings on new air service agreements and network growth.',
+  '2026-10-21'::date, '2026-10-23'::date,
+  'Frankfurt', 'Germany', 'Messe Frankfurt', 'In-person',
+  'Airlines, airports & route development', 'https://www.routesonline.com/events/288/routes-world-2026/',
+  'approved', now(), now()
+)
+on conflict (legacy_id) do update set
+  name = excluded.name,
+  host = excluded.host,
+  description = excluded.description,
+  start_date = excluded.start_date,
+  end_date = excluded.end_date,
+  city = excluded.city,
+  country = excluded.country,
+  venue = excluded.venue,
+  format = excluded.format,
+  audience = excluded.audience,
+  website = excluded.website;
+
+
+insert into public.events (
+  legacy_id, owner_id, name, host, description, start_date, end_date, city, country, venue, format,
+  audience, website, status, submitted_at, approved_at
+) values (
+  'skift-global-forum-2026', null, 'Skift Global Forum 2026', 'Skift', 'Skift Global Forum is a flagship travel industry event bringing together executives from airlines, hotels, OTAs and travel technology companies to discuss trends shaping the future of travel.',
+  '2026-09-22'::date, '2026-09-24'::date,
+  'New York', 'United States', 'Javits Center', 'In-person',
+  'Travel industry executives & leaders', 'https://live.skift.com/skift-global-forum/',
+  'approved', now(), now()
+)
+on conflict (legacy_id) do update set
+  name = excluded.name,
+  host = excluded.host,
+  description = excluded.description,
+  start_date = excluded.start_date,
+  end_date = excluded.end_date,
+  city = excluded.city,
+  country = excluded.country,
+  venue = excluded.venue,
+  format = excluded.format,
+  audience = excluded.audience,
+  website = excluded.website;
+
+
+insert into public.events (
+  legacy_id, owner_id, name, host, description, start_date, end_date, city, country, venue, format,
+  audience, website, status, submitted_at, approved_at
+) values (
+  'hsmai-commercial-strategy-conference-2026', null, 'HSMAI Commercial Strategy Conference 2026', 'Hospitality Sales and Marketing Association International (HSMAI Americas)', 'The HSMAI Commercial Strategy Conference brings together hotel marketing, revenue management, sales and distribution professionals to explore the convergence of commercial disciplines, held in conjunction with HITEC.',
+  '2026-06-16'::date, '2026-06-17'::date,
+  'San Antonio', 'United States', 'Henry B. Gonzalez Convention Center', 'In-person',
+  'Hotel commercial, revenue & marketing leaders', 'https://commercial.hsmai.org/',
+  'approved', now(), now()
+)
+on conflict (legacy_id) do update set
+  name = excluded.name,
+  host = excluded.host,
+  description = excluded.description,
+  start_date = excluded.start_date,
+  end_date = excluded.end_date,
+  city = excluded.city,
+  country = excluded.country,
+  venue = excluded.venue,
+  format = excluded.format,
+  audience = excluded.audience,
+  website = excluded.website;
+
+
+insert into public.events (
+  legacy_id, owner_id, name, host, description, start_date, end_date, city, country, venue, format,
+  audience, website, status, submitted_at, approved_at
+) values (
+  'traveltech-show-2026', null, 'TravelTech Show 2026', 'CloserStill Media', 'TravelTech Show (formerly Travel Technology Europe) is a technology-focused event bringing together travel technology suppliers, TMCs, tour operators, OTAs, airlines and hotels to source solutions across AI, distribution, CRM and booking systems.',
+  '2026-06-24'::date, '2026-06-25'::date,
+  'London', 'United Kingdom', 'ExCeL London', 'In-person',
+  'Travel technology buyers & suppliers', 'https://traveltech-show.com/',
+  'approved', now(), now()
+)
+on conflict (legacy_id) do update set
+  name = excluded.name,
+  host = excluded.host,
+  description = excluded.description,
+  start_date = excluded.start_date,
+  end_date = excluded.end_date,
+  city = excluded.city,
+  country = excluded.country,
+  venue = excluded.venue,
+  format = excluded.format,
+  audience = excluded.audience,
+  website = excluded.website;
+
+
+insert into public.events (
+  legacy_id, owner_id, name, host, description, start_date, end_date, city, country, venue, format,
+  audience, website, status, submitted_at, approved_at
+) values (
+  'wttc-global-summit-2026', null, 'WTTC Global Summit 2026', 'World Travel & Tourism Council (WTTC)', 'The WTTC Global Summit is the flagship annual gathering of the World Travel & Tourism Council, uniting public and private sector leaders to address innovation, resilience, sustainability and growth in travel and tourism.',
+  '2026-10-07'::date, '2026-10-09'::date,
+  'Valletta', 'Malta', 'TBA', 'In-person',
+  'Travel & tourism industry leaders and policymakers', 'https://wttc.org/events-webinars/global-summit',
+  'approved', now(), now()
+)
+on conflict (legacy_id) do update set
+  name = excluded.name,
+  host = excluded.host,
+  description = excluded.description,
+  start_date = excluded.start_date,
+  end_date = excluded.end_date,
+  city = excluded.city,
+  country = excluded.country,
+  venue = excluded.venue,
+  format = excluded.format,
+  audience = excluded.audience,
+  website = excluded.website;
+
+
+insert into public.events (
+  legacy_id, owner_id, name, host, description, start_date, end_date, city, country, venue, format,
+  audience, website, status, submitted_at, approved_at
+) values (
+  'world-travel-awards-2026-grand-final', null, 'World Travel Awards 2026 Grand Final Gala Ceremony', 'World Travel Awards', 'The World Travel Awards Grand Final is the climax of the annual World Travel Awards Grand Tour, recognizing excellence across airlines, hotels, tour operators and travel technology companies worldwide.',
+  '2026-12-12'::date, '2026-12-12'::date,
+  'TBA', 'Tanzania', 'TBA', 'In-person',
+  'Global travel & tourism industry', 'https://www.worldtravelawards.com/',
+  'approved', now(), now()
+)
+on conflict (legacy_id) do update set
+  name = excluded.name,
+  host = excluded.host,
+  description = excluded.description,
+  start_date = excluded.start_date,
+  end_date = excluded.end_date,
+  city = excluded.city,
+  country = excluded.country,
+  venue = excluded.venue,
+  format = excluded.format,
+  audience = excluded.audience,
+  website = excluded.website;
+
+
+insert into public.events (
+  legacy_id, owner_id, name, host, description, start_date, end_date, city, country, venue, format,
+  audience, website, status, submitted_at, approved_at
+) values (
+  'the-hotel-show-dubai-2026', null, 'The Hotel Show 2026', 'dmg events', 'The Hotel Show is a major hospitality trade show in the Middle East covering hotel design, technology, F&B and operations, co-located with INDEX and WORKSPACE at Dubai Exhibition Centre.',
+  '2026-09-28'::date, '2026-09-30'::date,
+  'Dubai', 'United Arab Emirates', 'Dubai Exhibition Centre, Expo City Dubai', 'In-person',
+  'Hoteliers, hospitality suppliers & procurement', 'https://www.thehotelshow.com/',
+  'approved', now(), now()
+)
+on conflict (legacy_id) do update set
+  name = excluded.name,
+  host = excluded.host,
+  description = excluded.description,
+  start_date = excluded.start_date,
+  end_date = excluded.end_date,
+  city = excluded.city,
+  country = excluded.country,
+  venue = excluded.venue,
+  format = excluded.format,
+  audience = excluded.audience,
+  website = excluded.website;
+
+
+insert into public.events (
+  legacy_id, owner_id, name, host, description, start_date, end_date, city, country, venue, format,
+  audience, website, status, submitted_at, approved_at
+) values (
+  'travelcon-2026', null, 'TravelCon 2026', 'TravelCon', 'TravelCon is a business event for travel content creators, connecting influencers with brands, tourism boards and DMOs through masterclasses, networking and one-on-one meetings. The 2026 edition is fully integrated with the Travel, Gear & Adventure Show.',
+  '2026-06-23'::date, '2026-06-25'::date,
+  'Salt Lake City', 'United States', 'Salt Palace Convention Center', 'In-person',
+  'Travel content creators & influencers', 'https://travelcon.org/',
+  'approved', now(), now()
+)
+on conflict (legacy_id) do update set
+  name = excluded.name,
+  host = excluded.host,
+  description = excluded.description,
+  start_date = excluded.start_date,
+  end_date = excluded.end_date,
+  city = excluded.city,
+  country = excluded.country,
+  venue = excluded.venue,
+  format = excluded.format,
+  audience = excluded.audience,
+  website = excluded.website;
+
+
+insert into public.events (
+  legacy_id, owner_id, name, host, description, start_date, end_date, city, country, venue, format,
+  audience, website, status, submitted_at, approved_at
+) values (
+  'seatrade-cruise-global-2026', null, 'Seatrade Cruise Global 2026', 'Seatrade Cruise (Informa Markets)', 'Seatrade Cruise Global is the leading global cruise industry event, bringing together cruise line executives, ports, destinations and technology suppliers. The 2026 edition was the largest in the event''s 41-year history.',
+  '2026-04-13'::date, '2026-04-16'::date,
+  'Miami Beach', 'United States', 'Miami Beach Convention Center', 'In-person',
+  'Cruise line executives & suppliers', 'https://www.seatradecruiseevents.com/global/en/home.html',
+  'approved', now(), now()
+)
+on conflict (legacy_id) do update set
+  name = excluded.name,
+  host = excluded.host,
+  description = excluded.description,
+  start_date = excluded.start_date,
+  end_date = excluded.end_date,
+  city = excluded.city,
+  country = excluded.country,
+  venue = excluded.venue,
+  format = excluded.format,
+  audience = excluded.audience,
+  website = excluded.website;
+
+
+insert into public.events (
+  legacy_id, owner_id, name, host, description, start_date, end_date, city, country, venue, format,
+  audience, website, status, submitted_at, approved_at
+) values (
+  'iata-agm-2026', null, 'IATA 82nd Annual General Meeting & World Air Transport Summit', 'International Air Transport Association (IATA)', 'The IATA AGM and World Air Transport Summit is the airline industry''s premier annual event, gathering airline CEOs and aviation leaders to discuss distribution, sustainability and industry policy. The 82nd edition was hosted by LATAM Airlines Group.',
+  '2026-06-06'::date, '2026-06-08'::date,
+  'Rio de Janeiro', 'Brazil', 'TBA', 'In-person',
+  'Airline CEOs & aviation leaders', 'https://www.iata.org/en/events/agm/agm-2026/',
+  'approved', now(), now()
+)
+on conflict (legacy_id) do update set
+  name = excluded.name,
+  host = excluded.host,
+  description = excluded.description,
+  start_date = excluded.start_date,
+  end_date = excluded.end_date,
+  city = excluded.city,
+  country = excluded.country,
+  venue = excluded.venue,
+  format = excluded.format,
+  audience = excluded.audience,
+  website = excluded.website;
+
+
+insert into public.events (
+  legacy_id, owner_id, name, host, description, start_date, end_date, city, country, venue, format,
+  audience, website, status, submitted_at, approved_at
+) values (
+  'phocuswright-europe-2026', null, 'Phocuswright Europe 2026', 'Phocuswright', 'Phocuswright Europe is the premier travel technology and industry conference for the European market, covering distribution, OTAs, hotel tech and emerging travel innovation.',
+  '2026-06-15'::date, '2026-06-17'::date,
+  'Barcelona', 'Spain', 'Palau de Congressos de Catalunya', 'In-person',
+  'European travel technology industry', 'https://www.phocuswrighteurope.com/',
+  'approved', now(), now()
+)
+on conflict (legacy_id) do update set
+  name = excluded.name,
+  host = excluded.host,
+  description = excluded.description,
+  start_date = excluded.start_date,
+  end_date = excluded.end_date,
+  city = excluded.city,
+  country = excluded.country,
+  venue = excluded.venue,
+  format = excluded.format,
+  audience = excluded.audience,
+  website = excluded.website;
+
+
+insert into public.events (
+  legacy_id, owner_id, name, host, description, start_date, end_date, city, country, venue, format,
+  audience, website, status, submitted_at, approved_at
+) values (
+  'skift-global-forum-east-2026', null, 'Skift Global Forum East 2026', 'Skift', 'Skift Global Forum East brings Skift''s flagship travel industry conference format to the Middle East, convening regional travel, tourism and hospitality leaders to discuss growth and technology trends.',
+  '2026-10-20'::date, '2026-10-21'::date,
+  'Abu Dhabi', 'United Arab Emirates', 'TBA', 'In-person',
+  'Middle East travel industry leaders', 'https://live.skift.com/skift-global-forum-east/',
+  'approved', now(), now()
+)
+on conflict (legacy_id) do update set
+  name = excluded.name,
+  host = excluded.host,
+  description = excluded.description,
+  start_date = excluded.start_date,
+  end_date = excluded.end_date,
+  city = excluded.city,
+  country = excluded.country,
+  venue = excluded.venue,
+  format = excluded.format,
+  audience = excluded.audience,
+  website = excluded.website;
 
 commit;
