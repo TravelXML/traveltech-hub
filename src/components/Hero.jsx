@@ -56,7 +56,7 @@ export default function Hero() {
         src={heroBg}
         alt=""
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-25"
+        className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-[0.12]"
       />
       <div className="relative mx-auto max-w-4xl px-4 py-16 text-center sm:px-6 sm:py-24 lg:px-8">
         <h1 className="bg-gradient-to-r from-brand-600 via-violet-600 to-fuchsia-600 bg-clip-text font-display text-4xl font-bold tracking-tight text-transparent sm:text-5xl">

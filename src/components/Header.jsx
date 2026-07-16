@@ -23,7 +23,7 @@ export default function Header() {
     <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/90 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center shrink-0" onClick={() => setMobileOpen(false)}>
-          <LogoFull height={30} />
+          <LogoFull height={42} />
         </Link>
 
         <nav className="hidden items-center gap-6 md:flex">
