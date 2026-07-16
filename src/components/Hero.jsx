@@ -1,86 +1,9 @@
 import { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Plane, Hotel, Ship, TrainFront, Building2, Globe2, Share2, Warehouse, CalendarCheck, Route, MapPin } from 'lucide-react'
 import SearchBar from './SearchBar.jsx'
 import { searchAll } from '../services/listingService.js'
 import { getTheme } from '../config/theme.js'
-
-// A network of connected nodes, each carrying the icon of an actual
-// category from config/categories.js - literally "every corner of travel
-// tech, connected in one directory." Two loose bands (top edge, bottom
-// edge) frame the headline/search instead of crossing through them.
-function NetworkMap() {
-  const topNodes = [
-    { x: 70, y: 55, Icon: Plane },
-    { x: 290, y: 35, Icon: Hotel },
-    { x: 510, y: 68, Icon: Ship },
-    { x: 730, y: 38, Icon: TrainFront },
-    { x: 950, y: 62, Icon: Building2 },
-    { x: 1140, y: 42, Icon: Globe2 },
-  ]
-  const bottomNodes = [
-    { x: 140, y: 420, Icon: Share2 },
-    { x: 380, y: 400, Icon: Warehouse },
-    { x: 630, y: 428, Icon: CalendarCheck },
-    { x: 870, y: 402, Icon: Route },
-    { x: 1090, y: 418, Icon: MapPin },
-  ]
-  const topLinks = [
-    [0, 1],
-    [1, 2],
-    [2, 3],
-    [3, 4],
-    [4, 5],
-  ]
-  const bottomLinks = [
-    [0, 1],
-    [1, 2],
-    [2, 3],
-    [3, 4],
-  ]
-
-  function band(nodes, links, keyPrefix) {
-    return (
-      <g>
-        {links.map(([a, b], i) => (
-          <line
-            key={`${keyPrefix}-l${i}`}
-            x1={nodes[a].x}
-            y1={nodes[a].y}
-            x2={nodes[b].x}
-            y2={nodes[b].y}
-            stroke="#8b5cf6"
-            strokeWidth="2"
-            strokeDasharray="1 8"
-            strokeLinecap="round"
-          />
-        ))}
-        {nodes.map(({ x, y, Icon }, i) => (
-          <g key={`${keyPrefix}-n${i}`}>
-            <circle cx={x} cy={y} r="15" fill="#fff" stroke="#8b5cf6" strokeWidth="1.5" />
-            <Icon x={x - 9} y={y - 9} width={18} height={18} color="#7c3aed" strokeWidth={2.2} />
-          </g>
-        ))}
-      </g>
-    )
-  }
-
-  return (
-    <svg
-      viewBox="0 0 1200 470"
-      preserveAspectRatio="xMidYMid slice"
-      className="pointer-events-none absolute inset-0 h-full w-full opacity-[0.3]"
-      aria-hidden="true"
-    >
-      {/* Two short edge-only links tying the bands together, kept near the
-          far left/right so they don't cross the centered text column. */}
-      <line x1={70} y1={55} x2={140} y2={420} stroke="#8b5cf6" strokeWidth="2" strokeDasharray="1 8" strokeLinecap="round" />
-      <line x1={1140} y1={42} x2={1090} y2={418} stroke="#8b5cf6" strokeWidth="2" strokeDasharray="1 8" strokeLinecap="round" />
-      {band(topNodes, topLinks, 'top')}
-      {band(bottomNodes, bottomLinks, 'bottom')}
-    </svg>
-  )
-}
+import heroBg from '../assets/hero-bg.jpg'
 
 export default function Hero() {
   const [query, setQuery] = useState('')
@@ -124,7 +47,17 @@ export default function Hero() {
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-brand-50 to-white">
-      <NetworkMap />
+      {/* Low-opacity backdrop, not a full-strength background: at full
+          strength the icons/pins sit directly behind the headline and
+          search bar (illegible, worse once bg-cover crops it tighter on
+          narrow viewports) - a soft wash keeps the "connected world" motif
+          without competing with the text on top of it. */}
+      <img
+        src={heroBg}
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-25"
+      />
       <div className="relative mx-auto max-w-4xl px-4 py-16 text-center sm:px-6 sm:py-24 lg:px-8">
         <h1 className="bg-gradient-to-r from-brand-600 via-violet-600 to-fuchsia-600 bg-clip-text font-display text-4xl font-bold tracking-tight text-transparent sm:text-5xl">
           Find your next travel technology partner
