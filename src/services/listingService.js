@@ -6,6 +6,7 @@
 import { supabase } from '../lib/supabase.js'
 import { mapListingRow, mapCategoryRow, LISTING_SELECT } from './listingMapper.js'
 import { verifyCaptcha } from './captchaService.js'
+import { getHiringListingIds } from './jobService.js'
 
 const DEFAULT_PAGE_SIZE = 100
 const SEARCH_RESULT_LIMIT = 30
@@ -32,6 +33,24 @@ function toFriendlyError(error) {
 async function currentUserId() {
   const { data } = await supabase.auth.getUser()
   return data?.user?.id ?? null
+}
+
+/**
+ * Attaches a `hiring` boolean to each listing - true when it has at least
+ * one approved, still-open job posting (see jobService.getHiringListingIds).
+ * Fails soft (hiring: false for everyone) rather than throwing: the badge is
+ * a decoration on top of the core listings experience, which shouldn't hard
+ * -fail if the jobs subsystem has a problem.
+ */
+async function attachHiring(listings) {
+  if (listings.length === 0) return listings
+  try {
+    const hiringIds = await getHiringListingIds(listings.map((l) => l.id))
+    return listings.map((l) => ({ ...l, hiring: hiringIds.has(l.id) }))
+  } catch (err) {
+    console.error('Could not load hiring status:', err)
+    return listings.map((l) => ({ ...l, hiring: false }))
+  }
 }
 
 /**
@@ -111,7 +130,8 @@ export async function getListings(categoryId, options = {}) {
 
   const { data, error, count } = await query
   if (error) throw toFriendlyError(error)
-  return { listings: (data ?? []).map((row) => mapListingRow(row)), total: count ?? 0 }
+  const listings = await attachHiring((data ?? []).map((row) => mapListingRow(row)))
+  return { listings, total: count ?? 0 }
 }
 
 /**
@@ -128,7 +148,8 @@ export async function getListingBySlug(slug) {
   if (error) throw toFriendlyError(error)
   if (!data) return null
   const { categories, ...row } = data
-  return { ...mapListingRow(row), category: categories ? mapCategoryRow(categories) : null }
+  const [listing] = await attachHiring([mapListingRow(row)])
+  return { ...listing, category: categories ? mapCategoryRow(categories) : null }
 }
 
 /**
@@ -171,7 +192,8 @@ export async function searchAll(query) {
     const { categories, ...listingRow } = row
     seen.set(row.id, { ...mapListingRow(listingRow), category: categories ? mapCategoryRow(categories) : null })
   }
-  return [...seen.values()].slice(0, SEARCH_RESULT_LIMIT)
+  const results = await attachHiring([...seen.values()].slice(0, SEARCH_RESULT_LIMIT))
+  return results
 }
 
 /**

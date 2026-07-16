@@ -25,6 +25,9 @@ export default function Footer() {
               <Link to="/events" className="text-sm font-medium text-slate-400 hover:text-white">
                 Events
               </Link>
+              <Link to="/jobs" className="text-sm font-medium text-slate-400 hover:text-white">
+                Jobs
+              </Link>
             </div>
           </div>
           {columns.map((col, i) => (

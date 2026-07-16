@@ -1,6 +1,18 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Mail, Phone, Globe, MapPin, Calendar, ChevronDown, ChevronUp, Heart, ThumbsUp, ThumbsDown } from 'lucide-react'
+import {
+  Mail,
+  Phone,
+  Globe,
+  MapPin,
+  Calendar,
+  ChevronDown,
+  ChevronUp,
+  Heart,
+  ThumbsUp,
+  ThumbsDown,
+  Briefcase,
+} from 'lucide-react'
 import TagBadge from './TagBadge.jsx'
 import { getTheme } from '../config/theme.js'
 import { useReaction } from '../hooks/useReaction.js'
@@ -45,6 +57,13 @@ export default function ListingCard({ listing, color }) {
               <span className="flex items-center gap-1">
                 <Calendar size={13} className={theme.text} /> Founded {listing.founded}
               </span>
+              {listing.hiring && (
+                <TagBadge kind="hiring">
+                  <span className="flex items-center gap-1">
+                    <Briefcase size={11} /> Hiring
+                  </span>
+                </TagBadge>
+              )}
             </div>
           </div>
 

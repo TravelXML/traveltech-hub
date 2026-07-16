@@ -7,6 +7,7 @@ const KIND_STYLES = {
   pricingModel: 'bg-emerald-50 text-emerald-700 border-emerald-200',
   priceRange: 'bg-amber-50 text-amber-800 border-amber-200',
   usp: 'bg-purple-50 text-purple-700 border-purple-200',
+  hiring: 'bg-emerald-50 text-emerald-700 border-emerald-200',
 }
 
 export default function TagBadge({ kind = 'product', children, className = '' }) {

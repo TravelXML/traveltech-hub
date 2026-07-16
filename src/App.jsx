@@ -8,8 +8,11 @@ import CategoryPage from './pages/CategoryPage.jsx'
 import AddBusiness from './pages/AddBusiness.jsx'
 import AddNews from './pages/AddNews.jsx'
 import AddEvent from './pages/AddEvent.jsx'
+import AddJob from './pages/AddJob.jsx'
 import NewsPage from './pages/NewsPage.jsx'
 import EventsPage from './pages/EventsPage.jsx'
+import JobsPage from './pages/JobsPage.jsx'
+import JobDetail from './pages/JobDetail.jsx'
 import Login from './pages/Login.jsx'
 import Register from './pages/Register.jsx'
 import ForgotPassword from './pages/ForgotPassword.jsx'
@@ -22,6 +25,10 @@ import MyNews from './pages/MyNews.jsx'
 import EditNews from './pages/EditNews.jsx'
 import MyEvents from './pages/MyEvents.jsx'
 import EditEvent from './pages/EditEvent.jsx'
+import MyJobs from './pages/MyJobs.jsx'
+import EditJob from './pages/EditJob.jsx'
+import JobApplicants from './pages/JobApplicants.jsx'
+import MyApplications from './pages/MyApplications.jsx'
 import AdminDashboard from './pages/AdminDashboard.jsx'
 import AdminListings from './pages/AdminListings.jsx'
 import AdminListingDetail from './pages/AdminListingDetail.jsx'
@@ -29,6 +36,8 @@ import AdminNews from './pages/AdminNews.jsx'
 import AdminNewsDetail from './pages/AdminNewsDetail.jsx'
 import AdminEvents from './pages/AdminEvents.jsx'
 import AdminEventsDetail from './pages/AdminEventsDetail.jsx'
+import AdminJobs from './pages/AdminJobs.jsx'
+import AdminJobDetail from './pages/AdminJobDetail.jsx'
 import NotFound from './pages/NotFound.jsx'
 
 export default function App() {
@@ -41,8 +50,11 @@ export default function App() {
           <Route path="/add-business" element={<AddBusiness />} />
           <Route path="/add-news" element={<AddNews />} />
           <Route path="/add-event" element={<AddEvent />} />
+          <Route path="/add-job" element={<AddJob />} />
           <Route path="/news" element={<NewsPage />} />
           <Route path="/events" element={<EventsPage />} />
+          <Route path="/jobs" element={<JobsPage />} />
+          <Route path="/jobs/:id" element={<JobDetail />} />
 
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
@@ -107,6 +119,38 @@ export default function App() {
               </ProtectedRoute>
             }
           />
+          <Route
+            path="/dashboard/jobs"
+            element={
+              <ProtectedRoute>
+                <MyJobs />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/dashboard/jobs/:id/edit"
+            element={
+              <ProtectedRoute>
+                <EditJob />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/dashboard/jobs/:id/applicants"
+            element={
+              <ProtectedRoute>
+                <JobApplicants />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/dashboard/applications"
+            element={
+              <ProtectedRoute>
+                <MyApplications />
+              </ProtectedRoute>
+            }
+          />
 
           <Route
             path="/admin"
@@ -161,6 +205,22 @@ export default function App() {
             element={
               <AdminRoute>
                 <AdminEventsDetail />
+              </AdminRoute>
+            }
+          />
+          <Route
+            path="/admin/jobs"
+            element={
+              <AdminRoute>
+                <AdminJobs />
+              </AdminRoute>
+            }
+          />
+          <Route
+            path="/admin/jobs/:id"
+            element={
+              <AdminRoute>
+                <AdminJobDetail />
               </AdminRoute>
             }
           />

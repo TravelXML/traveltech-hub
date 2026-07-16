@@ -1,14 +1,16 @@
 import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { Mail, Phone, Globe, MapPin, Calendar, BadgeCheck, Star, AlertCircle } from 'lucide-react'
+import { Mail, Phone, Globe, MapPin, Calendar, BadgeCheck, Star, Briefcase, AlertCircle } from 'lucide-react'
 import TagBadge from '../components/TagBadge.jsx'
 import SeoHead from '../components/SeoHead.jsx'
 import { getTheme } from '../config/theme.js'
 import { getListingBySlug } from '../services/listingService.js'
+import { getOpenJobsForListing } from '../services/jobService.js'
 
 export default function ListingDetail() {
   const { slug } = useParams()
   const [listing, setListing] = useState(null)
+  const [openJobs, setOpenJobs] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
 
@@ -18,7 +20,11 @@ export default function ListingDetail() {
     setError('')
     getListingBySlug(slug)
       .then((data) => {
-        if (active) setListing(data)
+        if (!active) return
+        setListing(data)
+        if (data?.hiring) {
+          getOpenJobsForListing(data.id).then((jobs) => active && setOpenJobs(jobs))
+        }
       })
       .catch((err) => {
         if (active) setError(err.message)
@@ -121,6 +127,11 @@ export default function ListingDetail() {
                     <Star size={14} /> Featured
                   </span>
                 )}
+                {listing.hiring && (
+                  <span className="flex items-center gap-1 rounded-full bg-white/20 px-2 py-0.5 font-medium">
+                    <Briefcase size={14} /> Hiring
+                  </span>
+                )}
               </div>
             </div>
           </div>
@@ -172,6 +183,30 @@ export default function ListingDetail() {
                     </TagBadge>
                   ))}
                 </div>
+              </section>
+            )}
+
+            {openJobs.length > 0 && (
+              <section>
+                <h2 className="font-display text-lg font-semibold text-slate-900">Open positions</h2>
+                <ul className="mt-3 space-y-2">
+                  {openJobs.map((job) => (
+                    <li key={job.id}>
+                      <Link
+                        to={`/jobs/${job.id}`}
+                        className="flex items-center justify-between gap-3 rounded-xl border border-slate-200 px-4 py-3 hover:border-brand-300 hover:bg-brand-50/50"
+                      >
+                        <span className="min-w-0">
+                          <span className="block truncate font-medium text-slate-900">{job.title}</span>
+                          <span className="text-sm text-slate-500">
+                            {job.category} · {job.remote ? 'Remote' : job.location}
+                          </span>
+                        </span>
+                        <Briefcase size={16} className="shrink-0 text-brand-600" />
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
               </section>
             )}
           </div>

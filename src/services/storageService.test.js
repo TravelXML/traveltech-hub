@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { validateLogoFile, MAX_LOGO_SIZE_BYTES } from './storageService.js'
+import { validateLogoFile, MAX_LOGO_SIZE_BYTES, validateResumeFile, MAX_RESUME_SIZE_BYTES } from './storageService.js'
 
 function makeFile({ name = 'logo.png', type = 'image/png', size = 1024 } = {}) {
   const file = new File([new Uint8Array(size)], name, { type })
@@ -38,5 +38,45 @@ describe('validateLogoFile', () => {
   it('accepts a file exactly at the size limit', () => {
     const exact = makeFile({ size: MAX_LOGO_SIZE_BYTES })
     expect(validateLogoFile(exact)).toBeNull()
+  })
+})
+
+describe('validateResumeFile', () => {
+  it('rejects a missing file', () => {
+    expect(validateResumeFile(null)).toMatch(/choose a file/i)
+  })
+
+  it('accepts a valid PDF under the size limit', () => {
+    expect(validateResumeFile(makeFile({ type: 'application/pdf', name: 'resume.pdf' }))).toBeNull()
+  })
+
+  it('accepts DOC and DOCX', () => {
+    expect(validateResumeFile(makeFile({ type: 'application/msword', name: 'resume.doc' }))).toBeNull()
+    expect(
+      validateResumeFile(
+        makeFile({
+          type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+          name: 'resume.docx',
+        })
+      )
+    ).toBeNull()
+  })
+
+  it('rejects disallowed MIME types', () => {
+    expect(validateResumeFile(makeFile({ type: 'image/png', name: 'resume.png' }))).toMatch(/PDF, DOC or DOCX/)
+  })
+
+  it('rejects a MIME/extension mismatch', () => {
+    expect(validateResumeFile(makeFile({ type: 'application/pdf', name: 'resume.exe' }))).toMatch(/extension/i)
+  })
+
+  it('rejects files over the 5 MB limit', () => {
+    const oversized = makeFile({ type: 'application/pdf', name: 'resume.pdf', size: MAX_RESUME_SIZE_BYTES + 1 })
+    expect(validateResumeFile(oversized)).toMatch(/5 MB/)
+  })
+
+  it('accepts a file exactly at the size limit', () => {
+    const exact = makeFile({ type: 'application/pdf', name: 'resume.pdf', size: MAX_RESUME_SIZE_BYTES })
+    expect(validateResumeFile(exact)).toBeNull()
   })
 })

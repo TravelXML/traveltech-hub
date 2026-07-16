@@ -73,6 +73,9 @@ export default function Header() {
           <Link to="/events" className="text-sm font-medium text-slate-700 hover:text-brand-600">
             Events
           </Link>
+          <Link to="/jobs" className="text-sm font-medium text-slate-700 hover:text-brand-600">
+            Jobs
+          </Link>
         </nav>
 
         <div className="flex items-center gap-4">
@@ -135,7 +138,7 @@ export default function Header() {
               </Link>
             ))}
           </div>
-          <div className="mt-3 grid grid-cols-2 gap-1 border-t border-slate-100 pt-3">
+          <div className="mt-3 grid grid-cols-3 gap-1 border-t border-slate-100 pt-3">
             <Link
               to="/news"
               className="rounded-lg px-3 py-2 text-center text-sm font-medium text-slate-700 hover:bg-slate-50"
@@ -149,6 +152,13 @@ export default function Header() {
               onClick={() => setMobileOpen(false)}
             >
               Events
+            </Link>
+            <Link
+              to="/jobs"
+              className="rounded-lg px-3 py-2 text-center text-sm font-medium text-slate-700 hover:bg-slate-50"
+              onClick={() => setMobileOpen(false)}
+            >
+              Jobs
             </Link>
           </div>
           <div className="mt-3 grid grid-cols-2 gap-1 border-t border-slate-100 pt-3">

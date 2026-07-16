@@ -5,6 +5,7 @@
 import { supabase } from '../lib/supabase.js'
 import { mapListingRow, mapCategoryRow, LISTING_SELECT } from './listingMapper.js'
 import { mapNewsRow, mapEventRow, NEWS_SELECT, EVENTS_SELECT } from './contentMapper.js'
+import { mapJobRow, JOB_SELECT } from './jobMapper.js'
 
 const CATEGORY_EMBED = 'categories(id, name, short_name, route, color, icon)'
 
@@ -186,5 +187,56 @@ export async function rejectEvent(id, reason) {
 
 export async function archiveEvent(id) {
   const { error } = await supabase.rpc('archive_event', { p_id: id })
+  if (error) throw toFriendlyError(error)
+}
+
+// Job moderation --------------------------------------------------------
+
+const JOB_LISTING_EMBED = 'listings(id, name, slug, logo_url, logo_initials)'
+
+/** All pending jobs, oldest submission first (the moderation queue). */
+export async function getPendingJobs() {
+  const { data, error } = await supabase
+    .from('jobs')
+    .select(`${JOB_SELECT}, ${JOB_LISTING_EMBED}`)
+    .eq('status', 'pending')
+    .order('submitted_at', { ascending: true })
+  if (error) throw toFriendlyError(error)
+  return (data ?? []).map(mapJobRow)
+}
+
+/** All jobs, optionally filtered by status and/or a title/description search term. */
+export async function getAllJobs({ status, search } = {}) {
+  let query = supabase.from('jobs').select(`${JOB_SELECT}, ${JOB_LISTING_EMBED}`).order('created_at', { ascending: false })
+  if (status) query = query.eq('status', status)
+  const q = search?.trim()
+  if (q) {
+    const pattern = `%${q.replace(/[%_\\]/g, (m) => `\\${m}`)}%`
+    query = query.or(`title.ilike.${pattern},description.ilike.${pattern}`)
+  }
+  const { data, error } = await query
+  if (error) throw toFriendlyError(error)
+  return (data ?? []).map(mapJobRow)
+}
+
+/** One job by id, any status (admin review view). */
+export async function getJobByIdForAdmin(id) {
+  const { data, error } = await supabase.from('jobs').select(`${JOB_SELECT}, ${JOB_LISTING_EMBED}`).eq('id', id).maybeSingle()
+  if (error) throw toFriendlyError(error)
+  return data ? mapJobRow(data) : null
+}
+
+export async function approveJob(id) {
+  const { error } = await supabase.rpc('approve_job', { p_id: id })
+  if (error) throw toFriendlyError(error)
+}
+
+export async function rejectJob(id, reason) {
+  const { error } = await supabase.rpc('reject_job', { p_id: id, p_reason: reason })
+  if (error) throw toFriendlyError(error)
+}
+
+export async function archiveJob(id) {
+  const { error } = await supabase.rpc('archive_job', { p_id: id })
   if (error) throw toFriendlyError(error)
 }

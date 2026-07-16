@@ -40,6 +40,20 @@ export default function Dashboard() {
           <h2 className="font-display text-lg font-semibold text-slate-900">My events</h2>
           <p className="mt-2 text-sm text-slate-600">View, edit and resubmit your event submissions.</p>
         </Link>
+        <Link
+          to="/dashboard/jobs"
+          className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg"
+        >
+          <h2 className="font-display text-lg font-semibold text-slate-900">My job postings</h2>
+          <p className="mt-2 text-sm text-slate-600">Post jobs under your listings and review applicants.</p>
+        </Link>
+        <Link
+          to="/dashboard/applications"
+          className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg"
+        >
+          <h2 className="font-display text-lg font-semibold text-slate-900">My applications</h2>
+          <p className="mt-2 text-sm text-slate-600">Track the jobs you&apos;ve applied to.</p>
+        </Link>
         {isAdmin && (
           <Link
             to="/admin"
