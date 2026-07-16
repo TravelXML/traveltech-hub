@@ -40,8 +40,8 @@ export default function Home() {
   return (
     <div>
       <SeoHead
-        title="TravelTech Hub - Travel Technology Directory"
-        description="TravelTech Hub is the directory of travel technology providers: PMS, CRS, aggregators, channel managers, wholesalers, OTAs and more."
+        title="TravelPin - Travel Technology Directory"
+        description="TravelPin is the directory of travel technology providers: PMS, CRS, aggregators, channel managers, wholesalers, OTAs and more."
         path="/"
       />
       <Hero />

@@ -73,7 +73,7 @@ export default function ListingDetail() {
   return (
     <div>
       <SeoHead
-        title={`${listing.name} | TravelTech Hub`}
+        title={`${listing.name} | TravelPin`}
         description={listing.description}
         path={`/vendor/${listing.slug}`}
         image={listing.logoUrl}

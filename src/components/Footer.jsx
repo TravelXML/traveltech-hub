@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import { Compass } from 'lucide-react'
 import { CATEGORIES } from '../config/categories.js'
+import { LogoFull } from './Logo.jsx'
 
 export default function Footer() {
   const mid = Math.ceil(CATEGORIES.length / 2)
@@ -11,11 +11,8 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-3">
           <div>
-            <Link to="/" className="flex items-center gap-2">
-              <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-600 text-white">
-                <Compass size={18} />
-              </span>
-              <span className="font-display text-lg font-bold text-white">TravelTech Hub</span>
+            <Link to="/" className="flex items-center">
+              <LogoFull height={26} />
             </Link>
             <p className="mt-3 max-w-xs text-sm text-slate-400">
               The directory for discovering travel technology providers across every corner of
@@ -48,7 +45,7 @@ export default function Footer() {
           ))}
         </div>
         <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-slate-800 pt-6 text-sm text-slate-500 sm:flex-row">
-          <p>&copy; {new Date().getFullYear()} TravelTech Hub. Demo project - all data for illustration.</p>
+          <p>&copy; {new Date().getFullYear()} TravelPin. Demo project - all data for illustration.</p>
           <Link to="/add-business" className="font-medium text-brand-400 hover:text-brand-300">
             List Your Business &rarr;
           </Link>

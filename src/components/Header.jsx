@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { ChevronDown, Menu, X, Compass } from 'lucide-react'
+import { ChevronDown, Menu, X } from 'lucide-react'
 import * as Icons from 'lucide-react'
 import { CATEGORIES } from '../config/categories.js'
 import { getTheme } from '../config/theme.js'
 import { useAuth } from '../context/AuthContext.jsx'
+import { LogoFull } from './Logo.jsx'
 
 export default function Header() {
   const [dropdownOpen, setDropdownOpen] = useState(false)
@@ -21,13 +22,8 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/90 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
-        <Link to="/" className="flex items-center gap-2 shrink-0" onClick={() => setMobileOpen(false)}>
-          <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-brand-600 text-white">
-            <Compass size={20} />
-          </span>
-          <span className="font-display text-lg font-bold tracking-tight text-slate-900">
-            TravelTech Hub
-          </span>
+        <Link to="/" className="flex items-center shrink-0" onClick={() => setMobileOpen(false)}>
+          <LogoFull height={30} />
         </Link>
 
         <nav className="hidden items-center gap-6 md:flex">

@@ -7,4 +7,4 @@ Disallow: /register
 Disallow: /forgot-password
 Disallow: /reset-password
 
-Sitemap: https://getmemovo.com/sitemap.xml
+Sitemap: https://travelpin.space/sitemap.xml

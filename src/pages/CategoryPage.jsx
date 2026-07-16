@@ -58,7 +58,7 @@ export default function CategoryPage() {
   return (
     <div>
       <SeoHead
-        title={`${category.name} | TravelTech Hub`}
+        title={`${category.name} | TravelPin`}
         description={category.description}
         path={category.route}
       />
