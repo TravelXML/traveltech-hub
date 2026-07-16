@@ -12,7 +12,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-3">
           <div>
             <Link to="/" className="flex items-center">
-              <LogoFull height={34} />
+              <LogoFull height={40} />
             </Link>
             <p className="mt-3 max-w-xs text-sm text-slate-400">
               The directory for discovering travel technology providers across every corner of

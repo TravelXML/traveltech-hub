@@ -1,12 +1,35 @@
 import { useState } from 'react'
 import FieldLabel from './FieldLabel.jsx'
 
+// Keep in sync with supabase/migrations/004_expand_job_categories.sql -
+// the category CHECK constraint and the submit_job()/update_my_job() RPCs
+// all validate against this same 26-item list.
 export const JOB_CATEGORIES = [
   'Engineering',
+  'Product Management',
+  'Data Science & Analytics',
   'Management (MBA)',
+  'Sales & Business Development',
+  'Marketing',
+  'Customer Success & Support',
   'Hotel Management',
+  'Revenue Management',
   'Finance & Accounting',
   'Account Management',
+  'Human Resources',
+  'Legal & Compliance',
+  'Operations',
+  'Supply Chain & Procurement',
+  'UX/UI Design',
+  'Quality Assurance',
+  'DevOps & Infrastructure',
+  'Cybersecurity',
+  'IT & Technical Support',
+  'Partnerships & Alliances',
+  'Content & Editorial',
+  'Travel Consultant / Agent',
+  'Project & Program Management',
+  'Executive Leadership',
   'Other',
 ]
 export const EMPLOYMENT_TYPES = ['Full-time', 'Part-time', 'Contract', 'Internship']

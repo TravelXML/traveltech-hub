@@ -35,7 +35,7 @@ export default function JobsPage() {
     <div>
       <SeoHead
         title="Travel Tech Jobs | TravelPin"
-        description="Engineering, MBA/management, hotel management, finance and account management roles from travel technology companies."
+        description="Engineering, product, data, sales, marketing, hotel management, finance, HR, design and more - roles from travel technology companies."
         path="/jobs"
       />
       <div className="bg-gradient-to-br from-emerald-500 to-emerald-700">
@@ -49,8 +49,8 @@ export default function JobsPage() {
                 <h1 className="font-display text-3xl font-bold sm:text-4xl">Travel Tech Jobs</h1>
               </div>
               <p className="mt-3 max-w-2xl text-white/90">
-                Engineering, MBA/management, hotel management, finance and account management roles posted by
-                travel technology companies in the directory.
+                Engineering, product, data, sales, marketing, hotel management, finance, HR, design and more -
+                roles posted by travel technology companies in the directory.
               </p>
               <p className="mt-4 text-sm font-medium text-white/80">
                 {loading ? 'Loading...' : `${items.length} open role${items.length === 1 ? '' : 's'}`}

@@ -1,11 +1,68 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { ChevronDown, Menu, X } from 'lucide-react'
+import {
+  ChevronDown,
+  Menu,
+  X,
+  LayoutGrid,
+  Newspaper,
+  CalendarDays,
+  Briefcase,
+  LayoutDashboard,
+  ShieldCheck,
+  LogOut,
+  LogIn,
+  UserPlus,
+} from 'lucide-react'
 import * as Icons from 'lucide-react'
 import { CATEGORIES } from '../config/categories.js'
 import { getTheme } from '../config/theme.js'
 import { useAuth } from '../context/AuthContext.jsx'
 import { LogoFull } from './Logo.jsx'
+
+/** A nav link with a leading icon that animates on hover - shared shape for
+ * the desktop nav row and the mobile menu (mobile centers/pads/backgrounds
+ * on hover since it's a tap target, not an inline text link). */
+function NavLink({ to, icon: Icon, children, onClick, mobile = false }) {
+  if (mobile) {
+    return (
+      <Link
+        to={to}
+        onClick={onClick}
+        className="group flex items-center justify-center gap-1.5 rounded-lg px-3 py-2 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-50 hover:text-brand-600"
+      >
+        <Icon size={15} className="transition-transform duration-200 group-hover:scale-110" />
+        {children}
+      </Link>
+    )
+  }
+  return (
+    <Link
+      to={to}
+      onClick={onClick}
+      className="group flex items-center gap-1.5 text-sm font-medium text-slate-700 transition-colors hover:text-brand-600"
+    >
+      <Icon size={16} className="transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:scale-110" />
+      {children}
+    </Link>
+  )
+}
+
+function NavButton({ icon: Icon, children, onClick, mobile = false }) {
+  return (
+    <button
+      onClick={onClick}
+      className={
+        mobile
+          ? 'group flex items-center justify-center gap-1.5 rounded-lg px-3 py-2 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-50 hover:text-brand-600'
+          : 'group flex items-center gap-1.5 text-sm font-medium text-slate-700 transition-colors hover:text-brand-600'
+      }
+    >
+      <Icon size={mobile ? 15 : 16} className="transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:scale-110" />
+      {children}
+    </button>
+  )
+}
 
 export default function Header() {
   const [dropdownOpen, setDropdownOpen] = useState(false)
@@ -23,7 +80,7 @@ export default function Header() {
     <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/90 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center shrink-0" onClick={() => setMobileOpen(false)}>
-          <LogoFull height={42} />
+          <LogoFull height={50} />
         </Link>
 
         <nav className="hidden items-center gap-6 md:flex">
@@ -33,10 +90,12 @@ export default function Header() {
             onMouseLeave={() => setDropdownOpen(false)}
           >
             <button
-              className="flex items-center gap-1 text-sm font-medium text-slate-700 hover:text-brand-600"
+              className="group flex items-center gap-1.5 text-sm font-medium text-slate-700 transition-colors hover:text-brand-600"
               onClick={() => setDropdownOpen((v) => !v)}
             >
-              Categories <ChevronDown size={16} />
+              <LayoutGrid size={16} className="transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:scale-110" />
+              Categories
+              <ChevronDown size={16} className={`transition-transform duration-200 ${dropdownOpen ? 'rotate-180' : ''}`} />
             </button>
             {dropdownOpen && (
               <div className="absolute left-1/2 top-full grid w-[760px] -translate-x-1/2 grid-cols-3 gap-1 rounded-xl border border-slate-200 bg-white p-3 shadow-xl">
@@ -47,11 +106,11 @@ export default function Header() {
                     <Link
                       key={cat.id}
                       to={cat.route}
-                      className="flex items-start gap-3 rounded-lg p-2.5 hover:bg-slate-50"
+                      className="group flex items-start gap-3 rounded-lg p-2.5 transition-colors hover:bg-slate-50"
                       onClick={() => setDropdownOpen(false)}
                     >
                       <span
-                        className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-lg ${theme.bg50} ${theme.text}`}
+                        className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-lg ${theme.bg50} ${theme.text} transition-transform duration-200 group-hover:scale-110`}
                       >
                         <Icon size={18} />
                       </span>
@@ -67,47 +126,47 @@ export default function Header() {
               </div>
             )}
           </div>
-          <Link to="/news" className="text-sm font-medium text-slate-700 hover:text-brand-600">
+          <NavLink to="/news" icon={Newspaper}>
             News
-          </Link>
-          <Link to="/events" className="text-sm font-medium text-slate-700 hover:text-brand-600">
+          </NavLink>
+          <NavLink to="/events" icon={CalendarDays}>
             Events
-          </Link>
-          <Link to="/jobs" className="text-sm font-medium text-slate-700 hover:text-brand-600">
+          </NavLink>
+          <NavLink to="/jobs" icon={Briefcase}>
             Jobs
-          </Link>
+          </NavLink>
         </nav>
 
         <div className="flex items-center gap-4">
-          <div className="hidden items-center gap-3 md:flex">
+          <div className="hidden items-center gap-4 md:flex">
             {user ? (
               <>
-                <Link to="/dashboard" className="text-sm font-medium text-slate-700 hover:text-brand-600">
+                <NavLink to="/dashboard" icon={LayoutDashboard}>
                   Dashboard
-                </Link>
+                </NavLink>
                 {isAdmin && (
-                  <Link to="/admin" className="text-sm font-medium text-slate-700 hover:text-brand-600">
+                  <NavLink to="/admin" icon={ShieldCheck}>
                     Admin
-                  </Link>
+                  </NavLink>
                 )}
-                <button onClick={handleLogout} className="text-sm font-medium text-slate-700 hover:text-brand-600">
+                <NavButton icon={LogOut} onClick={handleLogout}>
                   Log out
-                </button>
+                </NavButton>
               </>
             ) : (
               <>
-                <Link to="/login" className="text-sm font-medium text-slate-700 hover:text-brand-600">
+                <NavLink to="/login" icon={LogIn}>
                   Log in
-                </Link>
-                <Link to="/register" className="text-sm font-medium text-slate-700 hover:text-brand-600">
+                </NavLink>
+                <NavLink to="/register" icon={UserPlus}>
                   Register
-                </Link>
+                </NavLink>
               </>
             )}
           </div>
           <Link
             to="/add-business"
-            className="hidden rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-700 sm:inline-block"
+            className="hidden rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-brand-700 hover:shadow-md sm:inline-block"
           >
             List Your Business
           </Link>
@@ -131,7 +190,7 @@ export default function Header() {
               <Link
                 key={cat.id}
                 to={cat.route}
-                className="rounded-lg px-3 py-2 text-sm text-slate-700 hover:bg-slate-50"
+                className="rounded-lg px-3 py-2 text-sm text-slate-700 transition-colors hover:bg-slate-50 hover:text-brand-600"
                 onClick={() => setMobileOpen(false)}
               >
                 {cat.name}
@@ -139,70 +198,39 @@ export default function Header() {
             ))}
           </div>
           <div className="mt-3 grid grid-cols-3 gap-1 border-t border-slate-100 pt-3">
-            <Link
-              to="/news"
-              className="rounded-lg px-3 py-2 text-center text-sm font-medium text-slate-700 hover:bg-slate-50"
-              onClick={() => setMobileOpen(false)}
-            >
+            <NavLink to="/news" icon={Newspaper} mobile onClick={() => setMobileOpen(false)}>
               News
-            </Link>
-            <Link
-              to="/events"
-              className="rounded-lg px-3 py-2 text-center text-sm font-medium text-slate-700 hover:bg-slate-50"
-              onClick={() => setMobileOpen(false)}
-            >
+            </NavLink>
+            <NavLink to="/events" icon={CalendarDays} mobile onClick={() => setMobileOpen(false)}>
               Events
-            </Link>
-            <Link
-              to="/jobs"
-              className="rounded-lg px-3 py-2 text-center text-sm font-medium text-slate-700 hover:bg-slate-50"
-              onClick={() => setMobileOpen(false)}
-            >
+            </NavLink>
+            <NavLink to="/jobs" icon={Briefcase} mobile onClick={() => setMobileOpen(false)}>
               Jobs
-            </Link>
+            </NavLink>
           </div>
           <div className="mt-3 grid grid-cols-2 gap-1 border-t border-slate-100 pt-3">
             {user ? (
               <>
-                <Link
-                  to="/dashboard"
-                  className="rounded-lg px-3 py-2 text-center text-sm font-medium text-slate-700 hover:bg-slate-50"
-                  onClick={() => setMobileOpen(false)}
-                >
+                <NavLink to="/dashboard" icon={LayoutDashboard} mobile onClick={() => setMobileOpen(false)}>
                   Dashboard
-                </Link>
+                </NavLink>
                 {isAdmin && (
-                  <Link
-                    to="/admin"
-                    className="rounded-lg px-3 py-2 text-center text-sm font-medium text-slate-700 hover:bg-slate-50"
-                    onClick={() => setMobileOpen(false)}
-                  >
+                  <NavLink to="/admin" icon={ShieldCheck} mobile onClick={() => setMobileOpen(false)}>
                     Admin
-                  </Link>
+                  </NavLink>
                 )}
-                <button
-                  onClick={handleLogout}
-                  className="rounded-lg px-3 py-2 text-center text-sm font-medium text-slate-700 hover:bg-slate-50"
-                >
+                <NavButton icon={LogOut} mobile onClick={handleLogout}>
                   Log out
-                </button>
+                </NavButton>
               </>
             ) : (
               <>
-                <Link
-                  to="/login"
-                  className="rounded-lg px-3 py-2 text-center text-sm font-medium text-slate-700 hover:bg-slate-50"
-                  onClick={() => setMobileOpen(false)}
-                >
+                <NavLink to="/login" icon={LogIn} mobile onClick={() => setMobileOpen(false)}>
                   Log in
-                </Link>
-                <Link
-                  to="/register"
-                  className="rounded-lg px-3 py-2 text-center text-sm font-medium text-slate-700 hover:bg-slate-50"
-                  onClick={() => setMobileOpen(false)}
-                >
+                </NavLink>
+                <NavLink to="/register" icon={UserPlus} mobile onClick={() => setMobileOpen(false)}>
                   Register
-                </Link>
+                </NavLink>
               </>
             )}
           </div>
