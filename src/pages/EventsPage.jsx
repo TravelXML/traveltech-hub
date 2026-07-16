@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { CalendarRange } from 'lucide-react'
 import SearchBar from '../components/SearchBar.jsx'
 import EventCard from '../components/EventCard.jsx'
+import SeoHead from '../components/SeoHead.jsx'
 import { getEvents } from '../services/eventService.js'
 
 export default function EventsPage() {
@@ -38,6 +39,11 @@ export default function EventsPage() {
 
   return (
     <div>
+      <SeoHead
+        title="Travel Tech Events & Conferences | TravelPin"
+        description="Trade shows, conferences and summits across the travel industry - who's hosting, where, and when."
+        path="/events"
+      />
       <div className="bg-gradient-to-br from-violet-500 to-violet-700">
         <div className="mx-auto max-w-7xl px-4 py-12 text-white sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-start justify-between gap-4">

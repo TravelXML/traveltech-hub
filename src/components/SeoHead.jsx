@@ -9,6 +9,10 @@ import { SITE_URL } from '../config/site.js'
  */
 export default function SeoHead({ title, description, path, image, jsonLd }) {
   const url = `${SITE_URL}${path}`
+  // jsonLd may be a single schema.org object or an array of them (e.g. Home
+  // ships both Organization and WebSite blocks) - each needs its own
+  // <script> tag, not one script holding a bare array.
+  const jsonLdBlocks = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : []
   return (
     <Helmet>
       <title>{title}</title>
@@ -22,7 +26,11 @@ export default function SeoHead({ title, description, path, image, jsonLd }) {
       <meta name="twitter:card" content={image ? 'summary_large_image' : 'summary'} />
       <meta name="twitter:title" content={title} />
       {description && <meta name="twitter:description" content={description} />}
-      {jsonLd && <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>}
+      {jsonLdBlocks.map((block, i) => (
+        <script key={i} type="application/ld+json">
+          {JSON.stringify(block)}
+        </script>
+      ))}
     </Helmet>
   )
 }

@@ -9,6 +9,18 @@ import SeoHead from '../components/SeoHead.jsx'
 import { getCategories } from '../services/listingService.js'
 import { getNews } from '../services/newsService.js'
 import { getEvents } from '../services/eventService.js'
+import { SITE_URL } from '../config/site.js'
+import logoUrl from '../assets/logo-full.png'
+
+const ORGANIZATION_JSON_LD = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'TravelPin',
+  url: SITE_URL,
+  logo: `${SITE_URL}${logoUrl}`,
+  description:
+    'TravelPin is the directory of travel technology providers: PMS, CRS, aggregators, channel managers, wholesalers, OTAs and more.',
+}
 
 export default function Home() {
   const [categories, setCategories] = useState([])
@@ -43,6 +55,7 @@ export default function Home() {
         title="TravelPin - Travel Technology Directory"
         description="TravelPin is the directory of travel technology providers: PMS, CRS, aggregators, channel managers, wholesalers, OTAs and more."
         path="/"
+        jsonLd={ORGANIZATION_JSON_LD}
       />
       <Hero />
 

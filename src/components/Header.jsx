@@ -94,7 +94,7 @@ export default function Header() {
               onClick={() => setDropdownOpen((v) => !v)}
             >
               <LayoutGrid size={16} className="transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:scale-110" />
-              Categories
+              Find a Partner
               <ChevronDown size={16} className={`transition-transform duration-200 ${dropdownOpen ? 'rotate-180' : ''}`} />
             </button>
             {dropdownOpen && (
@@ -183,7 +183,7 @@ export default function Header() {
       {mobileOpen && (
         <div className="border-t border-slate-200 bg-white px-4 py-3 md:hidden">
           <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-400">
-            Categories
+            Find a Partner
           </p>
           <div className="grid grid-cols-1 gap-1">
             {CATEGORIES.map((cat) => (

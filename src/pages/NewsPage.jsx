@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { Newspaper } from 'lucide-react'
 import SearchBar from '../components/SearchBar.jsx'
 import NewsCard from '../components/NewsCard.jsx'
+import SeoHead from '../components/SeoHead.jsx'
 import { getNews } from '../services/newsService.js'
 
 export default function NewsPage() {
@@ -31,6 +32,11 @@ export default function NewsPage() {
 
   return (
     <div>
+      <SeoHead
+        title="Travel Tech News | TravelPin"
+        description="Funding, product launches, partnerships and industry trends across travel technology, curated from trade press."
+        path="/news"
+      />
       <div className="bg-gradient-to-br from-indigo-500 to-indigo-700">
         <div className="mx-auto max-w-7xl px-4 py-12 text-white sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-start justify-between gap-4">

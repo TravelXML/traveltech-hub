@@ -5,6 +5,46 @@ import TagBadge from '../components/TagBadge.jsx'
 import ApplyForm from '../components/ApplyForm.jsx'
 import SeoHead from '../components/SeoHead.jsx'
 import { getJobById } from '../services/jobService.js'
+import { SITE_URL } from '../config/site.js'
+
+// schema.org JobPosting expects a fixed enum, not our display strings -
+// this is what makes a listing eligible for Google's "Google for Jobs"
+// rich-result carousel (https://developers.google.com/search/docs/appearance/structured-data/job-posting).
+const EMPLOYMENT_TYPE_SCHEMA = {
+  'Full-time': 'FULL_TIME',
+  'Part-time': 'PART_TIME',
+  Contract: 'CONTRACTOR',
+  Internship: 'INTERN',
+}
+
+function jobPostingJsonLd(job) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'JobPosting',
+    title: job.title,
+    description: job.description,
+    datePosted: job.createdAt,
+    ...(job.closesAt && { validThrough: new Date(job.closesAt).toISOString() }),
+    employmentType: EMPLOYMENT_TYPE_SCHEMA[job.employmentType] ?? 'FULL_TIME',
+    hiringOrganization: {
+      '@type': 'Organization',
+      name: job.listing?.name,
+      ...(job.listing?.slug && { sameAs: `${SITE_URL}/vendor/${job.listing.slug}` }),
+      ...(job.listing?.logoUrl && { logo: job.listing.logoUrl }),
+    },
+    ...(job.remote
+      ? {
+          jobLocationType: 'TELECOMMUTE',
+          applicantLocationRequirements: { '@type': 'Country', name: 'Anywhere' },
+        }
+      : {
+          jobLocation: {
+            '@type': 'Place',
+            address: { '@type': 'PostalAddress', addressLocality: job.location },
+          },
+        }),
+  }
+}
 
 export default function JobDetail() {
   const { id } = useParams()
@@ -63,6 +103,7 @@ export default function JobDetail() {
         title={`${job.title} at ${job.listing?.name} | TravelPin`}
         description={job.description}
         path={`/jobs/${job.id}`}
+        jsonLd={jobPostingJsonLd(job)}
       />
       <div className="bg-gradient-to-br from-emerald-500 to-emerald-700">
         <div className="mx-auto max-w-5xl px-4 py-12 text-white sm:px-6 lg:px-8">
