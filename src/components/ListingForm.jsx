@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { X } from 'lucide-react'
 import { validateLogoFile } from '../services/storageService.js'
+import Turnstile from './Turnstile.jsx'
 
 const PRICING_MODELS = ['Subscription', 'Per Booking', 'Commission', 'Freemium', 'Enterprise/Custom']
 const PRICE_RANGES = ['$', '$$', '$$$']
@@ -104,6 +105,7 @@ export default function ListingForm({
   submittingLabel = 'Submitting…',
   submitting = false,
   serverError = '',
+  requireCaptcha = false,
   onSubmit,
 }) {
   const [form, setForm] = useState({ ...EMPTY_LISTING_FORM, ...initialValues })
@@ -111,6 +113,12 @@ export default function ListingForm({
   const [logoFile, setLogoFile] = useState(null)
   const [logoError, setLogoError] = useState('')
   const [logoPreview, setLogoPreview] = useState(initialLogoUrl)
+  const [captchaToken, setCaptchaToken] = useState('')
+  const [captchaKey, setCaptchaKey] = useState(0)
+  const [captchaError, setCaptchaError] = useState('')
+  // Only require a token when a site key is actually configured - keeps the
+  // form usable before Cloudflare Turnstile is set up (see .env.example).
+  const captchaRequired = requireCaptcha && Boolean(import.meta.env.VITE_TURNSTILE_SITE_KEY)
 
   const set = (field) => (value) => setForm((f) => ({ ...f, [field]: value }))
 
@@ -145,9 +153,21 @@ export default function ListingForm({
     const validationErrors = validateListingForm(form)
     setErrors(validationErrors)
     if (Object.keys(validationErrors).length > 0) return
+    if (captchaRequired && !captchaToken) {
+      setCaptchaError('Please complete the verification challenge.')
+      return
+    }
+    setCaptchaError('')
 
     const payload = { ...form, founded: Number(form.founded) }
-    await onSubmit(payload, logoFile)
+    try {
+      await onSubmit(payload, logoFile, captchaToken)
+    } finally {
+      // Turnstile tokens are single-use - always reset after a submit
+      // attempt, success or failure, so a retry gets a fresh token.
+      setCaptchaToken('')
+      setCaptchaKey((k) => k + 1)
+    }
   }
 
   const inputClass = (field) =>
@@ -350,9 +370,16 @@ export default function ListingForm({
         </div>
       </div>
 
+      {requireCaptcha && (
+        <div>
+          <Turnstile key={captchaKey} onSuccess={setCaptchaToken} onExpire={() => setCaptchaToken('')} />
+          {captchaError && <p className="mt-1 text-xs text-red-600">{captchaError}</p>}
+        </div>
+      )}
+
       <button
         type="submit"
-        disabled={submitting}
+        disabled={submitting || (captchaRequired && !captchaToken)}
         className="w-full rounded-lg bg-brand-600 py-3 font-semibold text-white shadow-sm transition hover:bg-brand-700 disabled:cursor-not-allowed disabled:opacity-60"
       >
         {submitting ? submittingLabel : submitLabel}

@@ -11,23 +11,41 @@ function redirectUrl(path) {
   return `${window.location.origin}${import.meta.env.BASE_URL}${path}`
 }
 
-export async function signUp({ email, password, fullName }) {
+export async function signUp({ email, password, fullName, captchaToken }) {
   const { data, error } = await supabase.auth.signUp({
     email,
     password,
     options: {
       data: fullName ? { full_name: fullName } : undefined,
       emailRedirectTo: redirectUrl('login'),
+      captchaToken,
     },
   })
   if (error) throw toFriendlyAuthError(error)
   return data
 }
 
-export async function signIn({ email, password }) {
-  const { data, error } = await supabase.auth.signInWithPassword({ email, password })
+export async function signIn({ email, password, captchaToken }) {
+  const { data, error } = await supabase.auth.signInWithPassword({
+    email,
+    password,
+    options: { captchaToken },
+  })
   if (error) throw toFriendlyAuthError(error)
   return data
+}
+
+// provider is Supabase's provider id: 'google' or 'azure' (Microsoft/Azure
+// AD's id in Supabase Auth - not 'microsoft'). This redirects the whole page
+// away; there's no session to return here. detectSessionInUrl (set in
+// src/lib/supabase.js) exchanges the code on return, and AuthContext's
+// onAuthStateChange picks up the resulting session automatically.
+export async function signInWithOAuth(provider) {
+  const { error } = await supabase.auth.signInWithOAuth({
+    provider,
+    options: { redirectTo: redirectUrl('') },
+  })
+  if (error) throw toFriendlyAuthError(error)
 }
 
 export async function signOut() {

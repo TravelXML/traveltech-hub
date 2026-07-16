@@ -16,11 +16,11 @@ export default function AddBusinessForm() {
     if (user) getCategories().then(setCategories).catch(() => setCategories([]))
   }, [user])
 
-  async function handleSubmit(payload, logoFile) {
+  async function handleSubmit(payload, logoFile, captchaToken) {
     setServerError('')
     setSubmitting(true)
     try {
-      const { id } = await submitListing(payload)
+      const { id } = await submitListing(payload, captchaToken)
       if (logoFile) {
         try {
           const logoUrl = await uploadListingLogo({ userId: user.id, listingId: id, file: logoFile })
@@ -102,6 +102,7 @@ export default function AddBusinessForm() {
       serverError={serverError}
       submitLabel="Submit Listing"
       submittingLabel="Submitting…"
+      requireCaptcha
       onSubmit={handleSubmit}
     />
   )

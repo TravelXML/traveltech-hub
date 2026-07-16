@@ -5,6 +5,7 @@
 
 import { supabase } from '../lib/supabase.js'
 import { mapListingRow, mapCategoryRow, LISTING_SELECT } from './listingMapper.js'
+import { verifyCaptcha } from './captchaService.js'
 import newsData from '../data/news.json'
 import eventsData from '../data/events.json'
 
@@ -175,8 +176,15 @@ export async function searchAll(query) {
  * session; the submit_listing() RPC forces owner_id/status and every
  * privileged field to safe defaults server-side regardless of payload
  * content.
+ *
+ * Verifies a Turnstile token server-side first (only when Turnstile is
+ * actually configured - see .env.example - so submission still works before
+ * that's set up). Unlike login/signup this isn't an auth call, so there's no
+ * native captchaToken hook; see captchaService.js for the caveat that this
+ * stops naive bots, not a caller invoking the RPC directly.
  */
-export async function submitListing(payload) {
+export async function submitListing(payload, captchaToken) {
+  if (import.meta.env.VITE_TURNSTILE_SITE_KEY) await verifyCaptcha(captchaToken)
   const { data, error } = await supabase.rpc('submit_listing', { payload })
   if (error) throw toFriendlyError(error)
   const row = Array.isArray(data) ? data[0] : data

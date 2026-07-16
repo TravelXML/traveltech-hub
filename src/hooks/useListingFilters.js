@@ -15,6 +15,7 @@ export function useListingFilters(listings) {
   const [selectedPricingModels, setSelectedPricingModels] = useState([])
   const [selectedPriceRanges, setSelectedPriceRanges] = useState([])
   const [selectedProducts, setSelectedProducts] = useState([])
+  const [selectedFeatures, setSelectedFeatures] = useState([])
   const [sortBy, setSortBy] = useState(SORT_OPTIONS.NAME_ASC)
 
   const facets = useMemo(() => {
@@ -22,12 +23,14 @@ export function useListingFilters(listings) {
     const pricingModels = new Set()
     const priceRanges = new Set()
     const products = new Set()
+    const features = new Set()
 
     for (const listing of listings) {
       listing.targetMarkets?.forEach((m) => markets.add(m))
       if (listing.pricingModel) pricingModels.add(listing.pricingModel)
       if (listing.priceRange) priceRanges.add(listing.priceRange)
       listing.products?.forEach((p) => products.add(p))
+      listing.features?.forEach((f) => features.add(f))
     }
 
     return {
@@ -35,6 +38,7 @@ export function useListingFilters(listings) {
       pricingModels: [...pricingModels].sort(),
       priceRanges: [...priceRanges].sort((a, b) => a.length - b.length),
       products: [...products].sort(),
+      features: [...features].sort(),
     }
   }, [listings])
 
@@ -47,6 +51,7 @@ export function useListingFilters(listings) {
     toggle(selectedPricingModels, setSelectedPricingModels, value)
   const togglePriceRange = (value) => toggle(selectedPriceRanges, setSelectedPriceRanges, value)
   const toggleProduct = (value) => toggle(selectedProducts, setSelectedProducts, value)
+  const toggleFeature = (value) => toggle(selectedFeatures, setSelectedFeatures, value)
 
   const clearAll = () => {
     setSearch('')
@@ -54,10 +59,13 @@ export function useListingFilters(listings) {
     setSelectedPricingModels([])
     setSelectedPriceRanges([])
     setSelectedProducts([])
+    setSelectedFeatures([])
   }
 
   const activeFilters = useMemo(() => {
     const chips = []
+    selectedProducts.forEach((v) => chips.push({ type: 'product', value: v, onRemove: () => toggleProduct(v) }))
+    selectedFeatures.forEach((v) => chips.push({ type: 'feature', value: v, onRemove: () => toggleFeature(v) }))
     selectedMarkets.forEach((v) => chips.push({ type: 'market', value: v, onRemove: () => toggleMarket(v) }))
     selectedPricingModels.forEach((v) =>
       chips.push({ type: 'pricingModel', value: v, onRemove: () => togglePricingModel(v) })
@@ -65,10 +73,9 @@ export function useListingFilters(listings) {
     selectedPriceRanges.forEach((v) =>
       chips.push({ type: 'priceRange', value: v, onRemove: () => togglePriceRange(v) })
     )
-    selectedProducts.forEach((v) => chips.push({ type: 'product', value: v, onRemove: () => toggleProduct(v) }))
     if (search.trim()) chips.push({ type: 'search', value: search, onRemove: () => setSearch('') })
     return chips
-  }, [selectedMarkets, selectedPricingModels, selectedPriceRanges, selectedProducts, search])
+  }, [selectedMarkets, selectedPricingModels, selectedPriceRanges, selectedProducts, selectedFeatures, search])
 
   const filteredListings = useMemo(() => {
     const q = search.trim().toLowerCase()
@@ -87,6 +94,8 @@ export function useListingFilters(listings) {
       if (selectedPriceRanges.length && !selectedPriceRanges.includes(listing.priceRange)) return false
       if (selectedProducts.length && !selectedProducts.some((p) => listing.products?.includes(p)))
         return false
+      if (selectedFeatures.length && !selectedFeatures.some((f) => listing.features?.includes(f)))
+        return false
       return true
     })
 
@@ -96,7 +105,16 @@ export function useListingFilters(listings) {
     })
 
     return result
-  }, [listings, search, selectedMarkets, selectedPricingModels, selectedPriceRanges, selectedProducts, sortBy])
+  }, [
+    listings,
+    search,
+    selectedMarkets,
+    selectedPricingModels,
+    selectedPriceRanges,
+    selectedProducts,
+    selectedFeatures,
+    sortBy,
+  ])
 
   return {
     search,
@@ -109,10 +127,12 @@ export function useListingFilters(listings) {
     selectedPricingModels,
     selectedPriceRanges,
     selectedProducts,
+    selectedFeatures,
     toggleMarket,
     togglePricingModel,
     togglePriceRange,
     toggleProduct,
+    toggleFeature,
     activeFilters,
     clearAll,
     filteredListings,

@@ -2,6 +2,7 @@
 // products / geography / pricing tags at a glance.
 const KIND_STYLES = {
   product: 'bg-slate-100 text-slate-700 border-slate-200',
+  feature: 'bg-indigo-50 text-indigo-700 border-indigo-200',
   market: 'bg-blue-50 text-blue-700 border-blue-200',
   pricingModel: 'bg-emerald-50 text-emerald-700 border-emerald-200',
   priceRange: 'bg-amber-50 text-amber-800 border-amber-200',

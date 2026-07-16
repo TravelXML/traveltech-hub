@@ -9,6 +9,7 @@ import SearchBar from '../components/SearchBar.jsx'
 import FilterSidebar from '../components/FilterSidebar.jsx'
 import ListingCard from '../components/ListingCard.jsx'
 import TagBadge from '../components/TagBadge.jsx'
+import SeoHead from '../components/SeoHead.jsx'
 
 export default function CategoryPage() {
   const { categoryId } = useParams()
@@ -56,6 +57,11 @@ export default function CategoryPage() {
 
   return (
     <div>
+      <SeoHead
+        title={`${category.name} | TravelTech Hub`}
+        description={category.description}
+        path={category.route}
+      />
       <div className={`bg-gradient-to-br ${theme.gradient}`}>
         <div className="mx-auto max-w-7xl px-4 py-12 text-white sm:px-6 lg:px-8">
           <h1 className="font-display text-3xl font-bold sm:text-4xl">{category.name}</h1>

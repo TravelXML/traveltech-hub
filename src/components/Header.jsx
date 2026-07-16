@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { ChevronDown, Menu, X, Compass } from 'lucide-react'
+import * as Icons from 'lucide-react'
 import { CATEGORIES } from '../config/categories.js'
+import { getTheme } from '../config/theme.js'
 import { useAuth } from '../context/AuthContext.jsx'
 
 export default function Header() {
@@ -41,17 +43,31 @@ export default function Header() {
               Categories <ChevronDown size={16} />
             </button>
             {dropdownOpen && (
-              <div className="absolute left-1/2 top-full grid w-[560px] -translate-x-1/2 grid-cols-2 gap-1 rounded-xl border border-slate-200 bg-white p-3 shadow-xl">
-                {CATEGORIES.map((cat) => (
-                  <Link
-                    key={cat.id}
-                    to={cat.route}
-                    className="rounded-lg px-3 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-600"
-                    onClick={() => setDropdownOpen(false)}
-                  >
-                    {cat.name}
-                  </Link>
-                ))}
+              <div className="absolute left-1/2 top-full grid w-[760px] -translate-x-1/2 grid-cols-3 gap-1 rounded-xl border border-slate-200 bg-white p-3 shadow-xl">
+                {CATEGORIES.map((cat) => {
+                  const theme = getTheme(cat.color)
+                  const Icon = Icons[cat.icon] ?? Icons.Building2
+                  return (
+                    <Link
+                      key={cat.id}
+                      to={cat.route}
+                      className="flex items-start gap-3 rounded-lg p-2.5 hover:bg-slate-50"
+                      onClick={() => setDropdownOpen(false)}
+                    >
+                      <span
+                        className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-lg ${theme.bg50} ${theme.text}`}
+                      >
+                        <Icon size={18} />
+                      </span>
+                      <span className="min-w-0">
+                        <span className="block text-sm font-medium text-slate-900">{cat.name}</span>
+                        <span className="mt-0.5 block line-clamp-2 text-xs text-slate-500">
+                          {cat.description}
+                        </span>
+                      </span>
+                    </Link>
+                  )
+                })}
               </div>
             )}
           </div>

@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/generate-sitemap.mjs",
     "lint": "eslint . --ext js,jsx",
     "preview": "vite preview",
     "predeploy": "VITE_BASE_PATH=/traveltech-hub/ npm run build",
@@ -19,6 +19,7 @@
     "lucide-react": "^0.441.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-helmet-async": "^2.0.5",
     "react-router-dom": "^6.26.2"
   },
   "devDependencies": {

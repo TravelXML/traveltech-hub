@@ -5,6 +5,7 @@ import Hero from '../components/Hero.jsx'
 import CategoryCard from '../components/CategoryCard.jsx'
 import NewsCard from '../components/NewsCard.jsx'
 import EventCard from '../components/EventCard.jsx'
+import SeoHead from '../components/SeoHead.jsx'
 import { getCategories, getNews, getEvents } from '../services/listingService.js'
 
 export default function Home() {
@@ -36,6 +37,11 @@ export default function Home() {
 
   return (
     <div>
+      <SeoHead
+        title="TravelTech Hub - Travel Technology Directory"
+        description="TravelTech Hub is the directory of travel technology providers: PMS, CRS, aggregators, channel managers, wholesalers, OTAs and more."
+        path="/"
+      />
       <Hero />
 
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">

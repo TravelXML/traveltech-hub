@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext.jsx'
+import OAuthButtons from '../components/OAuthButtons.jsx'
+import Turnstile from '../components/Turnstile.jsx'
 
 export default function Register() {
   const { signUp } = useAuth()
@@ -10,6 +12,11 @@ export default function Register() {
   const [error, setError] = useState('')
   const [submitting, setSubmitting] = useState(false)
   const [done, setDone] = useState(false)
+  const [captchaToken, setCaptchaToken] = useState('')
+  const [captchaKey, setCaptchaKey] = useState(0)
+  // Only require a token when a site key is actually configured - keeps the
+  // form usable before Cloudflare Turnstile is set up (see .env.example).
+  const captchaRequired = Boolean(import.meta.env.VITE_TURNSTILE_SITE_KEY)
 
   async function handleSubmit(e) {
     e.preventDefault()
@@ -20,10 +27,12 @@ export default function Register() {
     }
     setSubmitting(true)
     try {
-      await signUp({ email, password, fullName })
+      await signUp({ email, password, fullName, captchaToken })
       setDone(true)
     } catch (err) {
       setError(err.message)
+      setCaptchaToken('')
+      setCaptchaKey((k) => k + 1)
     } finally {
       setSubmitting(false)
     }
@@ -51,8 +60,18 @@ export default function Register() {
       <h1 className="text-center font-display text-3xl font-bold text-slate-900">Create an account</h1>
       <p className="mt-2 text-center text-slate-600">List your business and manage submissions.</p>
 
-      <form onSubmit={handleSubmit} noValidate className="mt-8 space-y-5">
-        {error && <p className="rounded-lg bg-red-50 px-4 py-3 text-sm text-red-700">{error}</p>}
+      {error && <p className="mt-6 rounded-lg bg-red-50 px-4 py-3 text-sm text-red-700">{error}</p>}
+
+      <div className="mt-8">
+        <OAuthButtons onError={setError} />
+        <div className="mt-6 flex items-center gap-3">
+          <div className="h-px flex-1 bg-slate-200" />
+          <span className="text-xs font-medium uppercase tracking-wide text-slate-400">or continue with email</span>
+          <div className="h-px flex-1 bg-slate-200" />
+        </div>
+      </div>
+
+      <form onSubmit={handleSubmit} noValidate className="mt-6 space-y-5">
         <div>
           <label className="mb-1 block text-sm font-medium text-slate-700">Full name</label>
           <input
@@ -85,9 +104,11 @@ export default function Register() {
           />
           <p className="mt-1 text-xs text-slate-500">At least 8 characters.</p>
         </div>
+        <Turnstile key={captchaKey} onSuccess={setCaptchaToken} onExpire={() => setCaptchaToken('')} />
+
         <button
           type="submit"
-          disabled={submitting}
+          disabled={submitting || (captchaRequired && !captchaToken)}
           className="w-full rounded-lg bg-brand-600 py-3 font-semibold text-white shadow-sm transition hover:bg-brand-700 disabled:cursor-not-allowed disabled:opacity-60"
         >
           {submitting ? 'Creating account…' : 'Create account'}

@@ -53,6 +53,7 @@ export function AuthProvider({ children }) {
     loading,
     signUp: authService.signUp,
     signIn: authService.signIn,
+    signInWithOAuth: authService.signInWithOAuth,
     signOut: authService.signOut,
     requestPasswordReset: authService.requestPasswordReset,
     updatePassword: authService.updatePassword,

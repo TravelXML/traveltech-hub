@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { Mail, Phone, Globe, MapPin, Calendar, BadgeCheck, Star, AlertCircle } from 'lucide-react'
 import TagBadge from '../components/TagBadge.jsx'
+import SeoHead from '../components/SeoHead.jsx'
 import { getTheme } from '../config/theme.js'
 import { getListingBySlug } from '../services/listingService.js'
 
@@ -59,8 +60,25 @@ export default function ListingDetail() {
   const theme = getTheme(listing.category?.color)
   const websiteHost = listing.website ? listing.website.replace(/^https?:\/\//, '').replace(/\/$/, '') : null
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: listing.name,
+    description: listing.description,
+    ...(listing.website && { url: listing.website }),
+    ...(listing.logoUrl && { logo: listing.logoUrl }),
+    ...(listing.founded && { foundingDate: String(listing.founded) }),
+  }
+
   return (
     <div>
+      <SeoHead
+        title={`${listing.name} | TravelTech Hub`}
+        description={listing.description}
+        path={`/vendor/${listing.slug}`}
+        image={listing.logoUrl}
+        jsonLd={jsonLd}
+      />
       <div className={`bg-gradient-to-br ${theme.gradient}`}>
         <div className="mx-auto max-w-5xl px-4 py-12 text-white sm:px-6 lg:px-8">
           {listing.category && (

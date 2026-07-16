@@ -21,11 +21,29 @@ function FilterGroup({ title, options, selected, onToggle }) {
 }
 
 export default function FilterSidebar({ filters }) {
-  const { facets, selectedMarkets, selectedPricingModels, selectedPriceRanges, selectedProducts } =
-    filters
+  const {
+    facets,
+    selectedMarkets,
+    selectedPricingModels,
+    selectedPriceRanges,
+    selectedProducts,
+    selectedFeatures,
+  } = filters
 
   return (
     <div>
+      <FilterGroup
+        title="Products"
+        options={facets.products}
+        selected={selectedProducts}
+        onToggle={filters.toggleProduct}
+      />
+      <FilterGroup
+        title="Features"
+        options={facets.features}
+        selected={selectedFeatures}
+        onToggle={filters.toggleFeature}
+      />
       <FilterGroup
         title="Target Market / Geography"
         options={facets.markets}
@@ -43,12 +61,6 @@ export default function FilterSidebar({ filters }) {
         options={facets.priceRanges}
         selected={selectedPriceRanges}
         onToggle={filters.togglePriceRange}
-      />
-      <FilterGroup
-        title="Products"
-        options={facets.products}
-        selected={selectedProducts}
-        onToggle={filters.toggleProduct}
       />
     </div>
   )
