@@ -152,11 +152,16 @@ export async function searchAll(query) {
       .eq('status', 'approved')
       .or(`name.ilike.${pattern},description.ilike.${pattern},headquarters.ilike.${pattern}`)
       .limit(SEARCH_RESULT_LIMIT),
+    // LISTING_SELECT already embeds `listing_products` once (for the
+    // mapped listing.products field) - embedding it again unaliased for
+    // this inner-join filter is ambiguous to PostgREST and errors with
+    // "aggregate functions are not allowed...". Alias this one so both
+    // embeds of the same relation coexist in one select.
     supabase
       .from('listings')
-      .select(`${LISTING_SELECT}, ${categorySelect}, listing_products!inner(value)`)
+      .select(`${LISTING_SELECT}, ${categorySelect}, product_match:listing_products!inner(value)`)
       .eq('status', 'approved')
-      .ilike('listing_products.value', pattern)
+      .ilike('product_match.value', pattern)
       .limit(SEARCH_RESULT_LIMIT),
   ])
   if (directError) throw toFriendlyError(directError)
