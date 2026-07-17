@@ -9,6 +9,7 @@ import AddBusiness from './pages/AddBusiness.jsx'
 import AddNews from './pages/AddNews.jsx'
 import AddEvent from './pages/AddEvent.jsx'
 import AddJob from './pages/AddJob.jsx'
+import Contact from './pages/Contact.jsx'
 import NewsPage from './pages/NewsPage.jsx'
 import EventsPage from './pages/EventsPage.jsx'
 import JobsPage from './pages/JobsPage.jsx'
@@ -55,6 +56,7 @@ export default function App() {
           <Route path="/events" element={<EventsPage />} />
           <Route path="/jobs" element={<JobsPage />} />
           <Route path="/jobs/:id" element={<JobDetail />} />
+          <Route path="/contact" element={<Contact />} />
 
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />

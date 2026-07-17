@@ -28,12 +28,9 @@ export default function Footer() {
               <Link to="/jobs" className="text-sm font-medium text-slate-400 hover:text-white">
                 Jobs
               </Link>
-              <a
-                href="mailto:ctoattraveltech@gmail.com?subject=TravelPin%20feedback"
-                className="text-sm font-medium text-slate-400 hover:text-white"
-              >
+              <Link to="/contact" className="text-sm font-medium text-slate-400 hover:text-white">
                 Feedback
-              </a>
+              </Link>
             </div>
           </div>
           {columns.map((col, i) => (
