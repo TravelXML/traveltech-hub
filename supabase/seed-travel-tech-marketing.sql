@@ -415,7 +415,7 @@ begin
     pricing_model, price_range, email, phone, website, headquarters, founded,
     status, featured, verified, contact_verified, submitted_at, approved_at
   ) values (
-    'vizergy', null, 'travel-tech-marketing', 'Vizergy', 'vizergy',
+    'vizergy', null, 'travel-tech-marketing', 'Vizergy', 'vizergy-2',
     'VZ', 'Vizergy delivers digital marketing and website services for hotels and resorts, including responsive website design, search marketing and a proprietary revenue-focused reporting suite that ties marketing spend to booking outcomes.',
     'Subscription', '$$', null, null,
     'https://www.vizergy.com', 'Jacksonville, United States', 1995,
@@ -533,7 +533,7 @@ begin
     pricing_model, price_range, email, phone, website, headquarters, founded,
     status, featured, verified, contact_verified, submitted_at, approved_at
   ) values (
-    'milestone-inc', null, 'travel-tech-marketing', 'Milestone Inc', 'milestone-inc',
+    'milestone-inc', null, 'travel-tech-marketing', 'Milestone Inc', 'milestone-inc-2',
     'MS', 'Milestone is a hospitality digital marketing company providing website design, SEO, paid media and its proprietary MOJO marketing intelligence platform that gives hoteliers visibility into competitive digital marketing performance.',
     'Subscription', '$$', null, null,
     'https://www.milestoneinternet.com', 'Bend, United States', 1992,

@@ -200,6 +200,23 @@ on conflict (id) do update set
 `
 }
 
+// The `slug` column is unique across ALL categories (not just within one),
+// and a handful of vendors are legitimately cross-listed under two
+// categories with the same name (e.g. Vizergy appears under both
+// "Hotel CRM & Email Marketing" and "Travel Tech Marketing"). Pre-seed
+// usedSlugs with every other category's slugs, in the same array order
+// generate-seed.mjs uses, so collisions resolve to the identical
+// "name-2" suffix the full seed.sql already assigned - producing slugs
+// that either match what's already live, or are novel and conflict-free.
+for (const other of CATEGORIES) {
+  if (other.id === category.id) continue
+  const otherFile = path.join(dataDir, `${other.dataFile}.json`)
+  const otherRaw = JSON.parse(readFileSync(otherFile, 'utf-8'))
+  for (const listing of otherRaw.listings ?? []) {
+    uniqueSlug(String(listing.name || '').slice(0, 200))
+  }
+}
+
 const file = path.join(dataDir, `${category.dataFile}.json`)
 const raw = JSON.parse(readFileSync(file, 'utf-8'))
 const listings = raw.listings ?? []
