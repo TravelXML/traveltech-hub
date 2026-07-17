@@ -82,7 +82,7 @@ Deno.serve(async (req) => {
         method: 'POST',
         headers: { Authorization: `Bearer ${resendKey}`, 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          from: 'TravelPin Contact Form <onboarding@resend.dev>',
+          from: 'TravelPin Contact Form <contact@travelpin.space>',
           to: [CONTACT_EMAIL],
           reply_to: cleanEmail,
           subject: `TravelPin contact form: ${cleanName}${cleanCompany ? ` (${cleanCompany})` : ''}`,
