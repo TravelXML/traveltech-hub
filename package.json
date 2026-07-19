@@ -1,6 +1,7 @@
 {
   "name": "traveltech-hub",
   "private": true,
+  "homepage": "https://travelpin.space",
   "version": "0.1.0",
   "type": "module",
   "scripts": {

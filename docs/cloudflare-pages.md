@@ -99,7 +99,7 @@ Dashboard -> Authentication -> URL Configuration -> Redirect URLs (see
 
 ```
 https://YOUR-PROJECT-NAME.pages.dev/**
-https://traveltech.startupctopro.in/**
+https://travelpin.space/**
 ```
 
 Set **Site URL** to the final production domain once one is live.
