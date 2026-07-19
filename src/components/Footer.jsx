@@ -51,12 +51,29 @@ export default function Footer() {
           ))}
         </div>
         <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-slate-800 pt-6 text-sm text-slate-500 sm:flex-row">
-          <p>
-            &copy; {new Date().getFullYear()}{' '}
-            <a href={SITE_URL} className="hover:text-white">
-              travelpin.space
-            </a>
-          </p>
+          <div className="text-center sm:text-left">
+            <p>
+              &copy; {new Date().getFullYear()}{' '}
+              <a href={SITE_URL} className="hover:text-white">
+                travelpin.space
+              </a>
+            </p>
+            <p className="mt-1 text-xs text-slate-600">
+              A{' '}
+              <a href="https://startupctopro.in" target="_blank" rel="noopener noreferrer" className="hover:text-white">
+                StartupCTOPro
+              </a>{' '}
+              initiative &middot;{' '}
+              <a
+                href="https://startupctopro.in/travel-tech/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white"
+              >
+                Travel Tech at StartupCTOPro
+              </a>
+            </p>
+          </div>
           <a href={`${SITE_URL}/add-business`} className="font-medium text-brand-400 hover:text-brand-300">
             List Your Business &rarr;
           </a>
