@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom'
 import { CATEGORIES } from '../config/categories.js'
 import { LogoFull } from './Logo.jsx'
+import { SITE_URL } from '../config/site.js'
 
 export default function Footer() {
   const mid = Math.ceil(CATEGORIES.length / 2)
@@ -11,26 +11,26 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-3">
           <div>
-            <Link to="/" className="flex items-center">
+            <a href={SITE_URL} className="flex items-center">
               <LogoFull height={40} />
-            </Link>
+            </a>
             <p className="mt-3 max-w-xs text-sm text-slate-400">
               The directory for discovering travel technology providers across every corner of
               the industry.
             </p>
             <div className="mt-4 flex flex-wrap gap-4">
-              <Link to="/news" className="text-sm font-medium text-slate-400 hover:text-white">
+              <a href={`${SITE_URL}/news`} className="text-sm font-medium text-slate-400 hover:text-white">
                 News
-              </Link>
-              <Link to="/events" className="text-sm font-medium text-slate-400 hover:text-white">
+              </a>
+              <a href={`${SITE_URL}/events`} className="text-sm font-medium text-slate-400 hover:text-white">
                 Events
-              </Link>
-              <Link to="/jobs" className="text-sm font-medium text-slate-400 hover:text-white">
+              </a>
+              <a href={`${SITE_URL}/jobs`} className="text-sm font-medium text-slate-400 hover:text-white">
                 Jobs
-              </Link>
-              <Link to="/contact" className="text-sm font-medium text-slate-400 hover:text-white">
+              </a>
+              <a href={`${SITE_URL}/contact`} className="text-sm font-medium text-slate-400 hover:text-white">
                 Feedback
-              </Link>
+              </a>
             </div>
           </div>
           {columns.map((col, i) => (
@@ -41,9 +41,9 @@ export default function Footer() {
               <ul className="mt-3 space-y-2">
                 {col.map((cat) => (
                   <li key={cat.id}>
-                    <Link to={cat.route} className="text-sm text-slate-400 hover:text-white">
+                    <a href={`${SITE_URL}${cat.route}`} className="text-sm text-slate-400 hover:text-white">
                       {cat.name}
-                    </Link>
+                    </a>
                   </li>
                 ))}
               </ul>
@@ -53,13 +53,13 @@ export default function Footer() {
         <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-slate-800 pt-6 text-sm text-slate-500 sm:flex-row">
           <p>
             &copy; {new Date().getFullYear()}{' '}
-            <Link to="/" className="hover:text-white">
+            <a href={SITE_URL} className="hover:text-white">
               travelpin.space
-            </Link>
+            </a>
           </p>
-          <Link to="/add-business" className="font-medium text-brand-400 hover:text-brand-300">
+          <a href={`${SITE_URL}/add-business`} className="font-medium text-brand-400 hover:text-brand-300">
             List Your Business &rarr;
-          </Link>
+          </a>
         </div>
       </div>
     </footer>

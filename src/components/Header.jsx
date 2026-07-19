@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import {
   ChevronDown,
   Menu,
@@ -19,6 +19,7 @@ import { CATEGORIES } from '../config/categories.js'
 import { getTheme } from '../config/theme.js'
 import { useAuth } from '../context/AuthContext.jsx'
 import { LogoFull } from './Logo.jsx'
+import { SITE_URL } from '../config/site.js'
 
 /** A nav link with a leading icon that animates on hover - shared shape for
  * the desktop nav row and the mobile menu (mobile centers/pads/backgrounds
@@ -26,25 +27,25 @@ import { LogoFull } from './Logo.jsx'
 function NavLink({ to, icon: Icon, children, onClick, mobile = false }) {
   if (mobile) {
     return (
-      <Link
-        to={to}
+      <a
+        href={`${SITE_URL}${to}`}
         onClick={onClick}
         className="group flex items-center justify-center gap-1.5 rounded-lg px-3 py-2 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-50 hover:text-brand-600"
       >
         <Icon size={15} className="transition-transform duration-200 group-hover:scale-110" />
         {children}
-      </Link>
+      </a>
     )
   }
   return (
-    <Link
-      to={to}
+    <a
+      href={`${SITE_URL}${to}`}
       onClick={onClick}
       className="group flex items-center gap-1.5 text-sm font-medium text-slate-700 transition-colors hover:text-brand-600"
     >
       <Icon size={16} className="transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:scale-110" />
       {children}
-    </Link>
+    </a>
   )
 }
 
@@ -79,9 +80,9 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/90 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
-        <Link to="/" className="flex items-center shrink-0" onClick={() => setMobileOpen(false)}>
+        <a href={SITE_URL} className="flex items-center shrink-0" onClick={() => setMobileOpen(false)}>
           <LogoFull height={50} />
-        </Link>
+        </a>
 
         <nav className="hidden items-center gap-6 md:flex">
           <div
@@ -103,9 +104,9 @@ export default function Header() {
                   const theme = getTheme(cat.color)
                   const Icon = Icons[cat.icon] ?? Icons.Building2
                   return (
-                    <Link
+                    <a
                       key={cat.id}
-                      to={cat.route}
+                      href={`${SITE_URL}${cat.route}`}
                       className="group flex items-start gap-3 rounded-lg p-2.5 transition-colors hover:bg-slate-50"
                       onClick={() => setDropdownOpen(false)}
                     >
@@ -120,7 +121,7 @@ export default function Header() {
                           {cat.description}
                         </span>
                       </span>
-                    </Link>
+                    </a>
                   )
                 })}
               </div>
@@ -164,12 +165,12 @@ export default function Header() {
               </>
             )}
           </div>
-          <Link
-            to="/add-business"
+          <a
+            href={`${SITE_URL}/add-business`}
             className="hidden rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-brand-700 hover:shadow-md sm:inline-block"
           >
             List Your Business
-          </Link>
+          </a>
           <button
             className="rounded-lg p-2 text-slate-700 hover:bg-slate-100 md:hidden"
             onClick={() => setMobileOpen((v) => !v)}
@@ -187,14 +188,14 @@ export default function Header() {
           </p>
           <div className="grid grid-cols-1 gap-1">
             {CATEGORIES.map((cat) => (
-              <Link
+              <a
                 key={cat.id}
-                to={cat.route}
+                href={`${SITE_URL}${cat.route}`}
                 className="rounded-lg px-3 py-2 text-sm text-slate-700 transition-colors hover:bg-slate-50 hover:text-brand-600"
                 onClick={() => setMobileOpen(false)}
               >
                 {cat.name}
-              </Link>
+              </a>
             ))}
           </div>
           <div className="mt-3 grid grid-cols-3 gap-1 border-t border-slate-100 pt-3">
@@ -234,13 +235,13 @@ export default function Header() {
               </>
             )}
           </div>
-          <Link
-            to="/add-business"
+          <a
+            href={`${SITE_URL}/add-business`}
             className="mt-3 block rounded-lg bg-brand-600 px-4 py-2 text-center text-sm font-semibold text-white"
             onClick={() => setMobileOpen(false)}
           >
             List Your Business
-          </Link>
+          </a>
         </div>
       )}
     </header>
